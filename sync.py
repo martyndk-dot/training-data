@@ -1717,7 +1717,7 @@ class IntervalsSync:
         # MUST run before _calculate_derived_metrics so self._intervals_data is
         # populated when _calculate_dfa_a1_profile reads it (v3.99 fix).
         print("Checking for interval data...")
-        interval_activity_ids = self._generate_intervals(activities_display)
+        interval_activity_ids = self._generate_intervals(activities_extended)
         if interval_activity_ids:
             print(f"  📊 {len(interval_activity_ids)} activit{'y' if len(interval_activity_ids) == 1 else 'ies'} with interval data")
         
