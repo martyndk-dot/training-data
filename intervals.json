@@ -1,0 +1,254 @@
+{
+  "generated_at": "2026-04-19T13:21:22.130085",
+  "version": "3.103",
+  "script_hash": "504417168730",
+  "scan_hours": 72,
+  "retention_days": 14,
+  "activities": [
+    {
+      "activity_id": "i140880395",
+      "date": "2026-04-18",
+      "type": "VirtualRide",
+      "name": "IntervalCoach - Dlouh\u00e1 vytrvalost",
+      "interval_summary": [
+        "1x 71s 351w",
+        "1x 3m11s 388w",
+        "1x 14m5s 348w",
+        "1x 6m25s 381w",
+        "1x 11s 651w",
+        "1x 2m8s 305w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4898,
+          "avg_power": 155,
+          "max_power": 566,
+          "avg_hr": 109,
+          "max_hr": 141,
+          "avg_cadence": 76.20648,
+          "zone": 1,
+          "training_load": 37.73294,
+          "decoupling": 4.3628283
+        },
+        {
+          "type": "WORK",
+          "label": "71s@351w87rpm",
+          "duration_secs": 71,
+          "avg_power": 351,
+          "max_power": 450,
+          "avg_hr": 143,
+          "max_hr": 151,
+          "avg_cadence": 86.66197,
+          "zone": 5,
+          "training_load": 1.9368467,
+          "decoupling": -5.5182943
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1781,
+          "avg_power": 156,
+          "max_power": 398,
+          "avg_hr": 109,
+          "max_hr": 151,
+          "avg_cadence": 71.69592,
+          "zone": 1,
+          "training_load": 13.9577265,
+          "decoupling": -4.4335175
+        },
+        {
+          "type": "WORK",
+          "label": "191s@388w89rpm",
+          "duration_secs": 191,
+          "avg_power": 388,
+          "max_power": 487,
+          "avg_hr": 154,
+          "max_hr": 167,
+          "avg_cadence": 88.55498,
+          "zone": 5,
+          "training_load": 6.9818277,
+          "decoupling": 6.327642
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3729,
+          "avg_power": 142,
+          "max_power": 441,
+          "avg_hr": 112,
+          "max_hr": 167,
+          "avg_cadence": 61.48604,
+          "zone": 1,
+          "training_load": 30.02846,
+          "decoupling": -3.048479
+        },
+        {
+          "type": "WORK",
+          "label": "845s@348w88rpm",
+          "duration_secs": 845,
+          "avg_power": 348,
+          "max_power": 455,
+          "avg_hr": 162,
+          "max_hr": 174,
+          "avg_cadence": 87.831955,
+          "zone": 4,
+          "training_load": 25.782,
+          "decoupling": 5.3807144
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 6585,
+          "avg_power": 99,
+          "max_power": 702,
+          "avg_hr": 110,
+          "max_hr": 173,
+          "avg_cadence": 49.71735,
+          "zone": 1,
+          "training_load": 19.924223
+        },
+        {
+          "type": "WORK",
+          "label": "385s@381w78rpm",
+          "duration_secs": 385,
+          "avg_power": 381,
+          "max_power": 650,
+          "avg_hr": 161,
+          "max_hr": 170,
+          "avg_cadence": 77.64416,
+          "zone": 5,
+          "training_load": 13.999732,
+          "decoupling": 16.654377
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2286,
+          "avg_power": 109,
+          "max_power": 647,
+          "avg_hr": 119,
+          "max_hr": 170,
+          "avg_cadence": 52.8081,
+          "zone": 1,
+          "training_load": 13.293775,
+          "decoupling": -15.51084
+        },
+        {
+          "type": "WORK",
+          "label": "11s@651w82rpm",
+          "duration_secs": 11,
+          "avg_power": 651,
+          "max_power": 733,
+          "avg_hr": 132,
+          "max_hr": 139,
+          "avg_cadence": 82.27273,
+          "zone": 7,
+          "training_load": 0.31666577,
+          "decoupling": 9.985514
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2767,
+          "avg_power": 172,
+          "max_power": 639,
+          "avg_hr": 125,
+          "max_hr": 163,
+          "avg_cadence": 72.012886,
+          "zone": 1,
+          "training_load": 33.390656,
+          "decoupling": -3.6459088
+        },
+        {
+          "type": "WORK",
+          "label": "128s@305w84rpm",
+          "duration_secs": 128,
+          "avg_power": 305,
+          "max_power": 362,
+          "avg_hr": 148,
+          "max_hr": 152,
+          "avg_cadence": 83.640625,
+          "zone": 4,
+          "training_load": 2.9243739,
+          "decoupling": 1.9486122
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 185,
+          "avg_power": 157,
+          "max_power": 375,
+          "avg_hr": 128,
+          "max_hr": 151,
+          "avg_cadence": 70.75676,
+          "zone": 1,
+          "training_load": 1.8352149,
+          "decoupling": -46.401337
+        }
+      ]
+    },
+    {
+      "activity_id": "i140616819",
+      "date": "2026-04-17",
+      "type": "VirtualRide",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
+      "interval_summary": [
+        "1x 3m13s 269w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2303,
+          "avg_power": 193,
+          "max_power": 439,
+          "avg_hr": 126,
+          "max_hr": 150,
+          "avg_cadence": 83.213554,
+          "zone": 2,
+          "training_load": 26.355003,
+          "decoupling": 0.09123175
+        },
+        {
+          "type": "WORK",
+          "label": "193s@269w88rpm",
+          "duration_secs": 193,
+          "avg_power": 269,
+          "max_power": 329,
+          "avg_hr": 138,
+          "max_hr": 144,
+          "avg_cadence": 88.38342,
+          "zone": 3,
+          "training_load": 3.446584,
+          "decoupling": 4.0377727
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3869,
+          "avg_power": 202,
+          "max_power": 611,
+          "avg_hr": 127,
+          "max_hr": 147,
+          "avg_cadence": 80.01613,
+          "zone": 2,
+          "training_load": 32.498222
+        }
+      ]
+    },
+    {
+      "activity_id": "i140078291",
+      "date": "2026-04-15",
+      "type": "VirtualRide",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4907,
+          "avg_power": 213,
+          "max_power": 705,
+          "avg_hr": 122,
+          "max_hr": 138,
+          "avg_cadence": 86.243904,
+          "zone": 2,
+          "training_load": 62.349483,
+          "decoupling": 2.1398602
+        }
+      ]
+    }
+  ]
+}
