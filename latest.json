@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-19T20:33:04.575904",
+    "last_updated": "2026-04-19T21:19:02.414849",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -185,7 +185,7 @@
       "atl": 80.52,
       "tsb": -8.41,
       "ramp_rate": -3.22,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 327.1,
@@ -606,15 +606,14 @@
         }
       }
     },
-    "consistency_index": 0.67,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 3,
+      "planned_days": 2,
       "completed_days": 3,
       "matched_days": 2,
       "planned_dates": [
         "2026-04-17",
-        "2026-04-18",
-        "2026-04-19"
+        "2026-04-18"
       ],
       "completed_dates": [
         "2026-04-15",
@@ -636,14 +635,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.33,
-          "hard_sessions_planned": 1,
+          "planned_tss_delta": null,
+          "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 2,
+          "current_week_hard_days_total": 1,
           "race_proximity": 7,
-          "next_week_load": 0.89,
-          "plan_coverage_current_week": 0.2,
-          "plan_coverage_next_week": 1.4
+          "next_week_load": 0.66,
+          "plan_coverage_current_week": 0.0,
+          "plan_coverage_next_week": 1.2
         },
         "data_quality": "good",
         "stream_agreement": false
@@ -678,13 +677,13 @@
     "p_max": 1121,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-19T20:33:04.574732",
+    "calculation_timestamp": "2026-04-19T21:19:02.413639",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 3,
       "activities_28d": 18,
-      "planned_workouts_7d": 3,
+      "planned_workouts_7d": 2,
       "ftp_history_days": {
         "indoor": 0,
         "outdoor": 0
@@ -2173,7 +2172,7 @@
   "planned_workouts": [
     {
       "id": 105163171,
-      "date": "2026-04-19",
+      "date": "2026-04-20",
       "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -2192,8 +2191,8 @@
       "type": "WORKOUT",
       "sport_type": "Ride",
       "planned_tss": 61,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
       "description": "\ud83c\udfaf TymeWear Threshold Test\n\nJe\u010f podle protokolu v TymeWear aplikaci.\nTest zm\u011b\u0159\u00ed VT1, VT2, VO2max a BP.\n\nP\u0159\u00edprava:\n- Dob\u0159e odpo\u010dat\u00fd (v\u00edkend lehk\u00fd)\n- Kofein 30-40 min p\u0159ed\n- Za\u010dni s TymeWear od rozj\u00edzd\u011bn\u00ed\n- Nic j\u00edst 2h p\u0159ed testem\n\nPo testu: po\u0161li Claudovi v\u00fdsledky pro aktualizaci zon."
@@ -2236,32 +2235,6 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "Main Set 1x\n- 240m 55-70% intensity=warmup"
-    },
-    {
-      "id": 104977097,
-      "date": "2026-04-26",
-      "name": "Transfer dom\u016f \u2013 40km Z1/Z2",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 84,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "Main Set 1x\n- 120m 65% intensity=warmup"
-    },
-    {
-      "id": 104977819,
-      "date": "2026-04-26",
-      "name": "Transfer na start \u2013 40km Z1/Z2",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 84,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "Main Set 1x\n- 120m 65% intensity=warmup"
     },
     {
       "id": 104477346,
@@ -2698,12 +2671,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 31,
+    "attempted": 29,
     "success": 12,
     "patternA": 12,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 19
+    "bail_no_match": 17
   },
   "weekly_summary": {
     "total_training_hours": 8.16,
