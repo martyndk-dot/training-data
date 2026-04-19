@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-19T16:52:59.381361",
+    "last_updated": "2026-04-19T17:32:44.199837",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -139,8 +139,8 @@
       "unavailable": 0
     },
     "phase_context": {
-      "phase": "Taper",
-      "phase_week": 1,
+      "phase": "Build",
+      "phase_week": 4,
       "amber_threshold": 1,
       "modifier_applied": "race_week_tightened"
     },
@@ -623,11 +623,9 @@
       ]
     },
     "phase_detection": {
-      "phase": "Taper",
-      "confidence": "medium",
-      "reason_codes": [
-        "RACE_IMMINENT"
-      ],
+      "phase": "Build",
+      "confidence": "high",
+      "reason_codes": [],
       "basis": {
         "stream_1": {
           "ctl_slope": 5.15,
@@ -640,8 +638,8 @@
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 1,
           "current_week_hard_days_total": 2,
-          "race_proximity": 7,
-          "next_week_load": 0.69,
+          "race_proximity": 6,
+          "next_week_load": 0.64,
           "plan_coverage_current_week": 0.2,
           "plan_coverage_next_week": 1.4
         },
@@ -649,14 +647,12 @@
         "stream_agreement": false
       },
       "previous_phase": "Build",
-      "phase_duration_weeks": 1,
+      "phase_duration_weeks": 4,
       "dossier_declared": null,
       "dossier_agreement": null
     },
-    "phase_detected": "Taper",
-    "phase_triggers": [
-      "RACE_IMMINENT"
-    ],
+    "phase_detected": "Build",
+    "phase_triggers": [],
     "seasonal_context": "Late Base / Build",
     "benchmark_indoor": {
       "current_ftp": 340,
@@ -678,7 +674,7 @@
     "p_max": 1121,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-19T16:52:59.380153",
+    "calculation_timestamp": "2026-04-19T17:32:44.198655",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2213,7 +2209,7 @@
     },
     {
       "id": 104976017,
-      "date": "2026-04-24",
+      "date": "2026-04-23",
       "name": "Threshold 2\u00d715 min",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -2225,17 +2221,17 @@
       "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 15m 97% intensity=interval\n- 5m 55% intensity=recovery\n\nCooldown\n- 10m 55% intensity=cooldown"
     },
     {
-      "id": 104977197,
+      "id": 105276015,
       "date": "2026-04-25",
-      "name": "Rozjet\u00ed p\u0159ed \u010dasovkou",
-      "type": "WORKOUT",
+      "name": "Klubov\u00e1 vyj\u00ed\u017edka",
+      "type": "RACE_C",
       "sport_type": "Ride",
-      "planned_tss": 30,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": "20m @187W | 3\u00d71m @374W / 4m rec | 10m @170W",
+      "planned_tss": null,
+      "duration_hours": 4.0,
+      "duration_formatted": "4h",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 20m 55% intensity=warmup\n\nMain Set 3x\n- 1m 110% intensity=interval\n- 4m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": ""
     },
     {
       "id": 104977097,
@@ -2698,9 +2694,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 31,
-    "success": 13,
-    "patternA": 13,
+    "attempted": 30,
+    "success": 12,
+    "patternA": 12,
     "patternB": 0,
     "bail_no_workout_doc": 0,
     "bail_no_match": 18
@@ -2715,17 +2711,26 @@
   },
   "race_calendar": {
     "next_race": {
-      "name": "\u010casovka Poho\u0159\u00ed",
-      "date": "2026-04-26",
-      "category": "RACE_B",
+      "name": "Klubov\u00e1 vyj\u00ed\u017edka",
+      "date": "2026-04-25",
+      "category": "RACE_C",
       "type": "Ride",
-      "days_until": 7,
-      "moving_time_seconds": 900,
-      "distance_meters": 10000.0,
-      "has_terrain": false,
-      "start_time": "10:00"
+      "days_until": 6,
+      "moving_time_seconds": 14400,
+      "distance_meters": 100000.0,
+      "has_terrain": false
     },
     "all_races": [
+      {
+        "name": "Klubov\u00e1 vyj\u00ed\u017edka",
+        "date": "2026-04-25",
+        "category": "RACE_C",
+        "type": "Ride",
+        "days_until": 6,
+        "moving_time_seconds": 14400,
+        "distance_meters": 100000.0,
+        "has_terrain": false
+      },
       {
         "name": "\u010casovka Poho\u0159\u00ed",
         "date": "2026-04-26",
