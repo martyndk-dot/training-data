@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-19T13:47:27.981759",
+    "last_updated": "2026-04-19T13:55:45.974894",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -553,7 +553,58 @@
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
       },
-      "dfa_a1_profile": null
+      "dfa_a1_profile": {
+        "latest_session": {
+          "activity_id": "i138930463",
+          "date": "2026-04-11",
+          "name": "Mallorca Day 7: The Queen Stage Finale",
+          "sport": "VirtualRide",
+          "validated": true,
+          "avg": 1.052,
+          "tiz_split_pct": {
+            "below_lt1": 52.4,
+            "lt1_transition": 13.4,
+            "transition_lt2": 14.8,
+            "above_lt2": 19.5
+          },
+          "drift_delta": -0.358,
+          "drift_interpretable": false,
+          "quality_pct": 95.8,
+          "sufficient": true
+        },
+        "trailing_by_sport": {
+          "cycling": {
+            "n_sessions": 7,
+            "date_range": [
+              "2026-04-05",
+              "2026-04-11"
+            ],
+            "avg_dfa_a1": 1.31,
+            "drift_delta_mean": -0.053,
+            "lt1_crossing_sessions": 7,
+            "lt2_crossing_sessions": 5,
+            "lt1_estimate": {
+              "hr": 131,
+              "watts_outdoor": 204,
+              "watts_indoor": 241,
+              "n_sessions": 7,
+              "n_sessions_outdoor": 6,
+              "n_sessions_indoor": 1
+            },
+            "lt2_estimate": {
+              "hr": 155,
+              "watts_outdoor": 277,
+              "watts_indoor": 276,
+              "n_sessions": 5,
+              "n_sessions_outdoor": 4,
+              "n_sessions_indoor": 1
+            },
+            "quality_avg_pct": 94.8,
+            "validated": true,
+            "confidence": "high"
+          }
+        }
+      }
     },
     "consistency_index": 0.67,
     "consistency_details": {
@@ -627,7 +678,7 @@
     "p_max": 1121,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-19T13:47:27.980590",
+    "calculation_timestamp": "2026-04-19T13:55:45.973729",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -877,8 +928,26 @@
           "z7_time": 32
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.052,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 52.4,
+          "lt1_transition": 13.4,
+          "transition_lt2": 14.8,
+          "above_lt2": 19.5
+        },
+        "valid_pct": 95.8,
+        "sufficient": true,
+        "drift_delta": -0.358,
+        "drift_interpretable": false,
+        "lt1_watts": 241,
+        "lt1_hr": 139,
+        "lt2_watts": 276,
+        "lt2_hr": 148
+      },
       "description": "CoachWatts Workout Analysis\n\nTato kr\u00e1lovsk\u00e1 etapa na Mallorce byla n\u00e1ro\u010dnou zkou\u0161kou vytrvalosti, kterou jste i p\u0159es pocity nastupuj\u00edc\u00ed nemoci dokon\u010dil s vysokou intenzitou. A\u010dkoliv byla celkov\u00e1 intenzita oproti pl\u00e1nu sn\u00ed\u017eena, poda\u0159ilo se v\u00e1m udr\u017eet solidn\u00ed normalizovan\u00fd v\u00fdkon 265 W po dobu v\u00edce ne\u017e \u010dty\u0159 hodin.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -937,8 +1006,24 @@
           "z7_time": 76
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.42,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 90.7,
+          "lt1_transition": 6.7,
+          "transition_lt2": 2.6,
+          "above_lt2": 0.0
+        },
+        "valid_pct": 97.7,
+        "sufficient": true,
+        "drift_delta": 0.191,
+        "drift_interpretable": true,
+        "lt1_watts": 174,
+        "lt1_hr": 122
+      },
       "description": "CoachWatts Workout Analysis\n\nTento tr\u00e9nink po dni odpo\u010dinku vykazuje solidn\u00ed n\u00e1vrat k aktivit\u011b s dobrou kontrolou tepov\u00e9 frekvence v z\u00f3n\u011b Z1/Z2. I p\u0159es m\u00edrn\u00e9 nedosa\u017een\u00ed c\u00edlov\u00e9ho v\u00fdkonu a d\u00e9lky trv\u00e1n\u00ed byla intenzita vzhledem k hl\u00e1\u0161en\u00e9 \u00fanav\u011b zvolena adekv\u00e1tn\u011b.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -997,8 +1082,26 @@
           "z7_time": 8
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.351,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 80.6,
+          "lt1_transition": 6.3,
+          "transition_lt2": 6.9,
+          "above_lt2": 6.2
+        },
+        "valid_pct": 95.0,
+        "sufficient": true,
+        "drift_delta": 0.187,
+        "drift_interpretable": true,
+        "lt1_watts": 203,
+        "lt1_hr": 122,
+        "lt2_watts": 279,
+        "lt2_hr": 153
+      },
       "description": "CoachWatts Workout Analysis\n\nP\u00e1t\u00fd den na Mallorce byl odjet v ni\u017e\u0161\u00ed intenzit\u011b, ne\u017e bylo pl\u00e1nov\u00e1no, co\u017e je vzhledem k hl\u00e1\u0161en\u00e9 \u00fanav\u011b a symptom\u016fm za\u010d\u00ednaj\u00edc\u00ed nemoci velmi rozumn\u00e9 rozhodnut\u00ed. P\u0159esto\u017ee byl v\u00fdkon pod c\u00edlov\u00fdmi z\u00f3nami, stabiln\u00ed srde\u010dn\u00ed tep a technick\u00e1 konzistence nazna\u010duj\u00ed dobrou kontrolu nad aktu\u00e1ln\u00edm fyzick\u00fdm stavem.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -1057,8 +1160,26 @@
           "z7_time": 45
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.322,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 75.9,
+          "lt1_transition": 8.2,
+          "transition_lt2": 9.0,
+          "above_lt2": 6.9
+        },
+        "valid_pct": 92.5,
+        "sufficient": true,
+        "drift_delta": -0.236,
+        "drift_interpretable": true,
+        "lt1_watts": 212,
+        "lt1_hr": 139,
+        "lt2_watts": 278,
+        "lt2_hr": 159
+      },
       "description": "CoachWatts Workout Analysis\n\nTato horsk\u00e1 vytrvalostn\u00ed j\u00edzda vykazuje vysokou m\u00edru shody s pl\u00e1novan\u00fdm tr\u00e9ninkov\u00fdm zat\u00ed\u017een\u00edm (TSS 216 vs 206) navzdory p\u0159\u00edznak\u016fm za\u010d\u00ednaj\u00edc\u00ed nemoci. I p\u0159es ni\u017e\u0161\u00ed pr\u016fm\u011brn\u00fd v\u00fdkon v intervalech byla intenzita (IF 0.70) p\u0159esn\u011b podle pl\u00e1nu, co\u017e zna\u010d\u00ed dobrou discipl\u00ednu v kopcovit\u00e9m ter\u00e9nu.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -1117,8 +1238,24 @@
           "z7_time": 58
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.397,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 84.1,
+          "lt1_transition": 7.2,
+          "transition_lt2": 7.4,
+          "above_lt2": 1.4
+        },
+        "valid_pct": 93.5,
+        "sufficient": true,
+        "drift_delta": -0.323,
+        "drift_interpretable": true,
+        "lt1_watts": 212,
+        "lt1_hr": 132
+      },
       "description": "CoachWatts Workout Analysis\n\nTato regenera\u010dn\u00ed vyj\u00ed\u017e\u010fka splnila sv\u016fj hlavn\u00ed \u00fa\u010del uvoln\u011bn\u00ed nohou po n\u00e1ro\u010dn\u00fdch dnech, i p\u0159es m\u00edrn\u00e9 p\u0159ekro\u010den\u00ed intenzity. Vzhledem k hl\u00e1\u0161en\u00e9 \u00fanav\u011b a za\u010d\u00ednaj\u00edc\u00ed r\u00fdm\u011b oce\u0148uji udr\u017een\u00ed n\u00edzk\u00e9 tepov\u00e9 frekvence a stabiln\u00ed techniku.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -1177,8 +1314,26 @@
           "z7_time": 25
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.268,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 76.0,
+          "lt1_transition": 6.1,
+          "transition_lt2": 3.9,
+          "above_lt2": 14.1
+        },
+        "valid_pct": 96.1,
+        "sufficient": true,
+        "drift_delta": -0.133,
+        "drift_interpretable": true,
+        "lt1_watts": 211,
+        "lt1_hr": 132,
+        "lt2_watts": 282,
+        "lt2_hr": 156
+      },
       "description": "CoachWatts Workout Analysis\n\nTato horsk\u00e1 etapa na Mallorce byla dokon\u010dena s vysokou m\u00edrou shody s pl\u00e1nem, a to i p\u0159es subjektivn\u011b poci\u0165ovanou \u00fanavu a nastupuj\u00edc\u00ed vir\u00f3zu. Celkov\u00e1 intenzita 69,7 % FTP p\u0159esn\u011b odpov\u00eddala rehabilita\u010dn\u011b-vytrvalostn\u00edmu charakteru tr\u00e9ninkov\u00e9ho bloku p\u0159i zachov\u00e1n\u00ed velmi solidn\u00ed efektivity.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
@@ -1237,8 +1392,26 @@
           "z7_time": 30
         }
       },
-      "has_intervals": false,
-      "has_dfa": false,
+      "has_intervals": true,
+      "has_dfa": true,
+      "dfa_summary": {
+        "avg": 1.359,
+        "dominant_band": "below_lt1",
+        "tiz_pct": {
+          "below_lt1": 81.5,
+          "lt1_transition": 11.4,
+          "transition_lt2": 2.5,
+          "above_lt2": 4.6
+        },
+        "valid_pct": 92.9,
+        "sufficient": true,
+        "drift_delta": -0.002,
+        "drift_interpretable": true,
+        "lt1_watts": 211,
+        "lt1_hr": 133,
+        "lt2_watts": 268,
+        "lt2_hr": 161
+      },
       "description": "CoachWatts Workout Analysis\n\nTato 101km j\u00edzda na Mallorce byla z hlediska celkov\u00e9 z\u00e1t\u011b\u017ee (TSS 163 vs 153) spln\u011bna velmi dob\u0159e, i p\u0159es d\u0159\u00edv\u011bj\u0161\u00ed p\u0159\u00edznaky \u00fanavy a vir\u00f3zy. P\u0159esto\u017ee intenzita byla z\u00e1m\u011brn\u011b sn\u00ed\u017eena, poda\u0159ilo se udr\u017eet solidn\u00ed vytrvalostn\u00ed z\u00e1klad v n\u00e1ro\u010dn\u00e9m pob\u0159e\u017en\u00edm ter\u00e9nu.\n\n\ud83d\udd17 https://CoachWatts.com - AI Endurance Coaching"
     },
     {
