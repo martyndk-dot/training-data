@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T16:21:46.876196",
+  "generated_at": "2026-04-20T17:34:44.688907",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2006,6 +2006,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i141498475",
+      "date": "2026-04-20",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Aktivn\u00ed regenerace Z1",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2306,
+          "avg_power": 158,
+          "max_power": 250,
+          "avg_hr": 108,
+          "max_hr": 116,
+          "avg_cadence": 87.804855,
+          "zone": 1,
+          "training_load": 15.628026,
+          "decoupling": -0.7329653
+        }
+      ]
     }
   ]
 }
