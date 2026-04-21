@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-21T11:46:14.018220",
+    "last_updated": "2026-04-21T13:16:13.823417",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -235,7 +235,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 1377,
+      "steps": 1674,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -629,14 +629,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.76,
-          "hard_sessions_planned": 3,
+          "planned_tss_delta": 0.54,
+          "hard_sessions_planned": 4,
           "current_week_hard_days_completed": 0,
-          "current_week_hard_days_total": 3,
+          "current_week_hard_days_total": 4,
           "race_proximity": 5,
-          "next_week_load": 0.36,
+          "next_week_load": 0.29,
           "plan_coverage_current_week": 1.25,
-          "plan_coverage_next_week": 1.5
+          "plan_coverage_next_week": 1.0
         },
         "data_quality": "good",
         "stream_agreement": false
@@ -671,7 +671,7 @@
     "p_max": 1119,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-21T11:46:14.016979",
+    "calculation_timestamp": "2026-04-21T13:16:13.822294",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2115,7 +2115,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 1377,
+      "steps": 1674,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2141,30 +2141,32 @@
       "description": "\ud83c\udfaf TymeWear Threshold Test\n\nJe\u010f podle protokolu v TymeWear aplikaci.\nTest zm\u011b\u0159\u00ed VT1, VT2, VO2max a BP.\n\nP\u0159\u00edprava:\n- Dob\u0159e odpo\u010dat\u00fd (v\u00edkend lehk\u00fd)\n- Kofein 30-40 min p\u0159ed\n- Za\u010dni s TymeWear od rozj\u00edzd\u011bn\u00ed\n- Nic j\u00edst 2h p\u0159ed testem\n\nPo testu: po\u0161li Claudovi v\u00fdsledky pro aktualizaci zon."
     },
     {
-      "id": 104976016,
+      "id": 105729350,
       "date": "2026-04-22",
-      "name": "Z2 Vytrvalost",
+      "name": "IntervalCoach - Kr\u00e1tk\u00e9 sprinty",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 84,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
+      "planned_tss": 28,
+      "duration_hours": 0.58,
+      "duration_formatted": "35m",
+      "workout_summary": "5m @198W | 16m @230W | 3\u00d730s @349W / 2m rec | 15s @495W | 2m @181W | 15s @495W | 4m @181W",
       "has_terrain": false,
-      "description": "Main Set 1x\n- 120m 65% intensity=warmup"
+      "start_time": "09:00",
+      "description": "Warmup\n- Ahoj Martine, \u010dek\u00e1 t\u011b z\u00e1vodn\u00ed t\u00fdden! 5m ramp 45-75% 85rpm\n\nMain Set\n- Easy 16m 65-75% 85rpm\n\n3x\n- Opener 30s 106% 100rpm\n- Recovery 2m 55% 80rpm\n\n- Sprint 1 15s 150% 110rpm\n- Recovery 2m 55% 80rpm\n- Sprint 2 15s 150% 110rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si dojezd 4m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
     },
     {
-      "id": 104976017,
-      "date": "2026-04-23",
-      "name": "Threshold 2\u00d715 min",
+      "id": 105729351,
+      "date": "2026-04-24",
+      "name": "IntervalCoach - Lehk\u00fd rozjezd",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 73,
-      "duration_hours": 1.08,
-      "duration_formatted": "1h5m",
-      "workout_summary": "15m @181W | 2\u00d715m @320W / 5m rec | 10m @181W",
+      "planned_tss": 23,
+      "duration_hours": 0.9,
+      "duration_formatted": "54m",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 15m 97% intensity=interval\n- 5m 55% intensity=recovery\n\nCooldown\n- 10m 55% intensity=cooldown"
+      "start_time": "09:00",
+      "description": "Warmup\n- Ahoj Martine! Dneska lehk\u00fd rozjezd. 8m ramp 45-55% 85rpm\n\nMain Set\n- Easy Spin 21m 45-50% 85rpm\n- Loosen Up 20m 50-55% 90rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si dojezd. 5m ramp 55-45% 85rpm\n\n[Weekly Plan - Race Week]"
     },
     {
       "id": 105282875,
@@ -2194,41 +2196,18 @@
       "description": ""
     },
     {
-      "id": 104976021,
+      "id": 105729371,
       "date": "2026-04-28",
-      "name": "Sweet Spot 3\u00d715 min",
+      "name": "IntervalCoach - Regenera\u010dn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 88,
-      "duration_hours": 1.42,
-      "duration_formatted": "1h25m",
-      "workout_summary": "15m @181W | 3\u00d715m @297W / 5m rec | 10m @181W",
+      "planned_tss": 13,
+      "duration_hours": 0.5,
+      "duration_formatted": "30m",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 15m 90% intensity=interval\n- 5m 55% intensity=recovery\n\nCooldown\n- 10m 55% intensity=cooldown"
-    },
-    {
-      "id": 104976022,
-      "date": "2026-04-29",
-      "name": "Z2 + n\u00e1jezdy do kopce",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 76,
-      "duration_hours": 1.33,
-      "duration_formatted": "1h20m",
-      "workout_summary": "20m @198W | 5\u00d73m @346W / 5m rec | 20m @198W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976207,
-      "date": "2026-04-30",
-      "name": "Rozjet\u00ed p\u0159ed Kr\u00e1l Zvi\u010diny",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 30,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": "20m @181W | 3\u00d71m @363W / 4m rec | 10m @165W",
-      "has_terrain": false
+      "start_time": "09:00",
+      "description": "Warmup\n- Ahoj Martine, dnes lehk\u00e1 regenerace 5m ramp 45-55% 85rpm\n\nMain Set\n- Recovery 22m 45-55% 85rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si dojezd 3m ramp 55-45% 85rpm\n\n[Weekly Plan - Race Week]"
     },
     {
       "id": 104665412,
@@ -2244,17 +2223,17 @@
       "description_preview": null
     },
     {
-      "id": 104976208,
+      "id": 105729216,
       "date": "2026-05-02",
-      "name": "Rozjet\u00ed p\u0159ed DP Gravel",
+      "name": "Klubov\u00fd \u0161vih 100km Z1-Z2",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 15,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "planned_tss": 156,
+      "duration_hours": 4.0,
+      "duration_formatted": "4h",
       "workout_summary": null,
       "has_terrain": false,
-      "description_preview": "Main Set 1x\n- 30m 55% intensity=warmup"
+      "description_preview": "Main Set 1x\n- 240m 55-70% intensity=warmup"
     },
     {
       "id": 89251690,
@@ -2628,12 +2607,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 29,
-    "success": 12,
-    "patternA": 12,
+    "attempted": 27,
+    "success": 9,
+    "patternA": 9,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 17
+    "bail_no_match": 18
   },
   "weekly_summary": {
     "total_training_hours": 8.8,
