@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-21T21:41:30.786775",
+    "last_updated": "2026-04-21T22:25:48.813391",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -235,7 +235,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 2229,
+      "steps": 3281,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -630,13 +630,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.54,
-          "hard_sessions_planned": 4,
+          "planned_tss_delta": 0.74,
+          "hard_sessions_planned": 5,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 5,
+          "current_week_hard_days_total": 6,
           "race_proximity": 5,
           "next_week_load": 0.29,
-          "plan_coverage_current_week": 1.25,
+          "plan_coverage_current_week": 1.5,
           "plan_coverage_next_week": 1.0
         },
         "data_quality": "good",
@@ -672,7 +672,7 @@
     "p_max": 1119,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-21T21:41:30.785643",
+    "calculation_timestamp": "2026-04-21T22:25:48.812272",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2176,7 +2176,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 2229,
+      "steps": 3281,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2200,6 +2200,19 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "\ud83c\udfaf TymeWear Threshold Test\n\nJe\u010f podle protokolu v TymeWear aplikaci.\nTest zm\u011b\u0159\u00ed VT1, VT2, VO2max a BP.\n\nP\u0159\u00edprava:\n- Dob\u0159e odpo\u010dat\u00fd (v\u00edkend lehk\u00fd)\n- Kofein 30-40 min p\u0159ed\n- Za\u010dni s TymeWear od rozj\u00edzd\u011bn\u00ed\n- Nic j\u00edst 2h p\u0159ed testem\n\nPo testu: po\u0161li Claudovi v\u00fdsledky pro aktualizaci zon."
+    },
+    {
+      "id": 105814206,
+      "date": "2026-04-22",
+      "name": "Base Intervals",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 97,
+      "duration_hours": 2.25,
+      "duration_formatted": "2h15m",
+      "workout_summary": "10m | 5\u00d720m @234W / 3m rec | 10m",
+      "has_terrain": false,
+      "description": "Warmup\n- 10m freeride\n\n5x\n- 20m 227-240W\n- 3m 91-170W\n\nCooldown\n- 10m freeride"
     },
     {
       "id": 105729350,
@@ -2668,9 +2681,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 27,
-    "success": 9,
-    "patternA": 9,
+    "attempted": 28,
+    "success": 10,
+    "patternA": 10,
     "patternB": 0,
     "bail_no_workout_doc": 0,
     "bail_no_match": 18
