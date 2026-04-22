@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T23:51:03.028486",
+  "generated_at": "2026-04-22T02:06:56.278518",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -1603,80 +1603,6 @@
           "total_secs": 15953,
           "valid_pct": 92.5,
           "artifact_rate_avg": 1.01,
-          "sufficient": true
-        }
-      }
-    },
-    {
-      "activity_id": "i137845632",
-      "date": "2026-04-07",
-      "type": "Ride",
-      "name": "Mallorca Day 3: 63km Coffee Ride",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 12890,
-          "avg_power": 158,
-          "max_power": 843,
-          "avg_hr": 114,
-          "max_hr": 169,
-          "avg_cadence": 72.03808,
-          "zone": 1,
-          "training_load": 88.51121,
-          "avg_dfa_a1": 1.3846916
-        }
-      ],
-      "dfa": {
-        "avg": 1.397,
-        "p25": 1.241,
-        "p50": 1.531,
-        "p75": 1.647,
-        "tiz_below_lt1": {
-          "secs": 6418,
-          "pct": 84.1,
-          "avg_hr": 110,
-          "avg_watts": 147
-        },
-        "tiz_lt1_transition": {
-          "secs": 547,
-          "pct": 7.2,
-          "avg_hr": 135,
-          "avg_watts": 223
-        },
-        "tiz_transition_lt2": {
-          "secs": 563,
-          "pct": 7.4,
-          "avg_hr": 149,
-          "avg_watts": 254
-        },
-        "tiz_above_lt2": {
-          "secs": 107,
-          "pct": 1.4,
-          "avg_hr": 164,
-          "avg_watts": 301
-        },
-        "drift": {
-          "first_third_avg": 1.529,
-          "last_third_avg": 1.206,
-          "delta": -0.323,
-          "interpretable": true
-        },
-        "lt1_crossing": {
-          "secs_in_band": 245,
-          "avg_hr": 132,
-          "avg_watts": 212
-        },
-        "lt2_crossing": {
-          "secs_in_band": 50,
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "quality": {
-          "valid_secs": 7635,
-          "total_secs": 8167,
-          "valid_pct": 93.5,
-          "artifact_rate_avg": 1.26,
           "sufficient": true
         }
       }
