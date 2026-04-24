@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-24T15:37:11.411573",
+    "last_updated": "2026-04-24T16:38:50.824089",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -666,7 +666,7 @@
     "p_max": 1116,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-24T15:37:11.410317",
+    "calculation_timestamp": "2026-04-24T16:38:50.822879",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2109,7 +2109,7 @@
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "10:00",
-      "description": ""
+      "description": "Main Set 1x\n- Start 1m 108% 95rpm intensity=interval\n\nMain Set 1x\n- Settle 2m 103% 95rpm intensity=interval\n\nMain Set 1x\n- Kopec 2m 100-105% 88rpm intensity=interval\n\nMain Set 1x\n- Post-kopec 2m 100-103% 95rpm intensity=interval\n\nMain Set 1x\n- Middle 3m 100-105% 94rpm intensity=interval\n\nMain Set 1x\n- Push 3m 103-106% 93rpm intensity=interval\n\nMain Set 1x\n- Finish 2m 120% 100rpm intensity=interval"
     },
     {
       "id": 105729371,
@@ -2578,7 +2578,7 @@
     "success": 10,
     "patternA": 10,
     "patternB": 0,
-    "bail_no_workout_doc": 0,
+    "bail_no_workout_doc": 1,
     "bail_no_match": 18
   },
   "weekly_summary": {
