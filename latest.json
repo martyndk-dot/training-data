@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-25T14:12:24.785519",
+    "last_updated": "2026-04-25T15:01:05.781783",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -129,7 +129,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": -7.2
+        "value": -4.2
       }
     },
     "signal_summary": {
@@ -172,10 +172,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 71.34,
-      "atl": 78.53,
-      "tsb": -7.19,
-      "ramp_rate": -2.51,
+      "ctl": 70.7,
+      "atl": 74.94,
+      "tsb": -4.24,
+      "ramp_rate": -3.14,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -235,7 +235,7 @@
       "respiration": 14.5,
       "body_fat_pct": 23.8,
       "abdomen_cm": null,
-      "steps": 74,
+      "steps": 156,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -583,16 +583,15 @@
         }
       }
     },
-    "consistency_index": 0.75,
+    "consistency_index": 0.67,
     "consistency_details": {
-      "planned_days": 4,
+      "planned_days": 3,
       "completed_days": 4,
-      "matched_days": 3,
+      "matched_days": 2,
       "planned_dates": [
         "2026-04-20",
         "2026-04-21",
-        "2026-04-24",
-        "2026-04-25"
+        "2026-04-24"
       ],
       "completed_dates": [
         "2026-04-20",
@@ -615,13 +614,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.16,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": null,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 3,
-          "current_week_hard_days_total": 5,
+          "current_week_hard_days_total": 4,
           "race_proximity": 1,
           "next_week_load": 0.33,
-          "plan_coverage_current_week": 0.5,
+          "plan_coverage_current_week": 0.25,
           "plan_coverage_next_week": 1.25
         },
         "data_quality": "good",
@@ -657,13 +656,13 @@
     "p_max": 1115,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-04-25T14:12:24.784390",
+    "calculation_timestamp": "2026-04-25T15:01:05.780651",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 4,
       "activities_28d": 17,
-      "planned_workouts_7d": 4,
+      "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 6,
         "outdoor": 6
@@ -1934,7 +1933,7 @@
       "respiration": 13.25,
       "body_fat_pct": 23.1,
       "abdomen_cm": null,
-      "steps": 4094,
+      "steps": 2577,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -1973,7 +1972,7 @@
       "respiration": 14.5,
       "body_fat_pct": 23.8,
       "abdomen_cm": null,
-      "steps": 74,
+      "steps": 156,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -1985,20 +1984,6 @@
     }
   ],
   "planned_workouts": [
-    {
-      "id": 106358224,
-      "date": "2026-04-25",
-      "name": "IntervalCoach - Otv\u00edr\u00e1ky",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 27,
-      "duration_hours": 0.63,
-      "duration_formatted": "38m",
-      "workout_summary": "6m @198W | 18m @230W | 3\u00d730s @244W / 2m rec | 15s @346W | 2m @181W | 15s @346W | 4m @181W",
-      "has_terrain": false,
-      "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine, dneska n\u00e1s \u010dekaj\u00ed otv\u00edr\u00e1ky! 6m ramp 45-75% 85rpm\n\nMain Set\n- Easy 18m 65-75% 85rpm\n\n3x\n- Opener 30s 74% 100rpm\n- Recovery 2m 55% 80rpm\n\n- Sprint 1 15s 105% 110rpm\n- Recovery 2m 55% 80rpm\n- Sprint 2 15s 105% 110rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si zklidn\u011bn\u00ed 4m ramp 65-45% 85rpm"
-    },
     {
       "id": 104477346,
       "date": "2026-04-26",
@@ -2489,9 +2474,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 27,
-    "success": 11,
-    "patternA": 11,
+    "attempted": 26,
+    "success": 10,
+    "patternA": 10,
     "patternB": 0,
     "bail_no_workout_doc": 1,
     "bail_no_match": 16
@@ -2713,18 +2698,18 @@
       "event_moving_time_seconds": 900,
       "days_until_event": 1,
       "current_day": "D-1",
-      "ctl_baseline": 71.3,
-      "normal_weekly_tss": 499.4,
+      "ctl_baseline": 70.7,
+      "normal_weekly_tss": 494.9,
       "race_week_tss_budget": {
-        "min": 250,
-        "max": 325
+        "min": 247,
+        "max": 322
       },
       "race_week_tss_spent": 359,
       "race_week_tss_remaining": {
         "min": 0,
         "max": 0
       },
-      "projected_race_day_tsb": 1.6,
+      "projected_race_day_tsb": 4.1,
       "tsb_target_range": {
         "min": 0,
         "max": 10
