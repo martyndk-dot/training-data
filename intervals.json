@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-26T09:14:17.937924",
+  "generated_at": "2026-04-26T10:08:24.667062",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -808,6 +808,146 @@
           "zone": 1,
           "training_load": 1.9429395,
           "decoupling": -2.1237211
+        }
+      ]
+    },
+    {
+      "activity_id": "i143041425",
+      "date": "2026-04-26",
+      "type": "VirtualRide",
+      "name": "Poho\u0159\u00ed SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1765,
+          "avg_power": 84,
+          "max_power": 206,
+          "avg_hr": 109,
+          "max_hr": 141,
+          "avg_cadence": 70.42821,
+          "zone": 1,
+          "training_load": 2.5691664,
+          "decoupling": -13.948057
+        }
+      ]
+    },
+    {
+      "activity_id": "i143041356",
+      "date": "2026-04-26",
+      "type": "VirtualRide",
+      "name": "Poho\u0159\u00ed SILNI\u010cN\u00cd",
+      "interval_summary": [
+        "2x 3m8s 345w",
+        "1x 3m38s 330w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 105,
+          "avg_power": 443,
+          "max_power": 933,
+          "avg_hr": 130,
+          "max_hr": 144,
+          "avg_cadence": 86.51852,
+          "zone": 6,
+          "training_load": 0.5362973
+        },
+        {
+          "type": "WORK",
+          "label": "188s@345w99rpm",
+          "duration_secs": 191,
+          "avg_power": 349,
+          "max_power": 465,
+          "avg_hr": 160,
+          "max_hr": 166,
+          "avg_cadence": 99.18324,
+          "zone": 5,
+          "training_load": 6.2790203,
+          "decoupling": 5.195267
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 89,
+          "avg_power": 331,
+          "max_power": 681,
+          "avg_hr": 166,
+          "max_hr": 168,
+          "avg_cadence": 97.58427,
+          "zone": 4,
+          "training_load": 2.7177646,
+          "decoupling": 16.105928
+        },
+        {
+          "type": "WORK",
+          "label": "218s@330w98rpm",
+          "duration_secs": 218,
+          "avg_power": 330,
+          "max_power": 501,
+          "avg_hr": 167,
+          "max_hr": 169,
+          "avg_cadence": 98.288994,
+          "zone": 4,
+          "training_load": 6.018911,
+          "decoupling": 4.7795105
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 62,
+          "avg_power": 296,
+          "max_power": 686,
+          "avg_hr": 165,
+          "max_hr": 169,
+          "avg_cadence": 83.258064,
+          "zone": 3,
+          "training_load": 1.3392057,
+          "decoupling": -44.98045
+        },
+        {
+          "type": "WORK",
+          "label": "188s@345w99rpm",
+          "duration_secs": 184,
+          "avg_power": 340,
+          "max_power": 453,
+          "avg_hr": 170,
+          "max_hr": 173,
+          "avg_cadence": 98.50543,
+          "zone": 4,
+          "training_load": 5.5539804,
+          "decoupling": 3.184544
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 95,
+          "avg_power": 387,
+          "max_power": 640,
+          "avg_hr": 174,
+          "max_hr": 178,
+          "avg_cadence": 94.46316,
+          "zone": 5,
+          "training_load": 3.704646,
+          "decoupling": 0.89764047
+        }
+      ]
+    },
+    {
+      "activity_id": "i143041251",
+      "date": "2026-04-26",
+      "type": "VirtualRide",
+      "name": "\u010casovka Poho\u0159\u00ed",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1371,
+          "avg_power": 172,
+          "max_power": 800,
+          "avg_hr": 120,
+          "max_hr": 145,
+          "avg_cadence": 78.16214,
+          "zone": 1,
+          "training_load": 13.139284,
+          "decoupling": -12.196868
         }
       ]
     }
