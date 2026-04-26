@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-26T11:02:35.584068",
+    "last_updated": "2026-04-26T11:55:11.021511",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -253,7 +253,7 @@
       "respiration": null,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 357,
+      "steps": 1217,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -601,7 +601,7 @@
           "current_week_hard_days_completed": 4,
           "current_week_hard_days_total": 5,
           "race_proximity": 0,
-          "next_week_load": 0.33,
+          "next_week_load": 0.4,
           "plan_coverage_current_week": 0.25,
           "plan_coverage_next_week": 1.25
         },
@@ -638,7 +638,7 @@
     "p_max": 1114,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-04-26T11:02:35.583206",
+    "calculation_timestamp": "2026-04-26T11:55:11.020258",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2056,7 +2056,7 @@
       "respiration": null,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 357,
+      "steps": 1217,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2099,16 +2099,16 @@
     {
       "id": 105856650,
       "date": "2026-04-29",
-      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
+      "name": "Sprint Activace pro Kr. Zvi\u010diny",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 23,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
+      "planned_tss": 64,
+      "duration_hours": 1.35,
+      "duration_formatted": "1h21m",
+      "workout_summary": "10m @198W | 8\u00d710s @660W / 3m50s rec | 6\u00d730s @495W / 3m30s rec | 10m @173W",
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine! \u010cek\u00e1 t\u011b vytrvalostn\u00ed j\u00edzda. 5m ramp 45-75% 85rpm\n\nMain Set\n- Endurance 22m 65-75% 85rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine, u\u017eij si zklidn\u011bn\u00ed. 3m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
+      "description": "Warmup\n- 10m ramp 50%-70% intensity=warmup\n\nMain Set 8x\n- 10s 200% 100rpm\n- 3m50s 50%\n\nMain Set 1x\n- 5m 55% intensity=interval\n\nMain Set 6x\n- 30s 150% 95rpm\n- 3m30s 50%\n\nCooldown\n- 10m ramp 60%-45% intensity=cooldown"
     },
     {
       "id": 104665412,
@@ -2559,11 +2559,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 26,
-    "success": 10,
-    "patternA": 10,
+    "success": 11,
+    "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 16
+    "bail_no_match": 15
   },
   "weekly_summary": {
     "total_training_hours": 8.48,
