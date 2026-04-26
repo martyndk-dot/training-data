@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-26T15:56:56.824304",
+    "last_updated": "2026-04-26T16:42:55.996544",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -611,9 +611,9 @@
           "current_week_hard_days_completed": 4,
           "current_week_hard_days_total": 5,
           "race_proximity": 0,
-          "next_week_load": 0.4,
+          "next_week_load": 0.58,
           "plan_coverage_current_week": 0.25,
-          "plan_coverage_next_week": 1.25
+          "plan_coverage_next_week": 1.5
         },
         "data_quality": "good",
         "stream_agreement": false
@@ -648,7 +648,7 @@
     "p_max": 1114,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-04-26T15:56:56.823031",
+    "calculation_timestamp": "2026-04-26T16:42:55.995317",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2093,22 +2093,22 @@
       "description": "Main Set 1x\n- Start 1m 108% 95rpm intensity=interval\n\nMain Set 1x\n- Settle 2m 103% 95rpm intensity=interval\n\nMain Set 1x\n- Kopec 2m 100-105% 88rpm intensity=interval\n\nMain Set 1x\n- Post-kopec 2m 100-103% 95rpm intensity=interval\n\nMain Set 1x\n- Middle 3m 100-105% 94rpm intensity=interval\n\nMain Set 1x\n- Push 3m 103-106% 93rpm intensity=interval\n\nMain Set 1x\n- Finish 2m 120% 100rpm intensity=interval"
     },
     {
-      "id": 105729371,
-      "date": "2026-04-28",
-      "name": "IntervalCoach - Regenera\u010dn\u00ed j\u00edzda",
+      "id": 106606937,
+      "date": "2026-04-27",
+      "name": "IntervalCoach - Dlouh\u00e1 vytrvalost",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 13,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "planned_tss": 91,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine, dnes lehk\u00e1 regenerace 5m ramp 45-55% 85rpm\n\nMain Set\n- Recovery 22m 45-55% 85rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si dojezd 3m ramp 55-45% 85rpm\n\n[Weekly Plan - Race Week]"
+      "description": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 t\u011b dlouh\u00e1 vytrvalost. 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 24m 65% 85rpm\n- Build 24m 67% 88rpm\n- Upper Z2 24m 70-74% 90rpm\n- Cruise 23m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine! Uvolni nohy. 10m ramp 65-45% 85rpm"
     },
     {
       "id": 105856650,
-      "date": "2026-04-29",
+      "date": "2026-04-28",
       "name": "Sprint Activace pro Kr. Zvi\u010diny",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -2119,6 +2119,20 @@
       "has_terrain": false,
       "start_time": "09:00",
       "description": "Warmup\n- 10m ramp 50%-70% intensity=warmup\n\nMain Set 8x\n- 10s 200% 100rpm\n- 3m50s 50%\n\nMain Set 1x\n- 5m 55% intensity=interval\n\nMain Set 6x\n- 30s 150% 95rpm\n- 3m30s 50%\n\nCooldown\n- 10m ramp 60%-45% intensity=cooldown"
+    },
+    {
+      "id": 106607815,
+      "date": "2026-04-29",
+      "name": "IntervalCoach - Regenera\u010dn\u00ed vyj\u00ed\u017e\u010fka",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 25,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "09:00",
+      "description": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 t\u011b regenerace. 9m ramp 45-55% 85rpm\n\nMain Set\n- Easy Spin 23m 45-50% 85rpm\n- Loosen Up 22m 50-55% 90rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine, u\u017eij si vyjet\u00ed. 6m ramp 55-45% 85rpm"
     },
     {
       "id": 104665412,
@@ -2568,12 +2582,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 26,
+    "attempted": 27,
     "success": 11,
     "patternA": 11,
     "patternB": 0,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 15
+    "bail_no_match": 16
   },
   "weekly_summary": {
     "total_training_hours": 8.48,
