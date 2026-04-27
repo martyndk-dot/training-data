@@ -62,15 +62,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 7.84,
-      "total_training_formatted": "7h50m",
-      "total_activities": 6,
+      "total_training_hours": 8.84,
+      "total_training_formatted": "8h50m",
+      "total_activities": 7,
       "total_tss": 385
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-27T04:48:18.774046",
+    "last_updated": "2026-04-27T07:32:22.278360",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -125,7 +125,7 @@
       "sleep": {
         "status": "unavailable",
         "hours": null,
-        "quality": null
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -168,9 +168,15 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 7.84,
-    "total_activities": 6,
+    "total_duration_decimal_hours": 8.84,
+    "total_activities": 7,
     "by_activity_type": {
+      "Ride": {
+        "duration_decimal_hours": 1.0,
+        "count": 1,
+        "tss": 0,
+        "distance_km": 20.0
+      },
       "VirtualRide": {
         "duration_decimal_hours": 7.84,
         "count": 6,
@@ -224,10 +230,10 @@
       "weight_kg": 85.47,
       "resting_hr": 47,
       "hrv": null,
-      "sleep_quality": null,
+      "sleep_quality": 2,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_score": null,
+      "sleep_score": 72.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -244,7 +250,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 807,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -252,7 +258,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 84.0
     }
   },
   "derived_metrics": {
@@ -555,19 +561,19 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.33,
+    "consistency_index": 0.5,
     "consistency_details": {
-      "planned_days": 3,
-      "completed_days": 4,
+      "planned_days": 2,
+      "completed_days": 5,
       "matched_days": 1,
       "planned_dates": [
         "2026-04-21",
-        "2026-04-24",
         "2026-04-27"
       ],
       "completed_dates": [
         "2026-04-21",
         "2026-04-22",
+        "2026-04-24",
         "2026-04-25",
         "2026-04-26"
       ]
@@ -584,14 +590,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.56,
+          "planned_tss_delta": 0.53,
           "hard_sessions_planned": 5,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 5,
           "race_proximity": 4,
           "next_week_load": 0.46,
-          "plan_coverage_current_week": 1.2,
-          "plan_coverage_next_week": 1.2
+          "plan_coverage_current_week": 1.0,
+          "plan_coverage_next_week": 1.0
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -624,13 +630,13 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-27T04:48:18.772636",
+    "calculation_timestamp": "2026-04-27T07:32:22.277120",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
-      "activities_7d": 6,
-      "activities_28d": 19,
-      "planned_workouts_7d": 4,
+      "activities_7d": 7,
+      "activities_28d": 20,
+      "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 8,
         "outdoor": 8
@@ -877,6 +883,46 @@
       "has_intervals": true,
       "has_dfa": false,
       "description": "\ud83d\udcca IntervalCoach Analysis\nWorkout score: 9/10\nTSS: 225\nTr\u00e9ninkov\u00fd stimul: endurance\nOdh. regenerace: 48h\n\n\ud83d\udd17 https://www.intervalcoach.app/?ref=REF-8B5A8X"
+    },
+    {
+      "id": "i143276837",
+      "date": "2026-04-24T00:00:00",
+      "type": "Ride",
+      "name": "Fiting Brno",
+      "duration_hours": 1.0,
+      "distance_km": 20.0,
+      "tss": null,
+      "intensity_factor": null,
+      "avg_power": null,
+      "normalized_power": null,
+      "avg_hr": null,
+      "max_hr": null,
+      "avg_cadence": null,
+      "avg_speed": 20.0,
+      "avg_speed_unit": "KPH",
+      "max_speed": null,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": null,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "KMH",
+      "work_kj": null,
+      "calories": null,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": null,
+      "decoupling": null,
+      "efficiency_factor": null,
+      "hrrc": null,
+      "elevation_m": null,
+      "feel": null,
+      "rpe": null,
+      "zone_distribution": null,
+      "has_intervals": false,
+      "has_dfa": false
     },
     {
       "id": "i142038178",
@@ -2003,7 +2049,7 @@
       "respiration": 14.125,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 6742,
+      "steps": 2797,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2021,8 +2067,8 @@
       "hrv_sdnn": null,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_quality": 2,
+      "sleep_score": 72.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -2042,7 +2088,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 807,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2050,23 +2096,23 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 84.0
     }
   ],
   "planned_workouts": [
     {
-      "id": 106606937,
+      "id": 106760161,
       "date": "2026-04-27",
-      "name": "IntervalCoach - Dlouh\u00e1 vytrvalost",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 91,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
+      "planned_tss": 75,
+      "duration_hours": 1.68,
+      "duration_formatted": "1h41m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 t\u011b dlouh\u00e1 vytrvalost. 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 24m 65% 85rpm\n- Build 24m 67% 88rpm\n- Upper Z2 24m 70-74% 90rpm\n- Cruise 23m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine! Uvolni nohy. 10m ramp 65-45% 85rpm"
+      "description": "Warmup\n- Ahoj Martine! Dnes vytrvalostn\u00ed j\u00edzda. 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 19m 65% 85rpm\n- Build 19m 67% 88rpm\n- Upper Z2 19m 70-74% 90rpm\n- Cruise 19m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine! U\u017eij si vyjet\u00ed. 10m ramp 65-45% 85rpm"
     },
     {
       "id": 105856650,
@@ -2552,10 +2598,10 @@
     "bail_no_match": 16
   },
   "weekly_summary": {
-    "total_training_hours": 7.84,
-    "total_training_formatted": "7h50m",
+    "total_training_hours": 8.84,
+    "total_training_formatted": "8h50m",
     "total_tss": 385,
-    "activities_count": 6,
+    "activities_count": 7,
     "avg_hrv": 22.0,
     "avg_resting_hr": 46.8
   },
