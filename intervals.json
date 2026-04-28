@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T19:55:45.086717",
+  "generated_at": "2026-04-28T21:04:52.795734",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -1292,6 +1292,27 @@
           "zone": 1,
           "training_load": 30.016481,
           "decoupling": 0.24825054
+        }
+      ]
+    },
+    {
+      "activity_id": "i143840747",
+      "date": "2026-04-28",
+      "type": "VirtualRide",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 5020,
+          "avg_power": 190,
+          "max_power": 547,
+          "avg_hr": 116,
+          "max_hr": 137,
+          "avg_cadence": 81.657104,
+          "zone": 2,
+          "training_load": 54.195873,
+          "decoupling": -6.640379
         }
       ]
     }
