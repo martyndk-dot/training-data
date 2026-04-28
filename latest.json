@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-04-28T05:46:36.960400",
+    "last_updated": "2026-04-28T08:18:10.873278",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -268,7 +268,7 @@
       "respiration": 14.125,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 356,
+      "steps": 703,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -647,7 +647,7 @@
     "p_max": 1114,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-04-28T05:46:36.959131",
+    "calculation_timestamp": "2026-04-28T08:18:10.872034",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2105,7 +2105,7 @@
       "respiration": 14.125,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 356,
+      "steps": 703,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2118,18 +2118,18 @@
   ],
   "planned_workouts": [
     {
-      "id": 107006442,
+      "id": 107008572,
       "date": "2026-04-28",
-      "name": "IntervalCoach - Regenera\u010dn\u00ed j\u00edzda",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 25,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 28,
+      "duration_hours": 0.62,
+      "duration_formatted": "37m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 n\u00e1s regenerace. 9m ramp 45-55% 85rpm\n\nMain Set\n- Easy Spin 23m 45-50% 85rpm\n- Loosen Up 22m 50-55% 90rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si zklidn\u011bn\u00ed. 6m ramp 55-45% 85rpm"
+      "description": "Warmup\n- Ahoj Martine, dnes n\u00e1s \u010dek\u00e1 vytrvalost! 6m ramp 45-75% 85rpm\n\nMain Set\n- Endurance 27m 65-75% 85rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine, u\u017eij si dojezd 4m ramp 65-45% 85rpm"
     },
     {
       "id": 106607815,
