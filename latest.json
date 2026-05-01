@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-01T11:08:07.925528",
+    "last_updated": "2026-05-01T12:05:55.766962",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -661,7 +661,7 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-05-01T11:08:07.924247",
+    "calculation_timestamp": "2026-05-01T12:05:55.765726",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -739,7 +739,7 @@
       "id": "i144522008",
       "date": "2026-05-01T09:57:48",
       "type": "VirtualRide",
-      "name": "Dv\u016fr Kr\u00e1lov\u00e9 nad Labem SILNI\u010cN\u00cd",
+      "name": "Kr\u00e1l Zvi\u010diny",
       "duration_hours": 0.41,
       "distance_km": 9.85,
       "tss": 44,
