@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:04:55.636727",
+  "generated_at": "2026-05-02T00:04:40.721871",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -179,53 +179,6 @@
           "zone": 1,
           "training_load": 1.8352149,
           "decoupling": -46.401337
-        }
-      ]
-    },
-    {
-      "activity_id": "i140616819",
-      "date": "2026-04-17",
-      "type": "VirtualRide",
-      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
-      "interval_summary": [
-        "1x 3m13s 269w"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 2303,
-          "avg_power": 193,
-          "max_power": 439,
-          "avg_hr": 126,
-          "max_hr": 150,
-          "avg_cadence": 83.213554,
-          "zone": 2,
-          "training_load": 26.355003,
-          "decoupling": 0.09123175
-        },
-        {
-          "type": "WORK",
-          "label": "193s@269w88rpm",
-          "duration_secs": 193,
-          "avg_power": 269,
-          "max_power": 329,
-          "avg_hr": 138,
-          "max_hr": 144,
-          "avg_cadence": 88.38342,
-          "zone": 3,
-          "training_load": 3.446584,
-          "decoupling": 4.0377727
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3869,
-          "avg_power": 202,
-          "max_power": 611,
-          "avg_hr": 127,
-          "max_hr": 147,
-          "avg_cadence": 80.01613,
-          "zone": 2,
-          "training_load": 32.498222
         }
       ]
     },
