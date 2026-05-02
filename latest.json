@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-02T18:01:43.813597",
+    "last_updated": "2026-05-02T19:16:51.700176",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -683,7 +683,7 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-05-02T18:01:43.812366",
+    "calculation_timestamp": "2026-05-02T19:16:51.698952",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2623,19 +2623,6 @@
       "description_preview": "Main Set 1x\n- 45m 50% intensity=recovery"
     },
     {
-      "id": 104666137,
-      "date": "2026-05-13",
-      "name": "VL Svatonovice-Odolov",
-      "type": "RACE_C",
-      "sport_type": "Ride",
-      "planned_tss": null,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": null
-    },
-    {
       "id": 104976213,
       "date": "2026-05-14",
       "name": "Regenerace po VL Svatonovice",
@@ -2709,19 +2696,6 @@
       "duration_formatted": "1h16m",
       "workout_summary": "15m @181W | 3\u00d712m @330W / 5m rec | 10m @181W",
       "has_terrain": false
-    },
-    {
-      "id": 104666405,
-      "date": "2026-05-20",
-      "name": "VL MachovskaL-Karlow",
-      "type": "RACE_C",
-      "sport_type": "Ride",
-      "planned_tss": null,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": null
     },
     {
       "id": 104976215,
@@ -2814,19 +2788,6 @@
       "description_preview": "Warmup\n- 15m 55% intensity=warmup\nMain Set 2x"
     },
     {
-      "id": 104666457,
-      "date": "2026-05-27",
-      "name": "VL Starkov-Krkavcina",
-      "type": "RACE_C",
-      "sport_type": "Ride",
-      "planned_tss": null,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": null
-    },
-    {
       "id": 104976221,
       "date": "2026-05-28",
       "name": "Regenerace po VL Starkov",
@@ -2890,19 +2851,6 @@
       "description_preview": "Main Set 1x\n- 30m 55% intensity=warmup"
     },
     {
-      "id": 104666643,
-      "date": "2026-06-03",
-      "name": "VL Cista-Hofmanky",
-      "type": "RACE_C",
-      "sport_type": "Ride",
-      "planned_tss": null,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": null
-    },
-    {
       "id": 104976224,
       "date": "2026-06-04",
       "name": "Regenerace po VL Cista + aktivace",
@@ -2935,19 +2883,6 @@
       "planned_tss": null,
       "duration_hours": 4.88,
       "duration_formatted": "4h53m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": null
-    },
-    {
-      "id": 104666972,
-      "date": "2026-06-10",
-      "name": "VL Svoboda-Cerna Hora",
-      "type": "RACE_C",
-      "sport_type": "Ride",
-      "planned_tss": null,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
       "workout_summary": null,
       "has_terrain": false,
       "description_preview": null
@@ -3027,31 +2962,11 @@
         "has_terrain": false
       },
       {
-        "name": "VL Svatonovice-Odolov",
-        "date": "2026-05-13",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 11,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
-        "has_terrain": false
-      },
-      {
         "name": "DP \u010dasovka Opo\u010dno",
         "date": "2026-05-17",
         "category": "RACE_B",
         "type": "Ride",
         "days_until": 15,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
-        "has_terrain": false
-      },
-      {
-        "name": "VL MachovskaL-Karlow",
-        "date": "2026-05-20",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 18,
         "moving_time_seconds": 1800,
         "distance_meters": 10000.0,
         "has_terrain": false
@@ -3067,26 +2982,6 @@
         "has_terrain": false
       },
       {
-        "name": "VL Starkov-Krkavcina",
-        "date": "2026-05-27",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 25,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
-        "has_terrain": false
-      },
-      {
-        "name": "VL Cista-Hofmanky",
-        "date": "2026-06-03",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 32,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
-        "has_terrain": false
-      },
-      {
         "name": "Road Stage Orlick\u00e9 Hory",
         "date": "2026-06-06",
         "category": "RACE_A",
@@ -3094,16 +2989,6 @@
         "days_until": 35,
         "moving_time_seconds": 17580,
         "distance_meters": 140000.0,
-        "has_terrain": false
-      },
-      {
-        "name": "VL Svoboda-Cerna Hora",
-        "date": "2026-06-10",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 39,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
         "has_terrain": false
       },
       {
@@ -3124,16 +3009,6 @@
         "days_until": 43,
         "moving_time_seconds": 4500,
         "distance_meters": null,
-        "has_terrain": false
-      },
-      {
-        "name": "VL Rtyne-Odolov",
-        "date": "2026-06-17",
-        "category": "RACE_C",
-        "type": "Ride",
-        "days_until": 46,
-        "moving_time_seconds": 1800,
-        "distance_meters": 10000.0,
         "has_terrain": false
       },
       {
