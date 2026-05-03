@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:45:47.103695",
+  "generated_at": "2026-05-03T16:43:05.763568",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -1731,6 +1731,81 @@
           "valid_pct": 88.6,
           "artifact_rate_avg": 0.39,
           "sufficient": false
+        }
+      }
+    },
+    {
+      "activity_id": "i145105373",
+      "date": "2026-05-03",
+      "type": "Ride",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 13563,
+          "avg_power": 197,
+          "max_power": 573,
+          "avg_hr": 130,
+          "max_hr": 156,
+          "avg_cadence": 84.002754,
+          "zone": 2,
+          "training_load": 158.18657,
+          "decoupling": -4.6665535,
+          "avg_dfa_a1": 1.112461
+        }
+      ],
+      "dfa": {
+        "avg": 1.118,
+        "p25": 0.783,
+        "p50": 1.174,
+        "p75": 1.45,
+        "tiz_below_lt1": {
+          "secs": 8449,
+          "pct": 63.4,
+          "avg_hr": 126,
+          "avg_watts": 187
+        },
+        "tiz_lt1_transition": {
+          "secs": 1819,
+          "pct": 13.6,
+          "avg_hr": 132,
+          "avg_watts": 206
+        },
+        "tiz_transition_lt2": {
+          "secs": 2023,
+          "pct": 15.2,
+          "avg_hr": 137,
+          "avg_watts": 204
+        },
+        "tiz_above_lt2": {
+          "secs": 1040,
+          "pct": 7.8,
+          "avg_hr": 145,
+          "avg_watts": 242
+        },
+        "drift": {
+          "first_third_avg": 1.343,
+          "last_third_avg": 0.879,
+          "delta": -0.464,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 906,
+          "avg_hr": 131,
+          "avg_watts": 189
+        },
+        "lt2_crossing": {
+          "secs_in_band": 580,
+          "avg_hr": 143,
+          "avg_watts": 223
+        },
+        "quality": {
+          "valid_secs": 13331,
+          "total_secs": 13420,
+          "valid_pct": 99.3,
+          "artifact_rate_avg": 0.24,
+          "sufficient": true
         }
       }
     }
