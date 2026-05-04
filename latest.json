@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-04T17:58:33.309691",
+    "last_updated": "2026-05-04T19:46:26.863898",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -128,13 +128,13 @@
         "value_yesterday": 0.9
       },
       "tsb": {
-        "status": "amber",
-        "value": -16.1
+        "status": "green",
+        "value": -13.3
       }
     },
     "signal_summary": {
-      "green": 3,
-      "amber": 3,
+      "green": 4,
+      "amber": 2,
       "red": 0,
       "unavailable": 0
     },
@@ -148,8 +148,7 @@
     "modification": {
       "triggers": [
         "hrv",
-        "sleep",
-        "tsb"
+        "sleep"
       ],
       "suggested_adjustments": {
         "intensity": "reduce",
@@ -157,7 +156,7 @@
         "cap_zone": null
       }
     },
-    "reason": "P2 signal count. 3 amber (hrv, sleep, tsb) >= threshold 1.",
+    "reason": "P2 signal count. 2 amber (hrv, sleep) >= threshold 1.",
     "alarm_refs": []
   },
   "history": {
@@ -189,10 +188,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 74.45,
-      "atl": 90.51,
-      "tsb": -16.06,
-      "ramp_rate": 2.42,
+      "ctl": 73.86,
+      "atl": 87.18,
+      "tsb": -13.32,
+      "ramp_rate": 1.84,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -688,7 +687,7 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-05-04T17:58:33.308472",
+    "calculation_timestamp": "2026-05-04T19:46:26.862646",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -706,7 +705,7 @@
       "id": "i145400021",
       "date": "2026-05-04T16:46:08",
       "type": "Ride",
-      "name": "Nemojov SILNI\u010cN\u00cd",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "duration_hours": 1.41,
       "distance_km": 39.49,
       "tss": 52,
@@ -3189,18 +3188,18 @@
       "event_moving_time_seconds": 18000,
       "days_until_event": 6,
       "current_day": "D-6",
-      "ctl_baseline": 74.5,
-      "normal_weekly_tss": 521.1,
+      "ctl_baseline": 73.9,
+      "normal_weekly_tss": 517.0,
       "race_week_tss_budget": {
-        "min": 208,
-        "max": 287
+        "min": 207,
+        "max": 284
       },
       "race_week_tss_spent": 232,
       "race_week_tss_remaining": {
         "min": 0,
-        "max": 55
+        "max": 52
       },
-      "projected_race_day_tsb": 26.1,
+      "projected_race_day_tsb": 27.0,
       "tsb_target_range": {
         "min": 10,
         "max": 25
