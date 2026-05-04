@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-04T16:19:23.097410",
+  "generated_at": "2026-05-04T17:58:32.600767",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -1805,6 +1805,95 @@
           "total_secs": 13420,
           "valid_pct": 99.3,
           "artifact_rate_avg": 0.24,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i145400021",
+      "date": "2026-05-04",
+      "type": "Ride",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": [
+        "1x 62s 362w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3254,
+          "avg_power": 161,
+          "max_power": 752,
+          "avg_hr": 113,
+          "max_hr": 147,
+          "avg_cadence": 81.87242,
+          "zone": 1,
+          "training_load": 28.756695,
+          "decoupling": -0.094331525,
+          "avg_dfa_a1": 1.5435431
+        },
+        {
+          "type": "WORK",
+          "label": "62s@362w88rpm",
+          "duration_secs": 62,
+          "avg_power": 362,
+          "max_power": 443,
+          "avg_hr": 151,
+          "max_hr": 155,
+          "avg_cadence": 87.96774,
+          "zone": 5,
+          "training_load": 1.9818366,
+          "decoupling": 9.547482,
+          "avg_dfa_a1": 1.5435431
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3155,
+          "avg_power": 137,
+          "max_power": 615,
+          "avg_hr": 110,
+          "max_hr": 156,
+          "avg_cadence": 47.834263,
+          "zone": 1,
+          "training_load": 19.783829,
+          "decoupling": -30.837711,
+          "avg_dfa_a1": 1.5435431
+        }
+      ],
+      "dfa": {
+        "avg": 1.544,
+        "p25": 1.544,
+        "p50": 1.544,
+        "p75": 1.544,
+        "tiz_below_lt1": {
+          "secs": 5103,
+          "pct": 100.0,
+          "avg_hr": 113,
+          "avg_watts": 153
+        },
+        "tiz_lt1_transition": null,
+        "tiz_transition_lt2": null,
+        "tiz_above_lt2": null,
+        "drift": {
+          "first_third_avg": 1.544,
+          "last_third_avg": 1.544,
+          "delta": 0.0,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 0,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "secs_in_band": 0,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 5103,
+          "total_secs": 5103,
+          "valid_pct": 100.0,
+          "artifact_rate_avg": 0.0,
           "sufficient": true
         }
       }
