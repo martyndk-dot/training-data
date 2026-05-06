@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-06T19:00:23.741210",
+    "last_updated": "2026-05-06T20:41:21.584984",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -645,13 +645,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.16,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": 1.24,
+          "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 3,
+          "current_week_hard_days_total": 4,
           "race_proximity": 3,
           "next_week_load": 0.33,
-          "plan_coverage_current_week": 0.29,
+          "plan_coverage_current_week": 0.43,
           "plan_coverage_next_week": 0.29
         },
         "data_quality": "good",
@@ -687,7 +687,7 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-06T19:00:23.740085",
+    "calculation_timestamp": "2026-05-06T20:41:21.583760",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2614,6 +2614,20 @@
   ],
   "planned_workouts": [
     {
+      "id": 108645151,
+      "date": "2026-05-08",
+      "name": "IntervalCoach - Rozjet\u00ed p\u0159ed \u010dasovkou (ERG)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 29,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
+      "workout_summary": "15m @198W | 3\u00d71m @363W / 4m rec | 10m @165W",
+      "has_terrain": false,
+      "start_time": "09:00",
+      "description": "Warmup\n- Ramp 15m ramp 50-70%\n\nMain Set\n3x\n- Interval 1m 110%\n- Recovery 4m 55%\n\nCooldown\n- 10m 50%"
+    },
+    {
       "id": 101546030,
       "date": "2026-05-09",
       "name": "Sudety \u010dasovka",
@@ -2747,9 +2761,9 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 3,
-    "success": 1,
-    "patternA": 1,
+    "attempted": 4,
+    "success": 2,
+    "patternA": 2,
     "patternB": 0,
     "bail_no_workout_doc": 0,
     "bail_no_match": 2
