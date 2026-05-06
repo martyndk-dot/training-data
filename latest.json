@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-06T04:03:28.575369",
+    "last_updated": "2026-05-06T06:44:24.102268",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -116,7 +116,7 @@
       "sleep": {
         "status": "unavailable",
         "hours": null,
-        "quality": null
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -221,10 +221,10 @@
       "weight_kg": 85.529,
       "resting_hr": 48,
       "hrv": null,
-      "sleep_quality": null,
+      "sleep_quality": 2,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_score": null,
+      "sleep_score": 81.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -241,7 +241,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 16,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -249,7 +249,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 80.0
     }
   },
   "derived_metrics": {
@@ -636,14 +636,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.24,
-          "hard_sessions_planned": 3,
+          "planned_tss_delta": 1.16,
+          "hard_sessions_planned": 2,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 4,
+          "current_week_hard_days_total": 3,
           "race_proximity": 3,
-          "next_week_load": 0.4,
-          "plan_coverage_current_week": 0.43,
-          "plan_coverage_next_week": 0.86
+          "next_week_load": 0.33,
+          "plan_coverage_current_week": 0.29,
+          "plan_coverage_next_week": 0.29
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -678,7 +678,7 @@
     "p_max": 1112,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-06T04:03:28.574240",
+    "calculation_timestamp": "2026-05-06T06:44:24.101117",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2553,7 +2553,7 @@
       "respiration": 15.0,
       "body_fat_pct": 23.1,
       "abdomen_cm": null,
-      "steps": 10126,
+      "steps": 651,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2571,8 +2571,8 @@
       "hrv_sdnn": null,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_quality": 2,
+      "sleep_score": 81.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -2592,7 +2592,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 16,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2600,23 +2600,10 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 80.0
     }
   ],
   "planned_workouts": [
-    {
-      "id": 104976211,
-      "date": "2026-05-08",
-      "name": "Rozjet\u00ed p\u0159ed Sudety \u010dasovka",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 30,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": "20m @181W | 3\u00d71m @363W / 4m rec | 10m @165W",
-      "has_terrain": false,
-      "description": "Warmup\n- 20m 55% intensity=warmup\n\nMain Set 3x\n- 1m 110% intensity=interval\n- 4m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
-    },
     {
       "id": 101546030,
       "date": "2026-05-09",
@@ -2644,69 +2631,18 @@
       "description": ""
     },
     {
-      "id": 104976212,
-      "date": "2026-05-11",
-      "name": "Regenerace po Sudety Tour",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "Main Set 1x\n- 45m 50% intensity=recovery"
-    },
-    {
-      "id": 108469540,
-      "date": "2026-05-12",
-      "name": "IntervalCoach - Regenera\u010dn\u00ed j\u00edzda",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 13,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine! Lehk\u00fd regenera\u010dn\u00ed tr\u00e9nink. 5m ramp 45-55% 85rpm\n\nMain Set\n- Recovery 22m 45-55% 85rpm\n\nCooldown\n- Dobr\u00e1 pr\u00e1ce, uvoln\u011bte nohy. 3m ramp 55-45% 85rpm\n\n[Weekly Plan - Race Week]"
-    },
-    {
-      "id": 108486054,
+      "id": 108515949,
       "date": "2026-05-13",
       "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 23,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "planned_tss": 99,
+      "duration_hours": 2.17,
+      "duration_formatted": "2h10m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine, dnes vytrvalostn\u00ed j\u00edzda! 5m ramp 45-75% 85rpm\n\nMain Set\n- Endurance 22m 65-75% 85rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, u\u017eij si dojezd 3m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
-    },
-    {
-      "id": 104976033,
-      "date": "2026-05-15",
-      "name": "Sweet Spot 2\u00d710 min",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 50,
-      "duration_hours": 0.92,
-      "duration_formatted": "55m",
-      "workout_summary": "15m @181W | 2\u00d710m @297W / 5m rec | 10m @181W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976478,
-      "date": "2026-05-16",
-      "name": "Rozjet\u00ed p\u0159ed DP \u010dasovka Opo\u010dno",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 30,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": "20m @181W | 3\u00d71m @363W / 4m rec | 10m @165W",
-      "has_terrain": false
+      "description": "Warmup\n- Ahoj Martine! Dnes n\u00e1s \u010dek\u00e1 dlouh\u00e1 vytrvalost. 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 26m 65% 85rpm\n- Build 26m 67% 88rpm\n- Upper Z2 26m 70-74% 90rpm\n- Cruise 27m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine, u\u017eij si zklidn\u011bn\u00ed. 10m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
     },
     {
       "id": 104666330,
@@ -2722,29 +2658,18 @@
       "description_preview": null
     },
     {
-      "id": 104976035,
-      "date": "2026-05-19",
-      "name": "Threshold 3\u00d712 min",
+      "id": 108516317,
+      "date": "2026-05-20",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 91,
-      "duration_hours": 1.27,
-      "duration_formatted": "1h16m",
-      "workout_summary": "15m @181W | 3\u00d712m @330W / 5m rec | 10m @181W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976216,
-      "date": "2026-05-22",
-      "name": "Rozjet\u00ed p\u0159ed Mamut Tour",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 15,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "planned_tss": 67,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
-      "description_preview": "Main Set 1x\n- 30m 55% intensity=warmup"
+      "start_time": "09:00",
+      "description_preview": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 t\u011b vytrvalostn\u00ed j\u00edzda 14m ramp 45-75% 85rpm\nMain Set"
     },
     {
       "id": 89251908,
@@ -2760,103 +2685,17 @@
       "description_preview": null
     },
     {
-      "id": 104976218,
-      "date": "2026-05-24",
-      "name": "Regenerace po Mamut Tour",
+      "id": 108516313,
+      "date": "2026-05-27",
+      "name": "IntervalCoach - VO2max Intervaly",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 25,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Main Set 1x\n- 60m 50% intensity=recovery"
-    },
-    {
-      "id": 104976479,
-      "date": "2026-05-25",
-      "name": "VO2max 4\u00d74 min",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 69,
-      "duration_hours": 0.95,
-      "duration_formatted": "57m",
-      "workout_summary": "15m @181W | 4\u00d74m @379W / 4m rec | 10m @181W",
-      "has_terrain": false
-    },
-    {
-      "id": 104980291,
-      "date": "2026-05-26",
-      "name": "30/30 x 10 \u2013 druh\u00fd blok 2 s\u00e9rie (CX prep)",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 26,
-      "duration_hours": 0.7,
-      "duration_formatted": "42m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Warmup\n- 15m 55% intensity=warmup\nMain Set 2x"
-    },
-    {
-      "id": 104976044,
-      "date": "2026-05-29",
-      "name": "Threshold 2\u00d710 min + n\u00e1jezdy",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 70,
-      "duration_hours": 1.12,
-      "duration_formatted": "1h7m",
-      "workout_summary": "15m @181W | 2\u00d710m @320W / 5m rec | 3\u00d71m @396W / 3m rec | 10m @181W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976045,
-      "date": "2026-05-30",
-      "name": "Race Simulation kr\u00e1tk\u00e1",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 88,
+      "planned_tss": 97,
       "duration_hours": 1.33,
       "duration_formatted": "1h20m",
-      "workout_summary": "20m @198W | 3\u00d710m @330W / 5m rec | 15m @181W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976046,
-      "date": "2026-05-31",
-      "name": "Z1 Regenerace",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": null,
+      "workout_summary": "11m @198W | 5m @230W | 5\u00d75m @360W / 5m rec | 6m @230W | 8m @181W",
       "has_terrain": false,
-      "description_preview": "Main Set 1x\n- 45m 50% intensity=recovery"
-    },
-    {
-      "id": 104976224,
-      "date": "2026-06-04",
-      "name": "Regenerace po VL Cista + aktivace",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 27,
-      "duration_hours": 0.58,
-      "duration_formatted": "35m",
-      "workout_summary": "15m @165W | 3\u00d72m @330W / 3m rec | 5m @165W",
-      "has_terrain": false
-    },
-    {
-      "id": 104976049,
-      "date": "2026-06-05",
-      "name": "Taper \u2013 aktivace p\u0159ed z\u00e1vodem",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 31,
-      "duration_hours": 0.55,
-      "duration_formatted": "33m",
-      "workout_summary": "10m @181W | 3\u00d73m @330W / 3m rec | 5m @165W",
-      "has_terrain": false
+      "start_time": "09:00"
     },
     {
       "id": 89252522,
@@ -2899,12 +2738,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 16,
-    "success": 9,
-    "patternA": 9,
+    "attempted": 3,
+    "success": 1,
+    "patternA": 1,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 7
+    "bail_no_match": 2
   },
   "weekly_summary": {
     "total_training_hours": 14.09,
