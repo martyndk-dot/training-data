@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-10T15:48:27.661297",
+    "last_updated": "2026-05-10T16:49:35.139985",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -279,7 +279,7 @@
       "respiration": 14.0,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 858,
+      "steps": 924,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -678,9 +678,9 @@
           "current_week_hard_days_completed": 3,
           "current_week_hard_days_total": 4,
           "race_proximity": 0,
-          "next_week_load": 0.3,
+          "next_week_load": 0.63,
           "plan_coverage_current_week": 0.14,
-          "plan_coverage_next_week": 0.29
+          "plan_coverage_next_week": 0.43
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -715,7 +715,7 @@
     "p_max": 1108,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 55.0,
-    "calculation_timestamp": "2026-05-10T15:48:27.660159",
+    "calculation_timestamp": "2026-05-10T16:49:35.138861",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2795,7 +2795,7 @@
       "respiration": 14.0,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 858,
+      "steps": 924,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2833,6 +2833,20 @@
       "has_terrain": false,
       "start_time": "09:00",
       "description": "Warmup\n- Ahoj Martine! Dneska vytrvalost s picked-upy. 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 21m 65% 85rpm\n- Build 21m 67% 88rpm\n- Upper Z2 21m 70-74% 90rpm\n- Cruise 22m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine. U\u017eij si zklidn\u011bn\u00ed. 10m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
+    },
+    {
+      "id": 109255023,
+      "date": "2026-05-16",
+      "name": "IntervalCoach - Dlouh\u00e1 vytrvalost",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 160,
+      "duration_hours": 3.43,
+      "duration_formatted": "3h26m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "09:00",
+      "description": "Warmup\n- Ahoj Martine, dnes n\u00e1s \u010dek\u00e1 dlouh\u00e1 vytrvalost! 15m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 45m 65% 85rpm\n- Build 45m 67% 88rpm\n- Upper Z2 45m 70-74% 90rpm\n- Cruise 46m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine, u\u017eij si zaslou\u017een\u00fd klid. 10m ramp 65-45% 85rpm\n\n[Weekly Plan - Race Week]"
     },
     {
       "id": 104666330,
@@ -2901,12 +2915,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 1,
+    "attempted": 2,
     "success": 0,
     "patternA": 0,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 1
+    "bail_no_match": 2
   },
   "weekly_summary": {
     "total_training_hours": 8.54,
