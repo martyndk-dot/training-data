@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-12T16:05:27.468334",
+  "generated_at": "2026-05-12T18:16:48.736617",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2574,6 +2574,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i147599409",
+      "date": "2026-05-12",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - IntervalCoach - Regenera\u010dn\u00ed j\u00edzda",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3606,
+          "avg_power": 164,
+          "max_power": 228,
+          "avg_hr": 108,
+          "max_hr": 117,
+          "avg_cadence": 90.1173,
+          "zone": 1,
+          "training_load": 25.041666,
+          "decoupling": -1.2791137
+        }
+      ]
     }
   ]
 }
