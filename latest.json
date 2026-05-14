@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-14T06:04:03.736031",
+    "last_updated": "2026-05-14T08:49:39.694499",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -259,7 +259,7 @@
       "respiration": null,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 90,
+      "steps": 1079,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -655,7 +655,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.16,
+          "planned_tss_delta": 1.12,
           "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 3,
@@ -697,7 +697,7 @@
     "p_max": 1106,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-14T06:04:03.734922",
+    "calculation_timestamp": "2026-05-14T08:49:39.693343",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2892,7 +2892,7 @@
       "respiration": 13.75,
       "body_fat_pct": 23.3,
       "abdomen_cm": null,
-      "steps": 2221,
+      "steps": 2317,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2931,7 +2931,7 @@
       "respiration": null,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 90,
+      "steps": 1079,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2944,18 +2944,18 @@
   ],
   "planned_workouts": [
     {
-      "id": 109598627,
+      "id": 110044565,
       "date": "2026-05-14",
-      "name": "IntervalCoach - Endurance + Tempo Pushes",
+      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 78,
-      "duration_hours": 1.58,
-      "duration_formatted": "1h35m",
-      "workout_summary": "14m @198W | 4\u00d713m @230W / 5m rec | 9m @181W",
+      "planned_tss": 65,
+      "duration_hours": 1.45,
+      "duration_formatted": "1h27m",
+      "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "Warmup\n- Ahoj Martine Fr\u00fdzle! \u010cek\u00e1 t\u011b vytrvalost a tempo. 14m ramp 45-75% 85rpm\n\nMain Set\n4x\n- Endurance 13m 65-75% 88rpm\n- Tempo 5m 76-82% 90rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine! U\u017eij si zklidn\u011bn\u00ed. 9m ramp 65-45% 85rpm"
+      "description": "Warmup\n- Ahoj Martine! Dnes n\u00e1s \u010dek\u00e1 vytrvalost s rozjezdy. 13m ramp 45-75% 85rpm\n\nMain Set\n- Settle In 16m 65% 85rpm\n- Build 16m 67% 88rpm\n- Upper Z2 16m 70-74% 90rpm\n- Cruise 17m 74-70% 88rpm\n\nCooldown\n- Skv\u011bl\u00e1 pr\u00e1ce, Martine! U\u017eij si zklidn\u011bn\u00ed. 9m ramp 65-45% 85rpm"
     },
     {
       "id": 109598796,
@@ -3053,11 +3053,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 3,
-    "success": 1,
-    "patternA": 1,
+    "success": 0,
+    "patternA": 0,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 2
+    "bail_no_match": 3
   },
   "weekly_summary": {
     "total_training_hours": 10.08,
