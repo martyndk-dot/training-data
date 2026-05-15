@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-15T04:16:35.960681",
+    "last_updated": "2026-05-15T07:40:18.079942",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -125,7 +125,7 @@
       "sleep": {
         "status": "unavailable",
         "hours": null,
-        "quality": null
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -230,10 +230,10 @@
       "weight_kg": 85.389,
       "resting_hr": 47,
       "hrv": null,
-      "sleep_quality": null,
+      "sleep_quality": 2,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_score": null,
+      "sleep_score": 81.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -250,7 +250,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 1221,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -258,7 +258,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 83.0
     }
   },
   "derived_metrics": {
@@ -687,7 +687,7 @@
     "p_max": 1106,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-15T04:16:35.959800",
+    "calculation_timestamp": "2026-05-15T07:40:18.078840",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2863,7 +2863,7 @@
       "sleep_score": 85.0,
       "mental_energy": null,
       "avg_sleeping_hr": 49.625,
-      "vo2max": null,
+      "vo2max": 56.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -2898,8 +2898,8 @@
       "hrv_sdnn": null,
       "sleep_hours": null,
       "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_quality": 2,
+      "sleep_score": 81.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -2919,7 +2919,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 1221,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2927,7 +2927,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 83.0
     }
   ],
   "planned_workouts": [
@@ -2951,11 +2951,11 @@
       "type": "RACE_B",
       "sport_type": "Ride",
       "planned_tss": 60,
-      "duration_hours": 0.5,
-      "duration_formatted": "30m",
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
-      "description": ""
+      "description": "Warmup\n- 10m ramp 45-65% 55-70%hrmax intensity=warmup\n\nMain Set 1x\n- 82s 100% 88-91%hrmax 95rpm intensity=interval\n\nMain Set 1x\n- 139s 103% 91-94%hrmax 93rpm intensity=interval\n\nMain Set 1x\n- 94s 105% 93-95%hrmax 90rpm intensity=interval\n\nMain Set 1x\n- 295s 108% 94-97%hrmax 87rpm intensity=interval\n\nMain Set 1x\n- 93s 105% 95-97%hrmax 93rpm intensity=interval\n\nMain Set 1x\n- 124s 109% 96-100%hrmax 90rpm intensity=interval\n\nCooldown\n- 15m ramp 55-40% 60-50%hrmax intensity=cooldown"
     },
     {
       "id": 109654918,
@@ -3243,7 +3243,7 @@
     "success": 7,
     "patternA": 7,
     "patternB": 0,
-    "bail_no_workout_doc": 0,
+    "bail_no_workout_doc": 1,
     "bail_no_match": 12
   },
   "weekly_summary": {
@@ -3261,7 +3261,7 @@
       "category": "RACE_B",
       "type": "Ride",
       "days_until": 2,
-      "moving_time_seconds": 1800,
+      "moving_time_seconds": 3600,
       "distance_meters": 10000.0,
       "has_terrain": false
     },
@@ -3272,7 +3272,7 @@
         "category": "RACE_B",
         "type": "Ride",
         "days_until": 2,
-        "moving_time_seconds": 1800,
+        "moving_time_seconds": 3600,
         "distance_meters": 10000.0,
         "has_terrain": false
       },
@@ -3351,7 +3351,7 @@
       "event_category": "RACE_B",
       "event_type": "Ride",
       "event_duration_class": "short_intense",
-      "event_moving_time_seconds": 1800,
+      "event_moving_time_seconds": 3600,
       "days_until_event": 2,
       "current_day": "D-2",
       "ctl_baseline": 70.6,
