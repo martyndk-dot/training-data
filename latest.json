@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-15T19:48:50.988184",
+    "last_updated": "2026-05-15T20:56:35.283127",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -650,7 +650,7 @@
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 0,
           "race_proximity": 8,
-          "next_week_load": 0.9,
+          "next_week_load": 0.92,
           "plan_coverage_current_week": 0.25,
           "plan_coverage_next_week": 0.5
         },
@@ -687,7 +687,7 @@
     "p_max": 1106,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-15T19:48:50.986929",
+    "calculation_timestamp": "2026-05-15T20:56:35.281958",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2973,15 +2973,15 @@
     {
       "id": 110066657,
       "date": "2026-05-19",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 UNO-X 3x20min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 60,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
-      "workout_summary": null,
+      "planned_tss": 68,
+      "duration_hours": 1.67,
+      "duration_formatted": "1h40m",
+      "workout_summary": "10m @181W | 3\u00d720m @231W / 5m rec | 15m @156W",
       "has_terrain": false,
-      "description": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2, HR pod 130 bpm\n\nWarmup\n- 10m ramp 45-65% intensity=warmup\n\nMain Set 1x\n- 70m 65% 85rpm intensity=interval\n\nCooldown\n- 10m ramp 65-45% intensity=cooldown"
+      "description": "Warmup\n- 10m ramp 45-65% 80rpm intensity=warmup\n\nMain Set 3x\n- 20m 70% 90rpm intensity=interval\n- 5m 50% 80rpm intensity=recovery\n\nCooldown\n- 15m ramp 55-40% 75rpm intensity=cooldown"
     },
     {
       "id": 110066658,
@@ -3025,28 +3025,26 @@
     {
       "id": 110066661,
       "date": "2026-05-26",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 Strukturovana 2x30min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 60,
+      "planned_tss": 61,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2\nWarmup\n- 10m ramp 45-65% intensity=warmup"
+      "workout_summary": "10m @181W | 2\u00d730m @224W / 5m rec | 10m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066662,
       "date": "2026-05-27",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 UNO-X 8x10min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 63,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2, vy\u0161\u0161\u00ed tempo\nWarmup\n- 10m ramp 45-65% intensity=warmup"
+      "planned_tss": 85,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
+      "workout_summary": "10m @181W | 8\u00d710m @231W / 2m30s rec | 10m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066670,
@@ -3076,28 +3074,26 @@
     {
       "id": 110066673,
       "date": "2026-05-30",
-      "name": "Dlouh\u00e1 vytrvalost 3:30h",
+      "name": "Z2 Dlouha 3:30h UAE styl",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 151,
-      "duration_hours": 3.5,
-      "duration_formatted": "3h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Dlouh\u00e1 vytrvalost. Dr\u017e HR pod 130 bpm, kadence 85+.\nWarmup\n- 15m ramp 45-65% intensity=warmup"
+      "planned_tss": 124,
+      "duration_hours": 2.92,
+      "duration_formatted": "2h55m",
+      "workout_summary": "15m @178W | 1\u00d740m @221W / 5m rec | 1\u00d740m @224W / 5m rec | 1\u00d730m @231W / 5m rec | 15m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066675,
       "date": "2026-06-01",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 Progresivni 6x10min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 60,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2\nWarmup\n- 10m ramp 45-65% intensity=warmup"
+      "planned_tss": 65,
+      "duration_hours": 1.67,
+      "duration_formatted": "1h40m",
+      "workout_summary": "10m @181W | 2\u00d710m @214W / 3m rec | 2\u00d710m @224W / 3m rec | 2\u00d710m @231W / 3m rec | 12m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066676,
@@ -3114,15 +3110,14 @@
     {
       "id": 110066677,
       "date": "2026-06-03",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 UNO-X 4x15min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 63,
+      "planned_tss": 64,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2\nWarmup\n- 10m ramp 45-65% intensity=warmup"
+      "workout_summary": "10m @181W | 4\u00d715m @231W / 3m rec | 8m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066692,
@@ -3177,15 +3172,14 @@
     {
       "id": 110066695,
       "date": "2026-06-09",
-      "name": "Vytrvalost Z2",
+      "name": "Z2 McNulty 2x25 + topper",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 60,
+      "planned_tss": 62,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description_preview": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Vytrvalost Z2\nWarmup\n- 10m ramp 45-65% intensity=warmup"
+      "workout_summary": "10m @181W | 1\u00d725m @224W / 5m rec | 1\u00d725m @231W / 5m rec | 10m @156W",
+      "has_terrain": false
     },
     {
       "id": 110066698,
@@ -3240,11 +3234,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 20,
-    "success": 7,
-    "patternA": 7,
+    "success": 14,
+    "patternA": 14,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 13
+    "bail_no_match": 6
   },
   "weekly_summary": {
     "total_training_hours": 11.18,
