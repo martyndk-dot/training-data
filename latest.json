@@ -63,14 +63,14 @@
     },
     "quick_stats": {
       "total_training_hours": 9.45,
-      "total_training_formatted": "9h27m",
+      "total_training_formatted": "9h26m",
       "total_activities": 8,
-      "total_tss": 395
+      "total_tss": 394
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-17T10:48:57.217192",
+    "last_updated": "2026-05-17T11:57:44.244187",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -129,7 +129,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": -0.3
+        "value": -0.2
       }
     },
     "signal_summary": {
@@ -165,8 +165,8 @@
       "Ride": {
         "duration_decimal_hours": 8.45,
         "count": 7,
-        "tss": 370,
-        "distance_km": 225.5
+        "tss": 369,
+        "distance_km": 225.4
       },
       "VirtualRide": {
         "duration_decimal_hours": 1.0,
@@ -178,10 +178,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 71.74,
-      "atl": 72.04,
-      "tsb": -0.3,
-      "ramp_rate": -2.64,
+      "ctl": 71.72,
+      "atl": 71.9,
+      "tsb": -0.18,
+      "ramp_rate": -2.66,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -267,14 +267,14 @@
     "monotony_interpretation": "normal",
     "primary_sport": "cycling",
     "primary_sport_monotony": 1.23,
-    "primary_sport_tss_7d": 395.0,
+    "primary_sport_tss_7d": 394.0,
     "effective_monotony": 1.23,
     "multi_sport_detected": false,
-    "strain": 486.0,
-    "stress_tolerance": 4.0,
+    "strain": 485.0,
+    "stress_tolerance": 3.9,
     "load_recovery_ratio": null,
-    "tss_7d_total": 395.0,
-    "tss_28d_total": 1977.0,
+    "tss_7d_total": 394.0,
+    "tss_28d_total": 1976.0,
     "zone_distribution_7d": {
       "z1_hours": 4.52,
       "z2_hours": 3.12,
@@ -292,9 +292,9 @@
     "hard_days_this_week": 2,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 27511,
-      "z2_seconds": 4180,
-      "z3_seconds": 2332,
+      "z1_seconds": 27507,
+      "z2_seconds": 4178,
+      "z3_seconds": 2333,
       "z1_pct": 80.9,
       "z2_pct": 12.3,
       "z3_pct": 6.9,
@@ -303,9 +303,9 @@
       "zone_basis": "power"
     },
     "seiler_tid_7d_primary": {
-      "z1_seconds": 27511,
-      "z2_seconds": 4180,
-      "z3_seconds": 2332,
+      "z1_seconds": 27507,
+      "z2_seconds": 4178,
+      "z3_seconds": 2333,
       "z1_pct": 80.9,
       "z2_pct": 12.3,
       "z3_pct": 6.9,
@@ -315,9 +315,9 @@
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 114253,
-      "z2_seconds": 18401,
-      "z3_seconds": 19238,
+      "z1_seconds": 114249,
+      "z2_seconds": 18399,
+      "z3_seconds": 19239,
       "z1_pct": 75.2,
       "z2_pct": 12.1,
       "z3_pct": 12.7,
@@ -326,9 +326,9 @@
       "zone_basis": "power"
     },
     "seiler_tid_28d_primary": {
-      "z1_seconds": 114253,
-      "z2_seconds": 18401,
-      "z3_seconds": 19238,
+      "z1_seconds": 114249,
+      "z2_seconds": 18399,
+      "z3_seconds": 19239,
       "z1_pct": 75.2,
       "z2_pct": 12.1,
       "z3_pct": 12.7,
@@ -400,9 +400,9 @@
             "pct_change": 0.5
           },
           "1200s": {
-            "current_watts": 337,
+            "current_watts": 335,
             "previous_watts": 333,
-            "pct_change": 1.2
+            "pct_change": 0.6
           },
           "3600s": {
             "current_watts": 277,
@@ -410,7 +410,7 @@
             "pct_change": 3.4
           }
         },
-        "rotation_index": 5.9,
+        "rotation_index": 6.2,
         "note": "Compares MMP at 5 anchor durations (5s neuromuscular, 60s anaerobic, 300s MAP, 1200s threshold, 3600s endurance) across two 28d windows. rotation_index = mean(5s,60s pct_change) - mean(1200s,3600s pct_change). Positive = sprint-biased gains, negative = endurance-biased. 300s excluded from rotation (transitional). Null when either window has fewer than 3 valid anchor durations."
       },
       "hr_curve_delta": {
@@ -483,8 +483,8 @@
               "model_divergence_pct": -4.8
             },
             "1200s": {
-              "actual_watts": 337,
-              "actual_wpkg": 3.95,
+              "actual_watts": 335,
+              "actual_wpkg": 3.92,
               "actual_hr": 167,
               "pct_lthr": 97.7,
               "source": "observed_outdoor",
@@ -492,7 +492,7 @@
               "coggan_wpkg": 3.59,
               "cp_model_watts": 354,
               "cp_model_wpkg": 4.15,
-              "model_divergence_pct": -4.8
+              "model_divergence_pct": -5.4
             },
             "1800s": {
               "actual_watts": 324,
@@ -638,7 +638,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.76,
+          "planned_tss_delta": 0.48,
           "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 2,
@@ -680,7 +680,7 @@
     "p_max": 1105,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 56.0,
-    "calculation_timestamp": "2026-05-17T10:48:57.216065",
+    "calculation_timestamp": "2026-05-17T11:57:44.242992",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -759,34 +759,34 @@
       "type": "Ride",
       "name": "DP \u010dasovka Opo\u010dno",
       "duration_hours": 0.33,
-      "distance_km": 11.48,
-      "tss": 36,
-      "intensity_factor": 103.333336,
-      "avg_power": 338,
-      "normalized_power": 341,
+      "distance_km": 11.43,
+      "tss": 35,
+      "intensity_factor": 103.030304,
+      "avg_power": 340,
+      "normalized_power": 340,
       "avg_hr": 164,
       "max_hr": 175,
-      "avg_cadence": 94.4908,
-      "avg_speed": 34.5,
+      "avg_cadence": 94.625,
+      "avg_speed": 34.4,
       "avg_speed_unit": "KPH",
       "max_speed": 52.2,
       "max_speed_unit": "KPH",
       "avg_pace": null,
-      "avg_temp": 11.674346,
+      "avg_temp": 11.523413,
       "avg_temp_unit": "C",
       "weather": null,
       "humidity": null,
-      "wind_speed": 2.8420548,
+      "wind_speed": 2.796732,
       "wind_speed_unit": "KMH",
-      "work_kj": 404.6,
+      "work_kj": 404.5,
       "calories": 434,
-      "carbs_used": 66,
+      "carbs_used": 65,
       "carbs_ingested": null,
-      "variability_index": 1.0088757,
-      "decoupling": 0.32156435,
-      "efficiency_factor": 2.0792682,
+      "variability_index": 1.0,
+      "decoupling": 0.18427594,
+      "efficiency_factor": 2.0731707,
       "hrrc": null,
-      "elevation_m": 163.0,
+      "elevation_m": 159.40009,
       "feel": 3,
       "rpe": 9,
       "zone_distribution": {
@@ -795,18 +795,18 @@
           "z2_time": 59,
           "z3_time": 112,
           "z4_time": 951,
-          "z5_time": 48,
+          "z5_time": 43,
           "z6_time": 0,
           "z7_time": 0
         },
         "power_zones": {
-          "z1_time": 5,
+          "z1_time": 1,
           "z2_time": 20,
-          "z3_time": 187,
+          "z3_time": 185,
           "z4_time": 504,
           "z5_time": 388,
           "z6_time": 75,
-          "z7_time": 18
+          "z7_time": 19
         }
       },
       "has_intervals": true,
@@ -3095,12 +3095,12 @@
       "name": "DP \u010dasovka Opo\u010dno",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 57,
-      "duration_hours": 0.75,
-      "duration_formatted": "44m50s",
+      "planned_tss": 36,
+      "duration_hours": 0.33,
+      "duration_formatted": "19m50s",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 10m ramp 45-65% 60-80rpm intensity=warmup\n\nMain Set 1x\n- 2m39s 100% 93-97rpm intensity=interval\n\nMain Set 1x\n- 4m30s 103% 91-95rpm intensity=interval\n\nMain Set 1x\n- 2m58s 105% 88-92rpm intensity=interval\n\nMain Set 1x\n- 4m53s 108% 83-88rpm intensity=interval\n\nMain Set 1x\n- 2m27s 105% 91-95rpm intensity=interval\n\nMain Set 1x\n- 2m23s 109% 88-95rpm intensity=interval\n\nCooldown\n- 15m ramp 55-40% 60-70rpm intensity=cooldown"
+      "description": "Main Set 1x\n- 2m39s 100% 93-97rpm intensity=interval\n\nMain Set 1x\n- 4m30s 103% 91-95rpm intensity=interval\n\nMain Set 1x\n- 2m58s 105% 88-92rpm intensity=interval\n\nMain Set 1x\n- 4m53s 108% 83-88rpm intensity=interval\n\nMain Set 1x\n- 2m27s 105% 91-95rpm intensity=interval\n\nMain Set 1x\n- 2m23s 109% 88-95rpm intensity=interval"
     },
     {
       "id": 109654918,
@@ -3400,8 +3400,8 @@
   },
   "weekly_summary": {
     "total_training_hours": 9.45,
-    "total_training_formatted": "9h27m",
-    "total_tss": 395,
+    "total_training_formatted": "9h26m",
+    "total_tss": 394,
     "activities_count": 8,
     "avg_hrv": 23.0,
     "avg_resting_hr": 47.3
@@ -3493,17 +3493,17 @@
       "days_until_event": 6,
       "current_day": "D-6",
       "ctl_baseline": 71.7,
-      "normal_weekly_tss": 502.2,
+      "normal_weekly_tss": 502.0,
       "race_week_tss_budget": {
         "min": 201,
         "max": 276
       },
-      "race_week_tss_spent": 190,
+      "race_week_tss_spent": 189,
       "race_week_tss_remaining": {
-        "min": 11,
-        "max": 86
+        "min": 12,
+        "max": 87
       },
-      "projected_race_day_tsb": 31.6,
+      "projected_race_day_tsb": 31.7,
       "tsb_target_range": {
         "min": 10,
         "max": 25
