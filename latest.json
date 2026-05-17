@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-17T16:39:14.519989",
+    "last_updated": "2026-05-17T17:40:54.480541",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -689,7 +689,7 @@
     "p_max": 1105,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 56.0,
-    "calculation_timestamp": "2026-05-17T16:39:14.519117",
+    "calculation_timestamp": "2026-05-17T17:40:54.479378",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3228,14 +3228,15 @@
     {
       "id": 110066673,
       "date": "2026-05-30",
-      "name": "Z2 Dlouha 3:30h UAE styl",
+      "name": "Klubovy svih",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 124,
-      "duration_hours": 2.92,
-      "duration_formatted": "2h55m",
-      "workout_summary": "15m @178W | 1\u00d740m @221W / 5m rec | 1\u00d740m @224W / 5m rec | 1\u00d730m @231W / 5m rec | 15m @156W",
-      "has_terrain": false
+      "planned_tss": 168,
+      "duration_hours": 4.0,
+      "duration_formatted": "4h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description_preview": "Klubovy svih ~4h Z1/Z2 \u00b7 HR pod 130 bpm \u00b7 Kadence 85+ rpm \u00b7 Na kopcich nepalit, dojet na sjezdu \u00b7 Sledovat decoupling po 3h\nMain Set 1x\n- 240m 65% 85rpm intensity=warmup"
     },
     {
       "id": 110066675,
@@ -3401,11 +3402,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 19,
-    "success": 14,
-    "patternA": 14,
+    "success": 13,
+    "patternA": 13,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 5
+    "bail_no_match": 6
   },
   "weekly_summary": {
     "total_training_hours": 9.45,
