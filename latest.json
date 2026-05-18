@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-18T05:57:33.729071",
+    "last_updated": "2026-05-18T10:08:21.864484",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -241,7 +241,7 @@
       "respiration": null,
       "body_fat_pct": 23.2,
       "abdomen_cm": null,
-      "steps": 188,
+      "steps": 2508,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -638,10 +638,10 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.92,
-          "hard_sessions_planned": 4,
+          "planned_tss_delta": 0.97,
+          "hard_sessions_planned": 2,
           "current_week_hard_days_completed": 0,
-          "current_week_hard_days_total": 4,
+          "current_week_hard_days_total": 2,
           "race_proximity": 5,
           "next_week_load": 0.85,
           "plan_coverage_current_week": 0.5,
@@ -680,7 +680,7 @@
     "p_max": 1104,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-18T05:57:33.726868",
+    "calculation_timestamp": "2026-05-18T10:08:21.862292",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2961,7 +2961,7 @@
       "respiration": 14.0,
       "body_fat_pct": 23.0,
       "abdomen_cm": null,
-      "steps": 1052,
+      "steps": 1108,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3000,7 +3000,7 @@
       "respiration": null,
       "body_fat_pct": 23.2,
       "abdomen_cm": null,
-      "steps": 188,
+      "steps": 2508,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3015,28 +3015,28 @@
     {
       "id": 109654918,
       "date": "2026-05-18",
-      "name": "Regenerace Z1",
+      "name": "Klubovy svih Carla",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
+      "planned_tss": 63,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Regenerace po \u010dasovce\n\nMain Set 1x\n- 45m 50% intensity=recovery"
+      "description": "Klubovy svih Carla \u00b7 1.5-2h Z1/Z2, HR pod 130 bpm \u00b7 Klidova j\u00edzda po z\u00e1vode, neptat na kopcich\n\nMain Set 1x\n- 105m 60% 85rpm intensity=warmup"
     },
     {
       "id": 110066657,
       "date": "2026-05-19",
-      "name": "Z2 UNO-X 3x20min",
+      "name": "Z2 Lehka 75min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 68,
-      "duration_hours": 1.67,
-      "duration_formatted": "1h40m",
-      "workout_summary": "10m @181W | 3\u00d720m @231W / 5m rec | 15m @156W",
+      "planned_tss": 48,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 10m ramp 45-65% 80rpm intensity=warmup\n\nMain Set 3x\n- 20m 70% 90rpm intensity=interval\n- 5m 50% 80rpm intensity=recovery\n\nCooldown\n- 15m ramp 55-40% 75rpm intensity=cooldown"
+      "description": "Lehka Z2 75min pred Mamutem \u00b7 sniz TSS pred zavodem \u00b7 HR pod 130 bpm\n\nWarmup\n- 10m ramp 45-65% 80rpm intensity=warmup\n\nMain Set 1x\n- 30m 65% 88rpm intensity=interval\n- 5m 50% 80rpm intensity=recovery\n- 20m 67% 90rpm intensity=interval\n\nCooldown\n- 10m ramp 55-40% 75rpm intensity=cooldown"
     },
     {
       "id": 110066658,
@@ -3303,11 +3303,11 @@
   ],
   "workout_summary_stats": {
     "attempted": 18,
-    "success": 13,
-    "patternA": 13,
+    "success": 12,
+    "patternA": 12,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 5
+    "bail_no_match": 6
   },
   "weekly_summary": {
     "total_training_hours": 8.65,
