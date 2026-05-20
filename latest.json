@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-20T04:38:29.095863",
+    "last_updated": "2026-05-20T08:06:02.450490",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -212,7 +212,7 @@
       }
     },
     "current_metrics": {
-      "weight_kg": 85.51,
+      "weight_kg": 85.08,
       "resting_hr": 48,
       "hrv": null,
       "sleep_quality": null,
@@ -233,9 +233,9 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 23.3,
       "abdomen_cm": null,
-      "steps": 18,
+      "steps": 37,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -243,7 +243,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 86.0
     }
   },
   "derived_metrics": {
@@ -448,92 +448,92 @@
           "start": "2026-04-09",
           "end": "2026-05-20"
         },
-        "weight_kg": 85.5,
+        "weight_kg": 85.1,
         "weight_source": "wellness_recent",
         "cycling": {
           "anchors": {
             "300s": {
               "actual_watts": 390,
-              "actual_wpkg": 4.56,
+              "actual_wpkg": 4.58,
               "actual_hr": 171,
               "pct_lthr": 100.0,
               "source": "observed_outdoor",
               "coggan_watts": 350,
-              "coggan_wpkg": 4.09,
+              "coggan_wpkg": 4.11,
               "cp_model_watts": 424,
-              "cp_model_wpkg": 4.96,
+              "cp_model_wpkg": 4.98,
               "model_divergence_pct": -8.0
             },
             "600s": {
               "actual_watts": 359,
-              "actual_wpkg": 4.2,
+              "actual_wpkg": 4.22,
               "actual_hr": 170,
               "pct_lthr": 99.4,
               "source": "observed_outdoor",
               "coggan_watts": 320,
-              "coggan_wpkg": 3.74,
+              "coggan_wpkg": 3.76,
               "cp_model_watts": 377,
-              "cp_model_wpkg": 4.41,
+              "cp_model_wpkg": 4.43,
               "model_divergence_pct": -4.8
             },
             "1200s": {
               "actual_watts": 335,
-              "actual_wpkg": 3.92,
+              "actual_wpkg": 3.94,
               "actual_hr": 167,
               "pct_lthr": 97.7,
               "source": "observed_outdoor",
               "coggan_watts": 307,
-              "coggan_wpkg": 3.59,
+              "coggan_wpkg": 3.61,
               "cp_model_watts": 354,
-              "cp_model_wpkg": 4.14,
+              "cp_model_wpkg": 4.16,
               "model_divergence_pct": -5.4
             },
             "1800s": {
               "actual_watts": 324,
-              "actual_wpkg": 3.79,
+              "actual_wpkg": 3.81,
               "actual_hr": 166,
               "pct_lthr": 97.1,
               "source": "observed_outdoor",
               "coggan_watts": 297,
-              "coggan_wpkg": 3.47,
+              "coggan_wpkg": 3.49,
               "cp_model_watts": 346,
-              "cp_model_wpkg": 4.05,
+              "cp_model_wpkg": 4.07,
               "model_divergence_pct": -6.4
             },
             "3600s": {
               "actual_watts": 277,
-              "actual_wpkg": 3.24,
+              "actual_wpkg": 3.25,
               "actual_hr": 154,
               "pct_lthr": 90.1,
               "source": "observed_outdoor",
               "coggan_watts": 284,
-              "coggan_wpkg": 3.32,
+              "coggan_wpkg": 3.34,
               "cp_model_watts": 338,
-              "cp_model_wpkg": 3.95,
+              "cp_model_wpkg": 3.97,
               "model_divergence_pct": -18.0
             },
             "5400s": {
               "actual_watts": 264,
-              "actual_wpkg": 3.09,
+              "actual_wpkg": 3.1,
               "actual_hr": 151,
               "pct_lthr": 88.3,
               "source": "observed_outdoor",
               "coggan_watts": 271,
-              "coggan_wpkg": 3.17,
+              "coggan_wpkg": 3.18,
               "cp_model_watts": 335,
-              "cp_model_wpkg": 3.92,
+              "cp_model_wpkg": 3.94,
               "model_divergence_pct": -21.2
             },
             "7200s": {
               "actual_watts": 258,
-              "actual_wpkg": 3.02,
+              "actual_wpkg": 3.03,
               "actual_hr": 150,
               "pct_lthr": 87.7,
               "source": "observed_outdoor",
               "coggan_watts": 257,
-              "coggan_wpkg": 3.01,
+              "coggan_wpkg": 3.02,
               "cp_model_watts": 334,
-              "cp_model_wpkg": 3.91,
+              "cp_model_wpkg": 3.92,
               "model_divergence_pct": -22.8
             }
           },
@@ -673,7 +673,7 @@
     "p_max": 1102,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-20T04:38:29.094638",
+    "calculation_timestamp": "2026-05-20T08:06:02.449344",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2970,7 +2970,7 @@
       "respiration": 13.875,
       "body_fat_pct": 23.4,
       "abdomen_cm": null,
-      "steps": 6181,
+      "steps": 3161,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2982,7 +2982,7 @@
     },
     {
       "date": "2026-05-20",
-      "weight_kg": null,
+      "weight_kg": 85.08,
       "resting_hr": null,
       "hrv_rmssd": null,
       "hrv_sdnn": null,
@@ -3007,9 +3007,9 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 23.3,
       "abdomen_cm": null,
-      "steps": 18,
+      "steps": 37,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3017,7 +3017,7 @@
       "fat_g": null,
       "menstrual_phase": null,
       "menstrual_phase_predicted": null,
-      "readiness": null
+      "readiness": 86.0
     }
   ],
   "planned_workouts": [
