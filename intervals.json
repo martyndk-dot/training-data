@@ -1,83 +1,10 @@
 {
-  "generated_at": "2026-05-19T22:59:54.057069",
+  "generated_at": "2026-05-20T00:14:40.987964",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i145681617",
-      "date": "2026-05-05",
-      "type": "VirtualRide",
-      "name": "MyWhoosh - Threshold 3\u00d715 min",
-      "interval_summary": [
-        "2x 7m47s 320w"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 906,
-          "avg_power": 180,
-          "max_power": 314,
-          "avg_hr": 111,
-          "max_hr": 117,
-          "avg_cadence": 92.315674,
-          "zone": 1,
-          "training_load": 7.404639,
-          "decoupling": 3.210649
-        },
-        {
-          "type": "WORK",
-          "label": "467s@320w94rpm",
-          "duration_secs": 459,
-          "avg_power": 320,
-          "max_power": 330,
-          "avg_hr": 149,
-          "max_hr": 159,
-          "avg_cadence": 93.82571,
-          "zone": 4,
-          "training_load": 11.839587,
-          "decoupling": 8.3599205
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 317,
-          "avg_power": 176,
-          "max_power": 326,
-          "avg_hr": 127,
-          "max_hr": 159,
-          "avg_cadence": 91.899055,
-          "zone": 1,
-          "training_load": 2.857884,
-          "decoupling": -10.55982
-        },
-        {
-          "type": "WORK",
-          "label": "467s@320w94rpm",
-          "duration_secs": 475,
-          "avg_power": 320,
-          "max_power": 334,
-          "avg_hr": 156,
-          "max_hr": 165,
-          "avg_cadence": 94.66947,
-          "zone": 4,
-          "training_load": 12.329475,
-          "decoupling": 6.993408
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 918,
-          "avg_power": 162,
-          "max_power": 307,
-          "avg_hr": 128,
-          "max_hr": 165,
-          "avg_cadence": 94.32898,
-          "zone": 1,
-          "training_load": 6.6878376,
-          "decoupling": -5.329586
-        }
-      ]
-    },
     {
       "activity_id": "i146552940",
       "date": "2026-05-08",
