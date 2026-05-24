@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T13:15:49.637596",
+  "generated_at": "2026-05-24T14:47:25.824606",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -3337,6 +3337,80 @@
           "total_secs": 1512,
           "valid_pct": 91.4,
           "artifact_rate_avg": 2.06,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i151111815",
+      "date": "2026-05-24",
+      "type": "MountainBikeRide",
+      "name": "Nemojov HORSK\u00c1",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 8321,
+          "avg_power": 72,
+          "max_power": 791,
+          "avg_hr": 90,
+          "max_hr": 125,
+          "avg_cadence": 46.894016,
+          "zone": 1,
+          "training_load": 18.540937,
+          "avg_dfa_a1": 1.5142403
+        }
+      ],
+      "dfa": {
+        "avg": 1.556,
+        "p25": 1.477,
+        "p50": 1.58,
+        "p75": 1.658,
+        "tiz_below_lt1": {
+          "secs": 4542,
+          "pct": 99.2,
+          "avg_hr": 90,
+          "avg_watts": 72
+        },
+        "tiz_lt1_transition": {
+          "secs": 34,
+          "pct": 0.7,
+          "avg_hr": 105,
+          "avg_watts": 73
+        },
+        "tiz_transition_lt2": {
+          "secs": 3,
+          "pct": 0.1,
+          "avg_hr": 110,
+          "avg_watts": 128
+        },
+        "tiz_above_lt2": {
+          "secs": 1,
+          "pct": 0.0,
+          "avg_hr": 103,
+          "avg_watts": 134
+        },
+        "drift": {
+          "first_third_avg": 1.581,
+          "last_third_avg": 1.567,
+          "delta": -0.014,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 22,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "secs_in_band": 0,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 4580,
+          "total_secs": 4800,
+          "valid_pct": 95.4,
+          "artifact_rate_avg": 0.69,
           "sufficient": true
         }
       }
