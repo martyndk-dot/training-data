@@ -1,85 +1,10 @@
 {
-  "generated_at": "2026-05-27T23:13:27.226441",
+  "generated_at": "2026-05-28T00:14:25.804315",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i147916300",
-      "date": "2026-05-13",
-      "type": "Ride",
-      "name": "IntervalCoach - Vytrvalostn\u00ed j\u00edzda",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 7238,
-          "avg_power": 209,
-          "max_power": 439,
-          "avg_hr": 121,
-          "max_hr": 141,
-          "avg_cadence": 82.75518,
-          "zone": 2,
-          "training_load": 90.374115,
-          "decoupling": -1.2661852,
-          "avg_dfa_a1": 1.1421685
-        }
-      ],
-      "dfa": {
-        "avg": 1.135,
-        "p25": 0.851,
-        "p50": 1.066,
-        "p75": 1.465,
-        "tiz_below_lt1": {
-          "secs": 3928,
-          "pct": 55.7,
-          "avg_hr": 119,
-          "avg_watts": 198
-        },
-        "tiz_lt1_transition": {
-          "secs": 2322,
-          "pct": 32.9,
-          "avg_hr": 124,
-          "avg_watts": 222
-        },
-        "tiz_transition_lt2": {
-          "secs": 744,
-          "pct": 10.5,
-          "avg_hr": 127,
-          "avg_watts": 224
-        },
-        "tiz_above_lt2": {
-          "secs": 61,
-          "pct": 0.9,
-          "avg_hr": 133,
-          "avg_watts": 241
-        },
-        "drift": {
-          "first_third_avg": 1.091,
-          "last_third_avg": 1.291,
-          "delta": 0.2,
-          "interpretable": true
-        },
-        "lt1_crossing": {
-          "secs_in_band": 678,
-          "avg_hr": 123,
-          "avg_watts": 218
-        },
-        "lt2_crossing": {
-          "secs_in_band": 123,
-          "avg_hr": 134,
-          "avg_watts": 241
-        },
-        "quality": {
-          "valid_secs": 7055,
-          "total_secs": 7193,
-          "valid_pct": 98.1,
-          "artifact_rate_avg": 0.49,
-          "sufficient": true
-        }
-      }
-    },
     {
       "activity_id": "i148222961",
       "date": "2026-05-14",
