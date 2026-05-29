@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-05-29T18:10:01.232880",
+    "last_updated": "2026-05-29T20:37:40.592451",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -181,8 +181,8 @@
       "ctl": 70.46,
       "atl": 65.38,
       "tsb": 5.08,
-      "ramp_rate": 2.88,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ramp_rate": 1.84,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 320.6,
@@ -603,15 +603,14 @@
         }
       }
     },
-    "consistency_index": 0.67,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 3,
+      "planned_days": 2,
       "completed_days": 5,
       "matched_days": 2,
       "planned_dates": [
         "2026-05-25",
-        "2026-05-27",
-        "2026-05-29"
+        "2026-05-27"
       ],
       "completed_dates": [
         "2026-05-23",
@@ -635,13 +634,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.18,
-          "hard_sessions_planned": 1,
+          "planned_tss_delta": 1.06,
+          "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 2,
+          "current_week_hard_days_total": 1,
           "race_proximity": 8,
           "next_week_load": 1.06,
-          "plan_coverage_current_week": 0.43,
+          "plan_coverage_current_week": 0.29,
           "plan_coverage_next_week": 0.71
         },
         "data_quality": "good",
@@ -677,13 +676,13 @@
     "p_max": 1099,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-05-29T18:10:01.231745",
+    "calculation_timestamp": "2026-05-29T20:37:40.591320",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
       "activities_7d": 6,
       "activities_28d": 28,
-      "planned_workouts_7d": 4,
+      "planned_workouts_7d": 3,
       "ftp_history_days": {
         "indoor": 40,
         "outdoor": 40
@@ -2765,7 +2764,7 @@
       "respiration": 13.75,
       "body_fat_pct": 23.1,
       "abdomen_cm": null,
-      "steps": 5034,
+      "steps": 6070,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2816,19 +2815,6 @@
     }
   ],
   "planned_workouts": [
-    {
-      "id": 110066671,
-      "date": "2026-05-29",
-      "name": "Regenerace Z1",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 25,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "Polarizovan\u00fd pl\u00e1n 80/20 \u00b7 Regenerace po VO2max\n\nMain Set 1x\n- 60m 50% intensity=recovery"
-    },
     {
       "id": 110066673,
       "date": "2026-05-30",
@@ -3010,12 +2996,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 11,
+    "attempted": 10,
     "success": 5,
     "patternA": 5,
     "patternB": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 6
+    "bail_no_match": 5
   },
   "weekly_summary": {
     "total_training_hours": 11.7,
