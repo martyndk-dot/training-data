@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-31T13:27:28.902877",
+  "generated_at": "2026-05-31T15:01:45.400237",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2151,6 +2151,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i152956225",
+      "date": "2026-05-31",
+      "type": "MountainBikeRide",
+      "name": "Recovery Z1 60 min",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 6712,
+          "avg_power": 64,
+          "max_power": 556,
+          "avg_hr": 88,
+          "max_hr": 136,
+          "avg_cadence": 43.45609,
+          "zone": 1,
+          "training_load": 29.904602,
+          "decoupling": -36.555584
+        }
+      ]
     }
   ]
 }
