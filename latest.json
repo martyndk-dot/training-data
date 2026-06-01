@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-01T18:34:50.773424",
+    "last_updated": "2026-06-01T21:53:15.985435",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -645,12 +645,12 @@
         },
         "stream_2": {
           "planned_tss_delta": 0.86,
-          "hard_sessions_planned": 2,
+          "hard_sessions_planned": 4,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 3,
+          "current_week_hard_days_total": 5,
           "race_proximity": 5,
           "next_week_load": 1.32,
-          "plan_coverage_current_week": 0.67,
+          "plan_coverage_current_week": 1.83,
           "plan_coverage_next_week": 1.0
         },
         "data_quality": "good",
@@ -686,13 +686,13 @@
     "p_max": 1099,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 56.0,
-    "calculation_timestamp": "2026-06-01T18:34:50.772229",
+    "calculation_timestamp": "2026-06-01T21:53:15.984179",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 5,
       "activities_28d": 26,
-      "planned_workouts_7d": 3,
+      "planned_workouts_7d": 4,
       "ftp_history_days": {
         "indoor": 43,
         "outdoor": 43
@@ -2705,6 +2705,19 @@
   ],
   "planned_workouts": [
     {
+      "id": 113671153,
+      "date": "2026-06-01",
+      "name": "\ud83c\udf7d\ufe0f V\u00fd\u017eiva: dopln\u011bn\u00ed po VO2max (~7 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~600 g | B\u00edlk ~155 g | ~3700 kcal. Po tr\u00e9ninku do 30 min: ban\u00e1n + 30 g whey. Ve\u010der tvaroh (pomal\u00e1 b\u00edlkovina). Hydratace, ledov\u00e1n\u00ed kolena."
+    },
+    {
       "id": 110066677,
       "date": "2026-06-02",
       "name": "VOLNO (maximalizace TSB)",
@@ -2716,6 +2729,19 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "\u00daPLN\u00c9 VOLNO. Po v\u010derej\u0161\u00edm VO2max/sprint tr\u00e9ninku (TSS 158, W' a\u017e na 10 kJ) t\u011blo pot\u0159ebuje regeneraci. \u017d\u00e1dn\u00e9 kolo - i kdyby la\u0301kalo. Stre\u010dink, hydratace, sp\u00e1nek 7.5h+. Ledov\u00e1n\u00ed kolena. C\u00edl: maximalizovat TSB p\u0159ed RSOH."
+    },
+    {
+      "id": 113671155,
+      "date": "2026-06-02",
+      "name": "\ud83c\udf7d\ufe0f V\u00fd\u017eiva: volno, sach dol\u016f (~3,5 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~300 g | B\u00edlk ~160 g | ~2700 kcal. B\u00edlkoviny vysoko (regenerace + koleno), sacharidy n\u00edzko. Bez kola = m\u00e9n\u011b paliva."
     },
     {
       "id": 110066692,
@@ -2731,6 +2757,32 @@
       "description": "Kr\u00e1tk\u00e1 Z2 udr\u017eovac\u00ed - bez Z5 z\u00e1b\u011br\u016f (ty a\u017e v p\u00e1tek na opener). Jen proto\u010dit nohy. Kadence 88-92 rpm. Nep\u0159id\u00e1vat \u017e\u00e1dn\u00e9 z\u00e1b\u011bry. C\u00edl: TSB nahoru.\n\nWarmup\n- 10m 165w intensity=warmup\n\nMain Set 1x\n- 30m 200w intensity=interval\n\nCooldown\n- 10m 150w intensity=cooldown"
     },
     {
+      "id": 113671160,
+      "date": "2026-06-03",
+      "name": "\ud83c\udf7d\ufe0f V\u00fd\u017eiva: lehk\u00e1 Z2 (~4,5 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~380 g | B\u00edlk ~155 g | ~3000 kcal. M\u00edrn\u00e9 nav\u00fd\u0161en\u00ed sach kolem j\u00edzdy. Ban\u00e1n/r\u00fd\u017eov\u00e1 placka p\u0159ed a po."
+    },
+    {
+      "id": 113671166,
+      "date": "2026-06-04",
+      "name": "\ud83c\udf7d\ufe0f V\u00fd\u017eiva: volno, sach dol\u016f (~3,5 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~300 g | B\u00edlk ~160 g | ~2700 kcal. Stejn\u011b jako \u00fater\u00fd \u2014 b\u00edlkoviny nahoru, sach dol\u016f, TSB d\u00e1l stoup\u00e1."
+    },
+    {
       "id": 110066693,
       "date": "2026-06-05",
       "name": "Opener p\u0159ed RSOH",
@@ -2744,6 +2796,19 @@
       "description": "Opener den p\u0159ed RSOH. 3 kr\u00e1tk\u00e9 z\u00e1b\u011bry probud\u00ed nohy bez \u00fanavy. Kadence 95+ rpm. Po tr\u00e9ninku: hydratace, lehk\u00e1 ve\u010de\u0159e, kontrola kola, p\u0159\u00edprava kapes na z\u00e1vod.\n\nWarmup\n- 12m 165w intensity=warmup\n\nMain Set 3x\n- 1m 380w intensity=interval\n- 3m 165w intensity=recovery\n\nCooldown\n- 12m 150w intensity=cooldown"
     },
     {
+      "id": 113671169,
+      "date": "2026-06-05",
+      "name": "\u26a1 V\u00fd\u017eiva: START NAB\u00cdJEN\u00cd (~9 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~750 g | B\u00edlk ~140 g | ~4200 kcal. Sacharidov\u00e1 superkompenzace! R\u00fd\u017ee, t\u011bstoviny, b\u00edl\u00e9 pe\u010divo, ban\u00e1ny. SNI\u017d vl\u00e1kninu a tuky (m\u00e9n\u011b nad\u00fdm\u00e1n\u00ed). Pij v\u00edc + elektrolyty. P\u0159\u00edprava kapes a kola."
+    },
+    {
       "id": 89252522,
       "date": "2026-06-06",
       "name": "Road Stage Orlick\u00e9 Hory",
@@ -2755,6 +2820,32 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": ""
+    },
+    {
+      "id": 113671170,
+      "date": "2026-06-06",
+      "name": "\ud83c\udfc1 V\u00fd\u017eiva Z\u00c1VOD: 80 g sach/h na kole!",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "3 h p\u0159ed: ka\u0161e + b\u00edl\u00e9 pe\u010divo s d\u017eemem (~150\u2013200 g sach, n\u00edzk\u00fd tuk/vl\u00e1knina). NA KOLE: 80 g sach/h + 500\u2013750 ml/h s elektrolyty, jez od 20. min PROAKTIVN\u011a (\u03b11 pad\u00e1 p\u0159i podtankov\u00e1n\u00ed + vedru). Po dojezdu do 30 min: 60\u201380 g sach + 30 g b\u00edlk + s\u016fl. Kofein ~250 mg 45 min p\u0159ed startem."
+    },
+    {
+      "id": 113671173,
+      "date": "2026-06-07",
+      "name": "\ud83c\udf7d\ufe0f V\u00fd\u017eiva: regenerace (~5 g/kg)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Sach ~430 g | B\u00edlk ~165 g (nejv\u00fd\u0161 v t\u00fddnu) | ~3000 kcal. Losos = omega-3 proti z\u00e1n\u011btu. Hydratace cel\u00fd den, lehk\u00e1 proch\u00e1zka, ledov\u00e1n\u00ed kolena."
     },
     {
       "id": 110066694,
@@ -3002,7 +3093,7 @@
     "success": 8,
     "patternA": 8,
     "patternB": 0,
-    "bail_no_workout_doc": 3,
+    "bail_no_workout_doc": 10,
     "bail_no_match": 8
   },
   "weekly_summary": {
