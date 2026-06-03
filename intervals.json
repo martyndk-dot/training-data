@@ -1,79 +1,10 @@
 {
-  "generated_at": "2026-06-02T23:22:19.311224",
+  "generated_at": "2026-06-03T02:06:26.691545",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i149752321",
-      "date": "2026-05-19",
-      "type": "Ride",
-      "name": "Nemojov SILNI\u010cN\u00cd",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 9418,
-          "avg_power": 205,
-          "max_power": 568,
-          "avg_hr": 120,
-          "max_hr": 142,
-          "avg_cadence": 83.154686,
-          "zone": 2,
-          "training_load": 76.22902,
-          "avg_dfa_a1": 1.2823248
-        }
-      ],
-      "dfa": {
-        "avg": 1.3,
-        "p25": 1.031,
-        "p50": 1.355,
-        "p75": 1.544,
-        "tiz_below_lt1": {
-          "secs": 4260,
-          "pct": 76.7,
-          "avg_hr": 119,
-          "avg_watts": 200
-        },
-        "tiz_lt1_transition": {
-          "secs": 1106,
-          "pct": 19.9,
-          "avg_hr": 129,
-          "avg_watts": 226
-        },
-        "tiz_transition_lt2": {
-          "secs": 186,
-          "pct": 3.4,
-          "avg_hr": 132,
-          "avg_watts": 232
-        },
-        "tiz_above_lt2": null,
-        "drift": {
-          "first_third_avg": 1.323,
-          "last_third_avg": 1.432,
-          "delta": 0.109,
-          "interpretable": true
-        },
-        "lt1_crossing": {
-          "secs_in_band": 396,
-          "avg_hr": 125,
-          "avg_watts": 206
-        },
-        "lt2_crossing": {
-          "secs_in_band": 21,
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "quality": {
-          "valid_secs": 5552,
-          "total_secs": 5967,
-          "valid_pct": 93.0,
-          "artifact_rate_avg": 0.89,
-          "sufficient": true
-        }
-      }
-    },
     {
       "activity_id": "i150609543",
       "date": "2026-05-22",
