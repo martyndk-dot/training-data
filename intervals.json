@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T17:16:33.439689",
+  "generated_at": "2026-06-03T20:35:32.057174",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2042,6 +2042,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i154015267",
+      "date": "2026-06-03",
+      "type": "VirtualRide",
+      "name": "MyWhoosh - Z2 udr\u017eovac\u00ed 50 min",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3014,
+          "avg_power": 172,
+          "max_power": 220,
+          "avg_hr": 111,
+          "max_hr": 122,
+          "avg_cadence": 93.35634,
+          "zone": 1,
+          "training_load": 24.085707,
+          "decoupling": 2.3517227
+        }
+      ]
     }
   ]
 }
