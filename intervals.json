@@ -1,85 +1,10 @@
 {
-  "generated_at": "2026-06-08T22:55:01.310889",
+  "generated_at": "2026-06-09T00:01:26.121941",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i151417232",
-      "date": "2026-05-25",
-      "type": "Ride",
-      "name": "Nemojov SILNI\u010cN\u00cd",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 11083,
-          "avg_power": 161,
-          "max_power": 570,
-          "avg_hr": 112,
-          "max_hr": 148,
-          "avg_cadence": 73.34564,
-          "zone": 1,
-          "training_load": 100.9723,
-          "decoupling": 0.23243588,
-          "avg_dfa_a1": 1.4473522
-        }
-      ],
-      "dfa": {
-        "avg": 1.457,
-        "p25": 1.324,
-        "p50": 1.543,
-        "p75": 1.652,
-        "tiz_below_lt1": {
-          "secs": 8719,
-          "pct": 92.6,
-          "avg_hr": 112,
-          "avg_watts": 161
-        },
-        "tiz_lt1_transition": {
-          "secs": 403,
-          "pct": 4.3,
-          "avg_hr": 133,
-          "avg_watts": 211
-        },
-        "tiz_transition_lt2": {
-          "secs": 241,
-          "pct": 2.6,
-          "avg_hr": 138,
-          "avg_watts": 209
-        },
-        "tiz_above_lt2": {
-          "secs": 49,
-          "pct": 0.5,
-          "avg_hr": 140,
-          "avg_watts": 231
-        },
-        "drift": {
-          "first_third_avg": 1.47,
-          "last_third_avg": 1.282,
-          "delta": -0.188,
-          "interpretable": true
-        },
-        "lt1_crossing": {
-          "secs_in_band": 250,
-          "avg_hr": 133,
-          "avg_watts": 208
-        },
-        "lt2_crossing": {
-          "secs_in_band": 92,
-          "avg_hr": 139,
-          "avg_watts": 225
-        },
-        "quality": {
-          "valid_secs": 9412,
-          "total_secs": 10207,
-          "valid_pct": 92.2,
-          "artifact_rate_avg": 1.17,
-          "sufficient": true
-        }
-      }
-    },
     {
       "activity_id": "i151971861",
       "date": "2026-05-27",
