@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T12:02:29.308002",
+  "generated_at": "2026-06-10T16:07:26.173676",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2853,6 +2853,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i156115550",
+      "date": "2026-06-10",
+      "type": "VirtualRide",
+      "name": "Z2 + 3x2min race-pace aktivace",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3911,
+          "avg_power": 199,
+          "max_power": 310,
+          "avg_hr": 124,
+          "max_hr": 149,
+          "avg_cadence": 93.30657,
+          "zone": 2,
+          "training_load": 40.06052,
+          "decoupling": 3.8282568
+        }
+      ]
     }
   ]
 }
