@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T06:56:07.372062",
+  "generated_at": "2026-06-13T09:55:17.238571",
   "version": "3.103",
   "script_hash": "e925c47d82b9",
   "scan_hours": 72,
@@ -2735,6 +2735,81 @@
           "decoupling": -2.3215435
         }
       ]
+    },
+    {
+      "activity_id": "i156842528",
+      "date": "2026-06-13",
+      "type": "Ride",
+      "name": "Trutnov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1816,
+          "avg_power": 128,
+          "max_power": 622,
+          "avg_hr": 106,
+          "max_hr": 140,
+          "avg_cadence": 70.47744,
+          "zone": 1,
+          "training_load": 10.078269,
+          "decoupling": 29.478867,
+          "avg_dfa_a1": 1.4683465
+        }
+      ],
+      "dfa": {
+        "avg": 1.585,
+        "p25": 1.532,
+        "p50": 1.599,
+        "p75": 1.665,
+        "tiz_below_lt1": {
+          "secs": 1292,
+          "pct": 99.7,
+          "avg_hr": 107,
+          "avg_watts": 127
+        },
+        "tiz_lt1_transition": {
+          "secs": 2,
+          "pct": 0.2,
+          "avg_hr": 104,
+          "avg_watts": 179
+        },
+        "tiz_transition_lt2": {
+          "secs": 1,
+          "pct": 0.1,
+          "avg_hr": 104,
+          "avg_watts": 173
+        },
+        "tiz_above_lt2": {
+          "secs": 1,
+          "pct": 0.1,
+          "avg_hr": 104,
+          "avg_watts": 183
+        },
+        "drift": {
+          "first_third_avg": 1.591,
+          "last_third_avg": 1.631,
+          "delta": 0.04,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 2,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "secs_in_band": 0,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 1296,
+          "total_secs": 1485,
+          "valid_pct": 87.3,
+          "artifact_rate_avg": 1.79,
+          "sufficient": true
+        }
+      }
     }
   ]
 }
