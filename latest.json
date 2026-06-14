@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-14T11:26:55.213773",
+    "last_updated": "2026-06-14T13:13:24.759245",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -95,29 +95,11 @@
       "context": "RACE_A 'DP Bystre' in 14 days. Begin volume reduction (target 41-60% over 2 weeks). Maintain intensity. CTL should peak now or within the next few days.",
       "persistence_days": null,
       "tier": 1
-    },
-    {
-      "metric": "race_week",
-      "value": 0,
-      "severity": "info",
-      "threshold": "RACE_B within 7 days",
-      "context": "Race week D-0 of 'XC Z\u00e1hornice'. Today: Race day, 0-0 TSS. Race effort",
-      "persistence_days": null,
-      "tier": 1
-    },
-    {
-      "metric": "race_week_tsb",
-      "value": -25.2,
-      "severity": "warning",
-      "threshold": "TSB target 0-10",
-      "context": "Projected race-day TSB -25.2 is below target range 0-10. Consider additional rest to reach target.",
-      "persistence_days": null,
-      "tier": 1
     }
   ],
   "readiness_decision": {
-    "recommendation": "modify",
-    "priority": 2,
+    "recommendation": "go",
+    "priority": 3,
     "signals": {
       "hrv": {
         "status": "unavailable",
@@ -146,13 +128,13 @@
         "value_yesterday": 0.86
       },
       "tsb": {
-        "status": "amber",
-        "value": -25.2
+        "status": "green",
+        "value": 7.2
       }
     },
     "signal_summary": {
-      "green": 1,
-      "amber": 1,
+      "green": 2,
+      "amber": 0,
       "red": 0,
       "unavailable": 4
     },
@@ -160,20 +142,11 @@
       "phase": "Taper",
       "phase_week": 1,
       "amber_threshold": 1,
-      "modifier_applied": "race_week_tightened"
+      "modifier_applied": "taper_tightened"
     },
-    "race_week_defers": true,
-    "modification": {
-      "triggers": [
-        "tsb"
-      ],
-      "suggested_adjustments": {
-        "intensity": "preserve",
-        "volume": "reduce",
-        "cap_zone": null
-      }
-    },
-    "reason": "P2 signal count. 1 amber (tsb) >= threshold 1.",
+    "race_week_defers": false,
+    "modification": null,
+    "reason": "P3 green light. 2 green, 0 amber (threshold 1), 0 red. Note: 4 signals unavailable \u2014 limited data.",
     "alarm_refs": []
   },
   "history": {
@@ -205,17 +178,17 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 78.64,
-      "atl": 103.8,
-      "tsb": -25.16,
-      "ramp_rate": 4.75,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ctl": 70.6,
+      "atl": 63.41,
+      "tsb": 7.19,
+      "ramp_rate": -3.3,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
-      "eftp": 350.0,
-      "w_prime": 29928,
+      "eftp": 349.3,
+      "w_prime": 29868,
       "w_prime_kj": 29.9,
-      "p_max": 1097,
+      "p_max": 1095,
       "vo2max": null,
       "sports": {
         "cycling": {
@@ -268,7 +241,7 @@
       "respiration": null,
       "body_fat_pct": 22.8,
       "abdomen_cm": null,
-      "steps": 5165,
+      "steps": 5586,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -572,7 +545,7 @@
           },
           "coverage_ratio": 1.0,
           "ftp_used": 350,
-          "w_prime_used": 29928,
+          "w_prime_used": 29868,
           "ftp_staleness_days": 0,
           "model_trust_note": "CP/W' model (P=CP+W'/t) is primary for durations \u226420min where W' contribution is meaningful. Coggan duration factors (Allen & Coggan, 3rd ed.) are the established reference for \u226560min. 30min is the crossover zone where both apply. model_divergence_pct = (actual - CP_model) / CP_model \u00d7 100. Positive divergence at short durations may indicate strong anaerobic capacity or stale W' value. Indoor MMP is typically 3-5% lower than outdoor (cooling, motivation) \u2014 source flag indicates which environment produced each anchor."
         }
@@ -662,13 +635,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.58,
-          "hard_sessions_planned": 1,
+          "planned_tss_delta": null,
+          "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 2,
-          "current_week_hard_days_total": 3,
-          "race_proximity": 0,
+          "current_week_hard_days_total": 2,
+          "race_proximity": 14,
           "next_week_load": 0.76,
-          "plan_coverage_current_week": 0.2,
+          "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 1.4
         },
         "data_quality": "good",
@@ -698,19 +671,19 @@
       "benchmark_percentage": "+2.9%",
       "seasonal_expected": true
     },
-    "eftp": 350.0,
-    "w_prime": 29928,
+    "eftp": 349.3,
+    "w_prime": 29868,
     "w_prime_kj": 29.9,
-    "p_max": 1097,
+    "p_max": 1095,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-14T11:26:55.212577",
+    "calculation_timestamp": "2026-06-14T13:13:24.758134",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
       "activities_7d": 6,
       "activities_28d": 22,
-      "planned_workouts_7d": 5,
+      "planned_workouts_7d": 4,
       "ftp_history_days": {
         "indoor": 56,
         "outdoor": 56
@@ -722,7 +695,7 @@
       "id": "i156885534",
       "date": "2026-06-13T09:56:23",
       "type": "Ride",
-      "name": "Trutnov SILNI\u010cN\u00cd",
+      "name": "KCM",
       "duration_hours": 2.58,
       "distance_km": 80.94,
       "tss": 158,
@@ -2415,7 +2388,7 @@
       "respiration": null,
       "body_fat_pct": 22.8,
       "abdomen_cm": null,
-      "steps": 5165,
+      "steps": 5586,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2427,19 +2400,6 @@
     }
   ],
   "planned_workouts": [
-    {
-      "id": 89253308,
-      "date": "2026-06-14",
-      "name": "XC Z\u00e1hornice",
-      "type": "RACE_B",
-      "sport_type": "MountainBikeRide",
-      "planned_tss": 120,
-      "duration_hours": 1.25,
-      "duration_formatted": "1h15m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": ""
-    },
     {
       "id": 113237881,
       "date": "2026-06-15",
@@ -2695,26 +2655,16 @@
   },
   "race_calendar": {
     "next_race": {
-      "name": "XC Z\u00e1hornice",
-      "date": "2026-06-14",
-      "category": "RACE_B",
-      "type": "MountainBikeRide",
-      "days_until": 0,
-      "moving_time_seconds": 4500,
-      "distance_meters": null,
+      "name": "DP Bystre",
+      "date": "2026-06-28",
+      "category": "RACE_A",
+      "type": "Ride",
+      "days_until": 14,
+      "moving_time_seconds": 9000,
+      "distance_meters": 85000.0,
       "has_terrain": false
     },
     "all_races": [
-      {
-        "name": "XC Z\u00e1hornice",
-        "date": "2026-06-14",
-        "category": "RACE_B",
-        "type": "MountainBikeRide",
-        "days_until": 0,
-        "moving_time_seconds": 4500,
-        "distance_meters": null,
-        "has_terrain": false
-      },
       {
         "name": "DP Bystre",
         "date": "2026-06-28",
@@ -2754,58 +2704,7 @@
       "message": "RACE_A 'DP Bystre' in 14 days. Begin volume reduction (target 41-60% over 2 weeks). Maintain intensity. CTL should peak now or within the next few days."
     },
     "race_week": {
-      "active": true,
-      "event_name": "XC Z\u00e1hornice",
-      "event_date": "2026-06-14",
-      "event_category": "RACE_B",
-      "event_type": "MountainBikeRide",
-      "event_duration_class": "short_intense",
-      "event_moving_time_seconds": 4500,
-      "days_until_event": 0,
-      "current_day": "D-0",
-      "ctl_baseline": 78.6,
-      "normal_weekly_tss": 550.5,
-      "race_week_tss_budget": {
-        "min": 275,
-        "max": 358
-      },
-      "race_week_tss_spent": 368,
-      "race_week_tss_remaining": {
-        "min": 0,
-        "max": 0
-      },
-      "projected_race_day_tsb": -25.2,
-      "tsb_target_range": {
-        "min": 0,
-        "max": 10
-      },
-      "today": {
-        "label": "Race day",
-        "load_target_tss": {
-          "min": 0,
-          "max": 0
-        },
-        "zones": "Race effort",
-        "purpose": "Go/no-go assessment. Execute race plan."
-      },
-      "carb_loading": {
-        "applicable": false,
-        "active": false,
-        "starts": "D-4",
-        "start_date": "2026-06-10",
-        "note": null
-      },
-      "opener": {
-        "day": "D-2",
-        "date": "2026-06-12",
-        "intensity": "more_intense"
-      },
-      "go_no_go": {
-        "tsb_status": "flag",
-        "notes": [
-          "Projected race-day TSB -25.2 is significantly below target range 0-10. Fatigue may impact performance."
-        ]
-      }
+      "active": false
     }
   }
 }
