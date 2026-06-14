@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-14T16:53:50.381363",
+    "last_updated": "2026-06-14T18:09:29.462152",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -241,7 +241,7 @@
       "respiration": null,
       "body_fat_pct": 22.8,
       "abdomen_cm": null,
-      "steps": 450,
+      "steps": 1571,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -640,7 +640,7 @@
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 2,
           "race_proximity": 14,
-          "next_week_load": 0.76,
+          "next_week_load": 0.66,
           "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 1.4
         },
@@ -677,7 +677,7 @@
     "p_max": 1095,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-14T16:53:50.380251",
+    "calculation_timestamp": "2026-06-14T18:09:29.460948",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2388,7 +2388,7 @@
       "respiration": null,
       "body_fat_pct": 22.8,
       "abdomen_cm": null,
-      "steps": 450,
+      "steps": 1571,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2416,15 +2416,15 @@
     {
       "id": 113237882,
       "date": "2026-06-16",
-      "name": "Recovery Z1 45 min",
+      "name": "Volno / lehk\u00e1 Z1 (dle pr\u016fdu\u0161nice)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
+      "planned_tss": 17,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Aktivn\u00ed regenerace po double v\u00edkendu. Pure Z1, kadence 85+ rpm. Pokud HRV st\u00e1le propadl\u00e9, vym\u011b\u0148 za proch\u00e1zku.\n\nMain Set 1x\n- 45m 50% intensity=recovery"
+      "description": "Main Set 1x\n- 40m 50% intensity=recovery"
     },
     {
       "id": 113237883,
@@ -2442,41 +2442,41 @@
     {
       "id": 113237884,
       "date": "2026-06-18",
-      "name": "Z2 90 min + 3x10 min sweet spot",
+      "name": "Z2 base 90 min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 78,
-      "duration_hours": 1.42,
-      "duration_formatted": "1h25m",
-      "workout_summary": "15m @192W | 3\u00d710m @315W / 5m rec | 10m @175W",
+      "planned_tss": 61,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Hlavn\u00ed kvalita t\u00fddne. Sweet spot 88-92 % FTP, kadence 90+ rpm. Sledovat DFA \u03b11 v interval\u00edch (0.6-0.8).\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 10m 90% intensity=interval\n- 5m 55% intensity=recovery\n\nMain Set 1x\n- 15m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "Warmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 70m 67% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 113237885,
       "date": "2026-06-19",
-      "name": "Recovery Z1 45 min",
+      "name": "Z2 + 2x10 sweet spot (podm\u00edn\u011bn\u011b)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 19,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": null,
+      "planned_tss": 48,
+      "duration_hours": 0.92,
+      "duration_formatted": "55m",
+      "workout_summary": "15m @192W | 2\u00d710m @308W / 5m rec | 10m @175W",
       "has_terrain": false,
-      "description": "Regenerace. Pure Z1, kadence 85+ rpm.\n\nMain Set 1x\n- 45m 50% intensity=recovery"
+      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 10m 88% intensity=interval\n- 5m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 113237886,
       "date": "2026-06-20",
-      "name": "Klubov\u00fd \u0161vih 4.5h",
+      "name": "Klubov\u00fd \u0161vih ~3h (zkr\u00e1ceno)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 189,
-      "duration_hours": 4.5,
-      "duration_formatted": "4h30m",
+      "planned_tss": 126,
+      "duration_hours": 3.0,
+      "duration_formatted": "3h",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Klubov\u00fd \u0161vih ~4.5h Z1/Z2 \u00b7 HR pod 135 bpm \u00b7 Kadence 85+ rpm \u00b7 Na kopc\u00edch nep\u00e1lit (max 280 W kr\u00e1tk\u00e9 stoup\u00e1n\u00ed), dojet na sjezdu \u00b7 Sledovat DFA \u03b11 (m\u011blo by z\u016fstat >1.0 - pokud klesne po 2-3h, n\u011bco chyb\u00ed: voda/j\u00eddlo/teplota, zkr\u00e1tit). V\u00fd\u017eiva 70-80 g sacharid\u016f/h od 30. minuty. Hlavn\u00ed endurance stimulus bloku k DP Bystre. Pozor na kadenci v kopc\u00edch - dr\u017eet 70+ rpm (koleno).\n\nMain Set 1x\n- 270m 65% intensity=warmup"
+      "description": "Main Set 1x\n- 180m 65% intensity=warmup"
     },
     {
       "id": 113237887,
