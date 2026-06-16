@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-16T19:02:41.210632",
+    "last_updated": "2026-06-16T21:47:11.341525",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -250,7 +250,7 @@
       "respiration": null,
       "body_fat_pct": 23.2,
       "abdomen_cm": null,
-      "steps": 7799,
+      "steps": 2959,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -629,9 +629,9 @@
     },
     "phase_detection": {
       "phase": "Taper",
-      "confidence": "high",
+      "confidence": "medium",
       "reason_codes": [
-        "RACE_IMMINENT_VOLUME_REDUCING"
+        "RACE_IMMINENT"
       ],
       "basis": {
         "stream_1": {
@@ -641,7 +641,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.8,
+          "planned_tss_delta": 0.9,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 1,
@@ -660,7 +660,7 @@
     },
     "phase_detected": "Taper",
     "phase_triggers": [
-      "RACE_IMMINENT_VOLUME_REDUCING"
+      "RACE_IMMINENT"
     ],
     "seasonal_context": "Build / Early Race Season",
     "benchmark_indoor": {
@@ -683,7 +683,7 @@
     "p_max": 1093,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-16T19:02:41.209383",
+    "calculation_timestamp": "2026-06-16T21:47:11.340398",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2258,7 +2258,7 @@
       "respiration": null,
       "body_fat_pct": 23.2,
       "abdomen_cm": null,
-      "steps": 7799,
+      "steps": 2959,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2273,7 +2273,7 @@
     {
       "id": 113237883,
       "date": "2026-06-17",
-      "name": "Z2 base 75 min",
+      "name": "Z2 base 75 min (n\u00e1vrat)",
       "type": "WORKOUT",
       "sport_type": "Ride",
       "planned_tss": 50,
@@ -2281,59 +2281,59 @@
       "duration_formatted": "1h15m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "N\u00e1vrat k objemu po regeneraci. Z2 base, kadence 88-92 rpm. Sledovat DFA \u03b11 >1.0.\n\nWarmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 55m 67% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "Warmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 55m 67% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 113237884,
       "date": "2026-06-18",
-      "name": "Z2 base 90 min",
+      "name": "Z2 + 3x2min aktivace",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 61,
+      "planned_tss": 63,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
-      "workout_summary": null,
+      "workout_summary": "15m @192W | 3\u00d72m @301W / 3m rec | 10m @175W",
       "has_terrain": false,
-      "description": "Warmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 70m 67% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 1x\n- 50m 67% intensity=interval\n\nMain Set 3x\n- 2m 86% intensity=interval\n- 3m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 113237885,
       "date": "2026-06-19",
-      "name": "Z2 + 2x10 sweet spot (podm\u00edn\u011bn\u011b)",
+      "name": "Z2 base 60 min (p\u0159ed \u0161vihem)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 48,
-      "duration_hours": 0.92,
-      "duration_formatted": "55m",
-      "workout_summary": "15m @192W | 2\u00d710m @308W / 5m rec | 10m @175W",
+      "planned_tss": 37,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
       "has_terrain": false,
-      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 10m 88% intensity=interval\n- 5m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "Warmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 40m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 113237886,
       "date": "2026-06-20",
-      "name": "Klubov\u00fd \u0161vih ~3h (zkr\u00e1ceno)",
+      "name": "Kopcovit\u00fd klubov\u00fd \u0161vih 4-5h",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 126,
-      "duration_hours": 3.0,
-      "duration_formatted": "3h",
+      "planned_tss": 208,
+      "duration_hours": 4.5,
+      "duration_formatted": "4h30m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Main Set 1x\n- 180m 65% intensity=warmup"
+      "description": "Main Set 1x\n- 270m 68% intensity=interval"
     },
     {
       "id": 113237887,
       "date": "2026-06-21",
-      "name": "Z2 base 75 min",
+      "name": "Recovery Z1 40 min",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 50,
-      "duration_hours": 1.25,
-      "duration_formatted": "1h15m",
+      "planned_tss": 17,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Z2 base. Kadence 88-92 rpm.\n\nWarmup\n- 10m 50% intensity=warmup\n\nMain Set 1x\n- 55m 67% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "Main Set 1x\n- 40m 50% intensity=recovery"
     },
     {
       "id": 113237890,
