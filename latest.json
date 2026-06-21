@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-21T20:20:52.950846",
+    "last_updated": "2026-06-21T21:51:47.180366",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -176,7 +176,7 @@
       "atl": 61.35,
       "tsb": 6.79,
       "ramp_rate": -2.46,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 346.9,
@@ -235,7 +235,7 @@
       "respiration": null,
       "body_fat_pct": 22.9,
       "abdomen_cm": null,
-      "steps": 8314,
+      "steps": 10326,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -597,16 +597,15 @@
         }
       }
     },
-    "consistency_index": 0.75,
+    "consistency_index": 1.0,
     "consistency_details": {
-      "planned_days": 4,
+      "planned_days": 3,
       "completed_days": 3,
       "matched_days": 3,
       "planned_dates": [
         "2026-06-17",
         "2026-06-18",
-        "2026-06-20",
-        "2026-06-21"
+        "2026-06-20"
       ],
       "completed_dates": [
         "2026-06-17",
@@ -628,13 +627,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.25,
+          "planned_tss_delta": null,
           "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 1,
           "current_week_hard_days_total": 1,
           "race_proximity": 7,
           "next_week_load": 0.65,
-          "plan_coverage_current_week": 0.2,
+          "plan_coverage_current_week": 0.0,
           "plan_coverage_next_week": 1.4
         },
         "data_quality": "good",
@@ -670,13 +669,13 @@
     "p_max": 1087,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-21T20:20:52.949627",
+    "calculation_timestamp": "2026-06-21T21:51:47.179208",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
       "activities_7d": 3,
       "activities_28d": 19,
-      "planned_workouts_7d": 5,
+      "planned_workouts_7d": 4,
       "ftp_history_days": {
         "indoor": 63,
         "outdoor": 63
@@ -2190,7 +2189,7 @@
       "respiration": null,
       "body_fat_pct": 22.9,
       "abdomen_cm": null,
-      "steps": 8314,
+      "steps": 10326,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2202,19 +2201,6 @@
     }
   ],
   "planned_workouts": [
-    {
-      "id": 113237887,
-      "date": "2026-06-21",
-      "name": "Recovery Z1 40 min",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 17,
-      "duration_hours": 0.67,
-      "duration_formatted": "40m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "description": "Main Set 1x\n- 40m 50% intensity=recovery"
-    },
     {
       "id": 113237890,
       "date": "2026-06-22",
@@ -2364,12 +2350,12 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 9,
+    "attempted": 8,
     "success": 2,
     "patternA": 2,
     "patternB": 0,
     "bail_no_workout_doc": 2,
-    "bail_no_match": 7
+    "bail_no_match": 6
   },
   "weekly_summary": {
     "total_training_hours": 8.47,
