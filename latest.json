@@ -70,7 +70,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-06-21T17:01:56.237512",
+    "last_updated": "2026-06-21T18:48:47.872843",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.103"
@@ -235,7 +235,7 @@
       "respiration": null,
       "body_fat_pct": 22.9,
       "abdomen_cm": null,
-      "steps": 6694,
+      "steps": 8314,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -633,7 +633,7 @@
           "current_week_hard_days_completed": 1,
           "current_week_hard_days_total": 1,
           "race_proximity": 7,
-          "next_week_load": 0.51,
+          "next_week_load": 0.65,
           "plan_coverage_current_week": 0.2,
           "plan_coverage_next_week": 1.4
         },
@@ -670,7 +670,7 @@
     "p_max": 1087,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-06-21T17:01:56.236386",
+    "calculation_timestamp": "2026-06-21T18:48:47.871628",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 6,
@@ -2190,7 +2190,7 @@
       "respiration": null,
       "body_fat_pct": 22.9,
       "abdomen_cm": null,
-      "steps": 6694,
+      "steps": 8314,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2252,7 +2252,7 @@
       "duration_formatted": "1h9m",
       "workout_summary": "15m @192W | 2\u00d715m @332W / 6m rec | 12m @175W",
       "has_terrain": false,
-      "description": "Posledn\u00ed kvalita p\u0159ed DP Bystre (4 dny p\u0159ed ned\u011bln\u00edm z\u00e1vodem). Threshold 95 % FTP, kadence 88-92 rpm (koleno). Sledovat DFA \u03b11 - kolem 0.5-0.6. Pokud klesne pod 0.4 brzy, zkr\u00e1tit.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 15m 95% intensity=interval\n- 6m 55% intensity=recovery\n\nCooldown\n- 12m 50% intensity=cooldown"
+      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 2x\n- 15m 95% intensity=interval\n- 6m 55% intensity=recovery\n\nCooldown\n- 12m 50% intensity=cooldown"
     },
     {
       "id": 113237892,
@@ -2283,15 +2283,15 @@
     {
       "id": 113237894,
       "date": "2026-06-27",
-      "name": "Opener p\u0159ed DP Bystre",
+      "name": "Zkr\u00e1cen\u00fd \u0161vih 2.5h + opener z\u00e1b\u011bry",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 31,
-      "duration_hours": 0.7,
-      "duration_formatted": "42m",
-      "workout_summary": "15m @192W | 3\u00d71m @420W / 3m rec | 15m @175W",
+      "planned_tss": 103,
+      "duration_hours": 2.45,
+      "duration_formatted": "2h27m",
+      "workout_summary": "15m @192W | 3\u00d71m @385W / 3m rec | 10m @175W",
       "has_terrain": false,
-      "description": "Opener DEN P\u0158ED DP Bystre (ne\u0301d\u011ble 28.6.). Kr\u00e1tk\u00e9 z\u00e1b\u011bry probud\u00ed nohy. Kadence 95+ rpm. Po tr\u00e9ninku: hydratace, carb-load, kontrola kola, p\u0159\u00edprava kapes.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 1m 120% intensity=interval\n- 3m 55% intensity=recovery\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "Warmup\n- 15m 55% intensity=warmup\n\nMain Set 1x\n- 110m 65% intensity=interval\n\nMain Set 3x\n- 1m 110% intensity=interval\n- 3m 55% intensity=recovery\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 104667395,
