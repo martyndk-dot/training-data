@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T13:25:24.015818",
+  "generated_at": "2026-06-25T15:59:36.518124",
   "version": "3.112",
   "script_hash": "d151d2e118f2",
   "scan_hours": 72,
@@ -1111,6 +1111,27 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i160263466",
+      "date": "2026-06-25",
+      "type": "Ride",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 259,
+          "avg_power": 159,
+          "max_power": 374,
+          "avg_hr": 111,
+          "max_hr": 130,
+          "avg_cadence": 62.355213,
+          "zone": 1,
+          "training_load": 2.3310657,
+          "decoupling": 29.69202
+        }
+      ]
     }
   ]
 }
