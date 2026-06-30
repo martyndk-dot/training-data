@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T16:00:50.590732",
+  "generated_at": "2026-06-30T18:13:14.821214",
   "version": "3.112",
   "script_hash": "d151d2e118f2",
   "scan_hours": 72,
@@ -1578,6 +1578,81 @@
           "total_secs": 7365,
           "valid_pct": 99.2,
           "artifact_rate_avg": 0.15,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i161534582",
+      "date": "2026-06-30",
+      "type": "Ride",
+      "name": "Regenerace Z1 45 min",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2902,
+          "avg_power": 153,
+          "max_power": 450,
+          "avg_hr": 104,
+          "max_hr": 138,
+          "avg_cadence": 80.152435,
+          "zone": 1,
+          "training_load": 20.600058,
+          "decoupling": -24.217709,
+          "avg_dfa_a1": 1.3103964
+        }
+      ],
+      "dfa": {
+        "avg": 1.364,
+        "p25": 1.221,
+        "p50": 1.458,
+        "p75": 1.586,
+        "tiz_below_lt1": {
+          "secs": 2215,
+          "pct": 84.6,
+          "avg_hr": 103,
+          "avg_watts": 145
+        },
+        "tiz_lt1_transition": {
+          "secs": 180,
+          "pct": 6.9,
+          "avg_hr": 119,
+          "avg_watts": 202
+        },
+        "tiz_transition_lt2": {
+          "secs": 222,
+          "pct": 8.5,
+          "avg_hr": 127,
+          "avg_watts": 248
+        },
+        "tiz_above_lt2": {
+          "secs": 1,
+          "pct": 0.0,
+          "avg_hr": 96,
+          "avg_watts": 171
+        },
+        "drift": {
+          "first_third_avg": 1.525,
+          "last_third_avg": 1.155,
+          "delta": -0.37,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 117,
+          "avg_hr": 115,
+          "avg_watts": 152
+        },
+        "lt2_crossing": {
+          "secs_in_band": 0,
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 2618,
+          "total_secs": 2775,
+          "valid_pct": 94.3,
+          "artifact_rate_avg": 1.29,
           "sufficient": true
         }
       }
