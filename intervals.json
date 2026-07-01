@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T14:34:40.815372",
+  "generated_at": "2026-07-01T16:58:30.470792",
   "version": "3.112",
   "script_hash": "d151d2e118f2",
   "scan_hours": 72,
@@ -1653,6 +1653,81 @@
           "total_secs": 2775,
           "valid_pct": 94.3,
           "artifact_rate_avg": 1.29,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i161819927",
+      "date": "2026-07-01",
+      "type": "Ride",
+      "name": "Z2 base 60 min",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3611,
+          "avg_power": 206,
+          "max_power": 406,
+          "avg_hr": 117,
+          "max_hr": 138,
+          "avg_cadence": 85.07938,
+          "zone": 2,
+          "training_load": 41.429848,
+          "decoupling": 1.9635553,
+          "avg_dfa_a1": 1.0202005
+        }
+      ],
+      "dfa": {
+        "avg": 1.062,
+        "p25": 0.719,
+        "p50": 1.0,
+        "p75": 1.423,
+        "tiz_below_lt1": {
+          "secs": 1734,
+          "pct": 50.0,
+          "avg_hr": 112,
+          "avg_watts": 192
+        },
+        "tiz_lt1_transition": {
+          "secs": 745,
+          "pct": 21.5,
+          "avg_hr": 124,
+          "avg_watts": 221
+        },
+        "tiz_transition_lt2": {
+          "secs": 949,
+          "pct": 27.4,
+          "avg_hr": 129,
+          "avg_watts": 241
+        },
+        "tiz_above_lt2": {
+          "secs": 41,
+          "pct": 1.2,
+          "avg_hr": 129,
+          "avg_watts": 209
+        },
+        "drift": {
+          "first_third_avg": 1.199,
+          "last_third_avg": 1.114,
+          "delta": -0.085,
+          "interpretable": true
+        },
+        "lt1_crossing": {
+          "secs_in_band": 211,
+          "avg_hr": 122,
+          "avg_watts": 220
+        },
+        "lt2_crossing": {
+          "secs_in_band": 156,
+          "avg_hr": 129,
+          "avg_watts": 238
+        },
+        "quality": {
+          "valid_secs": 3469,
+          "total_secs": 3611,
+          "valid_pct": 96.1,
+          "artifact_rate_avg": 0.52,
           "sufficient": true
         }
       }
