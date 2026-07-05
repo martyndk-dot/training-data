@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-05T09:41:16.984853",
+  "generated_at": "2026-07-05T11:19:20.466488",
   "version": "3.112",
   "script_hash": "d151d2e118f2",
   "scan_hours": 72,
@@ -1755,6 +1755,24 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i162858768",
+      "date": "2026-07-05",
+      "type": "MountainBikeRide",
+      "name": "De\u0161tn\u00e9 v Orlick\u00fdch hor\u00e1ch HORSK\u00c1",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4859,
+          "avg_power": 4,
+          "max_power": 628,
+          "avg_cadence": 6.072848,
+          "zone": 1,
+          "training_load": 1.8341515
+        }
+      ]
     }
   ]
 }
