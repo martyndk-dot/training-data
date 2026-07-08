@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T23:55:47.989150",
+  "generated_at": "2026-07-08T02:25:59.395554",
   "version": "3.112",
   "script_hash": "d151d2e118f2",
   "scan_hours": 72,
@@ -131,81 +131,6 @@
           "valid_secs": 4633,
           "total_secs": 4713,
           "valid_pct": 98.3,
-          "artifact_rate_avg": 0.25,
-          "sufficient": true
-        }
-      }
-    },
-    {
-      "activity_id": "i159711973",
-      "date": "2026-06-23",
-      "type": "Ride",
-      "name": "Z2 base 65 min (leh\u010d\u00ed)",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 4198,
-          "avg_power": 206,
-          "max_power": 518,
-          "avg_hr": 122,
-          "max_hr": 144,
-          "avg_cadence": 85.07903,
-          "zone": 2,
-          "training_load": 46.482014,
-          "decoupling": 2.186326,
-          "avg_dfa_a1": 1.1003687
-        }
-      ],
-      "dfa": {
-        "avg": 1.129,
-        "p25": 0.897,
-        "p50": 1.136,
-        "p75": 1.407,
-        "tiz_below_lt1": {
-          "secs": 2616,
-          "pct": 65.8,
-          "avg_hr": 120,
-          "avg_watts": 203
-        },
-        "tiz_lt1_transition": {
-          "secs": 839,
-          "pct": 21.1,
-          "avg_hr": 129,
-          "avg_watts": 206
-        },
-        "tiz_transition_lt2": {
-          "secs": 395,
-          "pct": 9.9,
-          "avg_hr": 130,
-          "avg_watts": 228
-        },
-        "tiz_above_lt2": {
-          "secs": 128,
-          "pct": 3.2,
-          "avg_hr": 133,
-          "avg_watts": 253
-        },
-        "drift": {
-          "first_third_avg": 1.148,
-          "last_third_avg": 1.266,
-          "delta": 0.118,
-          "interpretable": true
-        },
-        "lt1_crossing": {
-          "secs_in_band": 377,
-          "avg_hr": 126,
-          "avg_watts": 202
-        },
-        "lt2_crossing": {
-          "secs_in_band": 155,
-          "avg_hr": 132,
-          "avg_watts": 250
-        },
-        "quality": {
-          "valid_secs": 3978,
-          "total_secs": 4198,
-          "valid_pct": 94.8,
           "artifact_rate_avg": 0.25,
           "sufficient": true
         }
