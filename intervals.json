@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T23:07:14.523346",
+  "generated_at": "2026-07-10T00:17:45.884295",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
@@ -1646,50 +1646,6 @@
           "sufficient": true
         }
       }
-    },
-    {
-      "activity_id": "i160287564",
-      "date": "2026-06-25",
-      "start_datetime": "2026-06-25T16:45:33",
-      "type": "Ride",
-      "name": "Z2 base 75 min",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 5735,
-          "avg_power": 220,
-          "max_power": 549,
-          "avg_hr": 134,
-          "max_hr": 151,
-          "avg_cadence": 84.73675,
-          "zone": 2,
-          "training_load": 68.4497,
-          "decoupling": 2.2365305
-        }
-      ]
-    },
-    {
-      "activity_id": "i160263466",
-      "date": "2026-06-25",
-      "start_datetime": "2026-06-25T16:38:04",
-      "type": "Ride",
-      "name": "Nemojov SILNI\u010cN\u00cd",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 259,
-          "avg_power": 159,
-          "max_power": 374,
-          "avg_hr": 111,
-          "max_hr": 130,
-          "avg_cadence": 62.355213,
-          "zone": 1,
-          "training_load": 2.3310657,
-          "decoupling": 29.69202
-        }
-      ]
     },
     {
       "activity_id": "i164241313",
