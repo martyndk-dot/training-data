@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T11:54:06.131761",
+  "generated_at": "2026-07-18T13:03:38.951536",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
@@ -1939,6 +1939,94 @@
           "total_secs": 19958,
           "valid_pct": 97.8,
           "artifact_rate_avg": 0.55,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i166860114",
+      "date": "2026-07-18",
+      "start_datetime": "2026-07-18T09:21:59",
+      "type": "Ride",
+      "name": "Cerkno SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 13821,
+          "avg_power": 100,
+          "max_power": 589,
+          "avg_hr": 100,
+          "max_hr": 132,
+          "avg_cadence": 65.35339,
+          "zone": 1,
+          "training_load": 32.254704,
+          "decoupling": 27.986536,
+          "avg_dfa_a1": 1.4168957
+        }
+      ],
+      "dfa": {
+        "avg": 1.441,
+        "p25": 1.268,
+        "p50": 1.504,
+        "p75": 1.662,
+        "tiz_recovery": {
+          "secs": 6262,
+          "pct": 91.8,
+          "avg_hr": 100,
+          "avg_watts": 95
+        },
+        "tiz_endurance": {
+          "secs": 502,
+          "pct": 7.4,
+          "avg_hr": 116,
+          "avg_watts": 166
+        },
+        "tiz_tempo": {
+          "secs": 60,
+          "pct": 0.9,
+          "avg_hr": 121,
+          "avg_watts": 170
+        },
+        "tiz_supra": null,
+        "drift": {
+          "first_third_avg": 1.252,
+          "last_third_avg": 1.619,
+          "delta": 0.367,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 353,
+          "contiguous_secs": 101,
+          "n_qualifying_segments": 2,
+          "reason": "ok",
+          "avg_hr": 116,
+          "avg_watts": 167
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 33,
+          "contiguous_secs": 11,
+          "n_qualifying_segments": 0,
+          "reason": "insufficient_total_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 10,
+          "contiguous_secs": 5,
+          "n_qualifying_segments": 0,
+          "reason": "insufficient_total_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 6824,
+          "total_secs": 6985,
+          "valid_pct": 97.7,
+          "artifact_rate_avg": 0.44,
           "sufficient": true
         }
       }
