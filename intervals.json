@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-25T12:43:53.740073",
+  "generated_at": "2026-07-25T14:19:16.563905",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
@@ -1165,6 +1165,99 @@
           "total_secs": 5310,
           "valid_pct": 96.4,
           "artifact_rate_avg": 0.33,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i169091982",
+      "date": "2026-07-25",
+      "start_datetime": "2026-07-25T09:19:46",
+      "type": "Ride",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 19184,
+          "avg_power": 158,
+          "max_power": 569,
+          "avg_hr": 113,
+          "max_hr": 149,
+          "avg_cadence": 66.84967,
+          "zone": 1,
+          "training_load": 134.92043,
+          "decoupling": -3.8246334,
+          "avg_dfa_a1": 1.27548
+        }
+      ],
+      "dfa": {
+        "avg": 1.283,
+        "p25": 0.995,
+        "p50": 1.387,
+        "p75": 1.58,
+        "tiz_recovery": {
+          "secs": 11063,
+          "pct": 74.6,
+          "avg_hr": 108,
+          "avg_watts": 140
+        },
+        "tiz_endurance": {
+          "secs": 2334,
+          "pct": 15.7,
+          "avg_hr": 129,
+          "avg_watts": 222
+        },
+        "tiz_tempo": {
+          "secs": 987,
+          "pct": 6.7,
+          "avg_hr": 133,
+          "avg_watts": 217
+        },
+        "tiz_supra": {
+          "secs": 438,
+          "pct": 3.0,
+          "avg_hr": 134,
+          "avg_watts": 214
+        },
+        "drift": {
+          "first_third_avg": 1.489,
+          "last_third_avg": 1.225,
+          "delta": -0.264,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 950,
+          "contiguous_secs": 74,
+          "n_qualifying_segments": 3,
+          "reason": "ok",
+          "avg_hr": 127,
+          "avg_watts": 215
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 471,
+          "contiguous_secs": 49,
+          "n_qualifying_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 385,
+          "contiguous_secs": 51,
+          "n_qualifying_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 14822,
+          "total_secs": 15193,
+          "valid_pct": 97.6,
+          "artifact_rate_avg": 0.48,
           "sufficient": true
         }
       }
