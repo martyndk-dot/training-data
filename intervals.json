@@ -1,98 +1,10 @@
 {
-  "generated_at": "2026-07-27T22:56:09.574913",
+  "generated_at": "2026-07-28T00:00:00.400895",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i165342561",
-      "date": "2026-07-13",
-      "start_datetime": "2026-07-13T16:51:04",
-      "type": "Ride",
-      "name": "Z2 lehce 60 min (pre-camp)",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3986,
-          "avg_power": 205,
-          "max_power": 408,
-          "avg_hr": 120,
-          "max_hr": 134,
-          "avg_cadence": 85.13773,
-          "zone": 2,
-          "training_load": 42.550945,
-          "decoupling": 2.1289084,
-          "avg_dfa_a1": 1.1412882
-        }
-      ],
-      "dfa": {
-        "avg": 1.141,
-        "p25": 0.852,
-        "p50": 1.165,
-        "p75": 1.43,
-        "tiz_recovery": {
-          "secs": 2482,
-          "pct": 62.3,
-          "avg_hr": 117,
-          "avg_watts": 193
-        },
-        "tiz_endurance": {
-          "secs": 850,
-          "pct": 21.3,
-          "avg_hr": 128,
-          "avg_watts": 227
-        },
-        "tiz_tempo": {
-          "secs": 654,
-          "pct": 16.4,
-          "avg_hr": 127,
-          "avg_watts": 226
-        },
-        "tiz_supra": null,
-        "drift": {
-          "first_third_avg": 1.246,
-          "last_third_avg": 1.289,
-          "delta": 0.043,
-          "interpretable": true
-        },
-        "easy_guard_crossing": {
-          "marker_dfa_a1": 1.0,
-          "secs_in_band": 290,
-          "contiguous_secs": 42,
-          "n_qualifying_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt1_crossing": {
-          "marker_dfa_a1": 0.75,
-          "secs_in_band": 539,
-          "contiguous_secs": 108,
-          "n_qualifying_segments": 3,
-          "reason": "ok",
-          "avg_hr": 129,
-          "avg_watts": 230
-        },
-        "lt2_crossing": {
-          "marker_dfa_a1": 0.5,
-          "secs_in_band": 3,
-          "contiguous_secs": 3,
-          "n_qualifying_segments": 0,
-          "reason": "insufficient_total_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "quality": {
-          "valid_secs": 3986,
-          "total_secs": 3986,
-          "valid_pct": 100.0,
-          "artifact_rate_avg": 0.29,
-          "sufficient": true
-        }
-      }
-    },
     {
       "activity_id": "i165987000",
       "date": "2026-07-15",
