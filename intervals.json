@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-04T17:02:42.543988",
+  "generated_at": "2026-08-04T18:50:19.061847",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
@@ -1215,6 +1215,128 @@
           "total_secs": 8306,
           "valid_pct": 99.7,
           "artifact_rate_avg": 0.37,
+          "sufficient": true
+        }
+      }
+    },
+    {
+      "activity_id": "i172454341",
+      "date": "2026-08-04",
+      "start_datetime": "2026-08-04T17:31:10",
+      "type": "Ride",
+      "name": "Z2 base 75 min",
+      "interval_summary": [
+        "1x 3m8s 265w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2311,
+          "avg_power": 207,
+          "max_power": 510,
+          "avg_hr": 126,
+          "max_hr": 143,
+          "avg_cadence": 84.22328,
+          "zone": 2,
+          "training_load": 26.529337,
+          "decoupling": -3.278792,
+          "avg_dfa_a1": 0.97009987
+        },
+        {
+          "type": "WORK",
+          "label": "188s@265w92rpm",
+          "duration_secs": 188,
+          "avg_power": 265,
+          "max_power": 321,
+          "avg_hr": 140,
+          "max_hr": 147,
+          "avg_cadence": 92.43617,
+          "zone": 3,
+          "training_load": 2.9711673,
+          "decoupling": 4.1145773,
+          "avg_dfa_a1": 1.2679381
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2205,
+          "avg_power": 212,
+          "max_power": 630,
+          "avg_hr": 134,
+          "max_hr": 151,
+          "avg_cadence": 85.38277,
+          "zone": 2,
+          "training_load": 26.196716,
+          "decoupling": 12.666733,
+          "avg_dfa_a1": 0.98484975
+        }
+      ],
+      "dfa": {
+        "avg": 1.023,
+        "p25": 0.661,
+        "p50": 0.98,
+        "p75": 1.378,
+        "tiz_recovery": {
+          "secs": 2247,
+          "pct": 49.4,
+          "avg_hr": 125,
+          "avg_watts": 197
+        },
+        "tiz_endurance": {
+          "secs": 658,
+          "pct": 14.5,
+          "avg_hr": 136,
+          "avg_watts": 233
+        },
+        "tiz_tempo": {
+          "secs": 1258,
+          "pct": 27.7,
+          "avg_hr": 140,
+          "avg_watts": 233
+        },
+        "tiz_supra": {
+          "secs": 383,
+          "pct": 8.4,
+          "avg_hr": 145,
+          "avg_watts": 235
+        },
+        "drift": {
+          "first_third_avg": 1.048,
+          "last_third_avg": 1.129,
+          "delta": 0.081,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 157,
+          "contiguous_secs": 20,
+          "n_qualifying_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 409,
+          "contiguous_secs": 64,
+          "n_qualifying_segments": 1,
+          "reason": "ok",
+          "avg_hr": 145,
+          "avg_watts": 235
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 381,
+          "contiguous_secs": 45,
+          "n_qualifying_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 4546,
+          "total_secs": 4704,
+          "valid_pct": 96.6,
+          "artifact_rate_avg": 0.26,
           "sufficient": true
         }
       }
