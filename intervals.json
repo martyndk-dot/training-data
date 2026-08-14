@@ -1,103 +1,10 @@
 {
-  "generated_at": "2026-08-13T23:50:52.065865",
+  "generated_at": "2026-08-14T01:26:35.251891",
   "version": "3.117",
   "script_hash": "ab26e5fd38f4",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i170858846",
-      "date": "2026-07-30",
-      "start_datetime": "2026-07-30T17:44:31",
-      "type": "Ride",
-      "name": "Z2 base 90 min",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 5885,
-          "avg_power": 222,
-          "max_power": 559,
-          "avg_hr": 138,
-          "max_hr": 156,
-          "avg_cadence": 89.05879,
-          "zone": 2,
-          "training_load": 71.814156,
-          "decoupling": 3.2985907,
-          "avg_dfa_a1": 0.82212925
-        }
-      ],
-      "dfa": {
-        "avg": 0.822,
-        "p25": 0.512,
-        "p50": 0.715,
-        "p75": 1.127,
-        "tiz_recovery": {
-          "secs": 1803,
-          "pct": 30.6,
-          "avg_hr": 129,
-          "avg_watts": 206
-        },
-        "tiz_endurance": {
-          "secs": 867,
-          "pct": 14.7,
-          "avg_hr": 139,
-          "avg_watts": 218
-        },
-        "tiz_tempo": {
-          "secs": 1844,
-          "pct": 31.3,
-          "avg_hr": 143,
-          "avg_watts": 231
-        },
-        "tiz_supra": {
-          "secs": 1371,
-          "pct": 23.3,
-          "avg_hr": 145,
-          "avg_watts": 234
-        },
-        "drift": {
-          "first_third_avg": 0.913,
-          "last_third_avg": 0.83,
-          "delta": -0.083,
-          "interpretable": false
-        },
-        "easy_guard_crossing": {
-          "marker_dfa_a1": 1.0,
-          "secs_in_band": 308,
-          "contiguous_secs": 61,
-          "n_qualifying_segments": 1,
-          "reason": "ok",
-          "avg_hr": 149,
-          "avg_watts": 266
-        },
-        "lt1_crossing": {
-          "marker_dfa_a1": 0.75,
-          "secs_in_band": 621,
-          "contiguous_secs": 83,
-          "n_qualifying_segments": 1,
-          "reason": "ok",
-          "avg_hr": 139,
-          "avg_watts": 253
-        },
-        "lt2_crossing": {
-          "marker_dfa_a1": 0.5,
-          "secs_in_band": 942,
-          "contiguous_secs": 129,
-          "n_qualifying_segments": 4,
-          "reason": "ok",
-          "avg_hr": 146,
-          "avg_watts": 230
-        },
-        "quality": {
-          "valid_secs": 5885,
-          "total_secs": 5885,
-          "valid_pct": 100.0,
-          "artifact_rate_avg": 0.24,
-          "sufficient": true
-        }
-      }
-    },
     {
       "activity_id": "i171452503",
       "date": "2026-08-01",
