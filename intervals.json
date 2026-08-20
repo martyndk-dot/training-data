@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T18:03:45.716856",
+  "generated_at": "2026-08-20T18:57:18.543210",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2265,6 +2265,152 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i178048017",
+      "date": "2026-08-20",
+      "start_datetime": "2026-08-20T17:31:05",
+      "type": "Ride",
+      "name": "Z2 base 75 min",
+      "interval_summary": [
+        "1x 1m47s 303w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2797,
+          "moving_secs": 2797,
+          "start_secs": 0,
+          "end_secs": 2797,
+          "avg_power": 203,
+          "max_power": 522,
+          "avg_hr": 120,
+          "max_hr": 137,
+          "min_hr": 77,
+          "avg_cadence": 88.1626,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 37429,
+          "training_load": 33.905884
+        },
+        {
+          "type": "WORK",
+          "label": "107s@303w87rpm",
+          "duration_secs": 107,
+          "moving_secs": 107,
+          "start_secs": 2797,
+          "end_secs": 2904,
+          "avg_power": 303,
+          "max_power": 360,
+          "avg_hr": 135,
+          "max_hr": 144,
+          "min_hr": 121,
+          "avg_cadence": 87.40187,
+          "zone": 4,
+          "w_bal_start": 37429,
+          "w_bal_end": 37072,
+          "training_load": 2.3591092
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 7081,
+          "moving_secs": 2513,
+          "start_secs": 2904,
+          "end_secs": 9985,
+          "avg_power": 175,
+          "max_power": 585,
+          "avg_hr": 118,
+          "max_hr": 144,
+          "min_hr": 76,
+          "avg_cadence": 79.85771,
+          "zone": 1,
+          "w_bal_start": 37074,
+          "w_bal_end": 38094,
+          "training_load": 26.415216
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.236,
+        "p25": 0.909,
+        "p50": 1.233,
+        "p75": 1.609,
+        "tiz_easy": {
+          "secs": 3638,
+          "pct": 68.9,
+          "avg_hr": 117,
+          "avg_watts": 184
+        },
+        "tiz_endurance": {
+          "secs": 748,
+          "pct": 14.2,
+          "avg_hr": 127,
+          "avg_watts": 208
+        },
+        "tiz_tempo": {
+          "secs": 854,
+          "pct": 16.2,
+          "avg_hr": 129,
+          "avg_watts": 227
+        },
+        "tiz_supra": {
+          "secs": 41,
+          "pct": 0.8,
+          "avg_hr": 130,
+          "avg_watts": 201
+        },
+        "drift": {
+          "first_third_avg": 1.215,
+          "last_third_avg": 1.454,
+          "delta": 0.239,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 399,
+          "contiguous_secs": 71,
+          "n_qualifying_segments": 1,
+          "n_eligible_segments": 0,
+          "reason": "ok",
+          "estimate_eligible": false,
+          "estimate_reason": "non_stationary_power",
+          "avg_hr": 122,
+          "avg_watts": 222
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 258,
+          "contiguous_secs": 43,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 73,
+          "contiguous_secs": 41,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 5281,
+          "total_secs": 5420,
+          "valid_pct": 97.4,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 0.42,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2435,6 +2581,25 @@
         "attempts": 1,
         "first_seen": "2026-08-19T16:27:29.904090",
         "last_attempt": "2026-08-19T16:27:29.904090",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i178048017": {
+      "date": "2026-08-20",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-20T18:57:18.543210",
+        "last_attempt": "2026-08-20T18:57:18.543210",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-08-20T18:18:27.669+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-20T18:57:18.543210",
+        "last_attempt": "2026-08-20T18:57:18.543210",
         "status": "ok",
         "reason": "ok"
       }
