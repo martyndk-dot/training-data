@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T23:58:21.505360",
+  "generated_at": "2026-08-21T01:34:33.195149",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -1684,110 +1684,6 @@
       }
     },
     {
-      "activity_id": "i173139161",
-      "date": "2026-08-06",
-      "start_datetime": "2026-08-06T16:38:59",
-      "type": "Ride",
-      "name": "Z2 lehce 65 min (p\u0159ed testem)",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 8131,
-          "moving_secs": 3786,
-          "start_secs": 0,
-          "end_secs": 8131,
-          "avg_power": 200,
-          "max_power": 619,
-          "avg_hr": 120,
-          "max_hr": 150,
-          "min_hr": 75,
-          "avg_cadence": 83.41273,
-          "zone": 2,
-          "w_bal_start": 38100,
-          "w_bal_end": 37941,
-          "training_load": 41.174683
-        }
-      ],
-      "zone_basis": "power",
-      "dfa": {
-        "avg": 1.345,
-        "p25": 1.119,
-        "p50": 1.457,
-        "p75": 1.586,
-        "tiz_easy": {
-          "secs": 2898,
-          "pct": 81.5,
-          "avg_hr": 120,
-          "avg_watts": 200
-        },
-        "tiz_endurance": {
-          "secs": 422,
-          "pct": 11.9,
-          "avg_hr": 127,
-          "avg_watts": 209
-        },
-        "tiz_tempo": {
-          "secs": 236,
-          "pct": 6.6,
-          "avg_hr": 128,
-          "avg_watts": 211
-        },
-        "tiz_supra": null,
-        "drift": {
-          "first_third_avg": 1.421,
-          "last_third_avg": 1.308,
-          "delta": -0.113,
-          "interpretable": true
-        },
-        "easy_guard_crossing": {
-          "marker_dfa_a1": 1.0,
-          "secs_in_band": 165,
-          "contiguous_secs": 22,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt1_crossing": {
-          "marker_dfa_a1": 0.75,
-          "secs_in_band": 182,
-          "contiguous_secs": 25,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt2_crossing": {
-          "marker_dfa_a1": 0.5,
-          "secs_in_band": 0,
-          "contiguous_secs": 0,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_samples_in_band",
-          "estimate_eligible": false,
-          "estimate_reason": "no_samples_in_band",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "quality": {
-          "valid_secs": 3556,
-          "total_secs": 3787,
-          "valid_pct": 93.9,
-          "artifact_state": "complete",
-          "artifact_coverage_pct": 100.0,
-          "artifact_rate_avg": 0.96,
-          "sufficient": true
-        }
-      }
-    },
-    {
       "activity_id": "i177242626",
       "date": "2026-08-18",
       "start_datetime": "2026-08-18T17:26:12",
@@ -2519,25 +2415,6 @@
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-08-07T16:40:38.502+00:00"
-      },
-      "streams": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok"
-      }
-    },
-    "i173139161": {
-      "date": "2026-08-06",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok",
-        "source_icu_sync_date": "2026-08-06T16:55:17.880+00:00"
       },
       "streams": {
         "attempts": 1,
