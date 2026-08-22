@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T23:46:33.886606",
+  "generated_at": "2026-08-22T00:56:52.567213",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -1575,115 +1575,6 @@
       }
     },
     {
-      "activity_id": "i173467861",
-      "date": "2026-08-07",
-      "start_datetime": "2026-08-07T17:49:48",
-      "type": "Ride",
-      "name": "Opener 45 min + 3x1min",
-      "interval_summary": null,
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 2950,
-          "moving_secs": 2950,
-          "start_secs": 0,
-          "end_secs": 2950,
-          "avg_power": 196,
-          "max_power": 620,
-          "avg_hr": 116,
-          "max_hr": 151,
-          "min_hr": 79,
-          "avg_cadence": 85.41288,
-          "zone": 2,
-          "w_bal_start": 38100,
-          "w_bal_end": 38095,
-          "training_load": 32.082756
-        }
-      ],
-      "zone_basis": "power",
-      "dfa": {
-        "avg": 1.271,
-        "p25": 1.16,
-        "p50": 1.336,
-        "p75": 1.444,
-        "tiz_easy": {
-          "secs": 2350,
-          "pct": 82.8,
-          "avg_hr": 117,
-          "avg_watts": 201
-        },
-        "tiz_endurance": {
-          "secs": 387,
-          "pct": 13.6,
-          "avg_hr": 119,
-          "avg_watts": 178
-        },
-        "tiz_tempo": {
-          "secs": 100,
-          "pct": 3.5,
-          "avg_hr": 123,
-          "avg_watts": 220
-        },
-        "tiz_supra": {
-          "secs": 1,
-          "pct": 0.0,
-          "avg_hr": 107,
-          "avg_watts": 220
-        },
-        "drift": {
-          "first_third_avg": 1.232,
-          "last_third_avg": 1.29,
-          "delta": 0.058,
-          "interpretable": true
-        },
-        "easy_guard_crossing": {
-          "marker_dfa_a1": 1.0,
-          "secs_in_band": 137,
-          "contiguous_secs": 23,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt1_crossing": {
-          "marker_dfa_a1": 0.75,
-          "secs_in_band": 168,
-          "contiguous_secs": 56,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt2_crossing": {
-          "marker_dfa_a1": 0.5,
-          "secs_in_band": 0,
-          "contiguous_secs": 0,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_samples_in_band",
-          "estimate_eligible": false,
-          "estimate_reason": "no_samples_in_band",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "quality": {
-          "valid_secs": 2838,
-          "total_secs": 2950,
-          "valid_pct": 96.2,
-          "artifact_state": "complete",
-          "artifact_coverage_pct": 100.0,
-          "artifact_rate_avg": 0.33,
-          "sufficient": true
-        }
-      }
-    },
-    {
       "activity_id": "i177242626",
       "date": "2026-08-18",
       "start_datetime": "2026-08-18T17:26:12",
@@ -2396,25 +2287,6 @@
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-08-10T08:07:21.223+00:00"
-      },
-      "streams": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok"
-      }
-    },
-    "i173467861": {
-      "date": "2026-08-07",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok",
-        "source_icu_sync_date": "2026-08-07T16:40:38.502+00:00"
       },
       "streams": {
         "attempts": 1,
