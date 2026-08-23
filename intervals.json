@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T23:56:19.295714",
+  "generated_at": "2026-08-23T01:11:31.105792",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -1427,152 +1427,6 @@
         }
       ],
       "zone_basis": "power"
-    },
-    {
-      "activity_id": "i173670194",
-      "date": "2026-08-08",
-      "start_datetime": "2026-08-08T08:04:23",
-      "type": "Ride",
-      "name": "TEST: Zlat\u00e9 n\u00e1vr\u0161\u00ed (Jilemnice \u2192 Vrbatova bouda, na \u010das)",
-      "interval_summary": [
-        "1x 20m37s 324w"
-      ],
-      "intervals": [
-        {
-          "type": "RECOVERY",
-          "duration_secs": 3993,
-          "moving_secs": 3891,
-          "start_secs": 0,
-          "end_secs": 3993,
-          "avg_power": 176,
-          "max_power": 660,
-          "avg_hr": 117,
-          "max_hr": 144,
-          "min_hr": 78,
-          "avg_cadence": 82.381454,
-          "zone": 1,
-          "w_bal_start": 38100,
-          "w_bal_end": 38024,
-          "training_load": 34.922516
-        },
-        {
-          "type": "WORK",
-          "label": "1237s@324w88rpm",
-          "duration_secs": 1237,
-          "moving_secs": 1237,
-          "start_secs": 3993,
-          "end_secs": 5230,
-          "avg_power": 324,
-          "max_power": 449,
-          "avg_hr": 159,
-          "max_hr": 165,
-          "min_hr": 105,
-          "avg_cadence": 88.21342,
-          "zone": 4,
-          "w_bal_start": 38024,
-          "w_bal_end": 35759,
-          "training_load": 29.627693
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 9178,
-          "moving_secs": 8961,
-          "start_secs": 5230,
-          "end_secs": 14408,
-          "avg_power": 178,
-          "max_power": 453,
-          "avg_hr": 128,
-          "max_hr": 171,
-          "min_hr": 87,
-          "avg_cadence": 67.769936,
-          "zone": 1,
-          "w_bal_start": 35761,
-          "w_bal_end": 38099,
-          "training_load": 115.06053
-        }
-      ],
-      "zone_basis": "power",
-      "dfa": {
-        "avg": 1.08,
-        "p25": 0.456,
-        "p50": 1.268,
-        "p75": 1.56,
-        "tiz_easy": {
-          "secs": 8685,
-          "pct": 62.0,
-          "avg_hr": 114,
-          "avg_watts": 139
-        },
-        "tiz_endurance": {
-          "secs": 933,
-          "pct": 6.7,
-          "avg_hr": 128,
-          "avg_watts": 199
-        },
-        "tiz_tempo": {
-          "secs": 684,
-          "pct": 4.9,
-          "avg_hr": 137,
-          "avg_watts": 223
-        },
-        "tiz_supra": {
-          "secs": 3712,
-          "pct": 26.5,
-          "avg_hr": 161,
-          "avg_watts": 305
-        },
-        "drift": {
-          "first_third_avg": 1.182,
-          "last_third_avg": 1.389,
-          "delta": 0.207,
-          "interpretable": false
-        },
-        "easy_guard_crossing": {
-          "marker_dfa_a1": 1.0,
-          "secs_in_band": 379,
-          "contiguous_secs": 29,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt1_crossing": {
-          "marker_dfa_a1": 0.75,
-          "secs_in_band": 271,
-          "contiguous_secs": 36,
-          "n_qualifying_segments": 0,
-          "n_eligible_segments": 0,
-          "reason": "no_contiguous_dwell",
-          "estimate_eligible": false,
-          "estimate_reason": "no_contiguous_dwell",
-          "avg_hr": null,
-          "avg_watts": null
-        },
-        "lt2_crossing": {
-          "marker_dfa_a1": 0.5,
-          "secs_in_band": 381,
-          "contiguous_secs": 67,
-          "n_qualifying_segments": 1,
-          "n_eligible_segments": 1,
-          "reason": "ok",
-          "estimate_eligible": true,
-          "estimate_reason": "ok",
-          "avg_hr": 161,
-          "avg_watts": 336
-        },
-        "quality": {
-          "valid_secs": 14014,
-          "total_secs": 14094,
-          "valid_pct": 99.4,
-          "artifact_state": "complete",
-          "artifact_coverage_pct": 100.0,
-          "artifact_rate_avg": 0.58,
-          "sufficient": true
-        }
-      }
     },
     {
       "activity_id": "i177242626",
@@ -3045,25 +2899,6 @@
         "last_attempt": "2026-08-16T06:29:59.235809",
         "status": "tombstone",
         "reason": "retry_expired"
-      }
-    },
-    "i173670194": {
-      "date": "2026-08-08",
-      "paired_planned": true,
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok",
-        "source_icu_sync_date": "2026-08-10T08:07:21.223+00:00"
-      },
-      "streams": {
-        "attempts": 1,
-        "first_seen": "2026-08-16T06:29:59.235809",
-        "last_attempt": "2026-08-16T06:29:59.235809",
-        "status": "ok",
-        "reason": "ok"
       }
     },
     "i177242626": {
