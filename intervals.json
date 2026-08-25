@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T16:06:42.193079",
+  "generated_at": "2026-08-25T16:53:29.287838",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2544,6 +2544,115 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i179687322",
+      "date": "2026-08-25",
+      "start_datetime": "2026-08-25T17:24:06",
+      "type": "Ride",
+      "name": "Z2 lehce 60 min",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4257,
+          "moving_secs": 4238,
+          "start_secs": 0,
+          "end_secs": 4257,
+          "avg_power": 190,
+          "max_power": 395,
+          "avg_hr": 116,
+          "max_hr": 132,
+          "min_hr": 84,
+          "avg_cadence": 82.35645,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 38099,
+          "training_load": 46.746838
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.239,
+        "p25": 0.994,
+        "p50": 1.28,
+        "p75": 1.453,
+        "tiz_easy": {
+          "secs": 3073,
+          "pct": 74.5,
+          "avg_hr": 114,
+          "avg_watts": 182
+        },
+        "tiz_endurance": {
+          "secs": 958,
+          "pct": 23.2,
+          "avg_hr": 125,
+          "avg_watts": 222
+        },
+        "tiz_tempo": {
+          "secs": 91,
+          "pct": 2.2,
+          "avg_hr": 128,
+          "avg_watts": 221
+        },
+        "tiz_supra": {
+          "secs": 1,
+          "pct": 0.0,
+          "avg_hr": 101,
+          "avg_watts": 136
+        },
+        "drift": {
+          "first_third_avg": 1.278,
+          "last_third_avg": 1.31,
+          "delta": 0.032,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 419,
+          "contiguous_secs": 76,
+          "n_qualifying_segments": 1,
+          "n_eligible_segments": 0,
+          "reason": "ok",
+          "estimate_eligible": false,
+          "estimate_reason": "non_stationary_power",
+          "avg_hr": 117,
+          "avg_watts": 203
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 145,
+          "contiguous_secs": 54,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 4123,
+          "total_secs": 4239,
+          "valid_pct": 97.3,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 0.5,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2676,6 +2785,25 @@
         "attempts": 1,
         "first_seen": "2026-08-22T19:02:40.829461",
         "last_attempt": "2026-08-22T19:02:40.829461",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i179687322": {
+      "date": "2026-08-25",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T16:53:29.287838",
+        "last_attempt": "2026-08-25T16:53:29.287838",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-08-25T16:37:16.307+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-25T16:53:29.287838",
+        "last_attempt": "2026-08-25T16:53:29.287838",
         "status": "ok",
         "reason": "ok"
       }
