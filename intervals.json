@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-29T13:21:28.649456",
+  "generated_at": "2026-08-29T17:16:55.363050",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2478,6 +2478,115 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i181025735",
+      "date": "2026-08-29",
+      "start_datetime": "2026-08-29T16:07:26",
+      "type": "Ride",
+      "name": "Opener 40 min (den p\u0159ed Lawi)",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2525,
+          "moving_secs": 2525,
+          "start_secs": 0,
+          "end_secs": 2525,
+          "avg_power": 181,
+          "max_power": 469,
+          "avg_hr": 116,
+          "max_hr": 149,
+          "min_hr": 90,
+          "avg_cadence": 86.27367,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38091,
+          "training_load": 27.066914
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.386,
+        "p25": 1.285,
+        "p50": 1.382,
+        "p75": 1.503,
+        "tiz_easy": {
+          "secs": 2335,
+          "pct": 95.2,
+          "avg_hr": 116,
+          "avg_watts": 183
+        },
+        "tiz_endurance": {
+          "secs": 113,
+          "pct": 4.6,
+          "avg_hr": 119,
+          "avg_watts": 187
+        },
+        "tiz_tempo": {
+          "secs": 4,
+          "pct": 0.2,
+          "avg_hr": 117,
+          "avg_watts": 177
+        },
+        "tiz_supra": {
+          "secs": 1,
+          "pct": 0.0,
+          "avg_hr": 106,
+          "avg_watts": 150
+        },
+        "drift": {
+          "first_third_avg": 1.33,
+          "last_third_avg": 1.445,
+          "delta": 0.115,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 8,
+          "contiguous_secs": 6,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "insufficient_total_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "insufficient_total_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 51,
+          "contiguous_secs": 41,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "insufficient_total_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "insufficient_total_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 2453,
+          "total_secs": 2525,
+          "valid_pct": 97.1,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 0.42,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2629,6 +2738,25 @@
         "attempts": 1,
         "first_seen": "2026-08-27T20:00:26.211808",
         "last_attempt": "2026-08-27T20:00:26.211808",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i181025735": {
+      "date": "2026-08-29",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-29T17:16:55.363050",
+        "last_attempt": "2026-08-29T17:16:55.363050",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-08-29T14:50:05.408+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-29T17:16:55.363050",
+        "last_attempt": "2026-08-29T17:16:55.363050",
         "status": "ok",
         "reason": "ok"
       }
