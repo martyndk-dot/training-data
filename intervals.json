@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T09:41:39.417065",
+  "generated_at": "2026-08-31T17:13:42.865990",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2852,6 +2852,260 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i181784223",
+      "date": "2026-08-31",
+      "start_datetime": "2026-08-31T16:42:26",
+      "type": "Ride",
+      "name": "Z2/Z3 s Carlou 2h (+ mini-opener)",
+      "interval_summary": [
+        "1x 3m41s 263w",
+        "1x 27s 609w",
+        "1x 50s 350w",
+        "1x 43s 566w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1973,
+          "moving_secs": 1332,
+          "start_secs": 0,
+          "end_secs": 1973,
+          "avg_power": 146,
+          "max_power": 558,
+          "avg_hr": 105,
+          "max_hr": 133,
+          "min_hr": 64,
+          "avg_cadence": 75.31957,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 37488,
+          "training_load": 11.628328
+        },
+        {
+          "type": "WORK",
+          "label": "221s@263w87rpm",
+          "duration_secs": 221,
+          "moving_secs": 221,
+          "start_secs": 1973,
+          "end_secs": 2194,
+          "avg_power": 263,
+          "max_power": 341,
+          "avg_hr": 130,
+          "max_hr": 136,
+          "min_hr": 114,
+          "avg_cadence": 87.39819,
+          "zone": 3,
+          "w_bal_start": 37489,
+          "w_bal_end": 37660,
+          "training_load": 3.7814767
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1335,
+          "moving_secs": 1335,
+          "start_secs": 2194,
+          "end_secs": 3529,
+          "avg_power": 168,
+          "max_power": 640,
+          "avg_hr": 115,
+          "max_hr": 138,
+          "min_hr": 78,
+          "avg_cadence": 75.63221,
+          "zone": 1,
+          "w_bal_start": 37661,
+          "w_bal_end": 37042,
+          "training_load": 14.732537
+        },
+        {
+          "type": "WORK",
+          "label": "27s@609w89rpm",
+          "duration_secs": 27,
+          "moving_secs": 27,
+          "start_secs": 3529,
+          "end_secs": 3556,
+          "avg_power": 609,
+          "max_power": 728,
+          "avg_hr": 150,
+          "max_hr": 160,
+          "min_hr": 139,
+          "avg_cadence": 89.44444,
+          "zone": 7,
+          "w_bal_start": 36648,
+          "w_bal_end": 29485,
+          "training_load": 1.5408334
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 248,
+          "moving_secs": 248,
+          "start_secs": 3556,
+          "end_secs": 3804,
+          "avg_power": 230,
+          "max_power": 544,
+          "avg_hr": 139,
+          "max_hr": 165,
+          "min_hr": 123,
+          "avg_cadence": 80.47177,
+          "zone": 2,
+          "w_bal_start": 29271,
+          "w_bal_end": 33191,
+          "training_load": 5.6554046
+        },
+        {
+          "type": "WORK",
+          "label": "50s@350w82rpm",
+          "duration_secs": 50,
+          "moving_secs": 50,
+          "start_secs": 3804,
+          "end_secs": 3854,
+          "avg_power": 350,
+          "max_power": 420,
+          "avg_hr": 154,
+          "max_hr": 160,
+          "min_hr": 149,
+          "avg_cadence": 82.18,
+          "zone": 5,
+          "w_bal_start": 33190,
+          "w_bal_end": 31909,
+          "training_load": 1.3973192
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 6,
+          "moving_secs": 6,
+          "start_secs": 3854,
+          "end_secs": 3860,
+          "avg_power": 313,
+          "max_power": 477,
+          "avg_hr": 160,
+          "max_hr": 161,
+          "min_hr": 160,
+          "avg_cadence": 82.0,
+          "zone": 4,
+          "w_bal_start": 31864,
+          "w_bal_end": 31657,
+          "training_load": 0.19614938
+        },
+        {
+          "type": "WORK",
+          "label": "43s@566w87rpm",
+          "duration_secs": 43,
+          "moving_secs": 43,
+          "start_secs": 3860,
+          "end_secs": 3903,
+          "avg_power": 566,
+          "max_power": 625,
+          "avg_hr": 167,
+          "max_hr": 174,
+          "min_hr": 161,
+          "avg_cadence": 86.53488,
+          "zone": 7,
+          "w_bal_start": 31525,
+          "w_bal_end": 21471,
+          "training_load": 2.9203672
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3159,
+          "moving_secs": 3036,
+          "start_secs": 3903,
+          "end_secs": 7062,
+          "avg_power": 167,
+          "max_power": 561,
+          "avg_hr": 123,
+          "max_hr": 175,
+          "min_hr": 86,
+          "avg_cadence": 70.031586,
+          "zone": 1,
+          "w_bal_start": 21353,
+          "w_bal_end": 38029,
+          "training_load": 39.52775
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.412,
+        "p25": 1.287,
+        "p50": 1.536,
+        "p75": 1.64,
+        "tiz_easy": {
+          "secs": 4981,
+          "pct": 85.3,
+          "avg_hr": 118,
+          "avg_watts": 174
+        },
+        "tiz_endurance": {
+          "secs": 289,
+          "pct": 5.0,
+          "avg_hr": 133,
+          "avg_watts": 187
+        },
+        "tiz_tempo": {
+          "secs": 509,
+          "pct": 8.7,
+          "avg_hr": 143,
+          "avg_watts": 256
+        },
+        "tiz_supra": {
+          "secs": 58,
+          "pct": 1.0,
+          "avg_hr": 161,
+          "avg_watts": 116
+        },
+        "drift": {
+          "first_third_avg": 1.431,
+          "last_third_avg": 1.471,
+          "delta": 0.04,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 154,
+          "contiguous_secs": 34,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 172,
+          "contiguous_secs": 29,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 103,
+          "contiguous_secs": 34,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 5837,
+          "total_secs": 6279,
+          "valid_pct": 93.0,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 1.03,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3018,12 +3272,12 @@
         "source_icu_sync_date": "2026-08-30T10:20:42.852+00:00"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-08-30T10:41:07.608520",
-        "last_attempt": "2026-08-31T09:41:39.417065",
+        "last_attempt": "2026-08-31T17:13:42.865990",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-31T10:11:39.417065"
+        "next_retry_at": "2026-08-31T17:43:42.865990"
       }
     },
     "i181240193": {
@@ -3037,12 +3291,31 @@
         "source_icu_sync_date": "2026-08-30T08:46:53.067+00:00"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-08-30T10:41:07.608520",
-        "last_attempt": "2026-08-31T09:41:39.417065",
+        "last_attempt": "2026-08-31T17:13:42.865990",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-31T10:11:39.417065"
+        "next_retry_at": "2026-08-31T17:43:42.865990"
+      }
+    },
+    "i181784223": {
+      "date": "2026-08-31",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-31T17:13:42.865990",
+        "last_attempt": "2026-08-31T17:13:42.865990",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-08-31T16:41:44.816+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-31T17:13:42.865990",
+        "last_attempt": "2026-08-31T17:13:42.865990",
+        "status": "ok",
+        "reason": "ok"
       }
     }
   }
