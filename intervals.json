@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T15:33:10.502473",
+  "generated_at": "2026-09-01T18:49:59.227884",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -3193,6 +3193,122 @@
           "sufficient": false
         }
       }
+    },
+    {
+      "activity_id": "i182140128",
+      "date": "2026-09-01",
+      "start_datetime": "2026-09-01T17:55:16",
+      "type": "Ride",
+      "name": "Lomnice nad Popelkou SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 669,
+          "moving_secs": 669,
+          "start_secs": 0,
+          "end_secs": 669,
+          "avg_power": 74,
+          "max_power": 364,
+          "avg_hr": 114,
+          "max_hr": 130,
+          "min_hr": 100,
+          "avg_cadence": 45.660686,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38082,
+          "training_load": 2.8354728
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": null,
+        "p25": null,
+        "p50": null,
+        "p75": null,
+        "tiz_easy": null,
+        "tiz_endurance": null,
+        "tiz_tempo": null,
+        "tiz_supra": null,
+        "drift": null,
+        "easy_guard_crossing": null,
+        "lt1_crossing": null,
+        "lt2_crossing": null,
+        "quality": {
+          "valid_secs": 536,
+          "total_secs": 669,
+          "valid_pct": 80.1,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 0.02,
+          "sufficient": false
+        }
+      }
+    },
+    {
+      "activity_id": "i182133301",
+      "date": "2026-09-01",
+      "start_datetime": "2026-09-01T17:27:47",
+      "type": "Ride",
+      "name": "RACE B: \u010casovka na T\u00e1bor (hromadn\u00fd start, JCL)",
+      "interval_summary": [
+        "1x 20m45s 321w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 141,
+          "moving_secs": 6,
+          "start_secs": 0,
+          "end_secs": 141,
+          "avg_power": 20,
+          "max_power": 140,
+          "avg_hr": 94,
+          "max_hr": 102,
+          "min_hr": 83,
+          "avg_cadence": 12.6,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38100,
+          "training_load": 2.0406082e-05
+        },
+        {
+          "type": "WORK",
+          "label": "1245s@321w84rpm",
+          "duration_secs": 1245,
+          "moving_secs": 1245,
+          "start_secs": 141,
+          "end_secs": 1386,
+          "avg_power": 321,
+          "max_power": 701,
+          "avg_hr": 162,
+          "max_hr": 177,
+          "min_hr": 103,
+          "avg_cadence": 83.63775,
+          "zone": 4,
+          "w_bal_start": 38100,
+          "w_bal_end": 7868,
+          "training_load": 36.71105
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 4,
+          "moving_secs": 4,
+          "start_secs": 1386,
+          "end_secs": 1390,
+          "avg_power": 88,
+          "max_power": 351,
+          "avg_hr": 177,
+          "max_hr": 177,
+          "min_hr": 177,
+          "avg_cadence": 62.75,
+          "zone": 1,
+          "w_bal_start": 7847,
+          "w_bal_end": 8624,
+          "training_load": 0.13667585
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -3421,6 +3537,44 @@
         "last_attempt": "2026-09-01T15:33:10.502473",
         "status": "ok",
         "reason": "ok"
+      }
+    },
+    "i182140128": {
+      "date": "2026-09-01",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T18:49:59.227884",
+        "last_attempt": "2026-09-01T18:49:59.227884",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-01T16:08:04.204+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T18:49:59.227884",
+        "last_attempt": "2026-09-01T18:49:59.227884",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i182133301": {
+      "date": "2026-09-01",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T18:49:59.227884",
+        "last_attempt": "2026-09-01T18:49:59.227884",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-01T17:09:43.268+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-01T18:49:59.227884",
+        "last_attempt": "2026-09-01T18:49:59.227884",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-01T18:54:59.227884"
       }
     }
   }
