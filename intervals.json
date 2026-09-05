@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T11:56:47.302861",
+  "generated_at": "2026-09-05T14:39:37.269701",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2939,6 +2939,94 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i183569113",
+      "date": "2026-09-05",
+      "start_datetime": "2026-09-05T08:28:00",
+      "type": "Ride",
+      "name": "Klubov\u00fd \u0161vih TJJJP 4-5h Z2 (dlouh\u00e1, ne tvrd\u00e1 \u2014 jako 2024)",
+      "interval_summary": [
+        "1x 1m57s 327w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 10049,
+          "moving_secs": 9014,
+          "start_secs": 0,
+          "end_secs": 10049,
+          "avg_power": 154,
+          "max_power": 666,
+          "avg_hr": 106,
+          "max_hr": 137,
+          "min_hr": 73,
+          "avg_cadence": 71.34576,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 37656,
+          "training_load": 79.52738
+        },
+        {
+          "type": "WORK",
+          "label": "117s@327w75rpm",
+          "duration_secs": 117,
+          "moving_secs": 117,
+          "start_secs": 10049,
+          "end_secs": 10166,
+          "avg_power": 327,
+          "max_power": 377,
+          "avg_hr": 137,
+          "max_hr": 147,
+          "min_hr": 110,
+          "avg_cadence": 75.068375,
+          "zone": 4,
+          "w_bal_start": 37656,
+          "w_bal_end": 36799,
+          "training_load": 3.0179338
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 12541,
+          "moving_secs": 9272,
+          "start_secs": 10166,
+          "end_secs": 22707,
+          "avg_power": 152,
+          "max_power": 488,
+          "avg_hr": 110,
+          "max_hr": 147,
+          "min_hr": 78,
+          "avg_cadence": 68.20248,
+          "zone": 1,
+          "w_bal_start": 36800,
+          "w_bal_end": 38052,
+          "training_load": 82.61475
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": null,
+        "p25": null,
+        "p50": null,
+        "p75": null,
+        "tiz_easy": null,
+        "tiz_endurance": null,
+        "tiz_tempo": null,
+        "tiz_supra": null,
+        "drift": null,
+        "easy_guard_crossing": null,
+        "lt1_crossing": null,
+        "lt2_crossing": null,
+        "quality": {
+          "valid_secs": 11498,
+          "total_secs": 18420,
+          "valid_pct": 62.4,
+          "artifact_state": "partial",
+          "artifact_coverage_pct": 99.978,
+          "artifact_rate_avg": 0.75,
+          "sufficient": false
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3181,6 +3269,25 @@
         "attempts": 1,
         "first_seen": "2026-09-03T18:28:47.285146",
         "last_attempt": "2026-09-03T18:28:47.285146",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i183569113": {
+      "date": "2026-09-05",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-05T14:39:37.269701",
+        "last_attempt": "2026-09-05T14:39:37.269701",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-05T12:48:47.426+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-05T14:39:37.269701",
+        "last_attempt": "2026-09-05T14:39:37.269701",
         "status": "ok",
         "reason": "ok"
       }
