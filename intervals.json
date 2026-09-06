@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T08:55:37.587687",
+  "generated_at": "2026-09-06T12:34:40.426042",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2358,6 +2358,71 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i183844113",
+      "date": "2026-09-06",
+      "start_datetime": "2026-09-06T11:15:44",
+      "type": "Ride",
+      "name": "\u0160pindler\u016fv Ml\u00fdn SILNI\u010cN\u00cd",
+      "interval_summary": [
+        "1x 28m40s 333w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 58,
+          "moving_secs": 11,
+          "start_secs": 0,
+          "end_secs": 58,
+          "avg_power": 403,
+          "max_power": 759,
+          "avg_hr": 87,
+          "max_hr": 103,
+          "min_hr": 78,
+          "avg_cadence": 64.916664,
+          "zone": 6,
+          "w_bal_start": 38100,
+          "w_bal_end": 36233,
+          "training_load": 0.035516784
+        },
+        {
+          "type": "WORK",
+          "label": "1720s@333w86rpm",
+          "duration_secs": 1720,
+          "moving_secs": 1720,
+          "start_secs": 58,
+          "end_secs": 1778,
+          "avg_power": 333,
+          "max_power": 400,
+          "avg_hr": 163,
+          "max_hr": 170,
+          "min_hr": 106,
+          "avg_cadence": 85.62209,
+          "zone": 4,
+          "w_bal_start": 36197,
+          "w_bal_end": 21551,
+          "training_load": 48.943047
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 51,
+          "moving_secs": 51,
+          "start_secs": 1778,
+          "end_secs": 1829,
+          "avg_power": 345,
+          "max_power": 429,
+          "avg_hr": 171,
+          "max_hr": 173,
+          "min_hr": 170,
+          "avg_cadence": 75.37255,
+          "zone": 4,
+          "w_bal_start": 21502,
+          "w_bal_end": 19783,
+          "training_load": 1.7809153
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2616,12 +2681,31 @@
         "source_icu_sync_date": "2026-09-06T08:38:40.282+00:00"
       },
       "streams": {
-        "attempts": 1,
+        "attempts": 2,
         "first_seen": "2026-09-06T08:55:37.587687",
-        "last_attempt": "2026-09-06T08:55:37.587687",
+        "last_attempt": "2026-09-06T12:34:40.426042",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-06T09:00:37.587687"
+        "next_retry_at": "2026-09-06T12:39:40.426042"
+      }
+    },
+    "i183844113": {
+      "date": "2026-09-06",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-06T12:34:40.426042",
+        "last_attempt": "2026-09-06T12:34:40.426042",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-06T09:46:55.206+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-06T12:34:40.426042",
+        "last_attempt": "2026-09-06T12:34:40.426042",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-06T12:39:40.426042"
       }
     }
   }
