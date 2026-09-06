@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T12:34:40.426042",
+  "generated_at": "2026-09-06T15:46:45.522752",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2423,6 +2423,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i183912290",
+      "date": "2026-09-06",
+      "start_datetime": "2026-09-06T11:54:06",
+      "type": "Ride",
+      "name": "\u0160pindler\u016fv Ml\u00fdn SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 11157,
+          "moving_secs": 4794,
+          "start_secs": 0,
+          "end_secs": 11157,
+          "avg_power": 176,
+          "max_power": 638,
+          "avg_hr": 132,
+          "max_hr": 158,
+          "min_hr": 90,
+          "avg_cadence": 74.67202,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38098,
+          "training_load": 52.8716
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2681,12 +2709,12 @@
         "source_icu_sync_date": "2026-09-06T08:38:40.282+00:00"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-09-06T08:55:37.587687",
-        "last_attempt": "2026-09-06T12:34:40.426042",
+        "last_attempt": "2026-09-06T15:46:45.522752",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-06T12:39:40.426042"
+        "next_retry_at": "2026-09-06T15:51:45.522752"
       }
     },
     "i183844113": {
@@ -2700,12 +2728,31 @@
         "source_icu_sync_date": "2026-09-06T09:46:55.206+00:00"
       },
       "streams": {
-        "attempts": 1,
+        "attempts": 2,
         "first_seen": "2026-09-06T12:34:40.426042",
-        "last_attempt": "2026-09-06T12:34:40.426042",
+        "last_attempt": "2026-09-06T15:46:45.522752",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-06T12:39:40.426042"
+        "next_retry_at": "2026-09-06T15:51:45.522752"
+      }
+    },
+    "i183912290": {
+      "date": "2026-09-06",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-06T15:46:45.522752",
+        "last_attempt": "2026-09-06T15:46:45.522752",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-06T13:00:42.957+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-06T15:46:45.522752",
+        "last_attempt": "2026-09-06T15:46:45.522752",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-09-06T15:51:45.522752"
       }
     }
   }
