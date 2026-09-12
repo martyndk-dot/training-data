@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T06:06:45.982511",
+  "generated_at": "2026-09-12T10:43:17.711695",
   "schema_version": 1,
   "version": "3.127",
   "script_hash": "81a9546c6d66",
@@ -2520,6 +2520,57 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i185826316",
+      "date": "2026-09-12",
+      "start_datetime": "2026-09-12T10:38:22",
+      "type": "Ride",
+      "name": "Hradec Kr\u00e1lov\u00e9 SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 671,
+          "moving_secs": 601,
+          "start_secs": 0,
+          "end_secs": 671,
+          "avg_power": 119,
+          "max_power": 544,
+          "avg_hr": 107,
+          "max_hr": 131,
+          "min_hr": 82,
+          "avg_cadence": 72.37541,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 37654,
+          "training_load": 4.009835
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": null,
+        "p25": null,
+        "p50": null,
+        "p75": null,
+        "tiz_easy": null,
+        "tiz_endurance": null,
+        "tiz_tempo": null,
+        "tiz_supra": null,
+        "drift": null,
+        "easy_guard_crossing": null,
+        "lt1_crossing": null,
+        "lt2_crossing": null,
+        "quality": {
+          "valid_secs": 476,
+          "total_secs": 602,
+          "valid_pct": 79.1,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 2.3,
+          "sufficient": false
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2794,12 +2845,12 @@
         "source_icu_sync_date": "2026-09-09T17:51:21.898+00:00"
       },
       "streams": {
-        "attempts": 15,
+        "attempts": 16,
         "first_seen": "2026-09-09T19:55:21.572678",
-        "last_attempt": "2026-09-12T01:20:43.070545",
+        "last_attempt": "2026-09-12T10:43:17.711695",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-12T07:20:43.070545"
+        "next_retry_at": "2026-09-12T16:43:17.711695"
       }
     },
     "i185311209": {
@@ -2833,12 +2884,30 @@
         "source_icu_sync_date": "2026-09-11T15:50:42.796+00:00"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-09-11T18:45:06.782214",
-        "last_attempt": "2026-09-12T06:06:45.982511",
+        "last_attempt": "2026-09-12T10:43:17.711695",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-12T06:11:45.982511"
+        "next_retry_at": "2026-09-12T10:48:17.711695"
+      }
+    },
+    "i185826316": {
+      "date": "2026-09-12",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-12T10:43:17.711695",
+        "last_attempt": "2026-09-12T10:43:17.711695",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-12T09:00:47.941+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-12T10:43:17.711695",
+        "last_attempt": "2026-09-12T10:43:17.711695",
+        "status": "ok",
+        "reason": "ok"
       }
     }
   }
