@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T17:52:23.460310",
+  "generated_at": "2026-09-13T20:11:17.256869",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -4030,12 +4030,12 @@
         "source_icu_sync_date": "2026-09-11T15:50:42.796+00:00"
       },
       "streams": {
-        "attempts": 3,
+        "attempts": 4,
         "first_seen": "2026-09-13T15:38:16.665283",
-        "last_attempt": "2026-09-13T17:52:23.460310",
+        "last_attempt": "2026-09-13T20:11:17.256869",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-09-13T17:57:23.460310"
+        "next_retry_at": "2026-09-13T20:16:17.256869"
       }
     },
     "i185311209": {
