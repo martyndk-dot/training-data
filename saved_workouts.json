@@ -1,0 +1,264 @@
+{
+  "generated_at": "2026-09-13T15:56:09.938600+00:00",
+  "schema_version": 1,
+  "version": "3.132",
+  "script_hash": "859f7e9caa4b",
+  "source": "intervals.icu",
+  "target_resolution": "as_stored",
+  "refresh": {
+    "status": "ok",
+    "consistency": "consistent",
+    "last_success_at": "2026-09-13T15:56:09.938600+00:00",
+    "last_content_change_at": "2026-09-13T15:56:09.938600+00:00",
+    "refresh_interval_secs": 21600
+  },
+  "counts": {
+    "folders": 1,
+    "workouts": 1
+  },
+  "folders": [
+    {
+      "id": 9548,
+      "type": "FOLDER",
+      "name": "Workouts",
+      "description": "",
+      "visibility": "PRIVATE",
+      "read_only_workouts": false,
+      "can_edit": true,
+      "upstream_num_workouts": 1,
+      "start_date_local": null,
+      "activity_types": [
+        "VirtualRide"
+      ],
+      "num_workouts": 1,
+      "workout_ids": [
+        1
+      ]
+    }
+  ],
+  "workouts": [
+    {
+      "id": 1,
+      "name": "IntervalCoach - Race Warmup",
+      "type": "VirtualRide",
+      "sub_type": null,
+      "indoor": true,
+      "description": "- 25m2s 55%\n- 1m58s 91%\n- 62s 50%\n- 1m58s 91%\n- 61s 50%\n- 1m59s 91%\n- 61s 50%\n- 1m59s 91%\n- 65s 53%\n- 1m55s 91%\n- 6m7s 54%",
+      "moving_time": 2707,
+      "distance": 0.0,
+      "icu_training_load": 36,
+      "icu_intensity": 69.1924,
+      "target": null,
+      "targets": [
+        "POWER"
+      ],
+      "tags": null,
+      "carbs_per_hour": null,
+      "day": null,
+      "days": null,
+      "for_week": false,
+      "hide_from_athlete": false,
+      "folder_id": 9548,
+      "folder_name": "Workouts",
+      "updated": "2026-02-08T09:19:37.314+00:00",
+      "source_endpoint": "workouts",
+      "has_workout_doc": true,
+      "workout_doc": {
+        "steps": [
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 55
+            },
+            "duration": 1502
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 91
+            },
+            "duration": 118
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 50
+            },
+            "duration": 62
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 91
+            },
+            "duration": 118
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 50
+            },
+            "duration": 61
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 91
+            },
+            "duration": 119
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 50
+            },
+            "duration": 61
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 91
+            },
+            "duration": 119
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 53
+            },
+            "duration": 65
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 91
+            },
+            "duration": 115
+          },
+          {
+            "power": {
+              "units": "%ftp",
+              "value": 54
+            },
+            "duration": 367
+          }
+        ],
+        "locales": [],
+        "options": {},
+        "distance": 0,
+        "duration": 2707,
+        "zoneTimes": [
+          {
+            "id": "Z1",
+            "max": 55,
+            "name": "Z1",
+            "secs": 2118,
+            "zone": 1,
+            "color": "#009e80",
+            "maxWatts": 165,
+            "minWatts": 1,
+            "percentRange": "0% - 55%"
+          },
+          {
+            "id": "Z2",
+            "max": 75,
+            "name": "Z2",
+            "secs": 0,
+            "zone": 2,
+            "color": "#009e00",
+            "maxWatts": 225,
+            "minWatts": 166,
+            "percentRange": "56% - 75%"
+          },
+          {
+            "id": "Z3",
+            "max": 90,
+            "name": "Z3",
+            "secs": 0,
+            "zone": 3,
+            "color": "#ffcb0e",
+            "maxWatts": 270,
+            "minWatts": 226,
+            "percentRange": "76% - 90%"
+          },
+          {
+            "id": "Z4",
+            "max": 105,
+            "name": "Z4",
+            "secs": 589,
+            "zone": 4,
+            "color": "#ff7f0e",
+            "maxWatts": 315,
+            "minWatts": 271,
+            "percentRange": "91% - 105%"
+          },
+          {
+            "id": "Z5",
+            "max": 120,
+            "name": "Z5",
+            "secs": 0,
+            "zone": 5,
+            "color": "#dd0447",
+            "maxWatts": 360,
+            "minWatts": 316,
+            "percentRange": "106% - 120%"
+          },
+          {
+            "id": "Z6",
+            "max": 150,
+            "name": "Z6",
+            "secs": 0,
+            "zone": 6,
+            "color": "#6633cc",
+            "maxWatts": 450,
+            "minWatts": 361,
+            "percentRange": "121% - 150%"
+          },
+          {
+            "id": "Z7",
+            "max": 999,
+            "name": "Z7",
+            "secs": 0,
+            "zone": 7,
+            "color": "#504861",
+            "maxWatts": 9999,
+            "minWatts": 451,
+            "percentRange": "151% +"
+          },
+          {
+            "id": "SS",
+            "gap": true,
+            "max": 97,
+            "min": 84,
+            "name": "Sweet Spot",
+            "secs": 589,
+            "zone": 8,
+            "color": "#ffa00e",
+            "maxWatts": 291,
+            "minWatts": 252,
+            "percentRange": "84% - 97%"
+          }
+        ],
+        "strain_score": {
+          "ss_cp": 42.79363594433951,
+          "ss_p_max": 0,
+          "ss_w_prime": 0,
+          "strain_score": 42.79363594433951
+        },
+        "average_watts": 187,
+        "normalized_power": 203,
+        "variability_index": 1.085561497326203,
+        "polarization_index": 0
+      }
+    }
+  ],
+  "fetch_state": {
+    "last_attempt_at": "2026-09-13T15:56:09.938600+00:00",
+    "consecutive_failures": 0,
+    "next_attempt_after": "2026-09-13T21:56:09.938600+00:00",
+    "last_error": null,
+    "content_digest": "sha256:b33c63bdc9938b41b09255fbf9d9384561d0be909667ea77ccab30e02c848408",
+    "endpoint_mismatch_count": 0,
+    "endpoint_mismatch_ids": []
+  }
+}
