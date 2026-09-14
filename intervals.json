@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T16:36:03.261810",
+  "generated_at": "2026-09-14T20:34:44.130323",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -3213,6 +3213,110 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i186674055",
+      "date": "2026-09-14",
+      "start_datetime": "2026-09-14T16:42:54",
+      "type": "Ride",
+      "name": "Klubovka s Carlou 2h aktivn\u011b",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 8468,
+          "moving_secs": 7549,
+          "start_secs": 0,
+          "end_secs": 8468,
+          "avg_power": 169,
+          "max_power": 725,
+          "avg_hr": 113,
+          "max_hr": 151,
+          "min_hr": 72,
+          "avg_cadence": 71.295006,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38025,
+          "training_load": 84.088486
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.469,
+        "p25": 1.362,
+        "p50": 1.49,
+        "p75": 1.614,
+        "tiz_easy": {
+          "secs": 6561,
+          "pct": 98.7,
+          "avg_hr": 114,
+          "avg_watts": 172
+        },
+        "tiz_endurance": {
+          "secs": 84,
+          "pct": 1.3,
+          "avg_hr": 118,
+          "avg_watts": 143
+        },
+        "tiz_tempo": {
+          "secs": 2,
+          "pct": 0.0,
+          "avg_hr": 104,
+          "avg_watts": 106
+        },
+        "tiz_supra": null,
+        "drift": {
+          "first_third_avg": 1.388,
+          "last_third_avg": 1.501,
+          "delta": 0.113,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 157,
+          "contiguous_secs": 54,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 4,
+          "contiguous_secs": 3,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "insufficient_total_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "insufficient_total_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 6647,
+          "total_secs": 7554,
+          "valid_pct": 88.0,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 1.69,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3264,12 +3368,11 @@
         "source_icu_sync_date": "2026-09-11T15:50:42.796+00:00"
       },
       "streams": {
-        "attempts": 9,
+        "attempts": 10,
         "first_seen": "2026-09-13T15:38:16.665283",
-        "last_attempt": "2026-09-14T16:36:03.261810",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-09-14T17:06:03.261810"
+        "last_attempt": "2026-09-14T20:34:44.130323",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     },
     "i185311209": {
@@ -3510,6 +3613,25 @@
         "attempts": 1,
         "first_seen": "2026-09-13T15:38:16.665283",
         "last_attempt": "2026-09-13T15:38:16.665283",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i186674055": {
+      "date": "2026-09-14",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-14T20:34:44.130323",
+        "last_attempt": "2026-09-14T20:34:44.130323",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-14T17:05:12.162+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-14T20:34:44.130323",
+        "last_attempt": "2026-09-14T20:34:44.130323",
         "status": "ok",
         "reason": "ok"
       }
