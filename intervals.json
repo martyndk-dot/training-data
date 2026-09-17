@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T10:20:21.721236",
+  "generated_at": "2026-09-17T15:08:40.448062",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -2967,6 +2967,142 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i187635329",
+      "date": "2026-09-17",
+      "start_datetime": "2026-09-17T14:58:19",
+      "type": "Ride",
+      "name": "Z2 lehce 60 + 10 min CX skills (f\u00e1ze 1)",
+      "interval_summary": [
+        "1x 11s 514w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 816,
+          "moving_secs": 727,
+          "start_secs": 0,
+          "end_secs": 816,
+          "avg_power": 171,
+          "max_power": 508,
+          "avg_hr": 122,
+          "max_hr": 148,
+          "min_hr": 93,
+          "avg_cadence": 78.41022,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 36086,
+          "training_load": 8.255986
+        },
+        {
+          "type": "WORK",
+          "label": "11s@514w84rpm",
+          "duration_secs": 11,
+          "moving_secs": 11,
+          "start_secs": 816,
+          "end_secs": 827,
+          "avg_power": 514,
+          "max_power": 558,
+          "avg_hr": 121,
+          "max_hr": 128,
+          "min_hr": 118,
+          "avg_cadence": 84.09091,
+          "zone": 7,
+          "w_bal_start": 35925,
+          "w_bal_end": 34056,
+          "training_load": 0.21684624
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3331,
+          "moving_secs": 1887,
+          "start_secs": 827,
+          "end_secs": 4158,
+          "avg_power": 168,
+          "max_power": 529,
+          "avg_hr": 116,
+          "max_hr": 149,
+          "min_hr": 71,
+          "avg_cadence": 69.70117,
+          "zone": 1,
+          "w_bal_start": 33980,
+          "w_bal_end": 37399,
+          "training_load": 23.408897
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.452,
+        "p25": 1.336,
+        "p50": 1.514,
+        "p75": 1.606,
+        "tiz_easy": {
+          "secs": 2238,
+          "pct": 94.6,
+          "avg_hr": 117,
+          "avg_watts": 168
+        },
+        "tiz_endurance": {
+          "secs": 127,
+          "pct": 5.4,
+          "avg_hr": 124,
+          "avg_watts": 205
+        },
+        "tiz_tempo": null,
+        "tiz_supra": null,
+        "drift": {
+          "first_third_avg": 1.556,
+          "last_third_avg": 1.465,
+          "delta": -0.091,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 73,
+          "contiguous_secs": 20,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 2365,
+          "total_secs": 2638,
+          "valid_pct": 89.7,
+          "artifact_state": "partial",
+          "artifact_coverage_pct": 99.924,
+          "artifact_rate_avg": 1.34,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3207,6 +3343,25 @@
         "attempts": 1,
         "first_seen": "2026-09-16T15:59:10.994155",
         "last_attempt": "2026-09-16T15:59:10.994155",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i187635329": {
+      "date": "2026-09-17",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-17T15:08:40.448062",
+        "last_attempt": "2026-09-17T15:08:40.448062",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-17T14:08:09.850+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-17T15:08:40.448062",
+        "last_attempt": "2026-09-17T15:08:40.448062",
         "status": "ok",
         "reason": "ok"
       }
