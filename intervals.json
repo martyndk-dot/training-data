@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T09:47:42.887642",
+  "generated_at": "2026-09-20T13:53:24.546604",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -3445,6 +3445,115 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i188491650",
+      "date": "2026-09-20",
+      "start_datetime": "2026-09-20T11:25:29",
+      "type": "Ride",
+      "name": "Mal\u00e1 \u00dapa SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 5270,
+          "moving_secs": 5082,
+          "start_secs": 0,
+          "end_secs": 5270,
+          "avg_power": 147,
+          "max_power": 380,
+          "avg_hr": 122,
+          "max_hr": 146,
+          "min_hr": 91,
+          "avg_cadence": 76.91385,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38099,
+          "training_load": 39.238945
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.199,
+        "p25": 0.871,
+        "p50": 1.232,
+        "p75": 1.558,
+        "tiz_easy": {
+          "secs": 3248,
+          "pct": 65.5,
+          "avg_hr": 119,
+          "avg_watts": 143
+        },
+        "tiz_endurance": {
+          "secs": 784,
+          "pct": 15.8,
+          "avg_hr": 128,
+          "avg_watts": 150
+        },
+        "tiz_tempo": {
+          "secs": 777,
+          "pct": 15.7,
+          "avg_hr": 132,
+          "avg_watts": 174
+        },
+        "tiz_supra": {
+          "secs": 148,
+          "pct": 3.0,
+          "avg_hr": 137,
+          "avg_watts": 161
+        },
+        "drift": {
+          "first_third_avg": 1.437,
+          "last_third_avg": 0.88,
+          "delta": -0.557,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 341,
+          "contiguous_secs": 60,
+          "n_qualifying_segments": 1,
+          "n_eligible_segments": 0,
+          "reason": "ok",
+          "estimate_eligible": false,
+          "estimate_reason": "non_stationary_power",
+          "avg_hr": 134,
+          "avg_watts": 196
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 291,
+          "contiguous_secs": 49,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 187,
+          "contiguous_secs": 34,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 4957,
+          "total_secs": 5084,
+          "valid_pct": 97.5,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 0.32,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3721,6 +3830,24 @@
         "attempts": 1,
         "first_seen": "2026-09-20T09:47:42.887642",
         "last_attempt": "2026-09-20T09:47:42.887642",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i188491650": {
+      "date": "2026-09-20",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-20T13:53:24.546604",
+        "last_attempt": "2026-09-20T13:53:24.546604",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-20T11:24:52.461+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-20T13:53:24.546604",
+        "last_attempt": "2026-09-20T13:53:24.546604",
         "status": "ok",
         "reason": "ok"
       }
