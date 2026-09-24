@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T15:21:11.192140",
+  "generated_at": "2026-09-24T19:22:09.485081",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -2846,6 +2846,110 @@
           "sufficient": true
         }
       }
+    },
+    {
+      "activity_id": "i189984924",
+      "date": "2026-09-24",
+      "start_datetime": "2026-09-24T16:47:54",
+      "type": "Ride",
+      "name": "Nemojov SILNI\u010cN\u00cd",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 6086,
+          "moving_secs": 5969,
+          "start_secs": 0,
+          "end_secs": 6086,
+          "avg_power": 189,
+          "max_power": 577,
+          "avg_hr": 113,
+          "max_hr": 143,
+          "min_hr": 72,
+          "avg_cadence": 81.801,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 37903,
+          "training_load": 69.076515
+        }
+      ],
+      "zone_basis": "power",
+      "dfa": {
+        "avg": 1.353,
+        "p25": 1.194,
+        "p50": 1.392,
+        "p75": 1.545,
+        "tiz_easy": {
+          "secs": 4834,
+          "pct": 87.6,
+          "avg_hr": 114,
+          "avg_watts": 189
+        },
+        "tiz_endurance": {
+          "secs": 623,
+          "pct": 11.3,
+          "avg_hr": 121,
+          "avg_watts": 202
+        },
+        "tiz_tempo": {
+          "secs": 60,
+          "pct": 1.1,
+          "avg_hr": 126,
+          "avg_watts": 222
+        },
+        "tiz_supra": null,
+        "drift": {
+          "first_third_avg": 1.402,
+          "last_third_avg": 1.388,
+          "delta": -0.014,
+          "interpretable": true
+        },
+        "easy_guard_crossing": {
+          "marker_dfa_a1": 1.0,
+          "secs_in_band": 419,
+          "contiguous_secs": 62,
+          "n_qualifying_segments": 1,
+          "n_eligible_segments": 0,
+          "reason": "ok",
+          "estimate_eligible": false,
+          "estimate_reason": "non_stationary_power",
+          "avg_hr": 120,
+          "avg_watts": 221
+        },
+        "lt1_crossing": {
+          "marker_dfa_a1": 0.75,
+          "secs_in_band": 90,
+          "contiguous_secs": 29,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_contiguous_dwell",
+          "estimate_eligible": false,
+          "estimate_reason": "no_contiguous_dwell",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "lt2_crossing": {
+          "marker_dfa_a1": 0.5,
+          "secs_in_band": 0,
+          "contiguous_secs": 0,
+          "n_qualifying_segments": 0,
+          "n_eligible_segments": 0,
+          "reason": "no_samples_in_band",
+          "estimate_eligible": false,
+          "estimate_reason": "no_samples_in_band",
+          "avg_hr": null,
+          "avg_watts": null
+        },
+        "quality": {
+          "valid_secs": 5517,
+          "total_secs": 5975,
+          "valid_pct": 92.3,
+          "artifact_state": "complete",
+          "artifact_coverage_pct": 100.0,
+          "artifact_rate_avg": 1.23,
+          "sufficient": true
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -3048,6 +3152,24 @@
         "attempts": 1,
         "first_seen": "2026-09-20T13:53:24.546604",
         "last_attempt": "2026-09-20T13:53:24.546604",
+        "status": "ok",
+        "reason": "ok"
+      }
+    },
+    "i189984924": {
+      "date": "2026-09-24",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-09-24T19:22:09.485081",
+        "last_attempt": "2026-09-24T19:22:09.485081",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-09-24T16:32:00.101+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-09-24T19:22:09.485081",
+        "last_attempt": "2026-09-24T19:22:09.485081",
         "status": "ok",
         "reason": "ok"
       }
