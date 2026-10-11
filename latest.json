@@ -71,7 +71,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-11T15:32:34.172210",
+    "last_updated": "2026-10-11T19:37:36.369234",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.132"
@@ -172,7 +172,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-09-13",
-    "age_days": 27,
+    "age_days": 28,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -279,7 +279,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 2199,
+      "steps": 2538,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -667,7 +667,7 @@
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 2,
           "race_proximity": null,
-          "next_week_load": 1.41,
+          "next_week_load": 1.49,
           "plan_coverage_current_week": 0.2,
           "plan_coverage_next_week": 1.4
         },
@@ -702,7 +702,7 @@
     "p_max": 1057,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-11T15:32:34.171240",
+    "calculation_timestamp": "2026-10-11T19:37:36.368237",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4254,7 +4254,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 2199,
+      "steps": 2538,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4266,6 +4266,32 @@
     }
   ],
   "planned_workouts": [
+    {
+      "id": 143520588,
+      "date": "2026-10-11",
+      "name": "\ud83e\ude7a Wellness \u2014 GO, nejlep\u0161\u00ed noc t\u00fddne (HRV 32, RHR 45)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "RHR 45 (baseline 47\u201348, varov\u00e1n\u00ed \u226553) \u2014 nejni\u017e\u0161\u00ed za 10 dn\u00ed | HRV 32 ms (baseline ~33, varov\u00e1n\u00ed <27) | sp\u00e1nek 7 h 26 min, score 92 (hlubok\u00fd 92 min, REM 119 min) | teplota k\u016f\u017ee \u22120,3 \u00b0C | Body Battery nabito +45 | v\u00e1ha nezm\u011b\u0159ena (sobota 84,3 kg).\nForma r\u00e1no: CTL 59,1, ATL 37,5, TSB +21,7 \u2014 po t\u0159ech dnech prakticky bez z\u00e1t\u011b\u017ee (\u010dt 0, p\u00e1 0, so 26 TSS) \u010derstv\u00fd a\u017e \u201epodtr\u00e9novan\u00fd\u201c.\n\nTrend 7 dn\u00ed: HRV 39 \u2192 33 \u2192 31 \u2192 30 \u2192 33 \u2192 32 (stabiln\u011b na baseline), RHR 45 \u2192 49 \u2192 50 \u2192 49 \u2192 48 \u2192 45 (zp\u011bt na minimum). Sp\u00e1nek 4 noci v \u0159ad\u011b 7,2\u20137,9 h. Kumulace z \u00fatern\u00ed 40/20 je d\u00e1vno pry\u010d; parasympatikus v po\u0159\u00e1dku, \u017e\u00e1dn\u00fd znak nemoci (teplota \u22120,3, RHR n\u00edzk\u00e1).\nBody Battery +45 je jedin\u00e9 slab\u0161\u00ed \u010d\u00edslo \u2014 Garmin ho po\u010d\u00edt\u00e1 i z denn\u00edho stresu/aktivity, s RHR+HRV nekoliduje.\n\nVERDIKT: GO \u2014 KOTVA dlouh\u00e1 Z2 v pln\u00e9m rozsahu, klidn\u011b 3,5\u20134 h (TSB +22 to unese bez rizika).\n\u2022 210\u2013240 W, HR 120\u2013135, VE 50\u201363 L/min, posledn\u00ed hodina horn\u00ed Z2.\n\u2022 V\u00fd\u017eiva 70\u201380 g/h, 0,7 l/h, s\u016fl; v de\u0161ti a 10 \u00b0C hl\u00eddat prochladnut\u00ed \u2014 vrstvy, rukavice.\n\nZ\u00edtra: RHR \u226450 a HRV \u226528 \u2192 pond\u011bl\u00ed Z2 75\u201390 min + S\u00cdLA A (nav\u00fd\u0161eno kv\u016fli poklesu CTL)."
+    },
+    {
+      "id": 143520591,
+      "date": "2026-10-11",
+      "name": "\ud83d\udcdd KOTVA dlouh\u00e1 Z2 \u2014 spln\u011bno, ale krat\u0161\u00ed a m\u011bk\u010d\u00ed (2 h 57, TSS 119)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "KOTVA: Dlouh\u00e1 Z2 (Edge 1050 + Tymewear, Prodoli) \u2014 84,5 km, pohyb 2 h 57 min / celkem 3 h 05, +645 m. Start 14:05, 11,6 \u00b0C (pocitov\u011b 8,7), d\u00e9\u0161\u0165 5,1 mm, v\u00edtr 3,5 m/s (n\u00e1razy 7) ze z\u00e1padu.\nPl\u00e1n: 195 min / TSS 143\u2013170; rann\u00ed doporu\u010den\u00ed 3,5\u20134 h / TSS 190\u2013210. Spln\u011bn\u00ed \u010dasu 83 %, TSS 119 = 70 % c\u00edle karty a ~60 % nav\u00fd\u0161en\u00e9ho c\u00edle.\n\nV\u00ddKON: pr\u016fm\u011br 193 W, NP 210 W, IF 0,64, VI 1,09, TSS 119, 2049 kJ. Max 573 W.\nZ\u00f3ny v\u00fdkonu: Z1 <182 W 50 min (v\u010d. dojezd\u016f/sjezd\u016f), Z2 182\u2013248 W 95 min (54 %), Z3 28 min, SS 8 min, pr\u00e1h 3,3 min, VO2+ <1 min. \u2192 J\u00e1dro v Z2, ale pr\u016fm\u011br 193 W je pod spodn\u00ed hranic\u00ed \u201eZ2 jako tr\u00e9nink\u201c (200 W); NP 210 v p\u00e1smu. Kopce do SS/prahu kr\u00e1tce \u2014 v toleranci.\nW\u2032: minimum 36,97 kJ z 38,1 (vy\u010derp\u00e1no max 1,1 kJ = 3 %), 4,7 kJ nad FTP celkem \u2192 \u010dist\u011b aerobn\u00ed j\u00edzda, W\u2032 netknut\u00e1.\n\nHR: pr\u016fm\u011br 124, max 141, Z1 (<137) 174,6 min = 99 %, Z2 jen 2 min. Na NP 210 W tep 124 je hodn\u011b n\u00edzko \u2014 v chladu a de\u0161ti typicky \u22125 a\u017e \u22128 tep\u016f (perifern\u00ed vazokonstrikce, men\u0161\u00ed termoregula\u010dn\u00ed z\u00e1t\u011b\u017e); HR tedy podhodnocuje intenzitu, v\u00fdkon a VE jsou pravdiv\u011bj\u0161\u00ed.\n\nVENTILACE (Tymewear): VE pr\u016fm\u011br 53,6 L/min = spodn\u00ed p\u016flka Z2 (50\u201363), daleko pod VT1 63 L/min / 260 W. Dechov\u00e1 frekvence 37,4/min, dechov\u00fd objem 1,46 L \u2014 m\u011bl\u010d\u00ed, rychlej\u0161\u00ed vzor ne\u017e bych na Z2 \u010dekal (obvykle ~25\u201330/min a 1,8\u20132,2 L); pravd\u011bpodobn\u011b chlad + mokr\u00fd p\u00e1s/vesta, sledovat na p\u0159\u00ed\u0161t\u00ed such\u00e9 j\u00edzd\u011b. Tymewear profil: AeT 236 W, VT1 260 W, VT2 287 W / 109 L/min.\n\nAEROBN\u00cd KVALITA:\n\u2022 Pw:HR decoupling \u22123,4 % (interval \u22121,7 %) \u2192 \u017e\u00e1dn\u00fd drift, naopak HR v 2. p\u016flce relativn\u011b klesal (ochlazov\u00e1n\u00ed v de\u0161ti). Aerobn\u00ed v\u00fddr\u017e na 3 h bez probl\u00e9mu.\n\u2022 EF (NP/HR) 1,69 vs 1,65 ve st\u0159edu 7. 10. (205 W/124) \u2014 m\u00edrn\u00e9 zlep\u0161en\u00ed, \u010d\u00e1ste\u010dn\u011b vlivem chladu.\n\u2022 Power/HR v Z2 1,90.\n\u2022 DFA \u03b11: nezaznamen\u00e1no (Edge bez RR/HRV z\u00e1znamu) \u2014 pro DFA zapnout v Edge \u201ez\u00e1znam HRV\u201c s hrudn\u00edm p\u00e1sem.\n\u2022 Technika: L/P 51,6/48,4 %, \u00fa\u010dinnost momentu 73/72 %, plynulost 21,5/22,2 % \u2014 standard. Kadence 84 (Z2 82).\n\u2022 Sacharidy spot\u0159ebov\u00e1no ~419 g = ~142 g/h \u2192 p\u0159i 70\u201380 g/h p\u0159\u00edjmu deficit ~60 g/h; dnes ve\u010der doplnit (~6\u20137 g/kg na cel\u00fd den).\n\nHODNOCEN\u00cd: aerobn\u011b kvalitn\u00ed j\u00edzda \u2014 bez driftu, VE pod VT1, W\u2032 netknut\u00e1. Slabina je jen rozsah: v de\u0161ti zkr\u00e1ceno a pr\u016fm\u011br pod 200 W, tak\u017ee stimul pro objem (TSS 119 m\u00edsto ~190) z\u016fstal nap\u016fl. Za po\u010das\u00ed pochopiteln\u00e9.\n\nDOPAD NA PL\u00c1N:\n\u2022 T\u00fdden 5.\u201311. 10.: 76 + 85 + 26 + 119 = 306 TSS vs c\u00edl 480\u2013520. CTL 62,9 (st) \u2192 59,1 (so) \u2192 60,6 dnes. Vypadla Mor. T\u0159ebov\u00e1 (pl\u00e1n 94) i \u010dt/p\u00e1 jednotky.\n\u2022 Projekce s aktu\u00e1ln\u00edm pl\u00e1nem: CTL 18. 10. ~62,2 (+1,7/t\u00fdden) \u2014 c\u00edl spln\u011bn jen p\u0159i odjet\u00ed KOTEV.\n\u2022 \u00daprava: pond\u011bl\u00ed 12. 10. z Z1 60 na Z2 75\u201390 min @ 190\u2013220 W + S\u00cdLA A (TSS ~55, +~0,5 CTL). TSB +12 to unese, \u00fatern\u00ed T3 20/40 t\u00edm netrp\u00ed.\n\u2022 \u00dater\u00fd KOTVA T3 20/40 @ 495\u2013545 W + 6 start\u016f beze zm\u011bny; d\u00e9lku s\u00e9rie podle sign\u00e1lu (HR 162+ a VE 100+).\n\u2022 St\u0159eda Z2 2\u20132,5 h: pokud sucho, jet horn\u00ed hranici 2,5 h.\n\u2022 P\u0159\u00ed\u0161t\u00ed dlouh\u00e1 ned\u011ble 18. 10. (po Go\u015bci\u0119cinu): c\u00edl \u22653 h a pr\u016fm\u011br \u2265205 W; p\u0159i de\u0161ti rad\u011bji 2 h venku + 45\u201360 min Tacx ne\u017e zkr\u00e1tit.\n\u2022 V\u00fd\u017eiva na dlouh\u00e9 j\u00edzdy: 80 g/h, prvn\u00ed p\u0159\u00edjem do 20. minuty."
+    },
     {
       "id": 137444648,
       "date": "2026-10-11",
@@ -4283,16 +4309,16 @@
     {
       "id": 142205731,
       "date": "2026-10-12",
-      "name": "Z1 60 + S\u00cdLA A",
+      "name": "Z2 75-90 + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 27,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 54,
+      "duration_hours": 1.42,
+      "duration_formatted": "1h25m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z1 60 min (pod 180 W, HR < 120) + S\u00cdLA A (2-3 s\u00e9rie). M\u00edsto nulov\u00e9ho dne \u2014 CTL nepot\u0159ebuje dal\u0161\u00ed volno. Kdy\u017e nevyjde kolo, aspo\u0148 s\u00edla.\n\nMain Set 1x\n- 60m 52% intensity=recovery"
+      "description": "FLEX (nav\u00fd\u0161eno 11. 10. kv\u016fli poklesu CTL na 60,6 a TSB +12): Z2 75\u201390 min @ 190\u2013220 W, HR < 130, VE < 60, bez z\u00e1tah\u016f \u2014 den p\u0159ed KOTVOU T3 20/40. Pot\u00e9 S\u00cdLA A (2\u20133 s\u00e9rie). Kdy\u017e se nestihne kolo, aspo\u0148 45 min Z1 + s\u00edla. P\u0159i RHR >50 nebo HRV <28 r\u00e1no \u2192 Z1 60 min.\n\nMain Set 1x\n- 85m 62% intensity=interval"
     },
     {
       "id": 142205732,
