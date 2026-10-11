@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T08:52:00.217190",
+  "generated_at": "2026-10-11T15:32:02.648473",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -2038,6 +2038,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i196147359",
+      "date": "2026-10-11",
+      "start_datetime": "2026-10-11T14:05:45",
+      "type": "Ride",
+      "name": "KOTVA: Dlouh\u00e1 Z2 3-3.5 h",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 11131,
+          "moving_secs": 10601,
+          "start_secs": 0,
+          "end_secs": 11131,
+          "avg_power": 193,
+          "max_power": 573,
+          "avg_hr": 123,
+          "max_hr": 141,
+          "min_hr": 86,
+          "avg_cadence": 79.005486,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 38051,
+          "training_load": 119.249084
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2188,6 +2216,26 @@
         "last_attempt": "2026-10-10T11:47:12.922126",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i196147359": {
+      "date": "2026-10-11",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-11T15:32:02.648473",
+        "last_attempt": "2026-10-11T15:32:02.648473",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-11T15:13:13.325+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-11T15:32:02.648473",
+        "last_attempt": "2026-10-11T15:32:02.648473",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-11T15:37:02.648473"
       }
     }
   }
