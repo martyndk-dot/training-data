@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T09:32:22.069248",
+  "generated_at": "2026-10-12T19:19:13.278876",
   "schema_version": 1,
   "version": "3.132",
   "script_hash": "859f7e9caa4b",
@@ -2066,6 +2066,34 @@
         }
       ],
       "zone_basis": "power"
+    },
+    {
+      "activity_id": "i196505997",
+      "date": "2026-10-12",
+      "start_datetime": "2026-10-12T15:50:03",
+      "type": "Ride",
+      "name": "Z2 75-90 + S\u00cdLA A",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 6021,
+          "moving_secs": 5885,
+          "start_secs": 0,
+          "end_secs": 6021,
+          "avg_power": 199,
+          "max_power": 590,
+          "avg_hr": 120,
+          "max_hr": 145,
+          "min_hr": 86,
+          "avg_cadence": 84.53252,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 38082,
+          "training_load": 66.83147
+        }
+      ],
+      "zone_basis": "power"
     }
   ],
   "fetch_state": {
@@ -2230,12 +2258,32 @@
         "source_icu_sync_date": "2026-10-11T15:13:13.325+00:00"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-10-11T15:32:02.648473",
-        "last_attempt": "2026-10-12T09:32:22.069248",
+        "last_attempt": "2026-10-12T19:19:13.278876",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-12T09:37:22.069248"
+        "next_retry_at": "2026-10-12T19:24:13.278876"
+      }
+    },
+    "i196505997": {
+      "date": "2026-10-12",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-12T19:19:13.278876",
+        "last_attempt": "2026-10-12T19:19:13.278876",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-12T15:31:18.388+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-12T19:19:13.278876",
+        "last_attempt": "2026-10-12T19:19:13.278876",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-12T19:24:13.278876"
       }
     }
   }
