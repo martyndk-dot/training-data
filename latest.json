@@ -71,7 +71,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-15T05:16:51.631880",
+    "last_updated": "2026-10-15T10:09:23.319172",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.132"
@@ -107,10 +107,10 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 30.3,
-        "delta_pct": null
+        "status": "green",
+        "value": 33.0,
+        "baseline_7d": 30.7,
+        "delta_pct": 7.5
       },
       "rhr": {
         "status": "green",
@@ -119,9 +119,9 @@
         "delta_bpm": 1.7
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "amber",
+        "hours": 6.78,
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -131,9 +131,9 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 0.96
+        "status": "green",
+        "value": 1.04,
+        "value_yesterday": 0.94
       },
       "tsb": {
         "status": "green",
@@ -141,10 +141,10 @@
       }
     },
     "signal_summary": {
-      "green": 3,
-      "amber": 0,
+      "green": 5,
+      "amber": 1,
       "red": 0,
-      "unavailable": 3
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Build",
@@ -154,7 +154,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 3 green, 0 amber (threshold 3), 0 red.",
+    "reason": "P3 green light. 5 green, 1 amber (threshold 3), 0 red.",
     "alarm_refs": []
   },
   "health_context": {
@@ -262,19 +262,19 @@
       }
     },
     "current_metrics": {
-      "weight_kg": 82.709,
+      "weight_kg": 83.23,
       "display": {
         "weight": {
-          "value": 82.7,
+          "value": 83.2,
           "unit": "kg"
         }
       },
       "resting_hr": 50,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "hrv": 33.0,
+      "sleep_quality": 2,
+      "sleep_hours": 6.78,
+      "sleep_formatted": "6h47m",
+      "sleep_score": 84.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -289,9 +289,9 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 21.9,
       "abdomen_cm": null,
-      "steps": 126,
+      "steps": 332,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -302,19 +302,19 @@
       "readiness": null
     },
     "weight": {
-      "weight_latest_kg": 82.7,
-      "weight_latest_date": "2026-10-14",
-      "wkg_current": 3.99,
+      "weight_latest_kg": 83.2,
+      "weight_latest_date": "2026-10-15",
+      "wkg_current": 3.97,
       "wkg_ftp_source": "tested",
       "ftp_setting_date": "2026-08-08",
       "wkg_block_start": 3.95,
-      "wkg_block_end": 3.99,
-      "wkg_block_delta": 0.04,
+      "wkg_block_end": 3.96,
+      "wkg_block_delta": 0.01,
       "weight_7d_avg_kg": 83.5,
-      "weight_28d_slope_kg_per_week": -0.165,
+      "weight_28d_slope_kg_per_week": -0.169,
       "display": {
         "weight_latest": {
-          "value": 82.7,
+          "value": 83.2,
           "unit": "kg"
         },
         "weight_7d_avg": {
@@ -322,20 +322,20 @@
           "unit": "kg"
         },
         "weight_28d_slope_per_week": {
-          "value": -0.165,
+          "value": -0.169,
           "unit": "kg/week"
         }
       }
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 0.96,
-    "hrv_baseline_7d": 30.3,
+    "recovery_index": 1.04,
+    "recovery_index_yesterday": 0.94,
+    "hrv_baseline_7d": 30.7,
     "rhr_baseline_7d": 48.3,
     "hrv_baseline_28d": 32.2,
     "rhr_baseline_28d": 48.5,
-    "latest_hrv": null,
+    "latest_hrv": 33.0,
     "latest_rhr": 50,
     "acwr": 1.06,
     "acwr_interpretation": "optimal",
@@ -359,7 +359,7 @@
     "multi_sport_detected": true,
     "strain": 423.0,
     "stress_tolerance": 3.6,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 3.5,
     "tss_7d_total": 365.0,
     "tss_28d_total": 1373.0,
     "zone_distribution_7d": {
@@ -543,92 +543,92 @@
           "start": "2026-09-04",
           "end": "2026-10-15"
         },
-        "weight_kg": 82.7,
+        "weight_kg": 83.2,
         "weight_source": "wellness_recent",
         "cycling": {
           "anchors": {
             "300s": {
               "actual_watts": 383,
-              "actual_wpkg": 4.63,
+              "actual_wpkg": 4.6,
               "actual_hr": 173,
               "pct_lthr": 101.2,
               "source": "observed_outdoor",
               "coggan_watts": 350,
-              "coggan_wpkg": 4.23,
+              "coggan_wpkg": 4.21,
               "cp_model_watts": 423,
-              "cp_model_wpkg": 5.11,
+              "cp_model_wpkg": 5.08,
               "model_divergence_pct": -9.5
             },
             "600s": {
               "actual_watts": 339,
-              "actual_wpkg": 4.1,
+              "actual_wpkg": 4.07,
               "actual_hr": 171,
               "pct_lthr": 100.0,
               "source": "observed_outdoor",
               "coggan_watts": 320,
-              "coggan_wpkg": 3.87,
+              "coggan_wpkg": 3.85,
               "cp_model_watts": 377,
-              "cp_model_wpkg": 4.56,
+              "cp_model_wpkg": 4.53,
               "model_divergence_pct": -10.1
             },
             "1200s": {
               "actual_watts": 337,
-              "actual_wpkg": 4.07,
+              "actual_wpkg": 4.05,
               "actual_hr": 168,
               "pct_lthr": 98.2,
               "source": "observed_outdoor",
               "coggan_watts": 307,
-              "coggan_wpkg": 3.71,
+              "coggan_wpkg": 3.69,
               "cp_model_watts": 353,
-              "cp_model_wpkg": 4.27,
+              "cp_model_wpkg": 4.24,
               "model_divergence_pct": -4.5
             },
             "1800s": {
               "actual_watts": 331,
-              "actual_wpkg": 4.0,
+              "actual_wpkg": 3.98,
               "actual_hr": 164,
               "pct_lthr": 95.9,
               "source": "observed_outdoor",
               "coggan_watts": 297,
-              "coggan_wpkg": 3.59,
+              "coggan_wpkg": 3.57,
               "cp_model_watts": 346,
-              "cp_model_wpkg": 4.18,
+              "cp_model_wpkg": 4.16,
               "model_divergence_pct": -4.3
             },
             "3600s": {
               "actual_watts": 267,
-              "actual_wpkg": 3.23,
+              "actual_wpkg": 3.21,
               "actual_hr": 161,
               "pct_lthr": 94.2,
               "source": "observed_outdoor",
               "coggan_watts": 284,
-              "coggan_wpkg": 3.43,
+              "coggan_wpkg": 3.41,
               "cp_model_watts": 338,
-              "cp_model_wpkg": 4.09,
+              "cp_model_wpkg": 4.06,
               "model_divergence_pct": -21.0
             },
             "5400s": {
               "actual_watts": 220,
-              "actual_wpkg": 2.66,
+              "actual_wpkg": 2.64,
               "actual_hr": 147,
               "pct_lthr": 86.0,
               "source": "observed_outdoor",
               "coggan_watts": 271,
-              "coggan_wpkg": 3.28,
+              "coggan_wpkg": 3.26,
               "cp_model_watts": 335,
-              "cp_model_wpkg": 4.05,
+              "cp_model_wpkg": 4.03,
               "model_divergence_pct": -34.3
             },
             "7200s": {
               "actual_watts": 216,
-              "actual_wpkg": 2.61,
+              "actual_wpkg": 2.6,
               "actual_hr": 146,
               "pct_lthr": 85.4,
               "source": "observed_outdoor",
               "coggan_watts": 257,
-              "coggan_wpkg": 3.11,
+              "coggan_wpkg": 3.09,
               "cp_model_watts": 334,
-              "cp_model_wpkg": 4.04,
+              "cp_model_wpkg": 4.01,
               "model_divergence_pct": -35.3
             }
           },
@@ -675,14 +675,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.85,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": 1.93,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 1,
-          "current_week_hard_days_total": 3,
+          "current_week_hard_days_total": 2,
           "race_proximity": null,
-          "next_week_load": 1.45,
+          "next_week_load": 1.83,
           "plan_coverage_current_week": 1.0,
-          "plan_coverage_next_week": 1.75
+          "plan_coverage_next_week": 2.0
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -715,9 +715,9 @@
     "p_max": 1053,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-15T05:16:51.630526",
+    "calculation_timestamp": "2026-10-15T10:09:23.317793",
     "data_quality": {
-      "hrv_data_points": 6,
+      "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 5,
       "activities_28d": 19,
@@ -4120,17 +4120,20 @@
     },
     {
       "date": "2026-10-15",
-      "weight_kg": null,
+      "weight_kg": 83.23,
       "display": {
-        "weight": null
+        "weight": {
+          "value": 83.2,
+          "unit": "kg"
+        }
       },
       "resting_hr": 50,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 33.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 6.78,
+      "sleep_formatted": "6h47m",
+      "sleep_quality": 2,
+      "sleep_score": 84.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -4148,9 +4151,9 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 21.9,
       "abdomen_cm": null,
-      "steps": 126,
+      "steps": 332,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4163,209 +4166,252 @@
   ],
   "planned_workouts": [
     {
+      "id": 144762858,
+      "date": "2026-10-15",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 GO, skills + s\u00edla B lehce (HRV 33, RHR 50)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Section 11 v11.71 \u2014 readiness (P0\u2013P3). Zdroj: Garmin p\u0159es freddy (dopln\u011bno po synchronizaci 15. 10. r\u00e1no) + intervals.icu p\u0159\u00edmo (ICUsync); 7d baseline z intervals wellness 8.\u201314. 10. (latest.json nen\u00ed v t\u00e9to session k dispozici).\n\nSIGN\u00c1LY:\n\ud83d\udfe2 HRV 33 ms vs 7d baseline 30,4 \u2192 +8,5 % (5min max 57)\n\ud83d\udfe2 RHR 50 vs 7d baseline 48,3 \u2192 +1,7 bpm (amber od +3)\n\ud83d\udfe1 Sp\u00e1nek 6 h 47 min, score 84 (5\u20137 h); hlubok\u00fd 107 min, REM 101 min, bd\u011bn\u00ed 0\n\ud83d\udfe2 TSB +4,2\n\u26aa ACWR start-of-day, Recovery Index, f\u00e1ze \u2192 nedostupn\u00e9 (vy\u017eaduje latest.json)\n\u2192 1\u00d7 \ud83d\udfe1. P\u0159i f\u00e1zi Build/Base (pr\u00e1h 2\u20133) = P3 GO; p\u0159i f\u00e1zi Race week (pr\u00e1h 1) = P2 Modify. Dne\u0161n\u00ed jednotka u\u017e je v re\u017eimu modify (s\u00edla B zkr\u00e1cen\u00e1) \u2192 ob\u011b varianty vedou ke stejn\u00e9mu pl\u00e1nu.\n\nKONTEXT: \ud83d\udfe2 teplota k\u016f\u017ee 0,0 \u00b0C (v\u010dera +0,4 \u2192 normalizov\u00e1no) | \ud83d\udfe2 Body Battery +51 (nejv\u00edc za 5 noc\u00ed) | \ud83d\udfe2 hlubok\u00fd sp\u00e1nek 107 min (nejv\u00edc za t\u00fdden) | \ud83d\udfe2 v\u00e1ha 83,2 kg (+0,5 = glykogen a tekutiny dopln\u011bny). RHR 50 2. den po sob\u011b je jedin\u00e1 drobnost. Celkov\u011b lep\u0161\u00ed obraz ne\u017e v\u010dera.\n\nVERDIKT: \ud83d\udfe2 GO \u2014 Skills 60 + S\u00cdLA B s v\u010derej\u0161\u00ed \u00fapravou.\n\u2022 Skills 60 (Inflite, ter\u00e9n za sv\u011btla): zat\u00e1\u010dky, sesed\u00e1n\u00ed/nased\u00e1n\u00ed, b\u011bh s kolem, skoky f\u00e1ze 3 \u2014 \u010derstv\u011b, s p\u0159est\u00e1vkami, technika ne \u00fanava.\n\u2022 S\u00cdLA B: jen 2 s\u00e9rie, 2\u20133 opakov\u00e1n\u00ed v rezerv\u011b, \u017e\u00e1dn\u00e9 selh\u00e1n\u00ed.\n\u2022 Pokud Feel 4\u20135, \u0161kr\u00e1b\u00e1n\u00ed v krku nebo r\u00fdma \u2192 jen skills 40 min bez s\u00edly.\n\u2022 Sp\u00e1t do 21:30 (sp\u00e1nek je jedin\u00fd \ud83d\udfe1), sacharidy k ve\u010de\u0159i.\n\nZ\u00edtra p\u00e1tek Opener 40: rann\u00ed krit\u00e9rium RHR \u226450 a HRV \u226528 \u2192 dle pl\u00e1nu; RHR \u226552 nebo HRV <27 \u2192 30 min, jen 2\u00d71 min."
+    },
+    {
+      "id": 144768384,
+      "date": "2026-10-15",
+      "name": "\ud83d\udccb Zm\u011bna pl\u00e1nu \u2014 bez Odersk\u00e9ho poh\u00e1ru, objem na +1,5 CTL/t\u00fdden",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "D\u016eVOD: CTL stagnuje (61,4) \u2014 posledn\u00ed 3 cel\u00e9 t\u00fddny 251 / 307 / 306 TSS vs udr\u017eovac\u00ed ~430 a c\u00edlov\u00fdch ~495 (+1,5 CTL/t\u00fdden). \u00dazk\u00e9 hrdlo = hodiny (5\u20137 h/t\u00fdden vs pot\u0159eba 10\u201312 h). Odersk\u00fd poh\u00e1r se nejede (ov\u011b\u0159eno v klubov\u00e9m kalend\u00e1\u0159i Jiskry: nep\u0159ihl\u00e1\u0161en na Go\u015bci\u0119cin, Ryma\u0159ov, Krnov, Zlat\u00e9 Hory, Starou Ves; z fin\u00e1le Z\u00e1b\u0159eh 28. 11. odhl\u00e1\u0161en 15. 10.).\n\nZM\u011aNY:\n\u2022 17. 10. Go\u015bci\u0119cin \u2192 KOTVA Z2 2 h + CX T4 80/160 (tvrd\u00fd den #2)\n\u2022 16. 10. opener \u2192 FLEX Z1\u2013Z2 45; 15. 10. skills + Z2 30\n\u2022 18. 10. KOTVA 3\u20133,5 h, d\u00e9\u0161\u0165 = dojet na Tacxu\n\u2022 19.\u201323. 10.: Z2 90 + s\u00edla A | KOTVA T1 30/30 + Z2 | Z2 2 h | skills + Z2 30 + s\u00edla B | Z1 45 / volno\n\u2022 24. 10. spole\u010dn\u00fd CX tr\u00e9nink (race-sim) + Z2 60; 25. 10. Ryma\u0159ov \u2192 KOTVA Z2 3 h\n\u2022 26.\u201329. 10. (zimn\u00ed \u010das, v\u0161edn\u00ed dny Tacx): Z2 90 + s\u00edla A | KOTVA T2 40/20 | 28. 10. Krnov \u2192 KOTVA Z2 2,5 h (sv\u00e1tek) | Z2 90 + s\u00edla B\n\u2022 30.\u201331. 10. opener + MT1 beze zm\u011bny, 1. 11. KOTVA 3 h\n\u2022 7.\u20138. 11. Star\u00e1 Ves I/II a 28. 11. Z\u00e1b\u0159eh smaz\u00e1no (dopl\u00e1nuje se s p\u0159edstihem 2\u20133 t\u00fddn\u016f)\n\nPL\u00c1NOVAN\u00c9 TSS: t\u00fdden 12. 10. ~528 (vc. odjet\u00fdch 220), 19. 10. ~554, 26. 10. ~552 \u2014 FLEX rezerva ~80\u2013100/t\u00fdden.\nPRAVIDLA: tapering a opener jen p\u0159ed A z\u00e1vody a MT; objem zkracovat jen p\u0159i \ud83d\udd34 nebo \ud83d\udfe1\ud83d\udfe1, p\u0159i jednom \ud83d\udfe1 ub\u00edrat intenzitu. Realistick\u00fd c\u00edl CTL: ~65 konec \u0159\u00edjna, ~70 Silvestr.\nZ\u00c1VODY PODZIM: MT1 31. 10., MT2 21. 11., MT3 12. 12., Silvestr Terez\u00edn 31. 12. (A), Poh\u00e1r starosty 1. 1. (A)."
+    },
+    {
       "id": 142205736,
       "date": "2026-10-15",
-      "name": "Skills 60 + S\u00cdLA B",
+      "name": "Skills 60 + Z2 30 + S\u00cdLA B",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 33,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 56,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Skills 60 (Inflite, ter\u00e9n za sv\u011btla): zat\u00e1\u010dky, sesed\u00e1n\u00ed/nased\u00e1n\u00ed, b\u011bh s kolem, SKOKY f\u00e1ze 3 (prkno 15-20 cm). Pot\u00e9 S\u00cdLA B. Dva dny p\u0159ed Gosciecinem \u2014 technika, ne \u00fanava.\n\nMain Set 1x\n- 60m 58% intensity=interval"
+      "description": "FLEX. Skills 60 (Inflite, ter\u00e9n za sv\u011btla): zat\u00e1\u010dky, sesed\u00e1n\u00ed/nased\u00e1n\u00ed, b\u011bh s kolem, SKOKY f\u00e1ze 3 (prkno 15-20 cm). Pak Z2 30 min 200-230 W. Pot\u00e9 S\u00cdLA B (2-3 s\u00e9rie, 2-3 opakov\u00e1n\u00ed v rezerv\u011b). Go\u015bci\u0119cin se nejede \u2014 technika + objem.\n\nMain Set 1x\n- 60m 58% intensity=interval\n\nMain Set 1x\n- 30m 66% intensity=interval"
     },
     {
       "id": 142205737,
       "date": "2026-10-16",
-      "name": "Opener 40 (p\u0159ed Gosciecinem)",
+      "name": "FLEX: Z1-Z2 45",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 25,
-      "duration_hours": 0.67,
-      "duration_formatted": "40m",
-      "workout_summary": "15m @181W | 3\u00d71m @330W / 3m rec | 13m @165W",
+      "planned_tss": 27,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Opener 40 (3\u00d71 @ 330 W) p\u0159ed Gosciecinem. Kolo, kapsy, elektrolyt, j\u00eddlo na cestu.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 3m 55% intensity=recovery\n\nCooldown\n- 13m 50% intensity=cooldown"
+      "description": "FLEX: Z1-Z2 45 min (180-210 W) \u2014 lehk\u00fd den p\u0159ed v\u00edkendov\u00fdm blokem (sobota KOTVA T4, ned\u011ble dlouh\u00e1 Z2). Zkr\u00e1titeln\u00e9 / volno p\u0159i \ud83d\udfe1\ud83d\udfe1.\n\nMain Set 1x\n- 45m 60% intensity=interval"
     },
     {
       "id": 138158616,
       "date": "2026-10-17",
-      "name": "RACE OP: CX Gosciecin (30 min)",
+      "name": "KOTVA: Z2 2 h + CX T4 80/160",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 94,
-      "duration_hours": 1.3,
-      "duration_formatted": "1h18m10s",
-      "workout_summary": "12m @181W | 8m @214W | 3\u00d71m @330W / 2m rec | 2\u00d720s @462W / 2m rec | 15m @165W",
+      "planned_tss": 96,
+      "duration_hours": 1.9,
+      "duration_formatted": "1h54m",
+      "workout_summary": "20m @191W | 6\u00d71m20s @386W / 2m40s rec | 10m @181W",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "RACE OP (30 min) - CX Odersky pohar GOSCIECIN (PL). Struktura: start 30 s @ 495 W, 1. kolo 2 min @ 356 W, hlavni cast 25 min @ ~330 W (narazy 380-460 po zatackach), finale 2 min @ 370 W. Rozjeti 20 min + 3x1 @ 330 + 2x20 s @ 460, gel 15 min pred. Dlouhe dojizdeni - elektrolyt a jidlo na cestu, rozjeti nezkracovat. Cas startu upresnit.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 108% intensity=interval\n\nMain Set 1x\n- 25m 100% intensity=interval\n\nMain Set 1x\n- 2m 112% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "KOTVA \u2014 tvrd\u00fd den #2 (96 h po \u00fater\u00fdn\u00edm T3). M\u00edsto Go\u015bci\u0119cinu (Odersk\u00fd poh\u00e1r se nejede). CX rotace T4: 80 s @ 380-396 W / 160 s voln\u011b. D\u00e9lka s\u00e9rie podle sign\u00e1lu: v\u00fdkon v p\u00e1smu; kdy\u017e HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2 \u00faseky a konec, max 8. Z2 \u010d\u00e1sti 200-235 W. Palivo 70 g/h.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 25m 66% intensity=interval\n\nMain Set 6x\n- 80s 117% intensity=interval\n- 160s 55% intensity=recovery\n\nMain Set 1x\n- 35m 66% intensity=interval\n\nCooldown\n- 10m 55% intensity=cooldown"
     },
     {
       "id": 142205739,
       "date": "2026-10-18",
-      "name": "KOTVA: Dlouh\u00e1 Z2 3-3.5 h",
+      "name": "KOTVA: Dlouh\u00e1 Z2 3-3,5 h",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 143,
-      "duration_hours": 3.25,
-      "duration_formatted": "3h15m",
+      "planned_tss": 129,
+      "duration_hours": 3.0,
+      "duration_formatted": "3h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3-3.5 h (den po Gosciecinu). 200-240 W, HR 120-135, VE 50-63, v\u00fd\u017eiva 70 g/h + elektrolyt. Po z\u00e1vod\u011b a dlouh\u00e9m cestov\u00e1n\u00ed: kdy\u017e r\u00e1no RHR > 52 nebo HRV < 27, zkr\u00e1tit na 2-2.5 h ve 180-200 W.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 160m 68% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h (p\u0159i dobr\u00e9m r\u00e1nu a\u017e 3,5 h). 200-240 W, HR 120-135, VE 50-63, v\u00fd\u017eiva 70-80 g/h od 20. min + elektrolyt. D\u00e9\u0161\u0165 = NEZKRACOVAT: zbytek do 3 h dojet na Tacxu. Zkr\u00e1tit na 2-2,5 h jen p\u0159i \ud83d\udd34 nebo \ud83d\udfe1\ud83d\udfe1 (RHR >52 / HRV <27).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 145m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+    },
+    {
+      "id": 144779313,
+      "date": "2026-10-19",
+      "name": "B\u011bh 25 lehce (n\u00e1b\u011bh 1/2)",
+      "type": "WORKOUT",
+      "sport_type": "Run",
+      "planned_tss": null,
+      "duration_hours": 0.42,
+      "duration_formatted": "25m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "12:00",
+      "description": "B\u011aH 1/2 (t\u00fdden 1 n\u00e1b\u011bhu): 25 min souvisle lehce, rovina / lesn\u00ed cesta. HR do 140, tempo kolem 6:20-6:40/km, mluvit v cel\u00fdch v\u011bt\u00e1ch.\nKoleno: krat\u0161\u00ed krok, vy\u0161\u0161\u00ed kadence (c\u00edl ~84-86 / noha, loni 79-82), \u017e\u00e1dn\u00e9 dlouh\u00e9 seb\u011bhy. Po b\u011bhu hned prota\u017een\u00ed (kvadriceps, IT p\u00e1s/TFL, l\u00fdtka).\nAltra Lone Peak = zero drop \u2192 l\u00fdtka a Achillovky dostanou v\u00edc; prvn\u00ed 2 t\u00fddny nep\u0159id\u00e1vat.\nStop pravidlo: bolest kolena B\u011aHEM b\u011bhu nebo dal\u0161\u00ed den r\u00e1no \u2192 b\u011bh p\u0159eru\u0161it a hl\u00e1sit."
     },
     {
       "id": 142205757,
       "date": "2026-10-19",
-      "name": "Z1 60 + S\u00cdLA A",
+      "name": "FLEX: Z2 60 + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 27,
+      "planned_tss": 41,
       "duration_hours": 1.0,
       "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z1 60 min + S\u00cdLA A. T\u00fdden s dvojv\u00edkendem (CX tr\u00e9nink + Ry\u010dma\u0159ov) \u2014 uprost\u0159ed t\u00fddne bez kvality.\n\nMain Set 1x\n- 60m 52% intensity=recovery"
+      "description": "FLEX: Z2 60 min (200-220 W) + S\u00cdLA A. Ve stejn\u00fd den b\u011bh 25 min (zvl\u00e1\u0161tn\u00ed karta) \u2014 ide\u00e1ln\u011b r\u00e1no nebo v poledne, kolo odpoledne.\n\nMain Set 1x\n- 60m 64% intensity=interval"
     },
     {
       "id": 142205758,
       "date": "2026-10-20",
-      "name": "KOTVA: Z2 2 h + 4\u00d730 s",
+      "name": "KOTVA: CX T1 30/30 + Z2 50",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 86,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": "15m @191W | 4\u00d730s @363W / 1m30s rec | 2m @165W",
+      "planned_tss": 100,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
+      "workout_summary": "20m @191W | 2 \u00d7 10\u00d730s @445W / 30s rec | 10m @181W",
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "KOTVA (objem): Z2 2 h 200-240 W + 4\u00d730 s @ ~363 W na konci (jiskra, ne z\u00e1t\u011b\u017e). T\u00fdden dvojv\u00edkendu = kvalitu nahrazuje sobota+ned\u011ble.\n\nWarmup\n- 15m 58% intensity=warmup\n\nMain Set 1x\n- 95m 66% intensity=interval\n\nMain Set 4x\n- 30s 110% intensity=interval\n- 90s 55% intensity=recovery\n\nCooldown\n- 2m 50% intensity=cooldown"
+      "description": "KOTVA \u2014 tvrd\u00fd den #1. CX rotace T1: 2 s\u00e9rie 30/30 @ 430-460 W, 5 min mezi s\u00e9riemi, pak Z2 50 min. D\u00e9lka s\u00e9rie podle sign\u00e1lu: kdy\u017e HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2-3 \u00faseky a konec, max 10. Venku za sv\u011btla, nebo Tacx (ERG jen na 30 s OK).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 5m 55% intensity=recovery\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 50m 66% intensity=interval\n\nCooldown\n- 10m 55% intensity=cooldown"
     },
     {
       "id": 142205759,
       "date": "2026-10-21",
-      "name": "Z2 2 h",
+      "name": "FLEX: Z2 2 h",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 82,
+      "planned_tss": 84,
       "duration_hours": 2.0,
       "duration_formatted": "2h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z2 2 h (200-230 W). Zkr\u00e1titeln\u00e9 na 90 min.\n\nMain Set 1x\n- 120m 64% intensity=interval"
+      "description": "FLEX: Z2 2 h (200-230 W, HR 120-135, VE 50-63). P\u00edt od 1. hodiny 0,5-0,75 l/h, 70 g/h. Zkr\u00e1tit na 90 min jen p\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34.\n\nMain Set 1x\n- 120m 65% intensity=interval"
     },
     {
       "id": 142205760,
       "date": "2026-10-22",
-      "name": "Skills 60 + S\u00cdLA B (lehce)",
+      "name": "Skills 60 + Z2 30 + S\u00cdLA B",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 33,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 56,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Skills 60 + S\u00cdLA B (leh\u010d\u00ed, 2 s\u00e9rie) \u2014 skoky f\u00e1ze 3-4, sesed\u00e1n\u00ed v rychlosti.\n\nMain Set 1x\n- 60m 58% intensity=interval"
+      "description": "FLEX. Skills 60 (skoky f\u00e1ze 3-4, sesed\u00e1n\u00ed v rychlosti, zat\u00e1\u010dky) + Z2 30 min 200-230 W + S\u00cdLA B (2 s\u00e9rie, 2 dny p\u0159ed spole\u010dn\u00fdm CX tr\u00e9ninkem).\n\nMain Set 1x\n- 60m 58% intensity=interval\n\nMain Set 1x\n- 30m 66% intensity=interval"
     },
     {
-      "id": 142205761,
+      "id": 144779314,
       "date": "2026-10-23",
-      "name": "Opener 30 / volno",
+      "name": "B\u011bh 30 lehce (n\u00e1b\u011bh 2/2)",
       "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 20,
+      "sport_type": "Run",
+      "planned_tss": null,
       "duration_hours": 0.5,
       "duration_formatted": "30m",
-      "workout_summary": "12m @181W | 3\u00d71m @330W / 3m rec | 6m @165W",
+      "workout_summary": null,
       "has_terrain": false,
-      "start_time": "15:00"
+      "start_time": "15:00",
+      "description_preview": "B\u011aH 2/2 (t\u00fdden 1 n\u00e1b\u011bhu): 30 min souvisle lehce, HR do 140, tempo 6:20-6:40/km. M\u00edsto FLEX Z1 45 na kole. Z\u00edtra spole\u010dn\u00fd CX tr\u00e9nink \u2014 \u017e\u00e1dn\u00e9 zrychlen\u00ed, kopce jen ch\u016fz\u00ed nebo velmi lehce.\nKadence vy\u0161\u0161\u00ed, krat\u0161\u00ed krok; po b\u011bhu prota\u017een\u00ed. Kdy\u017e po pond\u011bln\u00edm b\u011bhu z\u016fstalo koleno nebo l\u00fdtka bolav\u00e9 >24 h \u2192 m\u00edsto b\u011bhu Z1 45 na kole."
     },
     {
       "id": 138158167,
       "date": "2026-10-24",
-      "name": "Spolecny CX trenink Ch. Hradiste 10:00 (race-sim)",
+      "name": "KOTVA: Spole\u010dn\u00fd CX tr\u00e9nink Ch. Hradi\u0161t\u011b (race-sim) + Z2 60",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 58,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
-      "workout_summary": "15m @181W | 3\u00d76m @323W / 5m rec | 12m @165W",
+      "planned_tss": 101,
+      "duration_hours": 1.97,
+      "duration_formatted": "1h58m",
+      "workout_summary": "15m @181W | 3\u00d76m @323W / 5m rec | 10m @165W",
       "has_terrain": false,
       "start_time": "10:00"
     },
     {
       "id": 138158169,
       "date": "2026-10-25",
-      "name": "RACE OP: CX Rymarov (30 min)",
+      "name": "KOTVA: Dlouh\u00e1 Z2 3 h",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 98,
-      "duration_hours": 1.39,
-      "duration_formatted": "1h23m10s",
-      "workout_summary": "15m @181W | 10m @214W | 3\u00d71m @330W / 2m rec | 2\u00d720s @462W / 2m rec | 15m @165W",
+      "planned_tss": 129,
+      "duration_hours": 3.0,
+      "duration_formatted": "3h",
+      "workout_summary": null,
       "has_terrain": false,
-      "start_time": "10:00"
+      "start_time": "10:00",
+      "description_preview": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h (m\u00edsto Ryma\u0159ova; od dne\u0161ka zimn\u00ed \u010das \u2192 vyjet dopoledne). 200-240 W, HR 120-135, VE 50-63, 70-80 g/h + elektrolyt. D\u00e9\u0161\u0165 = nezkracovat, zbytek na Tacxu.\nWarmup\n- 20m 58% intensity=warmup"
     },
     {
       "id": 142205762,
       "date": "2026-10-26",
-      "name": "Z1 60 + S\u00cdLA A",
+      "name": "FLEX: Z2 90 Tacx + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 27,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 61,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description_preview": "FLEX: Z1 60 min (trena\u017e\u00e9r \u2014 zimn\u00ed \u010das od 25. 10.) + S\u00cdLA A. Den po Ry\u010dma\u0159ov\u011b, p\u0159ed Krnovem.\nMain Set 1x\n- 60m 52% intensity=recovery"
+      "description_preview": "FLEX: Z2 90 min na Tacxu (200-220 W) + S\u00cdLA A. Zimn\u00ed \u010das \u2014 v\u0161edn\u00ed dny indoor.\nMain Set 1x\n- 90m 64% intensity=interval"
     },
     {
       "id": 142205763,
       "date": "2026-10-27",
-      "name": "Opener 45 (p\u0159ed Krnovem)",
+      "name": "KOTVA: CX T2 40/20 (Tacx)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 29,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
-      "workout_summary": "15m @181W | 3\u00d71m @346W / 3m rec | 18m @171W",
+      "planned_tss": 74,
+      "duration_hours": 1.22,
+      "duration_formatted": "1h13m",
+      "workout_summary": "15m @181W | 2 \u00d7 9\u00d740s @405W / 20s rec | 10m @165W",
       "has_terrain": false,
       "start_time": "15:00"
     },
     {
       "id": 138158617,
       "date": "2026-10-28",
-      "name": "RACE OP: CX Krnov (30 min)",
+      "name": "KOTVA: Dlouh\u00e1 Z2 2,5 h (sv\u00e1tek)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 94,
-      "duration_hours": 1.3,
-      "duration_formatted": "1h18m10s",
-      "workout_summary": "12m @181W | 8m @214W | 3\u00d71m @330W / 2m rec | 2\u00d720s @462W / 2m rec | 15m @165W",
+      "planned_tss": 102,
+      "duration_hours": 2.5,
+      "duration_formatted": "2h30m",
+      "workout_summary": null,
       "has_terrain": false,
-      "start_time": "11:00"
+      "start_time": "11:00",
+      "description_preview": "KOTVA \u2014 DLOUH\u00c1 Z2 2,5 h (st\u00e1tn\u00ed sv\u00e1tek, m\u00edsto Krnova). Venku za sv\u011btla, 200-235 W, HR 120-135, VE 50-63, 70 g/h. D\u00e9\u0161\u0165 = zbytek na Tacxu. 3 dny p\u0159ed MT1 \u2014 bez z\u00e1tah\u016f.\nWarmup\n- 20m 58% intensity=warmup"
     },
     {
       "id": 142205764,
       "date": "2026-10-29",
-      "name": "Z2 90 (regenerace po Krnov\u011b)",
+      "name": "FLEX: Z2 90 Tacx + S\u00cdLA B (lehce)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 54,
+      "planned_tss": 59,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description_preview": "Z2 90 regenera\u010dn\u00ed den po Krnov\u011b (180-200 W, VE < 55). Trena\u017e\u00e9r nebo sv\u011btla.\nMain Set 1x\n- 90m 60% intensity=interval"
+      "description_preview": "FLEX: Z2 90 min na Tacxu (195-215 W, VE <60) + S\u00cdLA B lehce (2 s\u00e9rie). 2 dny p\u0159ed MT1.\nMain Set 1x\n- 90m 63% intensity=interval"
     },
     {
       "id": 142205765,
@@ -4406,32 +4452,6 @@
       "has_terrain": false,
       "start_time": "09:00",
       "description_preview": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h (den po MT1). 200-240 W, HR 120-135, VE 50-63, 70 g/h + elektrolyt. Za studena: vrstvy, n\u00e1vleky.\nWarmup\n- 20m 58% intensity=warmup"
-    },
-    {
-      "id": 138158625,
-      "date": "2026-11-07",
-      "name": "RACE OP: CX Stara Ves I. (30 min)",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 94,
-      "duration_hours": 1.3,
-      "duration_formatted": "1h18m10s",
-      "workout_summary": "12m @181W | 8m @214W | 3\u00d71m @330W / 2m rec | 2\u00d720s @462W / 2m rec | 15m @165W",
-      "has_terrain": false,
-      "start_time": "11:00"
-    },
-    {
-      "id": 138158626,
-      "date": "2026-11-08",
-      "name": "RACE OP: CX Stara Ves II. (30 min)",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 90,
-      "duration_hours": 1.31,
-      "duration_formatted": "1h18m30s",
-      "workout_summary": "15m @181W | 10m @214W | 3\u00d71m @330W / 2m rec | 15m @165W",
-      "has_terrain": false,
-      "start_time": "11:00"
     },
     {
       "id": 136401236,
@@ -4487,19 +4507,19 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 21,
-    "success": 13,
-    "patternA": 13,
+    "attempted": 18,
+    "success": 7,
+    "patternA": 7,
     "patternB": 0,
-    "bail_no_workout_doc": 0,
-    "bail_no_match": 8
+    "bail_no_workout_doc": 2,
+    "bail_no_match": 11
   },
   "weekly_summary": {
     "total_training_hours": 8.66,
     "total_training_formatted": "8h39m",
     "total_tss": 365,
     "activities_count": 5,
-    "avg_hrv": 30.3,
+    "avg_hrv": 30.7,
     "avg_resting_hr": 48.3
   },
   "race_calendar": {
