@@ -4,6 +4,263 @@ Intervals.icu → GitHub/Local JSON Export
 Exports training data for LLM access.
 Supports both automated GitHub sync and manual local export.
 
+Version 3.141 - Completed-session structure from exact paired Intervals plans and
+  recording-time plan alignment and repeated sets: compact latest.json summaries survive for 28 days, while
+  detailed metrics and cache state share intervals.json's 14-day retention.
+  Plan match is separate from compliance. Thirds/WORK efforts are fallback only.
+  Independent of DFA; retained detail refreshes on source changes or within 24h.
+  Flat planned steps now receive summaries without changing repeat compression.
+
+Version 3.140 - DFA drift uses fixed recording thirds with timing, coverage and gap
+  checks. Schema 2 carries drift eligibility and coverage through summaries and
+  profiles; trailing drift uses eligible sessions only. Missing artifact readings
+  are drift gaps without changing session sufficiency. Non-finite alpha1 is excluded.
+  Computable drift below 90 recorded minutes is descriptive only (short_session).
+  The 5400 original-slot floor aligns with the decoupling durability duration
+  floor (moving_time >= 5400); DFA still uses original 1 Hz slots, not moving time.
+
+Version 3.139 - Activity fields keep legitimate zero values.
+  recent_activities[] built decoupling, avg_temp and wind_speed with an "or"
+  fallback chain, so a real 0 (0.0 % decoupling, 0 °C, calm air) was treated as
+  missing: it became null, or the next source in the chain was used instead (a
+  0 °C weather temperature was silently replaced by the device temperature).
+  These three fields now fall through only when a source is absent or null.
+  Fields where an upstream 0 means "no sensor or no data" (power, NP, HR,
+  max HR, cadence, speed, work, calories, pace) and humidity keep their
+  previous behaviour, so a missing sensor still reads as null rather than 0.
+
+Version 3.138 - --init installs exactly what --update manages; maintainer folders
+  are no longer distributed.
+  --init extracted the whole repository archive, while --update refreshes only the
+  files listed in manifest.json and the orphan cleanup skips hidden paths. So
+  .github arrived once at --init and was never refreshed or offered for removal.
+  --init now reads manifest.json from the archive it downloaded and installs
+  exactly manifest.files plus manifest.json. Before anything is placed it checks
+  the archive root, the manifest shape, every listed path (relative POSIX, no
+  traversal, backslash or drive), that manifest.json and each listed member are
+  present exactly once as regular files (a declared directory, symlink, FIFO,
+  device or socket is refused), and each SHA256. Any failure installs nothing and keeps the
+  bootstrap sync.py. The hashes check that the archive is consistent with its own
+  manifest; they are not origin authentication. No extra network request.
+  The manifest generator now also excludes the repository-root dev/ folder
+  (maintainer tests), so it is no longer installed or updated. Nested folders
+  named dev are unaffected. The scope description is updated to match.
+  --update: on an installation that is not a Git checkout, section11/.github and,
+  once the upstream manifest no longer lists it, section11/dev can be moved to
+  section11-legacy-github/ and section11-legacy-dev/ beside section11/. This is
+  asked only when standard input is a terminal and happens only when the word
+  "move" is typed there. Enter, y, yes, EOF, Ctrl+C and any piped or redirected
+  input keep them. Nothing is deleted, an existing backup name is never overwritten, a
+  symlink is left alone, and a failed rename keeps the original. A dev/ folder
+  that stays is excluded from the orphan cleanup, so answering yes there cannot
+  delete it. Setup and update tooling only: no change to exported data, schema,
+  calculations or the cache policy.
+
+Version 3.137 - history.json refresh gate, retention and GitHub Actions run budget.
+  should_generate_history() refreshed an existing history.json older than 28 days
+  only on Sunday or Monday between 00:00 and 00:30 host-local time. Under the
+  :07/:37 GitHub schedule only the 00:07 run fitted, so a delayed or skipped run on
+  both days left the file overdue for another week, and a machine asleep at
+  midnight never refreshed it by age at all. The age rule is unchanged (strictly
+  more than 28 whole days, so due at 29 x 24h elapsed) but the weekday and
+  time-of-day window is removed: an overdue file is refreshed on the first
+  automatic run after it becomes due (in GitHub Actions, the first run the run
+  budget below allows). Ages are compared in UTC; a naive
+  generated_at, which is what generate_history() writes and whose format is
+  unchanged, is read as host-local time. A missing, unparseable or more than one
+  day future generated_at now counts as due at any time; previously an unusable
+  value counted only inside the old window and a future one never did.
+  generate_history() swallowed a failed activities or wellness fetch into an empty
+  list and still wrote the file, so one transient failure replaced good history
+  with a partially or fully degraded file carrying a fresh generated_at that
+  suppressed any refresh for a month. When history.json already loads as a JSON
+  object, a failed activities, wellness or athlete fetch now aborts generation and
+  the file is kept untouched; this applies to the automatic path and to
+  --generate-history alike, which stays loud and unwrapped. Without such a file
+  (first run, or an unreadable file) behaviour is unchanged: an activities-only or
+  wellness-only failure still writes a degraded first file, and an athlete,
+  builder or write failure still propagates and is retried on the next run. A
+  successful empty response is valid data. The history write is now atomic (temp
+  file plus os.replace, temp removed on failure).
+  A failed AUTOMATIC refresh of an existing file records an internal
+  refresh_state block in history.json (last_attempt_at, consecutive_failures,
+  next_attempt_after, attempt_script_hash, last_error {kind, status}), aware UTC,
+  no exception text. Every other key, generated_at included, is preserved.
+  Further automatic attempts back off 1h, 6h, then 24h; a Retry-After on 429/503
+  may raise but never lower the delay, capped at 24h. The backoff also applies to
+  the sync.py-changed trigger, but only for state recorded by the current script,
+  so changed code is never held back by older state. Malformed state is ignored,
+  and a next attempt more than 24h away (clock regression) is ignored. Success
+  writes a fresh file without the block. --generate-history bypasses gate and
+  backoff and records no state. Publication is unchanged: a failed or unknown
+  history publication after a successful generation records nothing, no PUT is
+  replayed, and automatic history stays non-critical.
+  GitHub Actions run budget: refresh_state reaches the next fresh runner only
+  when that whole run is published, so without a limit an outage that also fails
+  the main sync, or a failed push, allowed one history attempt (with a failed
+  push, one full 3-year pull) per run. When GITHUB_ACTIONS is "true" and the event
+  is not workflow_dispatch (scheduled runs, and also custom push or
+  repository_dispatch triggers), an automatic refresh of an existing JSON-object
+  history.json therefore starts only when GITHUB_RUN_NUMBER is a plain positive
+  integer divisible by HISTORY_ACTIONS_RUN_BUDGET (16), and only if the gate above
+  finds it due and outside any refresh_state backoff. Any other run skips only
+  the history refresh, prints one line and syncs normally; a missing or malformed
+  run number is treated as held. No state is stored for this. The run number
+  counts every created run of the workflow, manual runs included, so the limit is
+  at most one automatic attempt per multiple of 16 in any range of run numbers.
+  It is not a limit per hour or per scheduled run: manual runs can make two
+  consecutive scheduled runs eligible. Manual workflow_dispatch runs skip only
+  this budget (they still need a due file and honour backoff), and a re-run
+  keeps its number, so a re-run of an eligible run may attempt again; neither is
+  bounded by it. There is no refresh deadline: catch-up needs an eligible run that
+  reaches this gate, and cancelled or failed eligible runs, schedule delays,
+  backoff and continuing failures postpone it. Local runs and timers, the
+  --generate-history path, main sync, publication and HTTP handling are unchanged.
+  Known limits, accepted: a missing or unreadable file has no state carrier and
+  is not budgeted, so first-run failures keep their previous behaviour.
+  Pairs with SECTION_11.md / SKILL.md v11.70.
+
+Version 3.136 -An unmarked workout_summary is truthful for repeats, counts, durations
+  and the 2 W tolerance (issue #28, correction of the unpublished v3.135).
+  v3.135 could still emit an unmarked summary that misstated the plan: a repeat nested
+  inside a repeat was shown by its aggregate duration ("2×(1m @300W + 3m)"); a step
+  with "reps" but a non-list "steps" was rendered as a flat step; the unmatched final
+  child of a nested alternating repeat was shown by its duration when it was itself a
+  repeat; a zero, negative, fractional, non-finite, boolean or non-numeric repeat count
+  was rendered as if valid (a zero-count repeat became real work); a negative, zero,
+  sub-second, non-finite, boolean or string duration could render as a step ("0s
+  @200W") or join a compressed block; and the alternating detectors rounded targets
+  before applying their 2 W tolerance, so 302.4 W was shown as 300 W. Float durations
+  and counts also displayed as "1.0m" and "3.0×".
+  Now one duration policy (_summary_duration: a finite number of at least 1 s, not
+  boolean) and one count policy (_summary_count: a whole finite number of at least 1)
+  govern every summary path. Any step with a "reps" or "steps" key has repeat
+  semantics and is never rendered flat: a well-formed nested two-step repeat is shown
+  as "N×(A + B)" (recursively, to depth 4), and any other or malformed repeat is marked
+  "[repeat not summarized]". A child with repeat semantics or an unusable duration
+  cannot stand in a compressed position, so the detector declines the block and it is
+  marked. A compressed role shows the reference value only when every raw target is
+  within 2 W of the reference step before rounding; otherwise the role is marked.
+  Display uses whole seconds and whole counts.
+  Availability is unchanged for every valid input: detection still compares rounded
+  targets, and the v3.134 two-step availability rule is kept. It changes only where an
+  invalid input produced the summary's only interval: a zero-count repeat, or a flat
+  alternating block built from unusable durations, now leaves the summary null
+  instead of reporting invented work.
+  The report templates now state the tolerance as "within 2 W and 2 s of that first
+  step", matching the detectors (the v3.135 "of each other" wording overstated it).
+
+Version 3.135 - An incomplete workout_summary now says so (issue #28, checkpoint 2).
+  A summary could look complete while missing or misstating content: the second
+  step of a two-step repeat with no duration was dropped ("3×10m @245W"); a step
+  without a duration (a distance step, for example), a repeat block the renderer
+  cannot compress, or the unmatched final child of a nested alternating repeat
+  vanished; and a target value was printed as W or bpm whatever it was: a relative
+  target (%FTP, an HR zone) got an absolute unit, range bounds were dropped when
+  the object also carried a value, an empty target read as no target and an empty
+  power target let an HR value stand in for it. One target policy (_step_target)
+  now governs every output path, including both alternating detectors: a value is
+  printed only when it is a finite number in the governing object ("_power", else
+  "power"; "_hr", else "hr"), its units are absent on the resolved key or name W /
+  bpm, and no range bounds are present; otherwise the target is marked. Presence is
+  decided by key, not truthiness, and an unprintable power target is never replaced
+  by HR. Content that cannot render is marked in place: "[step not summarized]",
+  "[repeat not summarized]", "[target not shown]". No conversion or value is
+  invented; a step with no target key still renders as duration only.
+  A summary without a marker lists every step with its duration and its power
+  target (or HR target when no power target is set). It does not carry secondary
+  targets (cadence, an HR target set alongside power), and the alternating
+  detectors still show repeated steps within 2 W and 2 s of each other at one
+  reference value.
+  Rendering only: detection still compares targets through _get_power and a
+  two-step repeat's availability is decided exactly as in v3.134, and no marker
+  contains "×" or "sets", so which workouts get a workout_summary, the phase
+  hard-session marker, workout_summary_stats and near/far tiering are unchanged.
+  A part carrying a marker never merges with an identical neighbour.
+  The PRE and POST report templates used description_preview whenever workout_summary
+  was null, but near-day rows (the only rows those reports read for today and
+  tomorrow) carry description, not description_preview, so an all-flat workout, which
+  never gets a summary, reached the report with no plan text. Both templates now use
+  whichever of description or description_preview the entry carries when the summary
+  is null or marked, state what an unmarked summary does and does not carry, and no
+  longer drop a step as recovery unless the plan labels it.
+
+Version 3.134 - workout_summary no longer labels any step as recovery (issue #28).
+  The two-step repeat renderer called the second step "rec" without comparing
+  targets, and the nested and flat alternating detectors called the lower step "rec"
+  whenever it was at least 10 W or 5% below the first. A lower target is not
+  evidence of recovery: over-unders and active endurance connectors were misreported
+  and the report templates omit recovery steps. All three now render structure only,
+  "N×(A + B)", with each step's own target; a leading set step keeps its target
+  instead of "(Xm set rec)", and a differing tail rest or trailing rep is written out.
+  The flat detector also skipped the step after a trailing solo rep, dropping for
+  example a cool-down; it now resumes after the last consumed step.
+  Rendering only: every detector guard is unchanged, so which workouts get a
+  workout_summary, the "×" / "sets" markers read by _phase_stream2_features, and
+  workout_summary_stats are identical to v3.133. Known limits, unchanged: a two-step
+  repeat whose second step has no duration still renders only its first step, steps
+  that cannot render are still omitted from an otherwise non-null summary, and only
+  a power or HR "value" target is printed. examples/json-examples/latest.example.json
+  is aligned to the new format.
+
+Version 3.133 - Bounded HTTP timeouts, method-aware read retry, and truthful
+  ambiguous-write handling.
+  Eleven direct requests calls had no timeout: four here and seven in push.py. All
+  now pass a (connect, read) tuple. The read leg is an inactivity timeout between
+  socket reads as implemented by requests/urllib3, not a total body-transfer
+  deadline, so none of these values is a wall-clock bound on a call; what is bounded
+  is the connection phase, per-read inactivity, and how many further attempts may
+  begin.
+  Generic reads (_intervals_get, _get_activity_messages) retry only Timeout,
+  ConnectionError and 429/500/502/503/504, at most three attempts, backing off 1s
+  then 2s, honouring a valid Retry-After that may raise but never lower the delay.
+  Retry admission is decided BEFORE sleeping against a 60s monotonic cap measured
+  from the start of the call and including completed request time, so an oversized
+  Retry-After ends the call instead of buying a long sleep followed by no request.
+  A per-instance budget of four EXTRA generic-read attempts is shared across history
+  and current-data work, because main() builds one instance and a degraded API must
+  not spend a fresh retry budget on each of the dozen-odd generic reads in a run.
+  Four was chosen deliberately, not defaulted; once exhausted, later generic reads
+  still make their initial bounded attempt. Verification reads are never charged to
+  it, since starving them would manufacture unknown outcomes.
+  On exhaustion the ORIGINAL requests exception object is re-raised, so every
+  caller's fatal-versus-degraded behaviour is unchanged: _build_health_context still
+  catches RequestException specifically and still degrades to source_status
+  "partial". The generic loop never reads or writes _last_retry_after_secs, which
+  belongs to the interval/stream fetchers. Interval, stream and saved-workout fetch
+  state, ladders, deadlines and last-good retention are untouched, and their
+  persisted scheduling is deliberately not merged with this immediate-retry loop.
+  recent_activities[] gains a conditional chat_notes_status "unavailable". The
+  messages fetch previously collapsed every failure to an empty list, so a transport
+  failure and an activity with no notes were indistinguishable to the AI layer. The
+  marker is emitted only on degradation; a successful empty response emits nothing,
+  so a healthy payload is byte-identical to v3.132. After three consecutive final
+  failures in one run the remaining in-window activities are marked without issuing
+  a request; any successful retrieval, including a successful empty one, resets that
+  count.
+  publish_to_github is now a state machine. Every requests exception raised after
+  dispatch routes to verification, not only a timeout: a ChunkedEncodingError or
+  any other broken response stream can follow a commit the server already made. The old code turned any failed pre-read
+  into current_sha = None and sent a create-style PUT at a path that may exist;
+  GitHub rejects that with 422, so the observable result was a loud failed publish
+  and a skipped no-change comparison rather than a silent overwrite, but treating an
+  unknown read as proof of absence was wrong either way. Only a confirmed 404
+  establishes absence; every other status or transport failure raises
+  PublishPreReadFailed with zero PUTs. After a PUT timeout, connection error, 429 or
+  5xx, or any other unexpected non-2xx status, the file is read back and only
+  byte-equal intended content proves success;
+  anything else, including the pre-write content, raises PublishOutcomeUnknown,
+  because a commit can land after the verification read. A definitive 4xx including
+  409 raises as before. No second PUT is ever issued: the next scheduled sync is the
+  recovery path. All three new exceptions subclass requests.exceptions.
+  RequestException, so publication criticality is exactly unchanged, call site by
+  call site: latest.json is unwrapped and therefore critical; the auto-generated
+  history publication, intervals.json, routes.json and saved_workouts.json are each
+  wrapped and non-critical; and the explicit --history publication is unwrapped in
+  the baseline and stays unwrapped. No sys.exit is added anywhere in this file. The
+  four wrapped sites now report an unknown outcome distinctly from a failure.
+  Pairs with SECTION_11.md / SKILL.md v11.68, and with push.py v0.6.
+
 Version 3.132 - Saved Workouts Mirror: read-only saved_workouts.json.
   A read-only mirror of the user's saved workouts from Intervals.icu, written beside
   latest.json, history.json, intervals.json and routes.json. Intervals.icu remains the
@@ -350,6 +607,26 @@ import atexit
 from collections import defaultdict
 from pathlib import Path
 import xml.etree.ElementTree as ET
+import time
+
+
+# === Publication outcome errors (v3.133) ===
+#
+# All three subclass requests.exceptions.RequestException so that every existing
+# `except Exception` around a publish call keeps catching them and the criticality
+# of each call site is unchanged: latest.json stays critical and unwrapped, and
+# history/intervals/routes/saved_workouts stay non-critical and wrapped.
+
+class PublishError(requests.exceptions.RequestException):
+    """Base class for publish_to_github outcome errors."""
+
+
+class PublishPreReadFailed(PublishError):
+    """The pre-write read did not establish remote state, so no PUT was issued."""
+
+
+class PublishOutcomeUnknown(PublishError):
+    """A PUT was issued and its outcome could not be established. Not a failure."""
 
 
 class IntervalsSync:
@@ -361,10 +638,63 @@ class IntervalsSync:
     HISTORY_FILE = "history.json"
     UPSTREAM_REPO = "CrankAddict/section-11"
     CHANGELOG_FILE = "changelog.json"
-    VERSION = "3.132"
+    VERSION = "3.141"
     INTERVALS_FILE = "intervals.json"
     ROUTES_FILE = "routes.json"
     SAVED_WORKOUTS_FILE = "saved_workouts.json"
+
+    # --- HTTP policy (v3.133) ---
+    # Timeouts are (connect, read) tuples. The connect leg bounds the connection
+    # phase and the read leg bounds per-read inactivity, both as implemented by
+    # requests/urllib3. The read leg is an inactivity timeout between socket reads,
+    # NOT a total body-transfer deadline, so none of these values is a wall-clock
+    # bound on a call.
+    INTERVALS_READ_TIMEOUT = (5, 30)     # generic Intervals.icu reads
+    GITHUB_READ_TIMEOUT = (5, 30)        # publish pre-read and verification read
+    GITHUB_WRITE_TIMEOUT = (5, 60)       # publish PUT; history.json is the largest body
+    # Retry policy for generic reads only. The specialised interval/stream and
+    # saved-workout fetchers keep their own persisted ladders and are not routed here.
+    READ_RETRY_STATUSES = (429, 500, 502, 503, 504)
+    READ_RETRY_MAX_ATTEMPTS = 3          # 1 initial + up to 2 extra
+    READ_RETRY_BACKOFF_SECS = (1, 2)
+    # Admission cap, measured with time.monotonic() from the start of the call and
+    # including completed request time and completed sleeps. It decides whether a
+    # further attempt may BEGIN. It does not and cannot stop an in-flight request.
+    READ_RETRY_ADMISSION_CAP_SECS = 60
+    # Extra generic-read attempts allowed across one IntervalsSync instance. main()
+    # builds one instance for history and current-data work, so this is deliberately
+    # shared: a degraded API must not spend a fresh retry budget on each of the
+    # dozen-odd generic reads in a run. The number was chosen, not defaulted; once
+    # exhausted, later generic reads still make their initial bounded attempt.
+    READ_RETRY_INSTANCE_EXTRA_ATTEMPTS = 4
+    # Consecutive final failures of the per-activity messages read before the rest of
+    # the window is marked unavailable without issuing further requests.
+    MESSAGES_FAILURE_BREAK_COUNT = 3
+    # Publication statuses that prove the PUT was refused. Anything else after
+    # dispatch, including a redirect, is verified by read-back rather than
+    # trusted, because raise_for_status() does not reject 1xx or 3xx.
+    GITHUB_DEFINITIVE_WRITE_STATUSES = (400, 401, 403, 404, 409, 422)
+
+    # --- History refresh gate ---
+    # history.json is refreshed on the first automatic run (in GitHub Actions, the
+    # first one HISTORY_ACTIONS_RUN_BUDGET allows) once it is older than
+    # HISTORY_REFRESH_AGE_DAYS whole days (strictly greater, so due at 29 x 24h
+    # elapsed). There is no weekday or time-of-day window. A failed automatic
+    # refresh of an existing file keeps its data and records an INTERNAL
+    # refresh_state block that backs further automatic attempts off on this
+    # ladder (failure count through N -> delay seconds). The block is not part of
+    # the consumer contract.
+    HISTORY_REFRESH_AGE_DAYS = 28
+    HISTORY_RETRY_LADDER = ((1, 3600), (2, 21600), (None, 86400))
+    HISTORY_RETRY_MAX_SECS = 86400        # Retry-After cap and clock-regression bound
+    HISTORY_FUTURE_TOLERANCE_SECS = 86400  # generated_at further ahead than this is invalid
+    HISTORY_ERROR_KINDS = ("http_status", "timeout", "connection", "decode", "internal")
+    # In GitHub Actions a fresh runner cannot see an unpublished attempt, so an
+    # automatic refresh of an existing file starts only on runs whose
+    # GITHUB_RUN_NUMBER is a multiple of this. The number counts every run of the
+    # workflow, manual ones included. Manual workflow_dispatch runs skip only
+    # this limit. This limits attempts per created run, not per hour.
+    HISTORY_ACTIONS_RUN_BUDGET = 16
 
     # --- Saved Workouts Mirror (v3.132) ---
     # Read-only mirror of the athlete's Intervals.icu saved workouts. Intervals.icu
@@ -458,7 +788,20 @@ class IntervalsSync:
     DFA_MIN_VALID_VALUE = 0.01          # exclude AlphaHRV sentinel zeros
     DFA_MIN_DURATION_SECS = 1200        # 20 min minimum valid data for sufficient=True
     DFA_SUFFICIENT_MIN_VALID_PCT = 70.0 # min valid_pct for sufficient=True (excludes noisy AlphaHRV sessions)
-    DFA_DRIFT_INTERPRETABLE_MAX_LT2_PCT = 15.0  # if >15% time above LT2, drift is structural noise
+    DFA_DRIFT_INTERPRETABLE_MAX_LT2_PCT = 15.0  # retained supra fraction veto, not proof of steady work
+    DFA_DRIFT_METHOD = "original_index_thirds_v1"
+    DFA_DRIFT_MIN_SESSION_SAMPLES = 90 * 60  # original 1 Hz slots, not retained samples
+    DFA_DRIFT_MIN_WINDOW_SAMPLES = 60
+    DFA_DRIFT_MIN_VALID_SAMPLES = 60
+    DFA_DRIFT_MIN_COVERAGE_PCT = 70
+    DFA_DRIFT_BINS = 6
+    DFA_DRIFT_MIN_BIN_COVERAGE_PCT = 50
+    DFA_DRIFT_MAX_GAP_PCT = 10
+    DFA_DRIFT_GAP_FLOOR_SAMPLES = 60
+    DFA_DRIFT_GAP_CEILING_SAMPLES = 300
+    # Gap limits are sample counts; only a continuous 1 Hz time stream makes them
+    # seconds. These are missing-data screens, not proof of steady workload or of
+    # unbiased alpha1. The supra fraction is a veto, not a stationarity test.
     # v3.122 crossing estimate-eligibility. a1 is a windowed estimator (alphaHRV: prior 200
     # beats, so its span varies with HR - Rogers & Gronwald, Front Physiol 2022;13:879071),
     # while watts is instantaneous. Averaging them is valid only while power is stationary
@@ -582,6 +925,12 @@ class IntervalsSync:
         # Both fetchers reset it to None on entry, so a 429 value can never leak into
         # a later request. Valid only immediately after the fetcher returns.
         self._last_retry_after_secs = None
+        # v3.133: generic-read retry accounting. Deliberately per instance and never
+        # reset, so history and current-data work share one extra-attempt budget.
+        self._read_retry_extra_attempts_used = 0
+        # v3.133: consecutive FINAL failures of _get_activity_messages in this run.
+        # Any successful retrieval, including a successful empty response, resets it.
+        self._messages_consecutive_failures = 0
     
     @property
     def script_hash(self) -> str:
@@ -595,6 +944,110 @@ class IntervalsSync:
             self._cached_script_hash = h.hexdigest()[:12]  # short hash, sufficient for change detection
         return self._cached_script_hash
     
+    @staticmethod
+    def _decode_github_content(raw) -> str:
+        """
+        Decode a GitHub Contents API `content` field strictly.
+
+        base64.b64decode(validate=False) silently DISCARDS characters outside the
+        base64 alphabet, so a body with stray punctuation around an otherwise valid
+        payload decodes to the same bytes as the clean one. That is how a malformed
+        remote body could be compared equal to the intended content and reported as
+        "No changes detected", or accepted as proof that a write landed.
+
+        The GitHub API line-wraps its base64, so newlines and surrounding whitespace
+        are removed first, and only then is the remainder decoded with validate=True.
+        Raises ValueError on anything unusable; callers turn that into
+        PublishPreReadFailed or PublishOutcomeUnknown.
+        """
+        if not isinstance(raw, str):
+            raise ValueError("content is missing or not a string")
+        compact = "".join(raw.split())     # strips \n, \r, spaces and tabs only
+        if not compact:
+            raise ValueError("content is empty")
+        try:
+            decoded = base64.b64decode(compact, validate=True)
+        except Exception as e:
+            raise ValueError(f"content is not valid base64 ({e})")
+        try:
+            return decoded.decode("utf-8")
+        except UnicodeDecodeError as e:
+            raise ValueError(f"content is not valid UTF-8 ({e})")
+
+    def _read_retry_delay(self, attempt: int, retry_after_secs: Optional[int]) -> int:
+        """
+        Delay before attempt+1. Retry-After may RAISE the ladder value but never
+        lower it. The value is a local throughout: it is never stored on self, so it
+        cannot leak into a later request or into interval fetch-state scheduling.
+        """
+        ladder = self.READ_RETRY_BACKOFF_SECS
+        delay = ladder[min(attempt - 1, len(ladder) - 1)]
+        if retry_after_secs is not None:
+            delay = max(delay, int(retry_after_secs))
+        return delay
+
+    def _admit_read_retry(self, attempt: int, started_at: float, delay: int,
+                          charge_instance_budget: bool) -> bool:
+        """
+        Decide whether attempt+1 may BEGIN, and reserve budget only if it may.
+
+        Checked BEFORE sleeping, so a Retry-After too large to fit inside the
+        admission window re-raises immediately instead of sleeping and then
+        declining. The instance counter is incremented only on an admitted retry.
+        """
+        if attempt >= self.READ_RETRY_MAX_ATTEMPTS:
+            return False
+        if (time.monotonic() - started_at) + delay >= self.READ_RETRY_ADMISSION_CAP_SECS:
+            return False
+        if charge_instance_budget:
+            if self._read_retry_extra_attempts_used >= self.READ_RETRY_INSTANCE_EXTRA_ATTEMPTS:
+                return False
+            self._read_retry_extra_attempts_used += 1
+        return True
+
+    def _read_with_retry(self, send, charge_instance_budget: bool = True):
+        """
+        Run a bounded safe read, retrying only eligible transport failures and
+        statuses. Returns the final Response; the caller still calls
+        raise_for_status(), so an exhausted retryable status surfaces as the ordinary
+        requests.exceptions.HTTPError it always was.
+
+        On exhausted transport failure the ORIGINAL exception object is re-raised, so
+        its requests.exceptions.RequestException subclass is preserved. That is
+        load-bearing: _build_health_context catches RequestException specifically and
+        must keep degrading to source_status "partial" rather than killing the sync.
+
+        Retries POST/PUT/DELETE nothing: this is a read-only helper by construction.
+        """
+        started_at = time.monotonic()
+        attempt = 0
+        while True:
+            attempt += 1
+            error = None
+            response = None
+            retry_after = None
+            try:
+                response = send()
+            except (requests.exceptions.Timeout,
+                    requests.exceptions.ConnectionError) as e:
+                error = e
+            except requests.exceptions.RequestException:
+                raise
+            else:
+                if response.status_code not in self.READ_RETRY_STATUSES:
+                    return response
+                if response.status_code in (429, 503):
+                    retry_after = self._parse_retry_after(
+                        response.headers.get("Retry-After"))
+
+            delay = self._read_retry_delay(attempt, retry_after)
+            if not self._admit_read_retry(attempt, started_at, delay,
+                                          charge_instance_budget):
+                if error is not None:
+                    raise error
+                return response
+            time.sleep(delay)
+
     def _intervals_get(self, endpoint: str, params: Dict = None) -> Dict:
         """Fetch from Intervals.icu API"""
         if endpoint:
@@ -605,26 +1058,72 @@ class IntervalsSync:
             "Authorization": f"Basic {self.intervals_auth}",
             "Accept": "application/json"
         }
-        response = requests.get(url, headers=headers, params=params)
+        response = self._read_with_retry(
+            lambda: requests.get(url, headers=headers, params=params,
+                                 timeout=self.INTERVALS_READ_TIMEOUT))
         response.raise_for_status()
         return response.json()
 
-    def _get_activity_messages(self, activity_id: str) -> List[str]:
-        """Fetch messages/notes for a completed activity. Returns list of text strings."""
+    def _get_activity_messages(self, activity_id: str) -> Tuple[str, List[str]]:
+        """
+        Fetch messages/notes for a completed activity.
+
+        Returns (status, texts) where status is "ok" or "unavailable". A successful
+        empty response is ("ok", []) and means the activity genuinely has no notes.
+        A transport failure, an HTTP error, an unparseable body or an unexpected
+        shape is ("unavailable", []): not retrieved, which is not the same fact and
+        must not reach the AI layer as confirmed absence.
+
+        Circuit break: after MESSAGES_FAILURE_BREAK_COUNT consecutive FINAL failures
+        in this run, remaining activities are reported unavailable without issuing a
+        request, so a dead endpoint costs one initial attempt per activity at most
+        three times rather than once per activity in the window. The break path
+        issues no attempt and therefore consumes no retry budget.
+        """
+        if self._messages_consecutive_failures >= self.MESSAGES_FAILURE_BREAK_COUNT:
+            return ("unavailable", [])
         url = f"{self.INTERVALS_BASE_URL}/activity/{activity_id}/messages"
         headers = {
             "Authorization": f"Basic {self.intervals_auth}",
             "Accept": "application/json"
         }
         try:
-            response = requests.get(url, headers=headers)
+            response = self._read_with_retry(
+                lambda: requests.get(url, headers=headers,
+                                     timeout=self.INTERVALS_READ_TIMEOUT))
             response.raise_for_status()
             messages = response.json()
-            if isinstance(messages, list):
-                return [m.get("content", m.get("text", "")) for m in messages if (m.get("content") or m.get("text", "")).strip()]
-            return []
         except Exception:
-            return []
+            self._messages_consecutive_failures += 1
+            return ("unavailable", [])
+        if not isinstance(messages, list):
+            # A 200 that is not a list is not a confirmed empty library.
+            self._messages_consecutive_failures += 1
+            return ("unavailable", [])
+        texts = []
+        for item in messages:
+            # Element-level validation, not just the outer list. A non-object entry,
+            # or a content field that is not text, would otherwise raise here, well
+            # outside the guarded block, and kill the whole sync over a chat note.
+            if not isinstance(item, dict):
+                self._messages_consecutive_failures += 1
+                return ("unavailable", [])
+            raw = item.get("content")
+            if raw is not None and not isinstance(raw, str):
+                self._messages_consecutive_failures += 1
+                return ("unavailable", [])
+            if raw is None or not raw.strip():
+                # Either field can carry the note. Fall back when content is null,
+                # empty or whitespace-only, not only when the key is absent.
+                fallback = item.get("text", "")
+                if fallback is not None and not isinstance(fallback, str):
+                    self._messages_consecutive_failures += 1
+                    return ("unavailable", [])
+                raw = fallback or ""
+            if raw.strip():
+                texts.append(raw)
+        self._messages_consecutive_failures = 0
+        return ("ok", texts)
     
     def _fetch_activity_intervals(self, activity_id: str) -> tuple:
         """
@@ -1010,6 +1509,8 @@ class IntervalsSync:
                 entry["terrain_error"] = act["terrain_error"]
             if "weather_summary" in act:
                 entry["weather_summary"] = act["weather_summary"]
+            if isinstance(act.get("structure_summary"), dict):
+                entry["structure_summary"] = act["structure_summary"]
             if entry:
                 lookup[str(act_id)] = entry
         return lookup
@@ -1159,12 +1660,171 @@ class IntervalsSync:
                 summary[k] = round(v, 2)
         return {"weather_summary": summary}
 
+    def _dfa_coverage_by_third(self, valid_mask, drift_mask, artifacts):
+        """Coverage in original coordinates. Retained and drift masks are distinct."""
+        n = len(valid_mask)
+        third = n // 3
+
+        def _max_gap(mask):
+            longest = run = 0
+            for valid in mask:
+                run = 0 if valid else run + 1
+                longest = max(longest, run)
+            return longest
+
+        def _span(start, end):
+            total = end - start
+            valid = sum(valid_mask[start:end])
+            drift_valid = sum(drift_mask[start:end])
+            return {
+                "start_sample_idx": start,
+                "end_sample_idx_exclusive": end,
+                "total_samples": total,
+                "valid_samples": valid,
+                "valid_pct": round(100.0 * valid / total, 3) if total else None,
+                "drift_valid_samples": drift_valid,
+                "drift_valid_pct": round(100.0 * drift_valid / total, 3) if total else None,
+            }
+
+        spans = []
+        for role, start, end in (("early", 0, third), ("middle", third, n - third),
+                                 ("late", n - third, n)):
+            span = _span(start, end)
+            span.update({
+                "role": role,
+                "artifact_observed_samples": sum(a is not None for a in artifacts[start:end]),
+                "max_invalid_run_samples": _max_gap(valid_mask[start:end]),
+                "max_drift_gap_samples": _max_gap(drift_mask[start:end]),
+                "bins": None,
+                "min_bin_valid_pct": None,
+                "min_bin_drift_valid_pct": None,
+                "allowed_drift_gap_samples": None,
+            })
+            if role != "middle":
+                bins = []
+                if third >= self.DFA_DRIFT_BINS:
+                    bins = [
+                        _span(start + k * third // self.DFA_DRIFT_BINS,
+                              start + (k + 1) * third // self.DFA_DRIFT_BINS)
+                        for k in range(self.DFA_DRIFT_BINS)
+                    ]
+                span["bins"] = bins
+                span["min_bin_valid_pct"] = min((b["valid_pct"] for b in bins), default=None)
+                span["min_bin_drift_valid_pct"] = min(
+                    (b["drift_valid_pct"] for b in bins), default=None)
+                span["allowed_drift_gap_samples"] = min(
+                    self.DFA_DRIFT_GAP_CEILING_SAMPLES,
+                    max(self.DFA_DRIFT_GAP_FLOOR_SAMPLES,
+                        third * self.DFA_DRIFT_MAX_GAP_PCT // 100))
+            spans.append(span)
+        return spans
+
+    def _dfa_timebase_status(self, time_stream, n):
+        if not isinstance(time_stream, list) or len(time_stream) != n or not n:
+            return "unverified"
+        times = [self._finite_num(t) for t in time_stream]
+        if any(t is None for t in times):
+            return "unverified"
+        if any(t - times[0] != i for i, t in enumerate(times)):
+            return "nonuniform"
+        return "verified_1hz"
+
+    def _compute_dfa_drift(self, dfa_stream, drift_mask, time_stream, quality, supra_pct):
+        """Fixed recording-span contrast; eligibility does not prove steady effort."""
+        metadata = {
+            "method": self.DFA_DRIFT_METHOD,
+            "status": "unavailable",
+            "reasons": [],
+            "time_basis": "original_sample_index",
+            "timebase_status": self._dfa_timebase_status(time_stream, len(dfa_stream)),
+        }
+        reasons = metadata["reasons"]
+        if not quality["sufficient"]:
+            if quality["valid_secs"] < self.DFA_MIN_DURATION_SECS:
+                reasons.append("whole_session_duration")
+            if quality["valid_pct"] < self.DFA_SUFFICIENT_MIN_VALID_PCT:
+                reasons.append("whole_session_coverage")
+            return None, metadata
+
+        early, _, late = quality["coverage_by_third"]
+        if early["total_samples"] < self.DFA_DRIFT_MIN_WINDOW_SAMPLES:
+            reasons.append("window_too_short")
+        for span in (early, late):
+            if span["drift_valid_samples"] < self.DFA_DRIFT_MIN_VALID_SAMPLES:
+                reasons.append(span["role"] + "_too_few_samples")
+        if reasons:
+            return None, metadata
+
+        means = []
+        for span in (early, late):
+            values = [dfa_stream[i] for i in range(span["start_sample_idx"],
+                                                  span["end_sample_idx_exclusive"])
+                      if drift_mask[i]]
+            mean = self._finite_num(sum(values) / len(values))
+            if mean is None:
+                reasons.append("invalid_dfa")
+                return None, metadata
+            means.append(round(mean, 3))
+        delta = self._finite_num(round(means[1] - means[0], 3))
+        if delta is None:
+            reasons.append("invalid_dfa")
+            return None, metadata
+
+        if len(dfa_stream) < self.DFA_DRIFT_MIN_SESSION_SAMPLES:
+            reasons.append("short_session")
+        if metadata["timebase_status"] != "verified_1hz":
+            reasons.append("timebase_" + metadata["timebase_status"])
+        # Exact count inequalities, not rounded display percentages. Missing
+        # artifact readings are drift gaps only, including inside each sixth.
+        for span in (early, late):
+            if 100 * span["drift_valid_samples"] < self.DFA_DRIFT_MIN_COVERAGE_PCT * span["total_samples"]:
+                reasons.append(span["role"] + "_coverage")
+        for span in (early, late):
+            if any(100 * b["drift_valid_samples"] < self.DFA_DRIFT_MIN_BIN_COVERAGE_PCT * b["total_samples"]
+                   for b in span["bins"]):
+                reasons.append(span["role"] + "_distribution")
+        for span in (early, late):
+            if span["max_drift_gap_samples"] > span["allowed_drift_gap_samples"]:
+                reasons.append(span["role"] + "_gap")
+        if supra_pct > self.DFA_DRIFT_INTERPRETABLE_MAX_LT2_PCT:
+            reasons.append("supra_fraction")
+        metadata["status"] = "descriptive_only" if reasons else "eligible"
+        return {
+            "first_third_avg": means[0],
+            "last_third_avg": means[1],
+            "delta": delta,
+            "interpretable": not reasons,
+        }, metadata
+
+    def _dfa_drift_eligible(self, block):
+        """Fail closed for legacy, unsupported or contradictory cached metadata."""
+        quality = block.get("quality") or {}
+        drift = block.get("drift") or {}
+        metadata = block.get("drift_quality") or {}
+        return (
+            quality.get("sufficient") is True
+            and metadata.get("method") == self.DFA_DRIFT_METHOD
+            and metadata.get("status") == "eligible"
+            and metadata.get("reasons") == []
+            and metadata.get("time_basis") == "original_sample_index"
+            and metadata.get("timebase_status") == "verified_1hz"
+            and drift.get("interpretable") is True
+            and all(self._finite_num(drift.get(k)) is not None
+                    for k in ("first_third_avg", "last_third_avg", "delta"))
+        )
+
+    def _dfa_quality_summary(self, block):
+        quality = block.get("quality") or {}
+        return {key: quality.get(key) for key in (
+            "valid_secs", "total_secs", "valid_pct", "sufficient", "artifact_state",
+            "artifact_coverage_pct", "coverage_by_third")}
+
     def _compute_dfa_block(self, streams: Dict[str, List]) -> Optional[Dict]:
         """
         Compute per-session DFA a1 rollup from raw streams.
 
         Inputs: streams dict from _fetch_activity_streams, expected keys:
-          dfa_a1, artifacts, heartrate, watts (heartrate/watts optional but degrade output)
+          dfa_a1, artifacts, heartrate, watts, time (time proves continuous 1 Hz for drift)
 
         Returns the dfa block dict, or None if dfa_a1 stream is absent entirely
         (i.e. AlphaHRV did not record on this activity).
@@ -1175,7 +1835,7 @@ class IntervalsSync:
         ran but unusable" (block present, sufficient=False).
 
         Filtering rules (in order):
-          1. Drop seconds where dfa_a1 < DFA_MIN_VALID_VALUE (AlphaHRV sentinel zeros)
+          1. Drop non-finite alpha1 and values < DFA_MIN_VALID_VALUE (sentinel zeros)
           2. Drop seconds where artifacts > DFA_ARTIFACT_MAX_PCT (5%, Altini convention)
         Both filters applied jointly to dfa_a1, hr, watts so they stay aligned.
         """
@@ -1217,14 +1877,17 @@ class IntervalsSync:
         ]
         hr_stream = [self._finite_num(x) for x in hr_stream]
         watts_stream = [self._finite_num(x) for x in watts_stream]
+        # v3.140: NaN used to survive the minimum-value comparison and poison
+        # rollups. Normalise alpha1 independently of the new drift mask.
+        dfa_stream = [self._finite_num(x) for x in dfa_stream]
 
         # Apply filters
         # v3.113: valid_idx records each surviving sample's ORIGINAL stream index. The valid_*
         # arrays are compacted (dropped samples are skipped), so array-index adjacency != stream
         # adjacency. Crossing contiguity must be measured against valid_idx, not position.
         # NOTE (v3.122): stream index is a SAMPLE index, not an elapsed second - they coincide
-        # only at 1 Hz with no pauses. The *_secs locals and wire keys below are nominal 1 Hz
-        # sample counts; the local rename is deferred to the drift rewrite.
+        # only at 1 Hz with no pauses. Existing *_secs wire keys remain nominal
+        # sample counts for compatibility; locals explicitly name samples.
         valid_dfa, valid_hr, valid_watts, valid_idx = [], [], [], []
         artifact_sum = 0.0
         artifact_count = 0
@@ -1243,13 +1906,13 @@ class IntervalsSync:
             valid_watts.append(watts_stream[i])
             valid_idx.append(i)
 
-        valid_secs = len(valid_dfa)
-        total_secs = n
-        valid_pct = round(100.0 * valid_secs / total_secs, 1) if total_secs else 0.0
+        valid_samples = len(valid_dfa)
+        total_samples = n
+        valid_pct = round(100.0 * valid_samples / total_samples, 1) if total_samples else 0.0
         # v3.122: artifact_count is the OBSERVED (finite, non-negative) sample count, so it
         # doubles as coverage - a full-length stream containing nulls or NaN is partial, not
-        # complete. sufficient is deliberately NOT gated on artifact coverage; whole-session
-        # band and drift artifact verification remains unresolved and is deferred.
+        # complete. sufficient is deliberately NOT gated on artifact coverage.
+        # Drift additionally excludes unknown artifacts; TIZ retains the original mask.
         artifact_rate_avg = round(artifact_sum / artifact_count, 2) if artifact_count else None
         # Three decimals: at one decimal a near-complete stream (Jul 24: 10,802 of 10,806
         # observed = 99.962984%) serialises as 100.0 while artifact_state is partial, which
@@ -1263,21 +1926,29 @@ class IntervalsSync:
         else:
             artifact_state = "partial"
         sufficient = (
-            valid_secs >= self.DFA_MIN_DURATION_SECS
+            valid_samples >= self.DFA_MIN_DURATION_SECS
             and valid_pct >= self.DFA_SUFFICIENT_MIN_VALID_PCT
         )
 
         quality = {
-            "valid_secs": valid_secs,
-            "total_secs": total_secs,
+            "valid_secs": valid_samples,
+            "total_secs": total_samples,
             "valid_pct": valid_pct,
             "artifact_state": artifact_state,
             "artifact_coverage_pct": artifact_coverage_pct,
             "artifact_rate_avg": artifact_rate_avg,
             "sufficient": sufficient,
         }
+        valid_mask = [False] * n
+        for i in valid_idx:
+            valid_mask[i] = True
+        drift_mask = [valid_mask[i] and artifacts_stream[i] is not None for i in range(n)]
+        quality["coverage_by_third"] = self._dfa_coverage_by_third(
+            valid_mask, drift_mask, artifacts_stream)
 
         if not sufficient:
+            _, drift_quality = self._compute_dfa_drift(
+                dfa_stream, drift_mask, streams.get("time"), quality, None)
             # Emit minimal block — AI sees AlphaHRV ran but data unusable
             return {
                 "avg": None,
@@ -1287,6 +1958,7 @@ class IntervalsSync:
                 "tiz_tempo": None,
                 "tiz_supra": None,
                 "drift": None,
+                "drift_quality": drift_quality,
                 "easy_guard_crossing": None,
                 "lt1_crossing": None,
                 "lt2_crossing": None,
@@ -1295,17 +1967,17 @@ class IntervalsSync:
 
         # Sufficient — full rollup
         sorted_dfa = sorted(valid_dfa)
-        avg = round(sum(valid_dfa) / valid_secs, 3)
-        p25 = round(sorted_dfa[valid_secs // 4], 3)
-        p50 = round(sorted_dfa[valid_secs // 2], 3)
-        p75 = round(sorted_dfa[(valid_secs * 3) // 4], 3)
+        avg = round(sum(valid_dfa) / valid_samples, 3)
+        p25 = round(sorted_dfa[valid_samples // 4], 3)
+        p50 = round(sorted_dfa[valid_samples // 2], 3)
+        p75 = round(sorted_dfa[(valid_samples * 3) // 4], 3)
 
         # 4-band TIZ with HR/power cross-references per band
         def _band_stats(predicate):
             secs = 0
             hr_sum, hr_n = 0, 0
             w_sum, w_n = 0, 0
-            for i in range(valid_secs):
+            for i in range(valid_samples):
                 if predicate(valid_dfa[i]):
                     secs += 1
                     if valid_hr[i] is not None:
@@ -1318,7 +1990,7 @@ class IntervalsSync:
                 return None
             return {
                 "secs": secs,
-                "pct": round(100.0 * secs / valid_secs, 1),
+                "pct": round(100.0 * secs / valid_samples, 1),
                 "avg_hr": round(hr_sum / hr_n) if hr_n else None,
                 "avg_watts": round(w_sum / w_n) if w_n else None,
             }
@@ -1333,26 +2005,9 @@ class IntervalsSync:
         tiz_tempo = _band_stats(lambda d: self.DFA_LT2 <= d < self.DFA_LT1)
         tiz_supra = _band_stats(lambda d: d < self.DFA_LT2)
 
-        # Drift: first-third vs last-third of valid data
-        third = valid_secs // 3
-        if third >= 60:  # need at least 60s per third for meaningful drift
-            first_third = valid_dfa[:third]
-            last_third = valid_dfa[-third:]
-            first_avg = round(sum(first_third) / len(first_third), 3)
-            last_avg = round(sum(last_third) / len(last_third), 3)
-            drift_delta = round(last_avg - first_avg, 3)
-            # Drift is interpretable only on steady-state work — if significant time
-            # was spent above LT2, the session has hard intervals and drift is structural
-            supra_pct = tiz_supra["pct"] if tiz_supra else 0.0
-            interpretable = supra_pct <= self.DFA_DRIFT_INTERPRETABLE_MAX_LT2_PCT
-            drift = {
-                "first_third_avg": first_avg,
-                "last_third_avg": last_avg,
-                "delta": drift_delta,
-                "interpretable": interpretable,
-            }
-        else:
-            drift = None
+        drift, drift_quality = self._compute_dfa_drift(
+            dfa_stream, drift_mask, streams.get("time"), quality,
+            tiz_supra["pct"] if tiz_supra else 0.0)
 
         # LT1 / LT2 crossing-band estimates (the actually-coachable threshold candidates)
         def _crossing_stats(center, band):
@@ -1368,7 +2023,7 @@ class IntervalsSync:
             cur = None
             last_orig = None
             total_in_band = 0
-            for i in range(valid_secs):
+            for i in range(valid_samples):
                 if not (lo <= valid_dfa[i] <= hi):
                     continue
                 total_in_band += 1
@@ -1458,6 +2113,7 @@ class IntervalsSync:
             "tiz_tempo": tiz_tempo,
             "tiz_supra": tiz_supra,
             "drift": drift,
+            "drift_quality": drift_quality,
             "easy_guard_crossing": easy_guard_crossing,
             "lt1_crossing": lt1_crossing,
             "lt2_crossing": lt2_crossing,
@@ -1530,7 +2186,7 @@ class IntervalsSync:
             return "non_stationary_power"
         return "ok"
 
-    def _build_dfa_summary(self, dfa_block: Dict) -> Dict:
+    def _build_dfa_summary(self, dfa_block: Dict, schema_version: Optional[int] = 2) -> Dict:
         """
         Build the compact dfa_summary attached to recent_activities[] in latest.json (v3.100).
 
@@ -1543,6 +2199,8 @@ class IntervalsSync:
         and is not summarisable. Per-band None (zero time in band) is handled here as
         0.0 pct / 0 secs.
         Optional fields are omitted (not nulled) when their underlying data is absent.
+        The default schema is for freshly computed blocks. Cached activity callers
+        pass the enclosing schema explicitly so unsupported versions fail closed.
         """
         def _band_pct(name):
             b = dfa_block.get(name)
@@ -1577,12 +2235,14 @@ class IntervalsSync:
             "tiz_pct": bands,
             "valid_pct": dfa_block["quality"]["valid_pct"],
             "sufficient": dfa_block["quality"]["sufficient"],
+            "drift_quality": dfa_block.get("drift_quality"),
+            "quality": self._dfa_quality_summary(dfa_block),
         }
 
         drift = dfa_block.get("drift")
         if drift is not None and drift.get("delta") is not None:
             summary["drift_delta"] = drift["delta"]
-            summary["drift_interpretable"] = drift.get("interpretable", False)
+            summary["drift_interpretable"] = schema_version == 2 and self._dfa_drift_eligible(dfa_block)
 
         # v3.122: the compact summary is the AI-facing surface, so it carries threshold
         # numbers only when the crossing is estimate-eligible. The detailed crossing block
@@ -1878,7 +2538,8 @@ class IntervalsSync:
         else:
             scan_cutoff = (now - timedelta(hours=self.INTERVAL_SCAN_HOURS)).strftime("%Y-%m-%d")
 
-        cached_ids = {str(a.get("activity_id")) for a in cached.get("activities", [])}
+        cached_ids = {str(a.get("activity_id")) for a in cached.get("activities", [])
+                      if a.get("intervals") or a.get("dfa")}
         paired_ids = self._build_pairing_map(events, activities)
 
         # Candidate selection. Two independent arms:
@@ -2013,7 +2674,7 @@ class IntervalsSync:
 
             if due.get("streams"):
                 status, payload = self._fetch_activity_streams(
-                    act_id, ["dfa_a1", "artifacts", "heartrate", "watts"])
+                    act_id, ["dfa_a1", "artifacts", "heartrate", "watts", "time"])
                 retry_after = self._last_retry_after_secs
                 if status == "terminal_error":
                     state["streams"] = self._advance_endpoint_state(
@@ -2097,9 +2758,10 @@ class IntervalsSync:
             if "dfa" in upd:
                 entry["dfa"] = upd["dfa"]
 
-        # An entry with neither payload carries nothing a consumer can use; its
-        # fetch_state record is what keeps it from being re-queued.
-        all_entries = [e for e in by_id.values() if e.get("intervals") or e.get("dfa")]
+        # Structure is an independent payload; retain it without fabricating
+        # interval or DFA availability. Empty entries still rely on fetch_state.
+        all_entries = [e for e in by_id.values()
+                       if e.get("intervals") or e.get("dfa") or e.get("session_structure")]
 
         # Prune fetch_state on the same two axes as the entries.
         pruned_state = {}
@@ -2113,7 +2775,7 @@ class IntervalsSync:
         # Build intervals.json
         self._intervals_data = {
             "generated_at": now_iso,
-            "schema_version": 1,
+            "schema_version": 2,
             "version": self.VERSION,
             "script_hash": self.script_hash,
             "scan_hours": self.INTERVAL_SCAN_HOURS,
@@ -2123,7 +2785,7 @@ class IntervalsSync:
         }
 
         # Return all activity IDs that have interval data
-        return {a["activity_id"] for a in all_entries}
+        return {a["activity_id"] for a in all_entries if a.get("intervals") or a.get("dfa")}
     
     # ── Route & Terrain Intelligence (v3.93) ─────────────────────────────
     
@@ -3872,7 +4534,7 @@ class IntervalsSync:
         
         height_m = athlete.get("height")
         athlete_profile = {
-            # Privacy (public repo): DOB not serialized, only derived age.
+            "date_of_birth": dob,
             "age": self._years_since(dob),
             "height_m": height_m,
             "display": {
@@ -4170,6 +4832,9 @@ class IntervalsSync:
             activities_extended, present_activity_ids=present_ids, events=pairing_events)
         if interval_activity_ids:
             print(f"  📊 {len(interval_activity_ids)} activit{'y' if len(interval_activity_ids) == 1 else 'ies'} with interval data")
+
+        self._prepare_session_structures(
+            activities_extended, events, previous_latest_lookup)
         
         # Calculate derived metrics for Section 11 compliance
         print("Calculating derived metrics...")
@@ -4255,6 +4920,22 @@ class IntervalsSync:
                 "display_formatting": "For durations and sleep, always display the '_formatted' fields (e.g., sleep_formatted, duration_formatted, total_training_formatted) instead of converting decimal '_hours' values. The formatted fields are pre-calculated from raw seconds and avoid rounding errors.",
                 "data_period": f"Last {days_back} days (including today)",
                 "extended_data_note": f"ACWR and baselines calculated from {days_for_acwr} days of data",
+                "dfa_drift_note": (
+                    "DFA drift uses original_index_thirds_v1 in intervals schema 2. Read drift_quality "
+                    "and quality.coverage_by_third in detailed blocks, summaries and latest_session. "
+                    "Only sufficient data with the recognized method, eligible status, empty reasons, "
+                    "verified_1hz timing and interpretable=true licenses an eligible endpoint contrast. "
+                    "A numeric delta may be descriptive only; null is unavailable, not zero. Name the "
+                    "supplied reasons, which need not imply structural intervals. TIZ percentages and "
+                    "dominant band describe retained samples; valid_secs/total_secs are sample counts. "
+                    "Unknown artifacts are gaps for drift only. Inspect temporal and artifact coverage "
+                    "before whole-session claims. The latest-seven-sufficient-session window's drift "
+                    "mean uses only eligible contrasts; drift_sessions is its denominator. Eligibility "
+                    "does not prove steady workload or eliminate bias from missing data. A physiological "
+                    "drift flag additionally requires steady easy/endurance cycling context and delta "
+                    "strictly below -0.2; without that context use descriptive wording. DFA remains "
+                    "Tier 2 and never changes readiness, phase progression or configured thresholds."
+                ),
                 "capability_metrics_note": "The 'capability' block in derived_metrics contains durability trend (aggregate decoupling 7d/28d), efficiency factor trend (aggregate EF 7d/28d), HRRc trend (heart rate recovery 7d/28d), TID comparison (7d vs 28d distribution drift), power curve delta (MMP shift at anchor durations across 28d windows — energy system adaptation direction), HR curve delta (max sustained HR shift at anchor durations — cardiac adaptation, cross-sport), sustainability profile (per-sport power/HR sustainability table for race estimation — 42d window, sport-filtered), and DFA a1 profile (per-session non-linear HRV index from AlphaHRV Connect IQ field — latest_session + trailing_by_sport with crossing-band easy_guard / LT1 / LT2 estimates). These measure HOW the athlete expresses fitness, not just load. Use these for coaching context alongside traditional load metrics. Durability and EF trend direction matters more than absolute values. HRRc is display only — higher = better parasympathetic recovery. Power curve delta rotation_index reveals whether gains are sprint-biased (positive) or endurance-biased (negative). HR curve delta is ambiguous — rising max sustained HR may indicate fitness or fatigue; cross-reference with resting HRV/HR and RPE. Sustainability profile provides race estimation lookup: actual MMP, Coggan predicted (cycling only), CP/W' model (cycling only), model_divergence_pct (actual vs CP — divergence IS the coaching signal). CP/W' is primary for durations ≤20min; Coggan duration factors are the established reference for ≥60min. Source flag (observed_outdoor/observed_indoor) matters for cycling race estimation — indoor MMP is typically 3-5% lower. DFA a1 profile: three self-describing markers (each estimate + crossing block carries marker_dfa_a1) — easy_guard (a1 1.0, a conservative easy-state guard, NOT a threshold), lt1 (a1 0.75, HRVT1 / aerobic threshold), lt2 (a1 0.5, HRVT2 / anaerobic threshold). The literature threshold markers (0.75 / 0.5) are cycling-validated only - non-cycling sports get rollups but validated=False. Every estimate requires a SUSTAINED contiguous crossing: each session's easy_guard_crossing / lt1_crossing / lt2_crossing carries a reason (ok / no_samples_in_band / insufficient_total_dwell / no_contiguous_dwell); scattered in-band time does not produce an estimate. v3.122: dwell is not sufficient. Each crossing also carries estimate_eligible / estimate_reason / n_eligible_segments - a1 reflects the prior 200 beats while watts is instantaneous, so a crossing recorded across varying power blends work and recovery into a number that is not usable as a threshold estimate. avg_hr / avg_watts stay populated on a dwell-qualified but estimate-ineligible crossing as descriptive evidence (a dwell-failed crossing has null averages as before); read estimate_eligible, never infer from absence. Compact lt1_/lt2_ summary fields and all trailing rollups consume eligible crossings only. HR is pooled across sessions; watts are split by environment for cycling (watts_outdoor, watts_indoor with per-environment n_sessions) - only lt2 is ever measured against a configured threshold: lt2_estimate.watts_outdoor against current_status.thresholds.sports.cycling.ftp, lt2_estimate.watts_indoor against current_status.thresholds.sports.cycling.ftp_indoor, and pooled lt2_estimate.hr against current_status.thresholds.sports.cycling.lthr. Non-cycling sports keep pooled watts. easy_guard_estimate, lt1_estimate and lt2_estimate are each gated INDEPENDENTLY - null when that marker has fewer than 3 estimate-ELIGIBLE marker-sessions (v3.122 - not merely dwell-qualified; see easy_guard_eligible_sessions / lt1_eligible_sessions / lt2_eligible_sessions alongside the *_crossing_sessions counts, and note that any gap between them means at least one dwell-qualified marker-session was estimate-rejected). An estimate is null whenever minimum estimate-eligible session depth is not met. If at least one eligible session exists, trailing_by_sport.{sport}.easy_guard_reason / lt1_reason / lt2_reason is insufficient_sessions. If none exists, the staged reason identifies the dominant blocker: dwell failure, incomplete coverage, excessive artifacts, non-positive mean power, or non-stationary power. Do NOT read a null estimate as 'the athlete did not sustain that marker' - read the reason. IMPORTANT: easy_guard is a conservative easy-state compliance guard, NOT an LT1/aerobic-threshold estimate - never compare it to the athlete's configured thresholds and never treat it as a calibration or staleness signal. Only lt2 (0.5) has a configured counterpart and can therefore produce a threshold-comparison coaching observation. lt1 (0.75) is descriptive only: no configured LT1 threshold exists to measure it against, so it never produces a delta, though it may motivate a formal retest. lt1 (0.75) populates only on rides that sustain aerobic-threshold intensity, so it is often null on easy/deload riding - that is expected, not a data gap. Sport-level confidence is a coarse orientation string derived from the maximum eligible-session depth across the THRESHOLD markers lt1 and lt2, with easy_guard excluded - it is orientation only and MUST NOT gate any LT2 comparison, which gates on lt2's own eligible-session depth; per-marker estimate presence + reason are authoritative. DFA a1 is a Tier-2 interpretive signal - does NOT enter the readiness P0-P3 ladder, does NOT affect the Phase Progression Check, and never auto-updates the configured thresholds; it surfaces a threshold comparison only from lt2, never from lt1 or easy_guard. Quality gate: refuse to interpret any DFA output when latest_session.sufficient=false. Each lt2 comparison is independently complete only with all three of a non-null estimate value, its own matching depth of at least 4, and a non-null configured comparator: lt2_estimate.hr with lt2_estimate.n_sessions and current_status.thresholds.sports.cycling.lthr; lt2_estimate.watts_outdoor with lt2_estimate.n_sessions_outdoor and .ftp; lt2_estimate.watts_indoor with lt2_estimate.n_sessions_indoor and .ftp_indoor. A missing cycling entry and a null comparator fail completeness identically. Depth in one environment never licenses a comparison in the other. Surface a delta only where a complete comparison differs by more than 5%; otherwise report the empirical estimate descriptively. Report no notable delta only when at least one lt2 comparison is complete and every complete difference is 5% or less. Where no comparison is complete, omit the comparison entirely; never use no notable delta as a substitute for the absence of a valid comparison. easy_guard is NOT gated on confidence (it is excluded from it) - interpret easy_guard_estimate from its own reason / n_sessions / quality when present, but never as a calibration signal. See SECTION_11.md DFA a1 Protocol for full interpretation rules.",
                 "readiness_decision_note": "The 'readiness_decision' block contains a pre-computed go/modify/skip recommendation with priority level (P0=safety, P1=overload, P2=fatigue, P3=green), individual signal statuses, phase-adjusted thresholds, and structured modification guidance. Use this as the baseline for pre-workout recommendations. Override only under the override rules in SECTION_11.md (Feel/RPE Override): athlete-reported state escalates unconditionally, de-escalation is P2-only, P0/P1 are not overridable. signals.acwr is the START-OF-DAY value from derived_metrics.acwr_start_of_day - the same 7d/28d windows with today's activities excluded - so it does not move when a workout is completed today. derived_metrics.acwr stays live and today-inclusive: retrospective load context only (acwr_readiness_eligible false), never used to approve, modify or veto a later same-day session or tomorrow's. Tomorrow is decided from tomorrow morning's readiness output, whose start-of-day value will include today's training. ACWR alone no longer forces P1 - a Skip needs start-of-day ACWR >= 1.5 plus a corroborating Tier-1 signal, and uncorroborated ACWR counts as an ordinary P2 amber/red. signals.hrv may carry an optional reason: 'rmssd_missing_sdnn_available' means the latest wellness record has no usable rMSSD but does carry SDNN. SDNN is a different metric and is explanatory metadata only - never a readiness input, never treated as HRV. Report HRV as unavailable and name the cause.",
                 "health_context_note": "The 'health_context' block carries athlete-reported illness and injury markers. It is CONTEXT, NOT a readiness input - readiness_decision is physiological only and can legitimately read 'go' while clarification_required is true. Calendar markers are matched on the canonical Intervals.icu category (SICK / INJURED), never on the event title. end_date is already converted to the INCLUSIVE last CALENDAR-MARKED day (not the last day the athlete was unwell); Intervals stores an exclusive end. IMPORTANT: end_date_local is the end of the calendar MARKING, not evidence that the illness or injury ended - illness is normally marked for the current day because recovery cannot be predicted. There is deliberately no 'active' field, because a false value would read as 'recovered'. Read marker_active (a marker spans today), recent_marker (a marker ended within recent_window_days and none spans today - recovery status UNKNOWN), and clarification_required. When clarification_required is true, do not give an unqualified full-program recommendation: acknowledge a current marker and establish severity; after a recent marker, ask whether the athlete has recovered rather than assuming it; this escalates only and is never grounds to relax an existing Skip, and never by itself an automatic Skip. wellness_injury is the CURRENT value only (the full series is in wellness_data[].injury and history.json daily_90d[].injury) and contributes to clarification_required only when freshness is 'current' and value >= 3; a 'stale' value is visible context that triggers nothing. source_status 'partial' means the dedicated health fetch failed and the block was built from the narrower main event fetch - marker_active and recent_marker are OMITTED in that case because they were not established, an empty current/recent list is NOT evidence of no marker, and clarification_required stays true. A span beginning before lookback_days is not visible; absence is never proof of no illness.",
@@ -6270,6 +6951,7 @@ class IntervalsSync:
         if not intervals_data:
             return None
         activities = intervals_data.get("activities", [])
+        drift_schema_supported = intervals_data.get("schema_version") == 2
         # Keep only activities with a dfa block (i.e. AlphaHRV recorded), most recent first
         dfa_activities = [a for a in activities if a.get("dfa") is not None]
         if not dfa_activities:
@@ -6283,7 +6965,7 @@ class IntervalsSync:
         latest_session = None
         for a in dfa_activities:
             block = a["dfa"]
-            quality = block.get("quality", {})
+            quality = block.get("quality") or {}
             if quality.get("sufficient"):
                 tiz_split = {}
                 for key, label in [
@@ -6304,7 +6986,11 @@ class IntervalsSync:
                     "avg": block.get("avg"),
                     "tiz_split_pct": tiz_split,
                     "drift_delta": drift.get("delta"),
-                    "drift_interpretable": drift.get("interpretable"),
+                    "drift_interpretable": (
+                        drift_schema_supported and self._dfa_drift_eligible(block)
+                    ) if drift else None,
+                    "drift_quality": block.get("drift_quality"),
+                    "quality": self._dfa_quality_summary(block),
                     "quality_pct": quality.get("valid_pct"),
                     "sufficient": True,
                 }
@@ -6324,7 +7010,9 @@ class IntervalsSync:
                 "tiz_split_pct": None,
                 "drift_delta": None,
                 "drift_interpretable": None,
-                "quality_pct": a["dfa"].get("quality", {}).get("valid_pct"),
+                "drift_quality": a["dfa"].get("drift_quality"),
+                "quality": self._dfa_quality_summary(a["dfa"]),
+                "quality_pct": (a["dfa"].get("quality") or {}).get("valid_pct"),
                 "sufficient": False,
             }
 
@@ -6333,7 +7021,7 @@ class IntervalsSync:
         # Group dfa activities by sport family
         by_family = {}
         for a in dfa_activities:
-            if not a["dfa"].get("quality", {}).get("sufficient"):
+            if not (a["dfa"].get("quality") or {}).get("sufficient"):
                 continue
             family = self.SPORT_FAMILIES.get(a.get("type", ""), "other")
             by_family.setdefault(family, []).append(a)
@@ -6348,8 +7036,7 @@ class IntervalsSync:
             drift_values = [
                 a["dfa"]["drift"]["delta"]
                 for a in window
-                if a["dfa"].get("drift") and a["dfa"]["drift"].get("interpretable")
-                and a["dfa"]["drift"].get("delta") is not None
+                if drift_schema_supported and self._dfa_drift_eligible(a["dfa"])
             ]
             drift_mean = round(sum(drift_values) / len(drift_values), 3) if drift_values else None
 
@@ -6493,6 +7180,8 @@ class IntervalsSync:
                 "date_range": [window[-1].get("date"), window[0].get("date")],
                 "avg_dfa_a1": avg_dfa,
                 "drift_delta_mean": drift_mean,
+                "drift_method": self.DFA_DRIFT_METHOD,
+                "drift_sessions": len(drift_values),
                 "easy_guard_crossing_sessions": easy_guard_crossing_sessions,
                 "lt1_crossing_sessions": lt1_crossing_sessions,
                 "lt2_crossing_sessions": lt2_crossing_sessions,
@@ -8473,67 +9162,154 @@ class IntervalsSync:
             "note": "No history.json available. Longitudinal analysis limited to current 28-day window."
         }
     
-    def should_generate_history(self) -> bool:
+    @staticmethod
+    def _history_stamp_utc(value) -> Optional[datetime]:
         """
-        Determine if history.json needs to be (re)generated.
-        
-        Triggers:
-        - history.json missing → ALWAYS generate (bypass time gate, first-run scenario)
-        - history.json >28 days old → regenerate (time-gated to Sun/Mon midnight)
-        
-        Refresh runs only on Sundays (6) or Mondays (0), in the first two runs
-        after midnight (00:00 and 00:15 UTC).
+        A history timestamp as aware UTC, or None when absent or unusable.
+
+        An aware stamp is converted. A naive stamp, which is what generate_history()
+        writes, is interpreted as host-local wall time, so DST is applied for that
+        date. A naive stamp written on another host keeps that host's offset error.
+        """
+        if not isinstance(value, str) or not value:
+            return None
+        try:
+            dt = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.astimezone()
+            return dt.astimezone(timezone.utc)
+        except (ValueError, OverflowError, OSError):
+            return None
+
+    def _history_backoff_active(self, history_data: Dict, now_utc: datetime) -> bool:
+        """
+        True while a recorded failed automatic refresh is still backing off.
+
+        Only state recorded by the CURRENT script applies, so changed code always
+        gets an immediate attempt. A malformed block is ignored, never fatal, and
+        a next attempt further away than the maximum delay is treated as stale
+        (clock regression) and ignored.
+        """
+        state = history_data.get("refresh_state")
+        if not isinstance(state, dict):
+            return False
+        if state.get("attempt_script_hash") != self.script_hash:
+            return False
+        nxt = state.get("next_attempt_after")
+        if not isinstance(nxt, str) or not nxt:
+            return False
+        try:
+            due = datetime.fromisoformat(nxt)
+        except ValueError:
+            return False
+        if due.tzinfo is None:
+            return False
+        remaining = (due - now_utc).total_seconds()
+        if remaining <= 0 or remaining > self.HISTORY_RETRY_MAX_SECS:
+            return False
+        return True
+
+    def _history_run_budget_hold(self, env=None) -> Optional[str]:
+        """
+        Why the GitHub Actions run budget holds an automatic refresh of an
+        existing history.json on this run, or None when it does not.
+
+        Applies only when GITHUB_ACTIONS is "true" and GITHUB_EVENT_NAME is not
+        workflow_dispatch, so local runs and manual Sync Now runs are never
+        held. Any other event, custom push or repository_dispatch included, is
+        held unless GITHUB_RUN_NUMBER is a plain positive integer that is a
+        multiple of HISTORY_ACTIONS_RUN_BUDGET. A missing or malformed number is
+        held, and its raw value is never echoed. A re-run keeps its number, so
+        it gets the same answer. `env` is for tests; it defaults to os.environ.
+        """
+        env = os.environ if env is None else env
+        if env.get("GITHUB_ACTIONS") != "true":
+            return None
+        if env.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+            return None
+        raw = env.get("GITHUB_RUN_NUMBER")
+        if not (isinstance(raw, str) and raw.isascii() and raw.isdigit() and raw[0] != "0"):
+            return "the run number is missing or not a positive integer"
+        number = int(raw)
+        if number % self.HISTORY_ACTIONS_RUN_BUDGET:
+            return f"run {number} is not a multiple of {self.HISTORY_ACTIONS_RUN_BUDGET}"
+        return None
+
+    def should_generate_history(self, now: Optional[datetime] = None) -> bool:
+        """
+        Determine if history.json needs to be (re)generated by the automatic path.
+
+        Triggers, in order:
+        - history.json missing, unreadable or not a JSON object → generate
+          (first-run scenario; no backoff, there is nothing to carry state in)
+        - sync.py changed (script_hash differs) → regenerate
+        - generated_at missing, unparseable or more than a day in the future → regenerate
+        - older than HISTORY_REFRESH_AGE_DAYS whole days (> 28) → regenerate
+        The last three are skipped while a failed attempt by this same script is
+        backing off (refresh_state), and otherwise in GitHub Actions runs that the
+        run budget holds (_history_run_budget_hold). There is no weekday or
+        time-of-day window: outside GitHub Actions an overdue file is refreshed on
+        the first run after it becomes due.
+        Ages are compared in UTC; a naive generated_at is host-local time.
+
+        `now` is for tests; it defaults to the current time.
         """
         history_path = self.data_dir / self.HISTORY_FILE
-        
-        # If history.json doesn't exist, ALWAYS generate (bypass time gate)
+        now_utc = now if now is not None else datetime.now(timezone.utc)
+        if now_utc.tzinfo is None:
+            now_utc = now_utc.astimezone()
+        now_utc = now_utc.astimezone(timezone.utc)
+
+        # If history.json doesn't exist, ALWAYS generate
         if not history_path.exists():
             if self.debug:
                 print("  history.json missing — will generate (first run)")
             return True
-        
-        # If sync.py changed, regenerate regardless of time gate
+
         try:
             with open(history_path, 'r') as f:
                 history_data = json.load(f)
-            if history_data.get("script_hash") != self.script_hash:
-                if self.debug:
-                    print("  history.json stale (sync.py changed) — will regenerate")
-                return True
         except Exception:
             return True
-        
-        # For REFRESH of existing history, apply the time gate
-        now = datetime.now()
-        
-        # Only on Sundays (6) or Mondays (0)
-        if now.weekday() not in [0, 6]:
-            return False
-        
-        # Only in the first two runs after midnight (00:00-00:30)
-        if now.hour > 0 or (now.hour == 0 and now.minute > 30):
-            return False
-        
-        # Check age of existing file
-        try:
-            with open(history_path, 'r') as f:
-                history_data = json.load(f)
-            generated_at = history_data.get("generated_at", "")
-            gen_date = datetime.fromisoformat(generated_at.replace("Z", "+00:00"))
-            age_days = (datetime.now() - gen_date.replace(tzinfo=None)).days
-            
-            if age_days > 28:
-                if self.debug:
-                    print(f"  history.json is {age_days} days old — will regenerate")
-                return True
-            else:
-                if self.debug:
-                    print(f"  history.json is {age_days} days old — fresh enough")
-                return False
-        except Exception as e:
-            if self.debug:
-                print(f"  Could not parse history.json age: {e} — will regenerate")
+        if not isinstance(history_data, dict):
             return True
+
+        backing_off = self._history_backoff_active(history_data, now_utc)
+
+        def due(reason: str) -> bool:
+            if backing_off:
+                if self.debug:
+                    print(f"  history.json {reason} — refresh backing off until "
+                          f"{history_data['refresh_state'].get('next_attempt_after')}")
+                return False
+            hold = self._history_run_budget_hold()
+            if hold is not None:
+                print(f"  ⏸️ history.json {reason}: automatic refresh deferred, {hold}. "
+                      f"In GitHub Actions only runs numbered in multiples of "
+                      f"{self.HISTORY_ACTIONS_RUN_BUDGET} refresh it automatically; a manual "
+                      f"Sync Now skips only this limit and still waits out any retry backoff "
+                      f"and refreshes only a due file.")
+                return False
+            if self.debug:
+                print(f"  history.json {reason} — will regenerate")
+            return True
+
+        # If sync.py changed, regenerate regardless of age
+        if history_data.get("script_hash") != self.script_hash:
+            return due("stale (sync.py changed)")
+
+        gen_utc = self._history_stamp_utc(history_data.get("generated_at"))
+        if gen_utc is None:
+            return due("has no usable generated_at")
+        if (gen_utc - now_utc).total_seconds() > self.HISTORY_FUTURE_TOLERANCE_SECS:
+            return due("generated_at is in the future")
+
+        age_days = (now_utc - gen_utc).days
+        if age_days > self.HISTORY_REFRESH_AGE_DAYS:
+            return due(f"is {age_days} days old")
+        if self.debug:
+            print(f"  history.json is {age_days} days old — fresh enough")
+        return False
     
     def generate_history(self) -> Dict:
         """
@@ -8545,9 +9321,18 @@ class IntervalsSync:
         - 1/2/3-year tiers: monthly aggregates (17 fields)
         - FTP timeline from API
         - Data gaps flagged factually
+        
+        When a history.json that loads as a JSON object already exists, a failed
+        activities, wellness or athlete fetch aborts generation by re-raising and
+        the existing file is kept untouched. Without one (first run, or an
+        unreadable file) a failed activities or wellness fetch still degrades to an
+        empty list as before. A successful empty response is valid data. The file
+        is written atomically. Callers decide criticality: the automatic path
+        treats a raise as non-critical, the explicit --generate-history does not.
         """
         print("\n📊 Generating history.json...")
         
+        prior_valid = self._history_prior_is_valid()
         now = datetime.now()
         
         # Determine how far back we can go (up to 3 years)
@@ -8562,6 +9347,9 @@ class IntervalsSync:
             })
         except Exception as e:
             print(f"  ⚠️ Could not fetch full history: {e}")
+            if prior_valid:
+                print("  ⚠️ History refresh aborted — existing history.json kept")
+                raise
             all_activities = []
         
         # Fetch all wellness for full range
@@ -8572,6 +9360,9 @@ class IntervalsSync:
             })
         except Exception as e:
             print(f"  ⚠️ Could not fetch wellness history: {e}")
+            if prior_valid:
+                print("  ⚠️ History refresh aborted — existing history.json kept")
+                raise
             all_wellness = []
         
         # Fetch athlete data for FTP history from API
@@ -8684,13 +9475,133 @@ class IntervalsSync:
             **monthly_tiers
         }
         
-        # Save locally
-        history_path = self.data_dir / self.HISTORY_FILE
-        with open(history_path, 'w') as f:
-            json.dump(history, f, indent=2, default=str)
+        # Save locally (atomic: a failed write leaves any previous file intact)
+        history_path = self._history_write(history)
         print(f"  ✅ history.json saved to {history_path} ({len(daily_90d)} daily, {len(weekly_180d)} weekly rows)")
         
         return history
+    
+    def _history_prior_is_valid(self) -> bool:
+        """True when history.json exists and loads as a JSON object."""
+        try:
+            with open(self.data_dir / self.HISTORY_FILE, 'r') as f:
+                return isinstance(json.load(f), dict)
+        except Exception:
+            return False
+    
+    def _history_write(self, data: Dict) -> Path:
+        """
+        Atomic same-directory write of history.json: temp file plus os.replace.
+        On any failure the temp file is removed and the previous file, if any, is
+        left exactly as it was.
+        """
+        history_path = self.data_dir / self.HISTORY_FILE
+        tmp_path = history_path.with_name(history_path.name + ".tmp")
+        try:
+            with open(tmp_path, 'w') as f:
+                json.dump(data, f, indent=2, default=str)
+            os.replace(tmp_path, history_path)
+        except BaseException:
+            try:
+                if tmp_path.exists():
+                    tmp_path.unlink()
+            except OSError:
+                pass
+            raise
+        return history_path
+    
+    def _history_error_info(self, error: BaseException) -> Dict:
+        """
+        Bounded, sanitized classification of a failed refresh: kind and HTTP
+        status only. No exception text, which could carry a URL, a token or
+        athlete data. retry_after is used for scheduling and never persisted.
+        """
+        kind, status, retry_after = "internal", None, None
+        json_errors = (json.JSONDecodeError,)
+        requests_json_error = getattr(requests.exceptions, "JSONDecodeError", None)
+        if requests_json_error is not None:
+            json_errors += (requests_json_error,)
+        if isinstance(error, requests.exceptions.HTTPError):
+            kind = "http_status"
+            response = getattr(error, "response", None)
+            code = getattr(response, "status_code", None)
+            if isinstance(code, int) and not isinstance(code, bool):
+                status = code
+                if code in (429, 503):
+                    retry_after = self._parse_retry_after(response.headers.get("Retry-After"))
+        elif isinstance(error, json_errors):
+            kind = "decode"
+        elif isinstance(error, requests.exceptions.Timeout):
+            kind = "timeout"
+        elif isinstance(error, requests.exceptions.ConnectionError):
+            kind = "connection"
+        return {"kind": kind, "status": status, "retry_after": retry_after}
+    
+    def _history_backoff_secs(self, failures: int, retry_after_secs: Optional[int] = None) -> int:
+        """Ladder delay; Retry-After may raise it but never lower it; capped at the maximum."""
+        delay = self.HISTORY_RETRY_LADDER[-1][1]
+        for through, secs in self.HISTORY_RETRY_LADDER:
+            if through is None or failures <= through:
+                delay = secs
+                break
+        if retry_after_secs is not None:
+            delay = max(delay, int(retry_after_secs))
+        return min(delay, self.HISTORY_RETRY_MAX_SECS)
+    
+    def _record_history_refresh_failure(self, error: BaseException,
+                                        now: Optional[datetime] = None) -> Optional[Dict]:
+        """
+        Record a failed AUTOMATIC refresh in the existing history.json and return
+        the new refresh_state, or None when nothing was recorded.
+        
+        Only an existing file that loads as a JSON object carries state; every
+        other key, generated_at included, is preserved exactly and only
+        refresh_state changes. Nothing is recorded for a missing or unreadable
+        file (first run). Never raises: a failure here must not touch the main
+        sync. Publication failures are not generation failures and never reach
+        this method.
+        
+        Cross-run reach: locally the file persists. In GitHub Actions the state
+        reaches the next fresh runner only if that whole run is published; a run
+        that fails later discards it, so the next runner attempts again once the
+        run budget (_history_run_budget_hold) allows it.
+        """
+        try:
+            history_path = self.data_dir / self.HISTORY_FILE
+            if not history_path.exists():
+                return None
+            with open(history_path, 'r') as f:
+                prev = json.load(f)
+            if not isinstance(prev, dict):
+                return None
+            now_utc = now if now is not None else datetime.now(timezone.utc)
+            if now_utc.tzinfo is None:
+                now_utc = now_utc.astimezone()
+            now_utc = now_utc.astimezone(timezone.utc)
+            prev_state = prev.get("refresh_state")
+            failures = 0
+            if isinstance(prev_state, dict) and prev_state.get("attempt_script_hash") == self.script_hash:
+                count = prev_state.get("consecutive_failures")
+                if isinstance(count, int) and not isinstance(count, bool) and count >= 0:
+                    failures = count
+            failures += 1
+            info = self._history_error_info(error)
+            delay = self._history_backoff_secs(failures, info["retry_after"])
+            state = {
+                "last_attempt_at": now_utc.isoformat(),
+                "consecutive_failures": failures,
+                "next_attempt_after": (now_utc + timedelta(seconds=delay)).isoformat(),
+                "attempt_script_hash": self.script_hash,
+                "last_error": {"kind": info["kind"], "status": info["status"]},
+            }
+            data = dict(prev)
+            data["refresh_state"] = state
+            self._history_write(data)
+            print(f"   ⚠️ Existing history.json kept; next automatic refresh attempt after {state['next_attempt_after']}")
+            return state
+        except Exception as e:
+            print(f"   ⚠️ Could not record history refresh state (non-critical): {type(e).__name__}")
+            return None
     
     def _build_daily_tier(self, activities_by_date: Dict, wellness_by_date: Dict, 
                           days: int,
@@ -9494,6 +10405,485 @@ class IntervalsSync:
             if self.debug:
                 print(f"  Could not create update issue: {e}")
     
+    # Structure shares interval retention, but not interval/DFA interpretation.
+    STRUCTURE_VERSION = 2
+    STRUCTURE_MAX_STEPS = 20
+    STRUCTURE_MAX_EFFORTS = 8
+
+    @staticmethod
+    def _structure_number(value):
+        return (isinstance(value, (int, float)) and not isinstance(value, bool)
+                and math.isfinite(value) and abs(value) <= 1e12)
+
+    @staticmethod
+    def _structure_date(value):
+        try:
+            result = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            return result if result.tzinfo is not None else None
+        except (TypeError, ValueError, AttributeError):
+            return None
+
+    @staticmethod
+    def _structure_fingerprint(value):
+        return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":"),
+                                         default=str).encode()).hexdigest()
+
+    def _structure_plan(self, act, event, reason=None):
+        """Normalize paired intent for computation; never emit raw definitions."""
+        plan = {"status": reason or ("unknown" if act.get("paired_event_id") is not None
+                                    else "no_plan"), "steps": []}
+        if reason or not isinstance(event, dict):
+            return plan
+        if (str(event.get("id")) != str(act.get("paired_event_id"))
+                or act.get("paired_event_id") is None
+                or (event.get("paired_activity_id") is not None
+                    and str(event["paired_activity_id"]) != str(act.get("id")))
+                or (event.get("athlete_id") is not None and act.get("athlete_id") is not None
+                    and str(event["athlete_id"]) != str(act["athlete_id"]))):
+            plan["status"] = "pairing_conflict"
+            return plan
+        plan["reference"] = {"event_id": str(event["id"])[:80],
+                             "updated": str(event.get("updated") or "")[:80] or None}
+        doc = event.get("workout_doc")
+        if not isinstance(doc, dict) or not isinstance(doc.get("steps"), list):
+            plan["status"] = "missing_steps"
+            return plan
+        steps = doc["steps"]
+        plan["status"] = "steps_present" if steps else "no_plan"
+        # Bound input work independently of the output cap, which counts sets.
+        for step in steps[:10000]:
+            entry = {"supported": False}
+            if isinstance(step, dict):
+                duration = step.get("duration")
+                prescribed = step.get("power")
+                target = prescribed
+                if (isinstance(prescribed, dict)
+                        and prescribed.get("units") not in self.SUMMARY_WATT_UNITS):
+                    target = step.get("_power")
+                allowed = {"duration", "power", "_power", "hr", "_hr", "cadence", "_cadence",
+                           "text", "description", "role", "ramp"}
+                if self._structure_number(duration) and 1 <= duration <= 604800:
+                    entry["duration_s"] = duration
+                if isinstance(target, dict):
+                    units = target.get("units")
+                    absolute = (units in self.SUMMARY_WATT_UNITS
+                                or (target is step.get("_power") and units is None))
+                    low = high = target.get("value")
+                    if (step.get("ramp") or (isinstance(prescribed, dict)
+                            and ("start" in prescribed or "end" in prescribed
+                                 or prescribed.get("ramp")))):
+                        absolute = False
+                    elif "min" in target or "max" in target:
+                        low, high = target.get("min"), target.get("max")
+                    if (absolute and self._structure_number(low) and self._structure_number(high)
+                            and 0 <= low <= high <= 3000):
+                        entry["target_w"] = low if low == high else [low, high]
+                if set(step) <= allowed and "duration_s" in entry and "target_w" in entry:
+                    entry.pop("supported")
+            plan["steps"].append(entry)
+        if any(s.get("supported") is False for s in plan["steps"]):
+            plan["status"] = "unsupported_steps"
+        elif steps:
+            total = sum(s["duration_s"] for s in plan["steps"])
+            if not self._structure_number(doc.get("duration")) or abs(total - doc["duration"]) > 1:
+                plan["status"] = "plan_total_mismatch"
+        plan["profile"] = plan["steps"]
+        plan["steps"] = self._structure_sets(plan["steps"])
+        omitted = max(0, len(plan["steps"]) - self.STRUCTURE_MAX_STEPS) + max(0, len(steps) - 10000)
+        if omitted:
+            plan.update(status="truncated", omitted_steps=omitted)
+            plan["steps"] = plan["steps"][:self.STRUCTURE_MAX_STEPS]
+        return plan
+
+    def _structure_sets(self, steps):
+        """Reuse the summary detector; compress exact short-recovery patterns only.
+
+        Long recoveries remain ordinary steps. Approximate summary compression is
+        insufficient for numeric comparison, so durations and targets must agree
+        exactly within each side of a set. No raw atoms are discarded on failure.
+        """
+        data = [(s.get("duration_s"), s.get("target_w"))
+                if s.get("supported") is not False and not isinstance(s.get("target_w"), list)
+                else (None, None) for s in steps]
+        result, i = [], 0
+        while i < len(steps):
+            block = self._try_alternating_block(data, i)
+            if block:
+                count, wd, wp, rd, rp, pairs, tail, trailing = block
+                # Keep a differing/long tail outside the set. A last work bout
+                # immediately before it still belongs to this set.
+                if tail is not None:
+                    # The summary detector may also see the next set's first
+                    # work bout as trailing. Stop before the long recovery.
+                    count, trailing = pairs, False
+                consumed = pairs * 2 + int(trailing) - int(tail is not None)
+                selected = data[i:i + consumed]
+                if (count >= 3 and rd < 60
+                        and all(v == data[i + j % 2] for j, v in enumerate(selected))):
+                    result.append({"duration_s": sum(d for d, _ in selected),
+                                   "target_w": steps[i]["target_w"],
+                                   "repeat": [count, wd, rd]})
+                    i += consumed
+                    continue
+            result.append(steps[i])
+            i += 1
+        return result
+
+    def _structure_streams(self, act, streams):
+        """Elapsed horizon, no gap filling, no extrapolated final sample."""
+        number = self._structure_number
+        horizon = act.get("elapsed_time")
+        times = streams.get("time") if isinstance(streams, dict) else None
+        reason = None
+        if (not isinstance(times, list) or len(times) < 2 or len(times) > 1000000
+                or any(not number(t) or t < 0 for t in times)
+                or any(b <= a for a, b in zip(times, times[1:]))):
+            times, reason = [], "missing_or_invalid_time"
+        if not number(horizon) or not 0 < horizon <= 604800:
+            horizon = times[-1] if times and 0 < times[-1] <= 604800 else 0
+            reason = reason or "activity_elapsed_unavailable"
+        if times and times[-1] > horizon + 1:
+            times, reason = [], "stream_exceeds_elapsed"
+        values = {}
+        for field in ("watts", "heartrate", "cadence"):
+            value = streams.get(field) if isinstance(streams, dict) else None
+            values[field] = value if isinstance(value, list) and len(value) == len(times) else []
+        return horizon, times, values, reason
+
+    def _structure_offset(self, steps, times, watts, shift, horizon):
+        """One bounded recording-time alignment, using the entire target profile."""
+        def error(offset):
+            index, end = 0, shift + offset + steps[0]["duration_s"]
+            squared, observed = 0.0, 0.0
+            for i, t in enumerate(times[:-1]):
+                a, b = max(t, shift + offset), min(t + 1, times[i + 1], horizon)
+                value = watts[i]
+                if not self._structure_number(value) or value < 0:
+                    continue
+                while a < b:
+                    while index < len(steps) and a >= end:
+                        index += 1
+                        if index < len(steps):
+                            end += steps[index]["duration_s"]
+                    if index == len(steps):
+                        break
+                    target = steps[index]["target_w"]
+                    if isinstance(target, list):
+                        target = sum(target) / 2
+                    dt = min(b, end) - a
+                    squared += (value - target) ** 2 * dt
+                    observed += dt
+                    a += dt
+            return squared / observed if observed else float("inf")
+        # min preserves the smallest integer offset on exact ties.
+        return min(range(9), key=error)
+
+    def _structure_window(self, start, end, times, values, precise=False, windows=None):
+        windows = windows if windows is not None else [(start, end)]
+        span = sum(b - a for a, b in windows)
+        sums, durations = [0.0] * 3, [0.0] * 3
+        zero = 0.0
+        first = 0
+        for i in range(len(times) - 1):
+            t = times[i]
+            if t >= end:
+                break
+            while first < len(windows) and windows[first][1] <= t:
+                first += 1
+            dt, j = 0, first
+            sample_end = min(t + 1, times[i + 1])
+            while j < len(windows) and windows[j][0] < sample_end:
+                a, b = windows[j]
+                dt += max(0, min(b, sample_end) - max(a, t))
+                j += 1
+            if not dt:
+                continue
+            for j, key in enumerate(("watts", "heartrate", "cadence")):
+                v = values[key][i] if values[key] else None
+                if self._structure_number(v) and (v > 0 if key == "heartrate" else v >= 0):
+                    sums[j] += v * dt
+                    durations[j] += dt
+                    if j == 0 and v == 0:
+                        zero += dt
+        means = [(s / d if precise else round(s / d, 1)) if d else None
+                 for s, d in zip(sums, durations)]
+        coverage = [(100 * d / span if precise else round(100 * d / span, 2)) if span > 0 else 0
+                    for d in durations]
+        return [start, end, means[0], round(sums[0] / 1000, 1) if durations[0] else None,
+                means[1], means[2], *coverage,
+                round(100 * zero / durations[0], 2) if durations[0] else None]
+
+    def _build_session_structure(self, act, event, streams, raw_intervals=None,
+                                 plan_reason=None):
+        if act.get("type") in ("Walk", "Hike"):
+            return None
+        plan = self._structure_plan(act, event)
+        horizon, times, values, timing_reason = self._structure_streams(act, streams)
+        window = lambda a, b: self._structure_window(a, b, times, values)
+        out = {"version": self.STRUCTURE_VERSION, "method": "fixed_elapsed_thirds",
+               "status": "unknown"}
+        if "reference" in plan:
+            out["plan"] = plan["reference"]
+        if plan["steps"]:
+            out["steps"] = plan["steps"]
+        if plan.get("omitted_steps"):
+            out["omitted_steps"] = plan["omitted_steps"]
+        issues = []
+        shift = act.get("workout_shift_secs")
+        if plan_reason:
+            issues.append(plan_reason)
+        elif plan["status"] == "no_plan":
+            out["status"] = "no_plan"
+        elif plan["status"] != "steps_present":
+            issues.append(plan["status"])
+        elif shift is not None and (not self._structure_number(shift) or abs(shift) > 604800):
+            issues.append("invalid_workout_shift")
+        elif timing_reason or not values["watts"]:
+            issues.append(timing_reason or "missing_power")
+        else:
+            # Time-stream gaps are unrecorded time. Compress only those gaps;
+            # null watts and real zero-power samples retain their recording time.
+            removed, recorded = 0, [times[0]]
+            for before, after in zip(times, times[1:]):
+                removed += max(0, after - before - 1)
+                recorded.append(after - removed)
+            plan_horizon = horizon - removed
+            plan_window = lambda a, b, ranges=None, precise=False: self._structure_window(
+                a, b, recorded, values, precise=precise, windows=ranges)
+            offset = self._structure_offset(plan["profile"], recorded, values["watts"],
+                                            shift or 0, plan_horizon)
+            if offset:
+                out["offset_s"] = offset
+            cursor = (shift or 0) + offset
+            total = sum(s["duration_s"] for s in plan["steps"])
+            # The offset models power-response lag, not extra prescribed riding.
+            # Judge ride duration on the original workout timer; clip lagged
+            # measurements at the recording end and expose their fraction.
+            delta = plan_horizon - ((shift or 0) + total)
+            results, agrees, disagrees, low_coverage = [], 0, 0, False
+            incomplete = False
+            for step in plan["steps"]:
+                end = cursor + step["duration_s"]
+                clip = lambda t: max(0, min(t, plan_horizon))
+                a, b = clip(min(cursor + 1, end)), clip(end)
+                ranges = [(a, b)]
+                planned_work = step["duration_s"] - 1
+                if "repeat" in step:
+                    reps, work, rest = step["repeat"]
+                    ranges = [(clip(cursor + n * (work + rest) + 1),
+                               clip(cursor + n * (work + rest) + work)) for n in range(reps)]
+                    planned_work = reps * (work - 1)
+                row = plan_window(a, b, ranges)
+                exact = plan_window(a, b, ranges, precise=True)
+                work_span = sum(y - x for x, y in ranges)
+                fraction = work_span / planned_work if planned_work else 0
+                adequate = work_span > 0 and exact[6] >= 95
+                low_coverage |= work_span > 0 and not adequate
+                incomplete |= clip(end - offset) - clip(cursor - offset) < step["duration_s"]
+                target = step["target_w"]
+                low, high = target if isinstance(target, list) else (target * .95, target * 1.05)
+                agreement = low <= exact[2] <= high if adequate else None
+                agrees += agreement is True
+                disagrees += agreement is False
+                result = {"target_w": target, "actual": row, "match": agreement}
+                if "repeat" in step:
+                    result.update(repeat=step["repeat"], work_s=work_span)
+                if not adequate:
+                    for index in (2, 3, 4, 5, 9):
+                        row[index] = None
+                if fraction < 1:
+                    result.update(duration_s=step["duration_s"], observed_window_fraction=round(fraction, 4))
+                results.append(result)
+                cursor = end
+            if abs(delta) > total * .5 or disagrees > (agrees + disagrees) / 2:
+                out["status"] = "not_followed"
+                issues.append("gross_duration_difference" if abs(delta) > total * .5 else "most_steps_disagree")
+            elif agrees == len(results) and 0 <= delta <= 30 and not incomplete:
+                out["status"] = "followed"
+            else:
+                out["status"] = "partly_followed"
+                issues.append("insufficient_power_coverage" if low_coverage or not agrees + disagrees
+                              else "shortened_or_extended" if incomplete or not 0 <= delta <= 30
+                              else "some_steps_disagree")
+            if out["status"] in ("followed", "partly_followed"):
+                out.update(method="paired_plan_windows", steps=results)
+                if shift:
+                    out["shift_s"] = shift
+                unassigned = []
+                if (shift or 0) + offset > 0:
+                    unassigned.append(plan_window(0, min((shift or 0) + offset, plan_horizon)))
+                if delta > 30:
+                    unassigned.append(plan_window(max(0, cursor), plan_horizon))
+                if unassigned:
+                    out["unassigned"] = unassigned
+        if out["method"] == "fixed_elapsed_thirds":
+            edges = [0, math.floor(horizon / 3), math.floor(2 * horizon / 3), horizon]
+            out["thirds"] = [window(a, b) for a, b in zip(edges, edges[1:])]
+            if timing_reason and timing_reason not in issues:
+                issues.append(timing_reason)
+            efforts, omitted = [], 0
+            if isinstance(raw_intervals, list):
+                for iv in raw_intervals:
+                    if not isinstance(iv, dict) or iv.get("type") != "WORK":
+                        continue
+                    a = iv.get("start_time", iv.get("start_secs"))
+                    b = iv.get("end_time", iv.get("end_secs"))
+                    if not (self._structure_number(a) and self._structure_number(b) and 0 <= a < b <= horizon + 1):
+                        if "efforts_partial" not in issues:
+                            issues.append("efforts_partial")
+                        continue
+                    if len(efforts) == self.STRUCTURE_MAX_EFFORTS:
+                        omitted += 1
+                        continue
+                    metrics = [iv.get(raw, iv.get(formatted)) for raw, formatted in
+                               (("average_watts", "avg_power"), ("average_heartrate", "avg_hr"),
+                                ("average_cadence", "avg_cadence"))]
+                    efforts.append([a, b] + [v if self._structure_number(v) and v >= 0 else None
+                                             for v in metrics])
+                if efforts:
+                    out["efforts"] = efforts
+                if omitted:
+                    out["omitted_efforts"] = omitted
+            else:
+                issues.append("efforts_unavailable")
+        if issues:
+            out["issues"] = issues
+        return out
+
+    @staticmethod
+    def _structure_summary(block):
+        """Small, self-contained comparison data that can outlive interval detail."""
+        summary = {"method": "plan_match_v2", "status": block["status"]}
+        if block.get("steps"):
+            rows = []
+            for step in block["steps"]:
+                actual = step.get("actual")
+                duration = actual[1] - actual[0] if actual else step.get("duration_s")
+                if "repeat" in step:
+                    duration = step.get("work_s", step["repeat"][0] * step["repeat"][1])
+                rows.append([duration, step.get("target_w"),
+                             actual[2] if actual else None, step.get("match")])
+                if "repeat" in step:
+                    rows[-1].append(step["repeat"])
+            summary["steps"] = rows
+        if block.get("issues"):
+            summary["issues"] = block["issues"][:]
+        if block.get("omitted_steps"):
+            summary["omitted_steps"] = block["omitted_steps"]
+        return summary
+
+    def _prepare_session_structures(self, activities, events, previous_lookup, now=None):
+        """Full blocks persist in intervals.json; expired summaries need no fetch."""
+        now = now or datetime.now(timezone.utc)
+        cutoff = (now.astimezone() - timedelta(days=self.INTERVAL_RETENTION_DAYS)).strftime("%Y-%m-%d")
+        event_map = defaultdict(list)
+        for event in events or []:
+            if isinstance(event, dict) and event.get("id") is not None:
+                event_map[str(event["id"])].append(event)
+        entries = self._intervals_data.setdefault("activities", [])
+        interval_map = {str(e.get("activity_id")): e for e in entries}
+        result = {}
+        for act in activities:
+            if act.get("type") in ("Walk", "Hike"):
+                entry = interval_map.get(str(act.get("id")))
+                if entry:
+                    entry.pop("session_structure", None)
+                continue
+            date = act.get("start_date_local", "")[:10]
+            if not date or date < cutoff:
+                continue
+            aid = str(act.get("id"))
+            paired = act.get("paired_event_id")
+            matches = event_map.get(str(paired), []) if paired is not None else []
+            event = matches[0] if len(matches) == 1 else None
+            entry = interval_map.get(aid) or {}
+            old = entry.get("session_structure") or {}
+            cache = old.get("cache") or {}
+            activity_key = self._structure_fingerprint({k: act.get(k) for k in
+                ("id", "paired_event_id", "start_date", "elapsed_time", "moving_time", "icu_sync_date",
+                 "icu_intervals_edited", "icu_average_watts", "icu_joules", "workout_shift_secs",
+                 "icu_intervals", "recording_stops", "icu_recording_time", "type")})
+            event_key = self._structure_fingerprint(matches) if matches else None
+            due = self._structure_date(cache.get("next_refresh_at"))
+            if (old.get("version") == self.STRUCTURE_VERSION and cache.get("activity_key") == activity_key
+                    and cache.get("event_key") == event_key and due and now < due):
+                result[aid] = old
+                continue
+            reason, failures, retry_after = None, [], 0
+            if len(matches) > 1:
+                reason = "ambiguous_pairing"
+            elif paired is not None and event is None:
+                try:
+                    event = self._intervals_get(f"events/{paired}", {"resolve": "true"})
+                    if not isinstance(event, dict) or str(event.get("id")) != str(paired):
+                        reason = "paired_event_unavailable"
+                except (requests.exceptions.RequestException, ValueError) as exc:
+                    reason = "paired_event_unavailable"
+                    response = getattr(exc, "response", None)
+                    if response is not None and response.status_code == 429:
+                        retry_after = self._parse_retry_after(response.headers.get("Retry-After")) or 0
+                if reason:
+                    failures.append(reason)
+            plan_key = self._structure_fingerprint(event.get("workout_doc")) if isinstance(event, dict) else None
+            status, streams = self._fetch_activity_streams(aid, ["time", "watts", "heartrate", "cadence"])
+            retry_after = max(retry_after, getattr(self, "_last_retry_after_secs", None) or 0)
+            if status != "ok":
+                streams = {}
+                failures.append("streams_" + status)
+            raw = act.get("icu_intervals")
+            cached_efforts = False
+            if not isinstance(raw, list):
+                raw = entry.get("intervals")
+                cached_efforts = isinstance(raw, list)
+            block = self._build_session_structure(act, event, streams, raw, reason)
+            if block["method"] == "fixed_elapsed_thirds" and not isinstance(raw, list):
+                iv_status, payload = self._fetch_activity_intervals(aid)
+                retry_after = max(retry_after, getattr(self, "_last_retry_after_secs", None) or 0)
+                raw = payload if iv_status in ("ok", "no_data") else None
+                if raw is None:
+                    failures.append("efforts_" + iv_status)
+                block = self._build_session_structure(act, event, streams, raw, reason)
+            if cached_efforts and block.get("efforts"):
+                block.setdefault("issues", []).append("efforts_from_interval_cache")
+            if failures:
+                block = self._build_session_structure(act, event, streams, raw, failures[0])
+                block["issues"] = list(dict.fromkeys(block.get("issues", []) + failures))
+                if status != "ok" and old.get("thirds"):
+                    block["thirds"] = old["thirds"]
+                if ("paired_event_unavailable" in failures
+                        and (old.get("plan") or {}).get("event_id") == str(paired)):
+                    block["plan"] = dict(old["plan"])
+                    if old.get("steps"):
+                        block["steps"] = []
+                        for step in old["steps"]:
+                            retained = {k: step[k] for k in ("duration_s", "target_w", "supported", "repeat") if k in step}
+                            if "duration_s" not in retained and step.get("actual"):
+                                retained["duration_s"] = (step["actual"][1] - step["actual"][0]
+                                                          + (1 if old.get("version", 1) >= 2 else 0))
+                            block["steps"].append(retained)
+                    if old.get("omitted_steps"):
+                        block["omitted_steps"] = old["omitted_steps"]
+                if cached_efforts and block.get("efforts"):
+                    block["issues"].append("efforts_from_interval_cache")
+            attempts = min(3, int(cache.get("failures", 0)) + 1) if failures else 0
+            delay = max((3600, 21600, 86400)[attempts - 1], retry_after) if failures else 86400
+            block["cache"] = {"activity_key": activity_key, "event_key": event_key,
+                              "plan_key": plan_key or cache.get("plan_key"),
+                              "sampled_at": cache.get("sampled_at") if status != "ok" else now.isoformat(),
+                              "next_refresh_at": (now + timedelta(seconds=delay)).isoformat()}
+            if failures:
+                block["cache"].update(status="stale" if old else "unavailable", failures=attempts)
+            if not entry:
+                entry = {"activity_id": act.get("id"), "date": date,
+                         "start_datetime": act.get("start_date_local", ""),
+                         "type": act.get("type", "Unknown"), "name": act.get("name", ""),
+                         "interval_summary": act.get("interval_summary"), "intervals": []}
+                entries.append(entry)
+                interval_map[aid] = entry
+            entry["session_structure"] = block
+            result[aid] = block
+        return result
+
     def _format_activities(self, activities: List[Dict], interval_activity_ids: set = None,
                            temp_unit: str = "C", wind_unit: str = "MPS",
                            speed_unit: str = "KPH",
@@ -9519,6 +10909,15 @@ class IntervalsSync:
             if e.get("activity_id") is not None
         }
         chat_notes_cutoff = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+
+        def _first_set(src: Dict, *keys: str):
+            """First value among keys that is present and not None (0 is kept)."""
+            for key in keys:
+                value = src.get(key)
+                if value is not None:
+                    return value
+            return None
+
         formatted = []
         for i, act in enumerate(activities):
             avg_power = (act.get("average_watts") or act.get("avg_watts") or 
@@ -9536,13 +10935,15 @@ class IntervalsSync:
             
             avg_cadence = (act.get("average_cadence") or act.get("avg_cadence") or
                           act.get("icu_average_cadence"))
-            avg_temp = (act.get("average_weather_temp") or act.get("average_temp") or 
-                       act.get("avg_temp") or act.get("average_temperature"))
+            # v3.139: 0 °C is a real temperature; fall through only on absent/None.
+            avg_temp = _first_set(act, "average_weather_temp", "average_temp",
+                                  "avg_temp", "average_temperature")
             joules = act.get("icu_joules")
             work_kj = round(joules / 1000, 1) if joules else None
             calories = act.get("calories") or act.get("icu_calories")
             variability_index = act.get("icu_variability_index")
-            decoupling = act.get("icu_hr_decoupling") or act.get("decoupling")
+            # v3.139: 0.0 % decoupling is a real value; fall through only on absent/None.
+            decoupling = _first_set(act, "icu_hr_decoupling", "decoupling")
             
             avg_speed_ms = act.get("average_speed")
             max_speed_ms = act.get("max_speed")
@@ -9552,7 +10953,8 @@ class IntervalsSync:
             
             weather = act.get("weather_description") or act.get("weather")
             humidity = act.get("humidity") or act.get("average_humidity")
-            wind_speed = act.get("average_wind_speed") or act.get("wind_speed")
+            # v3.139: calm (0) is a real wind speed; fall through only on absent/None.
+            wind_speed = _first_set(act, "average_wind_speed", "wind_speed")
             
             carbs_used = act.get("carbs_used")
             carbs_ingested = act.get("carbs_ingested")
@@ -9652,6 +11054,15 @@ class IntervalsSync:
                 "has_intervals": False,
                 "has_dfa": False,
             }
+            structure = (intervals_by_id.get(str(act.get("id"))) or {}).get("session_structure")
+            activity["has_structure"] = bool(structure)
+            activity["structure_summary"] = (self._structure_summary(structure) if structure else
+                (previous_latest_lookup.get(str(act.get("id"))) or {}).get("structure_summary") or
+                {"method": "plan_match_v2", "status": "unknown", "issues": ["detail_unavailable"]})
+            if act.get("type") in ("Walk", "Hike"):
+                activity["has_structure"] = False
+                activity["structure_summary"] = {"method": "plan_match_v2", "status": "unknown",
+                                                 "issues": ["sport_out_of_scope"]}
 
             # has_intervals: requires at least one WORK segment. Intervals.icu emits a
             # whole-session RECOVERY placeholder on unstructured endurance rides, so a
@@ -9665,7 +11076,8 @@ class IntervalsSync:
                 if _dfa:
                     activity["has_dfa"] = True
                     if _dfa.get("quality", {}).get("sufficient"):
-                        activity["dfa_summary"] = self._build_dfa_summary(_dfa)
+                        activity["dfa_summary"] = self._build_dfa_summary(
+                            _dfa, schema_version=(self._intervals_data or {}).get("schema_version"))
 
             # Terrain summary (v3.107) — fetched on first encounter, copied
             # forward thereafter via previous_latest_lookup. Indoor activities
@@ -9703,9 +11115,14 @@ class IntervalsSync:
             if act_date >= chat_notes_cutoff:
                 activity_id = act.get("id")
                 if activity_id:
-                    notes = self._get_activity_messages(activity_id)
+                    # v3.133: absence of chat_notes previously conflated "no notes"
+                    # with "not retrieved". The marker is emitted ONLY on degradation,
+                    # so a healthy payload is byte-identical to before.
+                    msg_status, notes = self._get_activity_messages(activity_id)
                     if notes:
                         activity["chat_notes"] = notes
+                    if msg_status == "unavailable":
+                        activity["chat_notes_status"] = "unavailable"
             
             formatted.append(activity)
         
@@ -9775,11 +11192,25 @@ class IntervalsSync:
         
         return formatted
     
+    # v3.135: in-place markers for content a workout_summary cannot render. Each
+    # replaces what used to be dropped or misstated; the scope of an unmarked summary
+    # is stated in the v3.135 note above. None contains "×" or "sets", so summary
+    # availability and the phase hard-session marker are unchanged.
+    SUMMARY_STEP_NOT_SUMMARIZED = "[step not summarized]"
+    SUMMARY_REPEAT_NOT_SUMMARIZED = "[repeat not summarized]"
+    SUMMARY_TARGET_NOT_SHOWN = "[target not shown]"
+    SUMMARY_TARGET_KEYS = ("_power", "power", "_hr", "hr", "_pace", "pace")
+    # Units under which a target value may be printed as an absolute W / bpm value.
+    # A resolved "_power" / "_hr" with no "units" is the resolve=true form the renderer
+    # has always printed; a raw "power" / "hr" must name one of these units.
+    SUMMARY_WATT_UNITS = ("w", "watts")
+    SUMMARY_BPM_UNITS = ("bpm",)
+
     def _summarize_workout_doc(self, workout_doc: Dict) -> str:
         """
         Summarize a structured workout_doc into a human-readable one-liner.
         
-        Uses two deterministic patterns:
+        Legacy repeat matcher, before the flat-list fallback in _format_events:
           Pattern A: Explicit repeats (step has 'reps' + nested 'steps')
           Pattern B: Flat alternating work/rest pairs (min 3 reps, strict guards)
         
@@ -9802,6 +11233,10 @@ class IntervalsSync:
                 rendered = self._render_step(step)
                 if rendered:
                     parts.append(rendered)
+                elif self._is_repeat_like(step):
+                    parts.append(self.SUMMARY_REPEAT_NOT_SUMMARIZED)
+                else:
+                    parts.append(self.SUMMARY_STEP_NOT_SUMMARIZED)
             
             if not parts:
                 return None
@@ -9812,17 +11247,34 @@ class IntervalsSync:
                 for p in parts
             )
             if not has_interval:
-                return None  # All flat steps — no wall-of-text problem, skip summary
+                return None  # _format_events next tries alternating, then flat lists.
             
             return self._merge_interval_blocks(parts)
         except Exception:
             return None
+
+    def _summarize_flat_workout_doc(self, workout_doc: Dict) -> str:
+        """Last-resort ordered flat summary; never introduce a hard-session marker.
+
+        Repeat and alternating renderers retain precedence and their existing
+        semantics. Unsupported atoms remain marked; no roles are inferred.
+        """
+        steps = workout_doc.get("steps") if isinstance(workout_doc, dict) else None
+        if not isinstance(steps, list) or not steps or any(self._is_repeat_like(s) for s in steps):
+            return None
+        rendered = [self._render_step(s) for s in steps[:self.STRUCTURE_MAX_STEPS]]
+        if not any(rendered):
+            return None
+        parts = [s or self.SUMMARY_STEP_NOT_SUMMARIZED for s in rendered]
+        if len(steps) > self.STRUCTURE_MAX_STEPS:
+            parts.append(self.SUMMARY_STEP_NOT_SUMMARIZED)
+        return " | ".join(parts)
     
     def _merge_interval_blocks(self, parts: List[str]) -> str:
         """
         Merge consecutive identical interval blocks in summary parts.
         
-        E.g., ["5×10s @700W / 3m rec", "5×10s @700W / 3m rec"] → ["2 × 5×10s @700W / 3m rec"]
+        E.g., ["5×(10s @700W + 3m @120W)", "5×(10s @700W + 3m @120W)"] → ["2 × 5×(10s @700W + 3m @120W)"]
         
         No WU/CD labeling — that's a coaching interpretation, not structural data.
         Strict string equality only.
@@ -9835,7 +11287,10 @@ class IntervalsSync:
         while i < len(parts):
             current = parts[i]
             count = 1
-            while i + count < len(parts) and parts[i + count] == current:
+            # v3.135: a part carrying a marker never merges; identical text does not
+            # prove that the unrendered steps or targets behind it are identical.
+            while (i + count < len(parts) and parts[i + count] == current
+                    and "[" not in current):
                 count += 1
             if count > 1:
                 result.append(f"{count} × {current}")
@@ -9851,8 +11306,9 @@ class IntervalsSync:
             if not isinstance(step, dict):
                 return None
             
-            # Pattern A: Explicit repeats
-            if "reps" in step and "steps" in step and isinstance(step["steps"], list):
+            # Pattern A: Explicit repeats. v3.136: any step with repeat semantics goes
+            # here; a malformed one returns None and is marked by the caller.
+            if self._is_repeat_like(step):
                 return self._render_repeat_block(step)
             
             # Pattern B: Check later at block level (handled in _summarize_workout_doc 
@@ -9864,28 +11320,12 @@ class IntervalsSync:
     def _render_flat_step(self, step: Dict) -> str:
         """Render a non-repeat step as 'duration @power'."""
         try:
-            dur = step.get("duration")
-            if not dur or not isinstance(dur, (int, float)):
+            dur = self._summary_duration(step.get("duration"))
+            if dur is None:
                 return None
             
-            dur_str = self._format_duration(int(dur))
-            
-            # Get power target
-            power = step.get("_power") or step.get("power")
-            if power and isinstance(power, dict):
-                val = power.get("value")
-                if val is not None:
-                    return f"{dur_str} @{int(round(val))}W"
-            
-            # HR target
-            hr = step.get("_hr") or step.get("hr")
-            if hr and isinstance(hr, dict):
-                val = hr.get("value")
-                if val is not None:
-                    return f"{dur_str} @{int(round(val))}bpm"
-            
-            # Duration only (freeride, etc)
-            return f"{dur_str}"
+            dur_str = self._format_duration(dur)
+            return f"{dur_str}{self._describe_step_target(step)}"
         except Exception:
             return None
     
@@ -9894,27 +11334,34 @@ class IntervalsSync:
         Render a repeat block (Pattern A).
         
         Handles:
-        - Simple: reps × (work + rest) → "N×dur @power / rest rec"
-        - With set recovery: first nested step is low-power rest, then alternating pairs
+        - Simple: reps × (A + B) → "N×(dur @target + dur @target)"
+        - With a leading set step: longer, lower-or-equal target step, then alternating pairs
+
+        Structure only (v3.134): no step is labelled recovery. Order and a lower target
+        are not evidence of a step's role, so each step keeps its own target.
         
         Bails to None if nested structure has >3 unique step types or is too complex.
         """
         try:
-            reps = step.get("reps", 1)
-            nested = step.get("steps", [])
-            if not nested or not isinstance(nested, list):
+            # v3.136: count and shape are validated first; zero, negative, fractional,
+            # non-finite, boolean or non-numeric counts and non-list or empty "steps"
+            # fail closed (the caller marks the repeat).
+            parts = self._repeat_parts(step)
+            if parts is None:
                 return None
+            reps, nested = parts
             
-            # Simple case: 2 nested steps (work + rest)
+            # Simple case: 2 nested steps, rendered alike
             if len(nested) == 2:
-                work, rest = nested[0], nested[1]
-                work_str = self._describe_work_step(work)
-                rest_str = self._describe_rest_duration(rest)
-                if work_str and rest_str:
-                    return f"{reps}×{work_str} / {rest_str} rec"
-                elif work_str:
-                    return f"{reps}×{work_str}"
-                return None
+                first, second = nested[0], nested[1]
+                # v3.135: availability is decided exactly as in v3.134 (see
+                # _repeat_step_describable); rendering follows _step_target, and a
+                # step that cannot render is marked in place, never dropped.
+                if not self._repeat_step_describable(first):
+                    return None
+                # v3.136: a nested repeat child is rendered as a repeat or marked,
+                # never by its aggregate duration.
+                return f"{reps}×({self._render_child(first)} + {self._render_child(second)})"
             
             # Check for alternating work/rest pattern inside nested steps
             # (e.g., 30/15 sessions: set_recovery, then work, rest, work, rest...)
@@ -9933,6 +11380,11 @@ class IntervalsSync:
         Detect alternating work/rest pairs inside a nested step list.
         Used for 30/15-style sessions where the builder unrolls reps inside a set.
         
+        The guards decide only whether the steps compress; they do not establish that
+        the lower step is recovery. v3.134 renders both targets and no role label:
+        "k×(a + b)", then "+ (a + b')" when the last rest duration differs and
+        "+ a" for a trailing rep; a leading set step keeps its target.
+
         Guards:
         - Both work and rest must have numeric power targets
         - All work targets within ±2W, all rest targets within ±2W
@@ -9940,10 +11392,16 @@ class IntervalsSync:
         - Minimum 3 pairs
         """
         try:
+            # v3.136: a child with repeat semantics or an unusable duration can never
+            # stand in a compressed position (set step, pair or trailing rep).
+            def usable(child):
+                return (isinstance(child, dict) and not self._is_repeat_like(child)
+                        and self._summary_duration(child.get("duration")) is not None)
+
             # Check if first step is a set recovery (low power, before the main work)
             set_rec = None
             start_idx = 0
-            if len(nested) >= 5:  # need at least set_rec + 2 pairs
+            if len(nested) >= 5 and usable(nested[0]) and usable(nested[1]):
                 first = nested[0]
                 second = nested[1]
                 first_power = self._get_power(first)
@@ -9963,16 +11421,19 @@ class IntervalsSync:
             
             # Try to consume as (work, rest) pairs
             pairs = []
+            pair_steps = []
             i = 0
             while i + 1 < len(remaining):
                 work = remaining[i]
                 rest = remaining[i + 1]
                 w_power = self._get_power(work)
                 r_power = self._get_power(rest)
+                if not usable(work) or not usable(rest):
+                    return None  # v3.136: unusable child — bail (caller marks the repeat)
                 w_dur = work.get("duration")
                 r_dur = rest.get("duration")
                 
-                if w_power is None or r_power is None or w_dur is None or r_dur is None:
+                if w_power is None or r_power is None:
                     return None  # Can't compare — bail
                 w_power = int(round(w_power))
                 r_power = int(round(r_power))
@@ -9982,6 +11443,7 @@ class IntervalsSync:
                     return None  # Targets must be meaningfully distinct
                 
                 pairs.append((w_dur, w_power, r_dur, r_power))
+                pair_steps.append((work, rest))
                 i += 2
             
             # Trailing solo work step: final rep with no rest (builder drops
@@ -9989,8 +11451,8 @@ class IntervalsSync:
             has_trailing = False
             if i == len(remaining) - 1:
                 trailing = remaining[i]
-                t_power = self._get_power(trailing)
-                t_dur = trailing.get("duration")
+                t_power = self._get_power(trailing) if usable(trailing) else None
+                t_dur = trailing.get("duration") if usable(trailing) else None
                 if (t_power is not None and t_dur is not None and pairs):
                     ref_wd = pairs[0][0]
                     ref_wp = pairs[0][1]
@@ -10014,23 +11476,51 @@ class IntervalsSync:
                 if rd != ref_r_dur and j < len(pairs) - 1:
                     return None
             
-            # Build summary
-            n_reps = len(pairs) + (1 if has_trailing else 0)
-            work_dur_str = self._format_duration(ref_w_dur)
-            work_power = int(round(ref_w_power))
-            rest_dur_str = self._format_duration(ref_r_dur)
-            
-            inner = f"{n_reps}×{work_dur_str} @{work_power}W / {rest_dur_str} rec"
-            
-            if outer_reps > 1:
-                if set_rec:
-                    sr_dur = self._format_duration(set_rec.get("duration", 0))
-                    return f"{outer_reps} sets × {inner} ({sr_dur} set rec)"
-                return f"{outer_reps} sets × {inner}"
+            # Build summary (structure only; both targets kept, no role label).
+            # v3.135: targets are rendered through _step_target / _role_target_suffix,
+            # and an unmatched final child is written out instead of dropped.
+            n_uniform = len(pairs)
+            last_r_dur = pairs[-1][2]
+            has_tail = last_r_dur != ref_r_dur
+            if has_tail:
+                n_uniform -= 1
+            work_steps = [w for w, _ in pair_steps]
+            if has_trailing:
+                work_steps.append(remaining[i])
+            rest_steps = [r for _, r in pair_steps]
+            if has_tail:
+                rest_steps = rest_steps[:-1]
+            work_str = (f"{self._format_duration(int(ref_w_dur))}"
+                        f"{self._role_target_suffix(work_steps, ref_w_power)}")
+            rest_str = (f"{self._format_duration(int(ref_r_dur))}"
+                        f"{self._role_target_suffix(rest_steps, ref_r_power)}")
+
+            inner = f"{n_uniform}×({work_str} + {rest_str})"
+            compound = False
+            if has_tail:
+                # Tail exception: render the differing last pair explicitly.
+                tail_rest = pair_steps[-1][1]
+                tail_str = (f"{self._format_duration(int(last_r_dur))}"
+                            f"{self._describe_step_target(tail_rest)}")
+                inner += f" + ({work_str} + {tail_str})"
+                compound = True
+            if has_trailing:
+                inner += f" + {work_str}"
+                compound = True
+            elif i == len(remaining) - 1:
+                unmatched = remaining[i]
+                inner += f" + {self._render_child(unmatched)}"
+                compound = True
             
             if set_rec:
-                sr_dur = self._format_duration(set_rec.get("duration", 0))
-                return f"{inner} ({sr_dur} set rec)"
+                sr_dur = self._format_duration(int(set_rec.get("duration")))
+                inner = f"{sr_dur}{self._describe_step_target(set_rec)} + {inner}"
+                compound = True
+            
+            if outer_reps > 1:
+                if compound:
+                    return f"{outer_reps} sets × ({inner})"
+                return f"{outer_reps} sets × {inner}"
             return inner
         except Exception:
             return None
@@ -10048,36 +11538,187 @@ class IntervalsSync:
             return None
     
     def _describe_work_step(self, step: Dict) -> str:
-        """Describe a work step as 'dur @power'."""
+        """Describe an atomic step as 'dur @target'; None if its duration is unusable."""
+        try:
+            if self._is_repeat_like(step):
+                return None
+            dur = self._summary_duration(step.get("duration"))
+            if dur is None:
+                return None
+            dur_str = self._format_duration(dur)
+            return f"{dur_str}{self._describe_step_target(step)}"
+        except Exception:
+            return None
+
+    # v3.136: one duration policy and one repeat-count policy for every summary path.
+    SUMMARY_MAX_NESTED_REPEAT_DEPTH = 4
+
+    @staticmethod
+    def _summary_duration(value) -> Optional[int]:
+        """
+        Seconds a summary may print for a step, or None when the duration is not a
+        usable positive finite number (missing, zero, negative, non-finite, boolean,
+        string or other type). Fractional seconds are truncated for display, as
+        before; a value below 1 s is not usable.
+        """
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return None
+        if not math.isfinite(value) or value < 1:
+            return None
+        return int(value)
+
+    @staticmethod
+    def _summary_count(value) -> Optional[int]:
+        """
+        A repeat count a summary may print, or None unless it is a whole finite
+        number of at least 1 (not boolean, not a string, not fractional).
+        """
+        if isinstance(value, bool) or not isinstance(value, (int, float)):
+            return None
+        if not math.isfinite(value) or value < 1 or value != int(value):
+            return None
+        return int(value)
+
+    @staticmethod
+    def _is_repeat_like(step) -> bool:
+        """A step with repeat semantics ("reps" or "steps" key) is never rendered flat."""
+        return isinstance(step, dict) and ("reps" in step or "steps" in step)
+
+    def _repeat_parts(self, step: Dict):
+        """(count, children) for a well-formed repeat, else None (fail closed)."""
+        if not self._is_repeat_like(step):
+            return None
+        count = self._summary_count(step.get("reps"))
+        children = step.get("steps")
+        if count is None or not isinstance(children, list) or not children:
+            return None
+        return count, children
+
+    def _render_child(self, child, depth: int = 1) -> str:
+        """
+        Render one child of a repeat: a nested two-step repeat as "N×(A + B)"
+        (recursively), any other repeat-like child as the repeat marker, and an atomic
+        child through _describe_work_step or the step marker. Never renders a repeat
+        by its aggregate duration.
+        """
+        if self._is_repeat_like(child):
+            parts = self._repeat_parts(child)
+            if (parts is None or len(parts[1]) != 2
+                    or depth > self.SUMMARY_MAX_NESTED_REPEAT_DEPTH):
+                return self.SUMMARY_REPEAT_NOT_SUMMARIZED
+            count, (a, b) = parts
+            return (f"{count}×({self._render_child(a, depth + 1)} + "
+                    f"{self._render_child(b, depth + 1)})")
+        return self._describe_work_step(child) or self.SUMMARY_STEP_NOT_SUMMARIZED
+
+    def _step_target_value(self, step: Dict):
+        """
+        The one target policy for every workout_summary output path (v3.135).
+
+        Returns ("W", raw), ("bpm", raw), None (no target key at all) or
+        SUMMARY_TARGET_NOT_SHOWN. Presence is decided by key, not truthiness, so
+        "power": {} or "power": null is a present target, not an untargeted step.
+        Power governs when any power key is present; an unprintable power target is
+        marked and never replaced by an HR value. A value is printed only when:
+        - it is a finite number in the governing object ("_power" if present, else
+          "power"; likewise "_hr" / "hr");
+        - its units support the absolute label: a resolved "_power" / "_hr" with no
+          "units", or units in SUMMARY_WATT_UNITS / SUMMARY_BPM_UNITS. Relative
+          targets (%FTP, zones) are marked, never relabelled or converted;
+        - no present object of that kind carries range bounds ("start" / "end"),
+          which a single printed value would silently discard.
+        A pace key is always marked. Never raises.
+        """
+        try:
+            for resolved, raw, label, units_ok in (
+                    ("_power", "power", "W", self.SUMMARY_WATT_UNITS),
+                    ("_hr", "hr", "bpm", self.SUMMARY_BPM_UNITS)):
+                present = [k for k in (resolved, raw) if k in step]
+                if not present:
+                    continue
+                for k in present:
+                    obj = step[k]
+                    if isinstance(obj, dict) and ("start" in obj or "end" in obj):
+                        return self.SUMMARY_TARGET_NOT_SHOWN
+                key = resolved if resolved in step else raw
+                obj = step[key]
+                if not isinstance(obj, dict):
+                    return self.SUMMARY_TARGET_NOT_SHOWN
+                val = obj.get("value")
+                if (isinstance(val, bool) or not isinstance(val, (int, float))
+                        or not math.isfinite(val)):
+                    return self.SUMMARY_TARGET_NOT_SHOWN
+                units = obj.get("units")
+                if key == raw or units is not None:
+                    if not isinstance(units, str) or units.strip().lower() not in units_ok:
+                        return self.SUMMARY_TARGET_NOT_SHOWN
+                return (label, float(val))
+            if "_pace" in step or "pace" in step:
+                return self.SUMMARY_TARGET_NOT_SHOWN
+            return None
+        except Exception:
+            return self.SUMMARY_TARGET_NOT_SHOWN
+
+    def _step_target(self, step: Dict):
+        """_step_target_value with the printable value rounded for display."""
+        target = self._step_target_value(step)
+        if isinstance(target, tuple):
+            return (target[0], int(round(target[1])))
+        return target
+
+    def _describe_step_target(self, step: Dict) -> str:
+        """Target suffix per _step_target: " @NW", " @Nbpm", "" or " [target not shown]"."""
+        target = self._step_target(step)
+        if target is None:
+            return ""
+        if isinstance(target, tuple):
+            return f" @{target[1]}{target[0]}"
+        return f" {self.SUMMARY_TARGET_NOT_SHOWN}"
+
+    def _role_target_suffix(self, steps: List[Dict], ref_power: float) -> str:
+        """
+        Target suffix for one role (work or rest) of a compressed alternating block.
+
+        The detectors compare targets through _get_power, which reads any value. The
+        rendered suffix follows _step_target: the reference watts are printed only when
+        every step in the role has a printable watt target; otherwise the role is
+        marked. Detection, and so summary availability, is unchanged.
+        """
+        targets = [self._step_target_value(s) for s in steps]
+        if targets and all(isinstance(t, tuple) and t[0] == "W" for t in targets):
+            raw = [t[1] for t in targets]
+            # v3.136: the detectors' 2 W tolerance (relative to the reference, the
+            # role's first step) is checked on raw values before display rounding;
+            # a wider deviation is marked rather than shown as the reference value.
+            if all(abs(v - raw[0]) <= 2 for v in raw):
+                return f" @{int(round(raw[0]))}W"
+        return f" {self.SUMMARY_TARGET_NOT_SHOWN}"
+
+    def _repeat_step_describable(self, step: Dict) -> bool:
+        """
+        Whether v3.134 _describe_work_step would have returned a string for this step.
+
+        A two-step repeat block exists only when its first step is describable. That
+        test is kept exactly as in v3.134 so the target policy cannot change which
+        repeats render, and with them summary null status or the phase "×" marker.
+        """
         try:
             dur = step.get("duration")
             if not dur:
-                return None
-            dur_str = self._format_duration(int(dur))
-            
+                return False
+            int(dur)
             power = self._get_power(step)
             if power is not None:
-                return f"{dur_str} @{int(round(power))}W"
-            
+                int(round(power))
+                return True
             hr = step.get("_hr") or step.get("hr")
             if hr and isinstance(hr, dict):
                 val = hr.get("value")
                 if val is not None:
-                    return f"{dur_str} @{int(round(val))}bpm"
-            
-            return dur_str
+                    int(round(val))
+            return True
         except Exception:
-            return None
-    
-    def _describe_rest_duration(self, step: Dict) -> str:
-        """Describe a rest step duration."""
-        try:
-            dur = step.get("duration")
-            if not dur:
-                return None
-            return self._format_duration(int(dur))
-        except Exception:
-            return None
+            return False
     
     @staticmethod
     def _format_duration(seconds: int) -> str:
@@ -10111,6 +11752,11 @@ class IntervalsSync:
         - All work durations equal, all rest durations equal (one tail exception)
         - Minimum 3 pairs per block
         - Work power must be higher than rest power
+
+        As in the nested detector, the guards decide only whether steps compress.
+        v3.134 renders "k×(a + b)" with both targets and no role label, an explicit
+        "+ (a + b')" for a differing tail rest and "+ a" for a trailing rep, and
+        resumes scanning immediately after the last consumed step.
         """
         try:
             steps = workout_doc.get("steps")
@@ -10126,6 +11772,10 @@ class IntervalsSync:
             for s in steps:
                 if not isinstance(s, dict):
                     return None
+                # v3.136: a repeat-like step or an unusable duration cannot join a block.
+                if self._is_repeat_like(s) or self._summary_duration(s.get("duration")) is None:
+                    step_data.append((None, None))
+                    continue
                 dur = s.get("duration")
                 power = self._get_power(s)
                 step_data.append((dur, power))
@@ -10144,18 +11794,46 @@ class IntervalsSync:
                     
                     block = self._try_alternating_block(step_data, i)
                     if block:
-                        count, work_dur, work_power, rest_dur = block
-                        wd_str = self._format_duration(work_dur)
-                        rd_str = self._format_duration(rest_dur)
-                        parts.append(f"{count}×{wd_str} @{int(round(work_power))}W / {rd_str} rec")
-                        i += count * 2
+                        (count, work_dur, work_power, rest_dur, rest_power,
+                         n_pairs, tail_rest_dur, has_trailing) = block
+                        # v3.135: targets follow _step_target via _role_target_suffix.
+                        work_steps = [steps[i + 2 * k] for k in range(n_pairs)]
+                        if has_trailing:
+                            work_steps.append(steps[i + 2 * n_pairs])
+                        rest_steps = [steps[i + 2 * k + 1] for k in range(n_pairs)]
+                        tail_rest = None
+                        if tail_rest_dur is not None:
+                            tail_rest = rest_steps.pop()
+                        work_str = (f"{self._format_duration(int(work_dur))}"
+                                    f"{self._role_target_suffix(work_steps, work_power)}")
+                        rest_str = (f"{self._format_duration(int(rest_dur))}"
+                                    f"{self._role_target_suffix(rest_steps, rest_power)}")
+                        n_uniform = n_pairs - (1 if tail_rest_dur is not None else 0)
+                        part = f"{n_uniform}×({work_str} + {rest_str})"
+                        if tail_rest_dur is not None:
+                            # v3.136: the tail rest shows the reference value only when it
+                            # and the reference rest are printable and within 2 W raw.
+                            tail_suffix = self._role_target_suffix([steps[i + 1], tail_rest],
+                                                                   rest_power)
+                            tail_str = f"{self._format_duration(int(tail_rest_dur))}{tail_suffix}"
+                            part += f" + ({work_str} + {tail_str})"
+                        if has_trailing:
+                            part += f" + {work_str}"
+                        parts.append(part)
+                        # v3.134: advance past exactly the consumed steps. count
+                        # includes a trailing solo rep, so count * 2 overshot by one
+                        # and silently dropped the step after it (e.g. a cool-down).
+                        i += n_pairs * 2 + (1 if has_trailing else 0)
                         continue
                 
                 # Not part of an alternating block — render as flat step
-                if dur_i is not None:
-                    flat = self._render_flat_step(steps[i])
-                    if flat:
-                        parts.append(flat)
+                # v3.135: a step that cannot render is marked, not dropped; v3.136: a
+                # repeat-like step gets the repeat marker and is never rendered flat.
+                if self._is_repeat_like(steps[i]):
+                    parts.append(self.SUMMARY_REPEAT_NOT_SUMMARIZED)
+                else:
+                    flat = self._render_flat_step(steps[i]) if dur_i is not None else None
+                    parts.append(flat or self.SUMMARY_STEP_NOT_SUMMARIZED)
                 i += 1
             
             if not parts:
@@ -10173,7 +11851,10 @@ class IntervalsSync:
     def _try_alternating_block(self, step_data: List, start: int) -> tuple:
         """
         Try to consume an alternating work/rest block starting at 'start'.
-        Returns (count, work_dur, work_power, rest_dur) or None.
+        Returns (count, work_dur, work_power, rest_dur, rest_power, n_pairs,
+        tail_rest_dur, has_trailing) or None. count = n_pairs plus one for a
+        trailing solo rep; tail_rest_dur is the last pair's differing rest duration
+        (tail exception) or None. Consumed steps: n_pairs * 2 + has_trailing.
         """
         try:
             ref_w_dur, ref_w_power = step_data[start]
@@ -10192,6 +11873,7 @@ class IntervalsSync:
                 return None
             
             count = 1
+            tail_rest_dur = None
             j = start + 2
             while j + 1 < len(step_data):
                 wd, wp = step_data[j]
@@ -10212,6 +11894,7 @@ class IntervalsSync:
                     # Long rest (≥1.5× normal) = set break — always consume as tail
                     if rd >= ref_r_dur * 1.5:
                         count += 1
+                        tail_rest_dur = rd
                         j += 2
                         break
                     # Otherwise check if more matching pairs follow
@@ -10221,6 +11904,7 @@ class IntervalsSync:
                             and nwp is not None and abs(int(round(nwp)) - ref_w_power) <= 2):
                             break  # Not the last pair — strict fail
                     count += 1
+                    tail_rest_dur = rd
                     j += 2
                     break  # Tail exception consumed, stop
                 
@@ -10228,17 +11912,21 @@ class IntervalsSync:
                 j += 2
             
             # Trailing solo work step: final rep with no paired rest
+            n_pairs = count
+            has_trailing = False
             if j < len(step_data):
                 wd, wp = step_data[j]
                 if (wd is not None and wp is not None
                         and abs(wd - ref_w_dur) <= 1
                         and abs(int(round(wp)) - ref_w_power) <= 2):
                     count += 1
+                    has_trailing = True
             
             if count < 3:
                 return None
             
-            return (count, ref_w_dur, ref_w_power, ref_r_dur)
+            return (count, ref_w_dur, ref_w_power, ref_r_dur, ref_r_power,
+                    n_pairs, tail_rest_dur, has_trailing)
         except Exception:
             return None
     
@@ -10258,7 +11946,7 @@ class IntervalsSync:
         
         day7_cutoff = (datetime.strptime(today, "%Y-%m-%d") + timedelta(days=7)).strftime("%Y-%m-%d")
         
-        stats = {"attempted": 0, "success": 0, "patternA": 0, "patternB": 0,
+        stats = {"attempted": 0, "success": 0, "patternA": 0, "patternB": 0, "flat": 0,
                  "bail_no_workout_doc": 0, "bail_no_match": 0}
         
         result = []
@@ -10281,7 +11969,11 @@ class IntervalsSync:
                     if summary:
                         stats["patternB"] += 1
                     else:
-                        stats["bail_no_match"] += 1
+                        summary = self._summarize_flat_workout_doc(workout_doc)
+                        if summary:
+                            stats["flat"] += 1
+                        else:
+                            stats["bail_no_match"] += 1
                 if summary:
                     stats["success"] += 1
             elif ((evt.get("description") or "").strip()
@@ -11010,42 +12702,123 @@ class IntervalsSync:
         }
         
         url = f"{self.GITHUB_API_URL}/repos/{self.github_repo}/contents/{filepath}"
-        try:
-            response = requests.get(url, headers=headers)
-            if response.status_code == 200:
-                current_file = response.json()
-                current_sha = current_file["sha"]
-                
-                current_content = base64.b64decode(current_file["content"]).decode()
-                new_content = json.dumps(data, indent=2, default=str)
-                
-                if current_content == new_content:
-                    print("⏭️  No changes detected, skipping update")
-                    raw_url = f"https://raw.githubusercontent.com/{self.github_repo}/main/{filepath}"
-                    return raw_url
-            else:
-                current_sha = None
-        except Exception as e:
-            print(f"⚠️  Could not check existing file: {e}")
-            current_sha = None
-        
+        raw_url = f"https://raw.githubusercontent.com/{self.github_repo}/main/{filepath}"
         content_json = json.dumps(data, indent=2, default=str)
-        content_base64 = base64.b64encode(content_json.encode()).decode()
-        
+
+        # --- Pre-read gate (v3.133) ---
+        # The old code turned ANY failed pre-read into current_sha = None, which sent
+        # a create-style PUT at a path that may exist. Only a confirmed 404 can
+        # establish absence; every other outcome stops before the PUT.
+        try:
+            response = self._read_with_retry(
+                lambda: requests.get(url, headers=headers,
+                                     timeout=self.GITHUB_READ_TIMEOUT),
+                charge_instance_budget=False)
+        except requests.exceptions.RequestException as e:
+            raise PublishPreReadFailed(
+                f"{filepath}: pre-read did not complete ({e}); no write attempted")
+
+        if response.status_code == 200:
+            # A 200 establishes an existing file only if it carries a usable sha and
+            # decodable content. A null, empty or non-string sha would otherwise be
+            # dropped by the truthiness test below and produce a create-style PUT,
+            # which only a confirmed 404 may authorise.
+            try:
+                current_file = response.json()
+                if not isinstance(current_file, dict):
+                    raise ValueError("expected an object")
+                current_sha = current_file.get("sha")
+                if not isinstance(current_sha, str) or not current_sha:
+                    raise ValueError("sha is missing, empty or not a string")
+                if current_sha != current_sha.strip():
+                    # " s1 " is not a usable sha. Trimming it here would guess at what
+                    # the server meant; sending it verbatim puts a value in the PUT
+                    # that cannot match.
+                    raise ValueError("sha carries surrounding whitespace")
+                current_content = self._decode_github_content(
+                    current_file.get("content"))
+            except Exception as e:
+                raise PublishPreReadFailed(
+                    f"{filepath}: pre-read returned an unusable body ({e}); "
+                    f"no write attempted")
+            if current_content == content_json:
+                print("⏭️  No changes detected, skipping update")
+                return raw_url
+        elif response.status_code == 404:
+            current_sha = None          # confirmed absent: create is safe
+        else:
+            raise PublishPreReadFailed(
+                f"{filepath}: pre-read returned HTTP {response.status_code}, which "
+                f"does not establish whether the path exists; no write attempted")
+
         payload = {
             "message": commit_message,
-            "content": content_base64,
+            "content": base64.b64encode(content_json.encode()).decode(),
             "branch": "main"
         }
-        
         if current_sha:
             payload["sha"] = current_sha
-        
-        response = requests.put(url, headers=headers, json=payload)
-        response.raise_for_status()
-        
-        raw_url = f"https://raw.githubusercontent.com/{self.github_repo}/main/{filepath}"
-        return raw_url
+
+        # --- Single write attempt (v3.133). There is no second PUT anywhere. ---
+        try:
+            response = requests.put(url, headers=headers, json=payload,
+                                    timeout=self.GITHUB_WRITE_TIMEOUT)
+        except requests.exceptions.RequestException as e:
+            # Every requests exception raised after dispatch is ambiguous, not just a
+            # timeout: a truncated or chunked response stream means the commit may
+            # already have happened and only the answer was lost.
+            return self._verify_github_publish(url, headers, content_json, raw_url,
+                                               filepath,
+                                               f"transport: {type(e).__name__}")
+
+        if 200 <= response.status_code < 300:
+            return raw_url
+        if response.status_code in self.GITHUB_DEFINITIVE_WRITE_STATUSES:
+            response.raise_for_status()     # definitive refusal, including 409
+        # Everything else, a 429, a 5xx, a redirect or any other unexpected status,
+        # is indeterminate. raise_for_status() would let a 3xx through as success, so
+        # the status is checked explicitly and the file is read back instead.
+        return self._verify_github_publish(
+            url, headers, content_json, raw_url, filepath,
+            f"http_{response.status_code}")
+
+    def _verify_github_publish(self, url: str, headers: Dict, intended_content: str,
+                               raw_url: str, filepath: str, cause: str) -> str:
+        """
+        Read the remote file back after an ambiguous PUT. Only byte-equal intended
+        content proves the write landed. Everything else, including the pre-write
+        content, is unknown: a commit can still be in flight, so observing the old
+        body does not prove non-application. No second PUT is ever issued; the next
+        scheduled sync is the recovery path.
+        """
+        try:
+            response = self._read_with_retry(
+                lambda: requests.get(url, headers=headers,
+                                     timeout=self.GITHUB_READ_TIMEOUT),
+                charge_instance_budget=False)
+        except requests.exceptions.RequestException as e:
+            raise PublishOutcomeUnknown(
+                f"{filepath}: write outcome UNKNOWN after {cause}; verification read "
+                f"failed ({e}). No write retry was issued.")
+        if response.status_code != 200:
+            raise PublishOutcomeUnknown(
+                f"{filepath}: write outcome UNKNOWN after {cause}; verification read "
+                f"returned HTTP {response.status_code}. No write retry was issued.")
+        try:
+            body = response.json()
+            if not isinstance(body, dict):
+                raise ValueError("expected an object")
+            remote_content = self._decode_github_content(body.get("content"))
+        except Exception as e:
+            raise PublishOutcomeUnknown(
+                f"{filepath}: write outcome UNKNOWN after {cause}; verification body "
+                f"unusable ({e}). No write retry was issued.")
+        if remote_content == intended_content:
+            print(f"   ✅ {filepath}: write confirmed by read-back after {cause}")
+            return raw_url
+        raise PublishOutcomeUnknown(
+            f"{filepath}: write outcome UNKNOWN after {cause}; remote content does "
+            f"not match the intended content. No write retry was issued.")
     
     def save_to_file(self, data: Dict, filepath: str = "latest.json"):
         """Save data to local JSON file"""
@@ -11062,6 +12835,168 @@ SECTION11_REPO_RAW = "https://raw.githubusercontent.com/CrankAddict/section-11/m
 # Directories/files to exclude from manifest generation
 _MANIFEST_EXCLUDE_DIRS = {".git", ".github", "__pycache__", "node_modules"}
 _MANIFEST_EXCLUDE_FILES = {"manifest.json", ".DS_Store"}
+# Excluded only at the repository root: maintainer material that athlete
+# installations do not receive. A nested folder with the same name is unaffected.
+_MANIFEST_EXCLUDE_ROOT_DIRS = {"dev"}
+
+# Root folders an older --init left in section11/ that --update does not manage,
+# and the backup folder each may be moved to beside section11/.
+_LEGACY_UNMANAGED_ROOTS = {".github": "section11-legacy-github", "dev": "section11-legacy-dev"}
+
+
+class _InitArchiveError(Exception):
+    """The downloaded archive cannot be installed as a consistent distribution."""
+
+
+def _safe_manifest_path(path):
+    """True when a manifest path is a plain relative POSIX file path.
+
+    Rejects anything that could write outside the installation: absolute paths,
+    backslashes, drive prefixes, empty, "." and ".." components, control characters.
+    """
+    if not isinstance(path, str) or not path or path != path.strip():
+        return False
+    if "\\" in path or ":" in path or path.startswith("/"):
+        return False
+    if any(ord(ch) < 32 or ord(ch) == 127 for ch in path):
+        return False
+    return all(part not in ("", ".", "..") for part in path.split("/"))
+
+
+def _plan_manifest_install(zf):
+    """Validate a downloaded repository archive against its own manifest.json.
+
+    Returns (manifest_bytes, [(relative_path, file_bytes), ...]) for exactly the
+    files manifest.json lists. Raises _InitArchiveError on any inconsistency, before
+    anything is written. Unlisted archive members are never read or returned.
+    """
+    infos = [info for info in zf.infolist() if not info.filename.startswith("__MACOSX/")]
+    roots = {info.filename.split("/", 1)[0] for info in infos}
+    if len(roots) != 1 or any("/" not in info.filename for info in infos):
+        raise _InitArchiveError(f"unexpected zip structure: expected 1 top-level directory, found {len(roots)}")
+    root = next(iter(roots))
+
+    members = {}
+    for info in infos:
+        if info.filename in members:
+            raise _InitArchiveError(f"duplicate archive member: {info.filename}")
+        members[info.filename] = info
+
+    def read_regular(rel_path):
+        info = members.get(f"{root}/{rel_path}")
+        if info is None:
+            raise _InitArchiveError(f"listed file is missing from the archive: {rel_path}")
+        # Unix file type declared by the archive. 0 means the creator recorded none,
+        # which is an ordinary file; anything else must be S_IFREG. That refuses
+        # directories, symlinks, FIFOs, devices and sockets.
+        declared_type = (info.external_attr >> 16) & 0o170000
+        if info.is_dir() or declared_type not in (0, 0o100000):
+            raise _InitArchiveError(f"listed path is not a regular file: {rel_path}")
+        return zf.read(info)
+
+    manifest_bytes = read_regular("manifest.json")
+    try:
+        manifest = json.loads(manifest_bytes.decode("utf-8"))
+    except (UnicodeDecodeError, ValueError):
+        raise _InitArchiveError("manifest.json is not valid JSON")
+    files = manifest.get("files") if isinstance(manifest, dict) else None
+    if not isinstance(files, dict) or not files:
+        raise _InitArchiveError("manifest.json has no files list")
+
+    planned = []
+    for rel_path, entry in files.items():
+        if not _safe_manifest_path(rel_path) or rel_path == "manifest.json":
+            raise _InitArchiveError(f"unsafe path in manifest.json: {rel_path!r}")
+        expected = entry.get("hash") if isinstance(entry, dict) else None
+        if not isinstance(expected, str) or len(expected) != 64 or any(c not in "0123456789abcdef" for c in expected):
+            raise _InitArchiveError(f"invalid hash in manifest.json for {rel_path}")
+        data = read_regular(rel_path)
+        if hashlib.sha256(data).hexdigest() != expected:
+            raise _InitArchiveError(f"hash mismatch for {rel_path}: the archive does not match its manifest.json")
+        planned.append((rel_path, data))
+    return manifest_bytes, planned
+
+
+def _is_git_checkout(section11_dir):
+    """True when section11/ is a Git working tree (a developer clone, not an --init install)."""
+    return os.path.lexists(os.path.join(str(section11_dir), ".git"))
+
+
+def _unmanaged_legacy_roots(upstream_files, section11_dir):
+    """Names of legacy root folders present in section11/ that the upstream manifest does not manage."""
+    present = []
+    for name in sorted(_LEGACY_UNMANAGED_ROOTS):
+        if any(path == name or path.startswith(name + "/") for path in upstream_files):
+            continue
+        if os.path.lexists(os.path.join(str(section11_dir), name)):
+            present.append(name)
+    return present
+
+
+def _stdin_is_interactive():
+    """True only when standard input is a terminal. Any doubt counts as not interactive."""
+    import sys
+    try:
+        return bool(sys.stdin is not None and sys.stdin.isatty())
+    except Exception:
+        return False
+
+
+def _offer_legacy_move(upstream_files, data_dir, section11_dir):
+    """Offer to move legacy unmanaged root folders out of section11/. Never deletes.
+
+    Asks only in an interactive session and acts only when the word "move" is typed
+    there. Piped or redirected input is never read for this question, whatever it
+    contains. Anything else, EOF or Ctrl+C keeps the folders. A Git checkout is never
+    offered, a symlink or non-directory is left alone, an existing backup name is
+    never overwritten and a failed rename keeps the original in place.
+    """
+    if _is_git_checkout(section11_dir):
+        return
+
+    movable = []
+    for name in _unmanaged_legacy_roots(upstream_files, section11_dir):
+        path = section11_dir / name
+        if path.is_symlink() or not path.is_dir():
+            print(f"\n   Kept section11/{name}: not an ordinary folder, left untouched.")
+            continue
+        count = sum(len(filenames) for _, _, filenames in os.walk(path))
+        movable.append((name, path, count))
+    if not movable:
+        return
+
+    if not _stdin_is_interactive():
+        names = ", ".join(f"section11/{name}/" for name, _, _ in movable)
+        print(f"\n   Kept {names}: from an older install and not updated by --update.")
+        print("   Run --update in a terminal to move them out of section11/.")
+        return
+
+    print("\n   Folders from an older install that --update does not manage:\n")
+    for name, _, count in movable:
+        print(f"   section11/{name}/  ({count} file{'s' if count != 1 else ''})"
+              f"  ->  {_LEGACY_UNMANAGED_ROOTS[name]}/")
+    print("\n   They are not used for coaching and are never refreshed.")
+    print("   Moving keeps every file; you can delete the moved folders afterwards.\n")
+    try:
+        answer = input('   Type "move" to move them out of section11/, or press Enter to keep them: ').strip().lower()
+    except (EOFError, KeyboardInterrupt):
+        answer = ""
+        print()
+    if answer != "move":
+        print("   Kept. These folders are not updated by --update.")
+        return
+
+    for name, path, _ in movable:
+        backup = data_dir / _LEGACY_UNMANAGED_ROOTS[name]
+        suffix = 2
+        while os.path.lexists(backup):
+            backup = data_dir / f"{_LEGACY_UNMANAGED_ROOTS[name]}-{suffix}"
+            suffix += 1
+        try:
+            os.rename(str(path), str(backup))
+            print(f"   Moved section11/{name}/ to {backup.name}/")
+        except OSError as e:
+            print(f"   Kept section11/{name}/: could not move it ({e})")
 
 
 def _compute_file_hash(filepath):
@@ -11211,7 +13146,9 @@ def do_generate_manifest():
     for root, dirs, filenames in os.walk(repo_dir):
         # Exclude directories
         dirs[:] = [d for d in dirs if d not in _MANIFEST_EXCLUDE_DIRS]
-        
+        if Path(root) == repo_dir:
+            dirs[:] = [d for d in dirs if d not in _MANIFEST_EXCLUDE_ROOT_DIRS]
+
         for filename in filenames:
             if filename in _MANIFEST_EXCLUDE_FILES:
                 continue
@@ -11239,7 +13176,7 @@ def do_generate_manifest():
     sorted_files = dict(sorted(files.items()))
     
     manifest = {
-        "scope": "All tracked files in the Section 11 repository. --update compares file hashes to detect changes and new files.",
+        "scope": "Files installed by sync.py --init and managed by --update; excludes .github, hidden paths, the repository-root dev folder, and generated dependency/cache directories.",
         "files": sorted_files
     }
     
@@ -11252,10 +13189,11 @@ def do_generate_manifest():
 
 def do_init():
     """
-    Download and extract the full Section 11 repo to section11/.
-    
+    Download Section 11 and install the manifest-managed files to section11/.
+
     Standalone function — does not require Intervals.icu credentials.
-    Downloads the repo as a zip from GitHub, extracts to section11/,
+    Downloads the repo as a zip from GitHub, installs exactly the files listed in
+    the archive's own manifest.json (plus manifest.json) after verifying them,
     and removes the bootstrap sync.py as the last step.
     """
     data_dir = Path.cwd()
@@ -11282,25 +13220,32 @@ def do_init():
     
     print(f"   Downloaded ({len(response.content) // 1024}KB)")
     
-    # Extract to temp directory first, then move (atomic)
+    # Verify the archive against its own manifest, stage only the listed files in a
+    # temp directory, then move (atomic). Unlisted archive content is never written.
     try:
         with tempfile.TemporaryDirectory() as tmp_dir:
             zip_path = Path(tmp_dir) / "repo.zip"
             with open(zip_path, 'wb') as f:
                 f.write(response.content)
-            
-            with zipfile.ZipFile(zip_path, 'r') as zf:
-                zf.extractall(tmp_dir)
-            
+
             # GitHub zips have a top-level folder like "section-11-main/"
-            extracted = [d for d in Path(tmp_dir).iterdir() 
-                        if d.is_dir() and d.name != '__MACOSX']
-            if len(extracted) != 1:
-                print(f"Section 11: unexpected zip structure — expected 1 directory, found {len(extracted)}")
-                return
-            
-            # Move extracted folder to section11/
-            shutil.move(str(extracted[0]), str(target_dir))
+            with zipfile.ZipFile(zip_path, 'r') as zf:
+                manifest_bytes, planned = _plan_manifest_install(zf)
+
+            staged = Path(tmp_dir) / "section11"
+            for rel_path, data in planned + [("manifest.json", manifest_bytes)]:
+                staged_path = staged.joinpath(*rel_path.split("/"))
+                staged_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(staged_path, 'xb') as f:
+                    f.write(data)
+
+            # Move the verified staged folder to section11/
+            shutil.move(str(staged), str(target_dir))
+    except _InitArchiveError as e:
+        print(f"Section 11: the downloaded archive failed verification — {e}")
+        print("   Nothing was installed. Try again later.")
+        print("   Alternative: git clone https://github.com/CrankAddict/section-11.git section11")
+        return
     except Exception as e:
         print(f"Section 11: extraction failed — {e}")
         # Clean up partial extraction if it exists
@@ -11308,7 +13253,7 @@ def do_init():
             shutil.rmtree(target_dir, ignore_errors=True)
         return
     
-    print(f"   ✅ Extracted to section11/")
+    print(f"   ✅ Installed {len(planned)} verified files to section11/")
     
     # Delete bootstrap sync.py — LAST STEP, only after extraction fully succeeded
     bootstrap_path = data_dir / "sync.py"
@@ -11464,9 +13409,19 @@ def do_update():
                 print(f"      Timer users: full data after 2 cycles (~2 min)")
                 print(f"      Manual users: run sync twice to rebuild")
 
+    # --- Legacy unmanaged folders (.github, dev): offer a recoverable move, never delete ---
+    _offer_legacy_move(upstream_files, data_dir, target_dir)
+
     # --- Orphan cleanup (runs regardless of whether files were updated) ---
     orphaned_files = _find_orphaned_files(upstream_files, target_dir)
     empty_dirs = _find_empty_dirs(target_dir)
+
+    # A legacy folder that is still here was kept on purpose (declined, Git checkout,
+    # symlink or failed move). It must not fall through into the orphan prompt.
+    kept_roots = set(_unmanaged_legacy_roots(upstream_files, target_dir))
+    if kept_roots:
+        orphaned_files = [p for p in orphaned_files if Path(p).parts[0] not in kept_roots]
+        empty_dirs = [d for d in empty_dirs if Path(d).parts[0] not in kept_roots]
 
     if orphaned_files or empty_dirs:
         total = len(orphaned_files) + len(empty_dirs)
@@ -11853,11 +13808,19 @@ def main():
     if sync.should_generate_history():
         try:
             print("\n📊 Auto-generating history.json...")
-            history = sync.generate_history()
+            try:
+                history = sync.generate_history()
+            except Exception as e:
+                # Generation failures only: back off further automatic attempts.
+                # Publication below never records refresh state.
+                sync._record_history_refresh_failure(e)
+                raise
             if not args.output:
                 sync.publish_to_github(history, filepath="history.json",
                                        commit_message=f"Auto-generate history.json - {datetime.now().strftime('%Y-%m-%d')}")
                 print("   ✅ history.json auto-generated and pushed to GitHub")
+        except PublishOutcomeUnknown as e:
+            print(f"   ⚠️ history.json push outcome UNKNOWN (non-critical): {e}")
         except Exception as e:
             print(f"   ⚠️ History generation failed (non-critical): {e}")
     
@@ -11960,6 +13923,8 @@ def main():
                 sync.publish_to_github(intervals_data, filepath="intervals.json",
                                        commit_message=f"Update intervals.json - {datetime.now().strftime('%Y-%m-%d')}")
                 print(f"   📊 intervals.json pushed ({len(intervals_data['activities'])} activities)")
+            except PublishOutcomeUnknown as e:
+                print(f"   ⚠️ intervals.json push outcome UNKNOWN (non-critical): {e}")
             except Exception as e:
                 print(f"   ⚠️ intervals.json push failed (non-critical): {e}")
         
@@ -11974,6 +13939,8 @@ def main():
                 sync.publish_to_github(routes_data, filepath="routes.json",
                                        commit_message=f"Update routes.json - {datetime.now().strftime('%Y-%m-%d')}")
                 print(f"   🗺️  routes.json pushed ({len(routes_data.get('events', []))} event(s))")
+            except PublishOutcomeUnknown as e:
+                print(f"   ⚠️ routes.json push outcome UNKNOWN (non-critical): {e}")
             except Exception as e:
                 print(f"   ⚠️ routes.json push failed (non-critical): {e}")
 
@@ -11986,6 +13953,8 @@ def main():
                 sync.publish_to_github(saved_workouts_data, filepath="saved_workouts.json",
                                        commit_message=f"Update saved_workouts.json - {datetime.now().strftime('%Y-%m-%d')}")
                 print(f"   📑 saved_workouts.json pushed ({sync._sw_status_line(saved_workouts_data)})")
+            except PublishOutcomeUnknown as e:
+                print(f"   ⚠️ saved_workouts.json push outcome UNKNOWN (non-critical): {e}")
             except Exception as e:
                 print(f"   ⚠️ saved_workouts.json push failed (non-critical): {e}")
         
