@@ -3872,7 +3872,7 @@ class IntervalsSync:
         
         height_m = athlete.get("height")
         athlete_profile = {
-            "date_of_birth": dob,
+            # Privacy (public repo): DOB not serialized, only derived age.
             "age": self._years_since(dob),
             "height_m": height_m,
             "display": {
