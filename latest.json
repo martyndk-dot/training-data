@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-17T14:20:18.898786",
+    "last_updated": "2026-10-17T17:30:26.631396",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -679,9 +679,9 @@
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
           "race_proximity": null,
-          "next_week_load": 1.83,
+          "next_week_load": 1.64,
           "plan_coverage_current_week": 0.5,
-          "plan_coverage_next_week": 2.0
+          "plan_coverage_next_week": 1.75
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -714,7 +714,7 @@
     "p_max": 1052,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-17T14:20:18.897449",
+    "calculation_timestamp": "2026-10-17T17:30:26.629997",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4470,7 +4470,7 @@
       "duration_formatted": "0s",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Section 11 v11.71 \u2014 post-workout report. Zdroj: intervals.icu API p\u0159\u00edmo (ICUsync), \u010dteno 17. 10. ve\u010der; latest.json/intervals.json nebyly v t\u00e9to session k dispozici.\n\nShrnut\u00ed: objem a supraprahov\u00fd \u010das bl\u00edzko pl\u00e1nu, ale bez struktury T4 a s n\u00edzkou kardio odezvou na trati (HR max 156) \u2014 tvrd\u00fd den #2 vy\u0161el sp\u00ed\u0161 jako st\u0159edn\u00ed.\n\nCompleted workout: Cyclocross \u2014 KOTVA: CX tr\u00e9nink 1 h (T4 80/160) + p\u0159\u00edjezd/odjezd Z2 (Forerunner 970, Prodoli)\nDuration: 1h58m pohyb / 2h38m celkem (40 min stoj\u00ed) | 37,2 km | +334 m\nOutdoor context: 9,6 \u00b0C (pocitov\u011b 8), bezv\u011bt\u0159\u00ed, sucho.\nPower: 183 W avg / 221 W NP | IF 0,67 | VI 1,21\nPower zones: Z1 44 %, Z2 33 %, Z3 12 %, SS 6 %, Z4 4 %, Z5 2 %, Z6 3 %, Z7 1 %\nGrey Zone (Z3): 12 % | Quality (Z4+): 10 % (11,5 min nad prahem, z toho 6,6 min nad 350 W)\nSession profile: sm\u00ed\u0161en\u00fd (PI 1,44) \u2014 roztrou\u0161en\u00e9 kr\u00e1tk\u00e9 \u00fasil\u00ed + Z2 p\u0159esuny\nHR: 124 avg / 170 max | HR zones: Z1 87 %, Z2 10 %, Z3 1 %, Z4 2 %\nCadence: 74 avg (vc. b\u011bhu/stoj\u00edc\u00edch \u00fasek\u016f)\nDecoupling: \u22127,6 % \u2014 neplatn\u00e9 (stop-and-go)\nEF: 1,78\nVE: nezaznamen\u00e1no (Tymewear nesp\u00e1rov\u00e1n s hodinkami)\nW\u2032: min 25,3 kJ (\u010derp\u00e1no 34 %) \u2014 a\u017e v z\u00e1v\u011bre\u010dn\u00e9m stoup\u00e1n\u00ed; v CX \u010d\u00e1sti min 29,1 kJ (24 %); 60,6 kJ nad FTP\nTSS: 88 (pl\u00e1n 116) | Feel 3/5 | RPE 3\n\nPLAN COMPLIANCE:\n\u2022 P\u00e1rov\u00e1n\u00ed s eventem 138158616 (platformn\u00ed compliance 76 %).\n\u2022 P\u0159edpis T4: 6\u00d7 80 s @ 380\u2013396 W (tolerance 376\u2013400 W) / 160 s.\n\u2022 Detekovan\u00e9 intervaly: jedin\u00fd WORK 2:10 @ 426 W (z\u00e1v\u011bre\u010dn\u00e9 stoup\u00e1n\u00ed 4,9 %, +39 m, HR 157 avg / 170 max) \u2014 mimo p\u0159edepsanou strukturu.\n\u2022 Full-set completion: UNAVAILABLE \u2014 \u00fasil\u00ed na trati nejsou v datech jako samostatn\u00e9 \u00faseky, nelze je spolehliv\u011b namapovat na 6\u00d780 s. Unavailable \u2260 failed.\n\u2022 \u010casov\u00fd objem nad 350 W (6,6 min) je bl\u00edzko p\u0159edepsan\u00fdm 8 min, ale Z6 204 s ukazuje krat\u0161\u00ed a ost\u0159ej\u0161\u00ed \u00fasil\u00ed ne\u017e T4.\n\u2022 Sign\u00e1lov\u00e9 pravidlo: na trati nenastalo \u2014 HR max 156, VE nem\u011b\u0159ena.\n\u2022 Three-axis: CX technika + Z2 objem DOSA\u017dEN; c\u00edlen\u00fd stimul T4 (opakovan\u00e9 VO2 80 s) NEOV\u011a\u0158ITELN\u00dd, kardio odezva n\u00edzk\u00e1; n\u00e1klad N\u00cdZK\u00dd (RPE 3, HR load 67 vs power load 88).\n\nFYZIOLOGIE:\n\u2022 HR max 156 v hlavn\u00ed \u010d\u00e1sti a 87 % \u010dasu v HR Z1 \u2192 \u00fasil\u00ed byla kr\u00e1tk\u00e1 s dlouh\u00fdmi pauzami (40 min stoj\u00ed), srdce se nikdy nedostalo do s\u00e9riov\u00e9 z\u00e1t\u011b\u017ee. U T4 by HR na konci s\u00e9rie m\u011blo b\u00fdt 160+.\n\u2022 Z\u00e1v\u011bre\u010dn\u00e9 stoup\u00e1n\u00ed 2:10 @ 426 W (129 % FTP, 5,1 W/kg) po 2,5 h \u2014 v\u00fdborn\u00fd sign\u00e1l \u010derstvosti a anaerobn\u00ed kapacity: W\u2032 38 \u2192 25 kJ, HR 170.\n\u2022 Power/HR 1,48 a EF 1,78 p\u0159i 9,6 \u00b0C \u2014 aerobn\u011b v dobr\u00e9 kondici.\n\nWEEKLY TOTALS (od pond\u011bl\u00ed, event-based):\nTSS 308 (67 + 72 + 81 + 88) | CTL 59,3 | ATL 49,0 | TSB +10,3 | Ramp +0,13\nPolarization 7d, Durability, TID 28d, ACWR, Recovery Index: UNAVAILABLE (vy\u017eaduje latest.json).\n\nINTERPRETACE:\nU\u017eite\u010dn\u00fd CX den (technika, Z2 objem, siln\u00fd z\u00e1v\u011bre\u010dn\u00fd kopec), ale jako tvrd\u00fd den #2 slab\u0161\u00ed: struktura T4 se ve skupinov\u00e9m tr\u00e9ninku ztratila a kardio z\u00e1t\u011b\u017e z\u016fstala n\u00edzko. T\u011blo je \u010derstv\u00e9 (TSB +10, RPE 3) \u2192 ned\u011ble unese pln\u00fd objem.\n\nDOPAD NA PL\u00c1N:\n\u2022 Ned\u011ble KOTVA: 3,5 h, p\u0159i \ud83d\udfe2 r\u00e1nu a suchu a\u017e 4 h (TSS 150\u2013170) \u2192 t\u00fdden ~460\u2013480.\n\u2022 \u00dater\u00fd 20. 10. KOTVA T1 30/30 beze zm\u011bny (72+ h od dne\u0161ka).\n\u2022 Na spole\u010dn\u00e9m CX tr\u00e9ninku 24. 10.: c\u00edlenou s\u00e9rii odjet samostatn\u011b na okruhu (stopky/lap tla\u010d\u00edtko na ka\u017ed\u00e9m \u00faseku), a\u0165 jde struktura vyhodnotit.\n\u2022 Z\u00e1znam CX: Edge 1050 + Tymewear, ne hodinky \u2014 bez VE nelze \u0159\u00eddit d\u00e9lku s\u00e9rie.\n\u2022 Ve\u010der: sacharidy (~6 g/kg) a tekutiny na z\u00edt\u0159ej\u0161\u00edch 3,5\u20134 h."
+      "description": "Section 11 v11.71 \u2014 post-workout report. Zdroj: intervals.icu API p\u0159\u00edmo (ICUsync), \u010dteno 17. 10.; latest.json/intervals.json nebyly v t\u00e9to session k dispozici.\n\nShrnut\u00ed: objem a supraprahov\u00fd \u010das bl\u00edzko pl\u00e1nu, ale bez struktury T4 a s n\u00edzkou kardio odezvou na trati (HR max 156) \u2014 tvrd\u00fd den #2 vy\u0161el sp\u00ed\u0161 jako st\u0159edn\u00ed.\n\nCompleted workout: Cyclocross \u2014 KOTVA: CX tr\u00e9nink 1 h (T4 80/160) + p\u0159\u00edjezd/odjezd Z2 (Forerunner 970, Prodoli)\nDuration: 1h58m pohyb / 2h38m celkem (40 min stoj\u00ed) | 37,2 km | +334 m\nOutdoor context: 9,6 \u00b0C (pocitov\u011b 8), bezv\u011bt\u0159\u00ed, sucho.\nPower: 183 W avg / 221 W NP | IF 0,67 | VI 1,21\nPower zones: Z1 44 %, Z2 33 %, Z3 12 %, SS 6 %, Z4 4 %, Z5 2 %, Z6 3 %, Z7 1 %\nGrey Zone (Z3): 12 % | Quality (Z4+): 10 % (11,5 min nad prahem, z toho 6,6 min nad 350 W)\nSession profile: sm\u00ed\u0161en\u00fd (PI 1,44) \u2014 roztrou\u0161en\u00e9 kr\u00e1tk\u00e9 \u00fasil\u00ed + Z2 p\u0159esuny\nHR: 124 avg / 170 max | HR zones: Z1 87 %, Z2 10 %, Z3 1 %, Z4 2 %\nCadence: 74 avg (vc. b\u011bhu/stoj\u00edc\u00edch \u00fasek\u016f)\nDecoupling: \u22127,6 % \u2014 neplatn\u00e9 (stop-and-go)\nEF: 1,78\nVE: nezaznamen\u00e1no (Tymewear nesp\u00e1rov\u00e1n s hodinkami)\nW\u2032: min 25,3 kJ (\u010derp\u00e1no 34 %) \u2014 a\u017e v z\u00e1v\u011bre\u010dn\u00e9m stoup\u00e1n\u00ed; v CX \u010d\u00e1sti min 29,1 kJ (24 %); 60,6 kJ nad FTP\nTSS: 88 (pl\u00e1n 116) | Feel 3/5 | RPE 3\n\nPLAN COMPLIANCE:\n\u2022 P\u00e1rov\u00e1n\u00ed s eventem 138158616 (platformn\u00ed compliance 76 %).\n\u2022 P\u0159edpis T4: 6\u00d7 80 s @ 380\u2013396 W (tolerance 376\u2013400 W) / 160 s.\n\u2022 Detekovan\u00e9 intervaly: jedin\u00fd WORK 2:10 @ 426 W (z\u00e1v\u011bre\u010dn\u00e9 stoup\u00e1n\u00ed 4,9 %, +39 m, HR 157 avg / 170 max) \u2014 mimo p\u0159edepsanou strukturu.\n\u2022 Rozpad CX \u010d\u00e1sti po 3min bloc\u00edch (0:44\u20132:10): NP 165\u2013260 W, \u010das v p\u00e1smu 380\u2013396 W 0\u201311 s na blok; HR 115\u2013133, jen blok 1:49\u20131:55 HR 146\u2013149 p\u0159i NP ~258 W. \u017d\u00e1dn\u00fd blok nevykazuje opakovan\u00e9 80s \u00fasil\u00ed.\n\u2022 Full-set completion: UNAVAILABLE \u2014 \u00fasil\u00ed na trati nejsou v datech jako samostatn\u00e9 \u00faseky. Unavailable \u2260 failed.\n\u2022 Sign\u00e1lov\u00e9 pravidlo: na trati nenastalo \u2014 HR max 156, VE nem\u011b\u0159ena.\n\u2022 Three-axis: CX technika + Z2 objem DOSA\u017dEN; c\u00edlen\u00fd stimul T4 (opakovan\u00e9 VO2 80 s) NEDOSA\u017dEN/NEOV\u011a\u0158ITELN\u00dd; n\u00e1klad N\u00cdZK\u00dd (RPE 3, HR load 67 vs power load 88).\n\nFYZIOLOGIE:\n\u2022 HR max 156 v hlavn\u00ed \u010d\u00e1sti a 87 % \u010dasu v HR Z1 \u2192 \u00fasil\u00ed kr\u00e1tk\u00e1 s dlouh\u00fdmi pauzami (40 min stoj\u00ed), srdce se nikdy nedostalo do s\u00e9riov\u00e9 z\u00e1t\u011b\u017ee. U T4 by HR na konci s\u00e9rie m\u011blo b\u00fdt 160+.\n\u2022 Z\u00e1v\u011bre\u010dn\u00e9 stoup\u00e1n\u00ed 2:10 @ 426 W (129 % FTP, 5,1 W/kg) po 2,5 h \u2014 dobr\u00fd sign\u00e1l \u010derstvosti a anaerobn\u00ed kapacity: W\u2032 38 \u2192 25 kJ, HR 170.\n\u2022 Power/HR 1,48 a EF 1,78 p\u0159i 9,6 \u00b0C \u2014 aerobn\u011b v dobr\u00e9 kondici.\n\nWEEKLY TOTALS (od pond\u011bl\u00ed):\nTSS 308 (67 + 72 + 81 + 88) | CTL 59,3 | ATL 49,0 | TSB +10,3 | Ramp +0,13\nPolarization 7d, Durability, TID 28d, ACWR, Recovery Index: UNAVAILABLE (vy\u017eaduje latest.json).\n\nINTERPRETACE:\nU\u017eite\u010dn\u00fd CX den (technika, Z2 objem, siln\u00fd z\u00e1v\u011bre\u010dn\u00fd kopec), ale jako tvrd\u00fd den #2 slab\u0161\u00ed: struktura T4 se ve skupinov\u00e9m tr\u00e9ninku ztratila. T\u011blo je \u010derstv\u00e9 (TSB +10, RPE 3) \u2192 ned\u011ble unese pln\u00fd pl\u00e1novan\u00fd objem.\n\nDOPAD NA PL\u00c1N:\n\u2022 Ned\u011ble KOTVA: dlouh\u00e1 Z2 3 h 15 podle pl\u00e1nu (S11 progrese +10 % proti 2 h 57). Neprodlu\u017eovat na 4 h \u2014 progrese po kroc\u00edch (3 h 35 \u2192 3 h 55) jen p\u0159i driftu <5 %. P\u0159i \ud83d\udfe2 r\u00e1nu a dobr\u00e9m pocitu tolerance max 3 h 30. Zbytek do c\u00edle CTL nedoh\u00e1n\u011bt intenzitou.\n\u2022 Ztracen\u00fd T4 stimul nedoh\u00e1n\u011bt nav\u00edc.\n\u2022 P\u0158EPL\u00c1NOV\u00c1NO (\u00fater\u00fd 20. 10. \u0161kolen\u00ed = volno): Po Z2 60 \u2192 90 + S\u00cdLA A + b\u011bh 25; \u00dat volno; St KOTVA T1 30/30 + Z2 50 (p\u0159esunuto z \u00fater\u00fd); St FLEX Z2 2 h zru\u0161ena; \u010ct Skills 45 + Z2 60 + S\u00cdLA B; P\u00e1 b\u011bh 30; So race-sim (~67 h po T1, pojistka 2\u00d76 min p\u0159i \ud83d\udfe1). T\u00fdden 19.\u201325. 10. ~510 TSS.\n\u2022 Na spole\u010dn\u00e9m CX tr\u00e9ninku 24. 10.: race-sim 3\u00d76 min odjet samostatn\u011b na okruhu s lap tla\u010d\u00edtkem na ka\u017ed\u00e9m \u00faseku, a\u0165 jde struktura vyhodnotit.\n\u2022 Z\u00e1znam CX: Edge 1050 + Tymewear, ne hodinky \u2014 bez VE nelze \u0159\u00eddit d\u00e9lku s\u00e9rie.\n\u2022 Ve\u010der: sacharidy (~6 g/kg) a tekutiny na z\u00edt\u0159ej\u0161\u00ed 3 h 15 (~240 g sacharid\u016f na j\u00edzdu)."
     },
     {
       "id": 138158616,
@@ -4517,20 +4517,20 @@
     {
       "id": 142205757,
       "date": "2026-10-19",
-      "name": "FLEX: Z2 60 + S\u00cdLA A",
+      "name": "FLEX: Z2 90 + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 41,
-      "duration_hours": 1.0,
-      "duration_formatted": "1h",
+      "planned_tss": 61,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z2 60 min (200-220 W) + S\u00cdLA A. Ve stejn\u00fd den b\u011bh 25 min (zvl\u00e1\u0161tn\u00ed karta) \u2014 ide\u00e1ln\u011b r\u00e1no nebo v poledne, kolo odpoledne.\n\nMain Set 1x\n- 60m 64% intensity=interval"
+      "description": "FLEX: Z2 90 min (200-220 W, HR 120-135) + S\u00cdLA A. Prodlou\u017eeno z 60 min \u2014 \u00fater\u00fd volno (\u0161kolen\u00ed), \u010d\u00e1st objemu se p\u0159esouv\u00e1 sem. Ve stejn\u00fd den b\u011bh 25 min (zvl\u00e1\u0161tn\u00ed karta) \u2014 ide\u00e1ln\u011b r\u00e1no nebo v poledne, kolo odpoledne. P\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34 r\u00e1no zp\u011bt na 60 min.\n\nMain Set 1x\n- 90m 64% intensity=interval"
     },
     {
       "id": 142205758,
-      "date": "2026-10-20",
+      "date": "2026-10-21",
       "name": "KOTVA: CX T1 30/30 + Z2 50",
       "type": "WORKOUT",
       "sport_type": "Ride",
@@ -4540,35 +4540,21 @@
       "workout_summary": "20m [target not shown] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | 10m [target not shown]",
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "KOTVA \u2014 tvrd\u00fd den #1. CX rotace T1: 2 s\u00e9rie 30/30 @ 430-460 W, 5 min mezi s\u00e9riemi, pak Z2 50 min. D\u00e9lka s\u00e9rie podle sign\u00e1lu: kdy\u017e HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2-3 \u00faseky a konec, max 10. Venku za sv\u011btla, nebo Tacx (ERG jen na 30 s OK).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 5m 55% intensity=recovery\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 50m 66% intensity=interval\n\nCooldown\n- 10m 55% intensity=cooldown"
-    },
-    {
-      "id": 142205759,
-      "date": "2026-10-21",
-      "name": "FLEX: Z2 2 h",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 84,
-      "duration_hours": 2.0,
-      "duration_formatted": "2h",
-      "workout_summary": null,
-      "has_terrain": false,
-      "start_time": "15:00",
-      "description": "FLEX: Z2 2 h (200-230 W, HR 120-135, VE 50-63). P\u00edt od 1. hodiny 0,5-0,75 l/h, 70 g/h. Zkr\u00e1tit na 90 min jen p\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34.\n\nMain Set 1x\n- 120m 65% intensity=interval"
+      "description": "KOTVA \u2014 tvrd\u00fd den #1 (p\u0159esunuto z \u00fater\u00fd 20. 10. \u2014 \u0161kolen\u00ed, den volna). 96 h po sobotn\u00edm CX, po voln\u00e9m dni \u010derstv\u00e9 nohy. CX rotace T1: 2 s\u00e9rie 30/30 @ 430-460 W, 5 min mezi s\u00e9riemi, pak Z2 50 min. D\u00e9lka s\u00e9rie podle sign\u00e1lu: kdy\u017e HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2-3 \u00faseky a konec, max 10. Venku za sv\u011btla (posledn\u00ed t\u00fdden letn\u00edho \u010dasu), nebo Tacx (ERG jen na 30 s OK). Z\u00e1znam Edge 1050 + Tymewear.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 5m 55% intensity=recovery\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 50m 66% intensity=interval\n\nCooldown\n- 10m 55% intensity=cooldown"
     },
     {
       "id": 142205760,
       "date": "2026-10-22",
-      "name": "Skills 60 + Z2 30 + S\u00cdLA B",
+      "name": "Skills 45 + Z2 60 + S\u00cdLA B",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 56,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
+      "planned_tss": 68,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX. Skills 60 (skoky f\u00e1ze 3-4, sesed\u00e1n\u00ed v rychlosti, zat\u00e1\u010dky) + Z2 30 min 200-230 W + S\u00cdLA B (2 s\u00e9rie, 2 dny p\u0159ed spole\u010dn\u00fdm CX tr\u00e9ninkem).\n\nMain Set 1x\n- 60m 58% intensity=interval\n\nMain Set 1x\n- 30m 66% intensity=interval"
+      "description": "FLEX. Den po st\u0159ede\u010dn\u00edm T1. Skills 45 (skoky f\u00e1ze 3-4, sesed\u00e1n\u00ed v rychlosti, zat\u00e1\u010dky \u2014 kvalita p\u0159ed kvantitou, na \u010derstv\u00fdch nohou hned po rozjet\u00ed) + Z2 60 min 200-230 W (n\u00e1hrada za zru\u0161enou st\u0159ede\u010dn\u00ed Z2 2 h) + S\u00cdLA B (2 s\u00e9rie, 2 dny p\u0159ed spole\u010dn\u00fdm CX tr\u00e9ninkem). P\u0159i t\u011b\u017ek\u00fdch noh\u00e1ch po T1 Z2 zkr\u00e1tit na 30 min.\n\nMain Set 1x\n- 45m 58% intensity=interval\n\nMain Set 1x\n- 60m 65% intensity=interval"
     },
     {
       "id": 144779314,
@@ -4596,7 +4582,7 @@
       "workout_summary": "15m [target not shown] | 3\u00d7(6m [target not shown] + 5m [target not shown]) | [repeat not summarized] | 10m [target not shown]",
       "has_terrain": false,
       "start_time": "10:00",
-      "description": "KOTVA \u2014 tvrd\u00fd den #2 (96 h po \u00fater\u00fdn\u00edm T1). Spole\u010dn\u00fd CX tr\u00e9nink Choustn\u00edkovo Hradi\u0161t\u011b 10:00 jako RACE-SIM: 3\u00d76 min @ 314-347 W v z\u00e1vodn\u00edm tempu s technick\u00fdmi prvky, mezi tim technika. Pak Z2 60 min 200-230 W (dojezd/odjezd na kole). Inflite, z\u00e1vodn\u00ed tlaky; z\u00e1znam Edge 1050 + Tymewear. Ryma\u0159ov se nejede.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 6m 98% intensity=interval\n- 5m 60% intensity=recovery\n\nMain Set 1x\n- 60m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "KOTVA \u2014 tvrd\u00fd den #2 (~67 h po st\u0159ede\u010dn\u00edm T1; T1 p\u0159esunuto z \u00fater\u00fd kv\u016fli \u0161kolen\u00ed). Spole\u010dn\u00fd CX tr\u00e9nink Choustn\u00edkovo Hradi\u0161t\u011b 10:00 jako RACE-SIM: 3\u00d76 min @ 314-347 W v z\u00e1vodn\u00edm tempu s technick\u00fdmi prvky, mezi t\u00edm technika. Ka\u017ed\u00fd \u00fasek odjet samostatn\u011b s lap tla\u010d\u00edtkem. Odstup od T1 je o 5 h krat\u0161\u00ed ne\u017e 72 h \u2192 kdy\u017e r\u00e1no \ud83d\udfe1 nebo v 1. \u00faseku HR \u2265168 p\u0159i <314 W, sn\u00ed\u017eit na 2\u00d76 min. Pak Z2 60 min 200-230 W (dojezd/odjezd na kole). Inflite, z\u00e1vodn\u00ed tlaky; z\u00e1znam Edge 1050 + Tymewear. Ryma\u0159ov se nejede.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 6m 98% intensity=interval\n- 5m 60% intensity=recovery\n\nMain Set 1x\n- 60m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 138158169,
@@ -4761,13 +4747,13 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 16,
+    "attempted": 15,
     "success": 7,
     "patternA": 7,
     "patternB": 0,
     "flat": 0,
     "bail_no_workout_doc": 2,
-    "bail_no_match": 9
+    "bail_no_match": 8
   },
   "weekly_summary": {
     "total_training_hours": 9.73,
