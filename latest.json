@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-17T19:41:03.187395",
+    "last_updated": "2026-10-17T22:12:34.873979",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -679,7 +679,7 @@
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
           "race_proximity": null,
-          "next_week_load": 1.64,
+          "next_week_load": 1.62,
           "plan_coverage_current_week": 0.5,
           "plan_coverage_next_week": 1.75
         },
@@ -714,7 +714,7 @@
     "p_max": 1052,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-17T19:41:03.185997",
+    "calculation_timestamp": "2026-10-17T22:12:34.872621",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4517,16 +4517,16 @@
     {
       "id": 142205757,
       "date": "2026-10-19",
-      "name": "FLEX: Z2 90 + S\u00cdLA A",
+      "name": "TEST: Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 61,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
+      "planned_tss": 55,
+      "duration_hours": 1.17,
+      "duration_formatted": "1h10m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z2 90 min (200-220 W, HR 120-135) + S\u00cdLA A. Prodlou\u017eeno z 60 min \u2014 \u00fater\u00fd volno (\u0161kolen\u00ed), \u010d\u00e1st objemu se p\u0159esouv\u00e1 sem. Ve stejn\u00fd den b\u011bh 25 min (zvl\u00e1\u0161tn\u00ed karta) \u2014 ide\u00e1ln\u011b r\u00e1no nebo v poledne, kolo odpoledne. P\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34 r\u00e1no zp\u011bt na 60 min.\n\nMain Set 1x\n- 90m 64% intensity=interval"
+      "description": "TEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection). Nahrazuje FLEX Z2 90. Submaxim\u00e1ln\u00ed, ne do vy\u010derp\u00e1n\u00ed: kon\u010d\u00ed t\u011bsn\u011b nad VT2, tak\u017ee nejde o plnohodnotn\u00fd tvrd\u00fd den; \u00fater\u00fd volno, st\u0159ede\u010dn\u00ed T1 je 48 h po testu.\n\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):\nRozjet\u00ed 15 min @ 150 W, pak 5min stupn\u011b 160 \u2192 300 W po 20 W, posledn\u00ed stupe\u0148 3 min @ 320 W, vyjet\u00ed 12 min @ 140 W.\n5min stupn\u011b jsou kv\u016fli ust\u00e1len\u00ed VE i HR (VE se ust\u00e1l\u00ed za ~2 min, HR za 3-4 min) \u2014 p\u0159esn\u011b to chyb\u011blo u intermitentn\u00edho 20/40.\n\nSTOP pravidlo (kter\u00e9koli): VE >130 L/min, HR \u2265170, nebo nelze dr\u017eet kadenci. Stupe\u0148 320 W jen p\u0159i RPE \u22648 po 300 W.\n\nPODM\u00cdNKY (kv\u016fli srovnatelnosti VE):\n\u2022 M\u00edstnost co nejchladn\u011bj\u0161\u00ed, v\u011btr\u00e1k na plno od za\u010d\u00e1tku (teplo zved\u00e1 VE a posunulo \u00fatern\u00ed detekci).\n\u2022 Kadence konstantn\u011b 90 \u00b13, celou dobu v sedle, nemluvit.\n\u2022 P\u00edt jen v prvn\u00ed minut\u011b stupn\u011b, ne v posledn\u00edch 2 min (polyk\u00e1n\u00ed a zadr\u017een\u00ed dechu kaz\u00ed VE).\n\u2022 Tymewear p\u00e1s na stejn\u00e9m m\u00edst\u011b jako obvykle, dob\u0159e uta\u017een\u00fd; p\u0159ed startem ov\u011b\u0159it p\u00e1rov\u00e1n\u00ed s Edge 1050 (VE na displeji).\n\u2022 Z\u00e1znam Edge 1050 + Tymewear + HR p\u00e1s. Workout krokovat z Edge, a\u0165 ka\u017ed\u00fd stupe\u0148 je samostatn\u00fd lap.\n\u2022 Posledn\u00ed j\u00eddlo 2-3 h p\u0159edem, norm\u00e1ln\u00ed sacharidy; v testu jen voda.\n\u2022 B\u011bh 25 min r\u00e1no nebo v poledne, nejpozd\u011bji 3 h p\u0159ed testem, opravdu lehce.\n\u2022 P\u0159ed testem v Tymewearu opravit HR max 183 \u2192 186 (vstup do detekce).\n\nPO TESTU: S\u00cdLA A. V Tymewearu spustit Workout Zone Detection na tuto aktivitu a poslat screenshot (VT1/VT2 HR a VE); v\u00fdkon k prah\u016fm dopo\u010d\u00edt\u00e1m z lap\u016f.\n\nO\u010dek\u00e1v\u00e1n\u00ed (star\u00e1 data): VT1 kolem 240-260 W / HR ~137-142, VT2 kolem 285-300 W / HR ~158, VE ~113.\n\nWarmup\n- 15m 150w intensity=warmup\n\nMain Set 1x\n- 5m 160w intensity=interval\n\nMain Set 1x\n- 5m 180w intensity=interval\n\nMain Set 1x\n- 5m 200w intensity=interval\n\nMain Set 1x\n- 5m 220w intensity=interval\n\nMain Set 1x\n- 5m 240w intensity=interval\n\nMain Set 1x\n- 5m 260w intensity=interval\n\nMain Set 1x\n- 5m 280w intensity=interval\n\nMain Set 1x\n- 5m 300w intensity=interval\n\nMain Set 1x\n- 3m 320w intensity=interval\n\nCooldown\n- 12m 140w intensity=cooldown"
     },
     {
       "id": 142205758,
