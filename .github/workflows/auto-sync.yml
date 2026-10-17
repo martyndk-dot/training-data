@@ -97,13 +97,23 @@ jobs:
           YEAR_MONTH=$(date -u +"%Y-%m")
           mkdir -p "archive/${YEAR_MONTH}"
 
-          # Get timestamp
-          TIMESTAMP=$(date -u +"%Y%m%d_%H%M%S")
+          # One snapshot per day: overwrite archive/YYYY-MM/YYYYMMDD.json
+          # (last sync of the day wins). history.json covers long-term trends.
+          DAY=$(date -u +"%Y%m%d")
 
           # Copy latest.json to archive if it exists
           if [ -f latest.json ]; then
-            cp latest.json "archive/${YEAR_MONTH}/${TIMESTAMP}.json"
-            echo "✅ Archived to archive/${YEAR_MONTH}/${TIMESTAMP}.json"
+            cp latest.json "archive/${YEAR_MONTH}/${DAY}.json"
+            echo "✅ Archived to archive/${YEAR_MONTH}/${DAY}.json"
+
+            # Consolidate legacy intra-day snapshots (YYYYMMDD_HHMMSS.json):
+            # keep the last one per day as YYYYMMDD.json, delete the rest.
+            # Idempotent — does nothing once the archive is clean.
+            for f in $(ls archive/*/*_*.json 2>/dev/null | sort); do
+              d=$(basename "$f" | cut -d_ -f1)
+              dir=$(dirname "$f")
+              if [ "$d" = "$DAY" ]; then rm -f "$f"; else mv -f "$f" "$dir/$d.json"; fi
+            done
 
             # Configure git
             git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -111,7 +121,7 @@ jobs:
 
             # Stage ALL generated files BEFORE pulling to prevent
             # "untracked working tree files would be overwritten" errors
-            git add archive/
+            git add -A archive/
             if [ -f ftp_history.json ]; then
               git add ftp_history.json
               echo "✅ Staged ftp_history.json"
