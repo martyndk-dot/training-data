@@ -71,7 +71,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-17T10:43:06.297215",
+    "last_updated": "2026-10-17T13:56:57.514342",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.132"
@@ -291,7 +291,7 @@
       "respiration": null,
       "body_fat_pct": 22.3,
       "abdomen_cm": null,
-      "steps": 1146,
+      "steps": 3711,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -673,7 +673,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 3.33,
+          "planned_tss_delta": 3.2,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
@@ -713,7 +713,7 @@
     "p_max": 1052,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-17T10:43:06.295772",
+    "calculation_timestamp": "2026-10-17T13:56:57.513340",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4094,7 +4094,7 @@
       "respiration": null,
       "body_fat_pct": 22.3,
       "abdomen_cm": null,
-      "steps": 1146,
+      "steps": 3711,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4136,16 +4136,16 @@
     {
       "id": 142205739,
       "date": "2026-10-18",
-      "name": "KOTVA: Dlouh\u00e1 Z2 3,5-4 h",
+      "name": "KOTVA: Dlouh\u00e1 Z2 3 h 15 (S11 +10 %)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 150,
-      "duration_hours": 3.5,
-      "duration_formatted": "3h30m",
+      "planned_tss": 139,
+      "duration_hours": 3.25,
+      "duration_formatted": "3h15m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3,5 h, p\u0159i \ud83d\udfe2 r\u00e1nu a suchu a\u017e 4 h (sobota n\u00edzk\u00fd n\u00e1klad, TSB +10). 200-240 W, HR 120-135, VE 50-63, v\u00fd\u017eiva 70-80 g/h od 20. min + elektrolyt. D\u00e9\u0161\u0165 = NEZKRACOVAT: zbytek dojet na Tacxu. Zkr\u00e1tit na 2,5-3 h jen p\u0159i \ud83d\udd34 nebo \ud83d\udfe1\ud83d\udfe1 (RHR >52 / HRV <27).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 175m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h 15 min (Section 11 *1 Endurance Progression, f\u00e1ze A: +10 % proti posledn\u00ed dlouh\u00e9 j\u00edzd\u011b 2 h 57 z 11. 10., decoupling tehdy \u22123,4 %).\nTEMPO podle v\u00fdkonu 200-240 W, rovnom\u011brn\u011b (c\u00edl VI \u22641,05, \u017e\u00e1dn\u00e9 z\u00e1tahy do kopc\u016f). HR jen jako STOPKA: kdy\u017e p\u0159i Z2 wattech dos\u00e1hne ~165 \u2192 ubrat na regeneraci nebo konec.\nV\u00ddDR\u017d (durability): sledujeme DI \u22650,97 (posledn\u00ed hodina vs prvn\u00ed) a HR drift <5 % (ide\u00e1ln\u011b <3 %).\nV\u00dd\u017dIVA: ~750 kJ/h \u2192 70-80 g/h (vyzkou\u0161en\u00e1 d\u00e1vka, nad 80 ne), ~25 g ka\u017ed\u00fdch 20 min od 20. min; pit\u00ed zvl\u00e1\u0161\u0165 0,5-0,75 l/h s elektrolytem. Celkem ~240 g sacharid\u016f \u2014 napl\u00e1novat kapsy a dopln\u011bn\u00ed lahv\u00ed.\nD\u00e9\u0161\u0165 = nezkracovat, zbytek na Tacxu. Zkr\u00e1tit na 2,5 h jen p\u0159i \ud83d\udd34 nebo \ud83d\udfe1\ud83d\udfe1 r\u00e1no.\nDal\u0161\u00ed progrese dlouh\u00e9 j\u00edzdy: ~3 h 35, pak ~3 h 55 (p\u0159i spln\u011bn\u00ed driftu <5 %).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 160m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
     },
     {
       "id": 144779313,
