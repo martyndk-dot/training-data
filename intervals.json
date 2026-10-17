@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T14:05:30.480339",
-  "schema_version": 1,
-  "version": "3.132",
-  "script_hash": "e6cc7ee551ec",
+  "generated_at": "2026-10-17T14:20:10.071207",
+  "schema_version": 2,
+  "version": "3.141",
+  "script_hash": "22262cd4fadf",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
@@ -69,7 +69,80 @@
           "training_load": 39.937313
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205734",
+          "updated": "2026-10-06T21:22:10.772+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 8100
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            2355,
+            202.4,
+            476.7,
+            124.9,
+            91.2,
+            100.0,
+            100.0,
+            100.0,
+            0.59
+          ],
+          [
+            2355,
+            4711,
+            201.4,
+            469.2,
+            128.8,
+            80.9,
+            98.9,
+            98.9,
+            98.9,
+            6.05
+          ],
+          [
+            4711,
+            7067,
+            198.7,
+            468.2,
+            128.4,
+            83.8,
+            100.0,
+            100.0,
+            100.0,
+            3.31
+          ]
+        ],
+        "efforts": [
+          [
+            3192,
+            3386,
+            262,
+            140,
+            80.78866
+          ]
+        ],
+        "issues": [
+          "unsupported_steps",
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "7373dd91d6ec917b031b8af6d63c70e2e315d12a632bdbe968b8a285a3b98745",
+          "event_key": "dc92bcc0def5140681cffb447e131febe44497e9479bfe6541d45b1285dbe289",
+          "plan_key": "54b7aab74dffc693bee74485d6e18d71e9a4052b673009d5b3c5f44b004616f9",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i196910312",
@@ -1010,7 +1083,156 @@
           "training_load": 8.964352
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205732",
+          "updated": "2026-10-06T21:22:10.540+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 181.0
+          },
+          {
+            "supported": false,
+            "duration_s": 600
+          },
+          {
+            "supported": false,
+            "duration_s": 360
+          },
+          {
+            "supported": false,
+            "duration_s": 600
+          },
+          {
+            "supported": false,
+            "duration_s": 360
+          },
+          {
+            "supported": false,
+            "duration_s": 720
+          },
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 165.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1500,
+            213.8,
+            309.1,
+            128.0,
+            93.9,
+            96.4,
+            96.4,
+            95.93,
+            0.97
+          ],
+          [
+            1500,
+            3000,
+            226.9,
+            340.3,
+            146.6,
+            95.8,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            3000,
+            4501,
+            183.7,
+            275.7,
+            139.5,
+            90.4,
+            100.0,
+            100.0,
+            97.93,
+            3.73
+          ]
+        ],
+        "efforts": [
+          [
+            959,
+            972,
+            511,
+            126,
+            105.166664
+          ],
+          [
+            1019,
+            1037,
+            501,
+            141,
+            103.333336
+          ],
+          [
+            1079,
+            1097,
+            505,
+            144,
+            103.55556
+          ],
+          [
+            1139,
+            1158,
+            498,
+            146,
+            104.36842
+          ],
+          [
+            1199,
+            1218,
+            500,
+            148,
+            107.210526
+          ],
+          [
+            1259,
+            1278,
+            503,
+            150,
+            107.57895
+          ],
+          [
+            1319,
+            1337,
+            507,
+            151,
+            107.55556
+          ],
+          [
+            1384,
+            1397,
+            508,
+            153,
+            107.0
+          ]
+        ],
+        "omitted_efforts": 18,
+        "issues": [
+          "unsupported_steps",
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "44070dd8b163710cef5c1b2a0cfe389fb0fa270ce218f966781d4959473783fc",
+          "event_key": "071f061170decf1e592fd089c5460cb23a245ad915db0197260bd901c8f9529d",
+          "plan_key": "9cdb459bba557da905ed093255259f8f6f0b7b479efb4d6274f61a64dea9dd1a",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i196505997",
@@ -1038,7 +1260,70 @@
           "training_load": 66.83147
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205731",
+          "updated": "2026-10-11T15:48:17.634+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 5100
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            2006,
+            187.8,
+            360.1,
+            115.4,
+            85.7,
+            95.61,
+            95.61,
+            95.61,
+            2.55
+          ],
+          [
+            2006,
+            4013,
+            210.3,
+            412.8,
+            124.3,
+            86.6,
+            97.81,
+            97.81,
+            97.81,
+            2.09
+          ],
+          [
+            4013,
+            6020,
+            200.5,
+            402.4,
+            121.7,
+            81.5,
+            100.0,
+            100.0,
+            100.0,
+            3.14
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "4ed1bcf983fb583727014c800749d2ec1e4383b07ec833958b4ffcf4948ff5e7",
+          "event_key": "8715ff0d2500cb039b4f3eb79de6ce26117c8695730d3971921d63694c0ca7c7",
+          "plan_key": "d11699667edfb39c8adda0ccdafa9b11bb456a2ac1e79a5804651212d8fee814",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i196147359",
@@ -1066,7 +1351,80 @@
           "training_load": 119.249084
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "137444648",
+          "updated": "2026-10-06T21:21:50.347+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 1200,
+            "target_w": 191.0
+          },
+          {
+            "supported": false,
+            "duration_s": 9600
+          },
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 181.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            3710,
+            186.5,
+            679.5,
+            122.1,
+            82.2,
+            98.22,
+            98.22,
+            97.12,
+            7.49
+          ],
+          [
+            3710,
+            7420,
+            194.4,
+            651.7,
+            121.4,
+            77.7,
+            90.35,
+            90.35,
+            90.35,
+            7.7
+          ],
+          [
+            7420,
+            11130,
+            198.6,
+            717.4,
+            127.0,
+            77.0,
+            97.39,
+            97.39,
+            97.39,
+            6.23
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "fd31b290ae2f7444e8e20b85838856347a55cfc65ba827f09c131f00cd9336c8",
+          "event_key": "2b9ee943a9455501b783fe5f0aced953c04498b1bc6685ac404805b8c39d19d2",
+          "plan_key": "85292e9ea8b2a666bacc0d0cd958fa72910b88b901e50b730acbdf65d325daff",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i194717447",
@@ -1094,7 +1452,70 @@
           "training_load": 84.96331
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "140334731",
+          "updated": "2026-10-06T21:21:43.797+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 7200
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            2642,
+            195.8,
+            517.2,
+            119.3,
+            89.3,
+            100.0,
+            100.0,
+            100.0,
+            0.76
+          ],
+          [
+            2642,
+            5284,
+            198.6,
+            524.8,
+            126.1,
+            81.8,
+            100.0,
+            100.0,
+            100.0,
+            4.92
+          ],
+          [
+            5284,
+            7927,
+            195.7,
+            517.2,
+            126.3,
+            83.5,
+            100.0,
+            100.0,
+            100.0,
+            3.71
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "d793fedb94229f73fb46967e25f26ded8c0f8fcfb6c9f5310031279aa09587a6",
+          "event_key": "e0a4c4a934d17fadc51e48653841d68700259f54a0389d9d108404857a8905ba",
+          "plan_key": "107f035f30571e7ae91ce2400dd366d88aad8c9034bd8fec1c714e17329d4f94",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i194337024",
@@ -1686,7 +2107,156 @@
           "training_load": 23.464237
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "129459978",
+          "updated": "2026-09-30T22:17:20.587+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 181.0
+          },
+          {
+            "supported": false,
+            "duration_s": 360
+          },
+          {
+            "supported": false,
+            "duration_s": 480
+          },
+          {
+            "supported": false,
+            "duration_s": 360
+          },
+          {
+            "supported": false,
+            "duration_s": 480
+          },
+          {
+            "supported": false,
+            "duration_s": 480
+          },
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 165.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1635,
+            213.6,
+            349.3,
+            124.5,
+            88.7,
+            100.0,
+            100.0,
+            100.0,
+            0.73
+          ],
+          [
+            1635,
+            3270,
+            230.8,
+            370.7,
+            133.8,
+            83.7,
+            98.23,
+            98.23,
+            98.23,
+            1.31
+          ],
+          [
+            3270,
+            4906,
+            187.2,
+            306.2,
+            121.5,
+            77.4,
+            100.0,
+            100.0,
+            100.0,
+            8.99
+          ]
+        ],
+        "efforts": [
+          [
+            903,
+            941,
+            400,
+            131,
+            92.63158
+          ],
+          [
+            962,
+            1001,
+            405,
+            146,
+            90.051285
+          ],
+          [
+            1022,
+            1061,
+            393,
+            150,
+            88.20513
+          ],
+          [
+            1081,
+            1121,
+            393,
+            152,
+            87.9
+          ],
+          [
+            1141,
+            1181,
+            405,
+            152,
+            85.225
+          ],
+          [
+            1202,
+            1241,
+            403,
+            152,
+            88.79487
+          ],
+          [
+            1742,
+            1780,
+            409,
+            141,
+            87.42105
+          ],
+          [
+            1802,
+            1840,
+            406,
+            148,
+            85.73684
+          ]
+        ],
+        "omitted_efforts": 8,
+        "issues": [
+          "unsupported_steps",
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "35c67a72612ebb6fdfd053935b9e3d63326a4737a694cc69999b05ef33b1b75c",
+          "event_key": "1f57087caca2a552a180c5784df156d91e12cf8a6859f5cbaaee20cb8988fca7",
+          "plan_key": "08d4f74e6fac761053b27c5d95806b73848c8b24051233906f5701a35d8fe0e3",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i192989621",
@@ -2393,7 +2963,153 @@
           "training_load": 4.77
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "129459976",
+          "updated": "2026-10-02T05:52:52.826+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 1500,
+            "target_w": 181.0
+          },
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 214.0
+          },
+          {
+            "supported": false,
+            "duration_s": 360
+          },
+          {
+            "supported": false,
+            "duration_s": 200
+          },
+          {
+            "supported": false,
+            "duration_s": 4800
+          },
+          {
+            "supported": false,
+            "duration_s": 1200,
+            "target_w": 165.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1771,
+            274.5,
+            485.3,
+            156.4,
+            80.8,
+            99.83,
+            99.83,
+            99.83,
+            8.48
+          ],
+          [
+            1771,
+            3543,
+            254.9,
+            451.6,
+            162.2,
+            78.6,
+            100.0,
+            100.0,
+            100.0,
+            13.32
+          ],
+          [
+            3543,
+            5315,
+            189.7,
+            327.4,
+            150.7,
+            64.0,
+            97.4,
+            97.4,
+            97.4,
+            22.71
+          ]
+        ],
+        "efforts": [
+          [
+            333,
+            377,
+            518,
+            161,
+            96.84091
+          ],
+          [
+            380,
+            573,
+            365,
+            170,
+            92.621765
+          ],
+          [
+            880,
+            916,
+            367,
+            157,
+            96.75
+          ],
+          [
+            1038,
+            1066,
+            405,
+            168,
+            89.10714
+          ],
+          [
+            1104,
+            1143,
+            347,
+            169,
+            94.69231
+          ],
+          [
+            1265,
+            1290,
+            409,
+            162,
+            92.76
+          ],
+          [
+            1305,
+            1359,
+            400,
+            169,
+            90.48148
+          ],
+          [
+            1615,
+            1822,
+            322,
+            165,
+            85.56039
+          ]
+        ],
+        "omitted_efforts": 12,
+        "issues": [
+          "unsupported_steps",
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "a07026d83af8283b6a3c778c0fa22719fd4bb44a732e3f028d6bb7439d2f9a64",
+          "event_key": "d564a53dbeb9f9504be64a50f1d762ec2d3feca3b2aa1f4a851ab5286f13ffe5",
+          "plan_key": "ce130eface3d5c2988866f5c9fdd87fff067fbbfca05a06f851027587f6c6aaa",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     },
     {
       "activity_id": "i192956796",
@@ -2421,7 +3137,217 @@
           "training_load": 14.612947
         }
       ],
-      "zone_basis": "power"
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            450,
+            132.9,
+            59.8,
+            107.6,
+            71.2,
+            100.0,
+            100.0,
+            100.0,
+            14.67
+          ],
+          [
+            450,
+            900,
+            205.2,
+            92.3,
+            126.5,
+            88.6,
+            100.0,
+            100.0,
+            100.0,
+            3.11
+          ],
+          [
+            900,
+            1350,
+            203.1,
+            91.4,
+            133.2,
+            88.6,
+            100.0,
+            100.0,
+            100.0,
+            4.44
+          ]
+        ],
+        "cache": {
+          "activity_key": "e646140747e5b86ad70ab326a9df7a0c308db5e3ff322267a9002b51d63af54f",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i198247774",
+      "date": "2026-10-17",
+      "start_datetime": "2026-10-17T09:08:29",
+      "type": "Cyclocross",
+      "name": "KOTVA: CX tr\u00e9nink 1 h (T4 80/160) + p\u0159\u00edjezd/odjezd Z2",
+      "interval_summary": [
+        "1x 2m10s 426w"
+      ],
+      "intervals": [],
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "138158616",
+          "updated": "2026-10-16T21:58:18.859+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 2700,
+            "target_w": 211.0
+          },
+          {
+            "supported": false,
+            "duration_s": 900
+          },
+          {
+            "supported": false,
+            "duration_s": 1440
+          },
+          {
+            "supported": false,
+            "duration_s": 900
+          },
+          {
+            "supported": false,
+            "duration_s": 2700,
+            "target_w": 211.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            3159,
+            166.0,
+            432.3,
+            118.0,
+            79.9,
+            82.43,
+            82.43,
+            82.02,
+            8.45
+          ],
+          [
+            3159,
+            6318,
+            185.4,
+            370.3,
+            122.5,
+            57.0,
+            63.22,
+            63.22,
+            61.86,
+            6.91
+          ],
+          [
+            6318,
+            9477,
+            206.6,
+            515.6,
+            130.3,
+            74.5,
+            79.01,
+            79.01,
+            79.01,
+            4.37
+          ]
+        ],
+        "efforts": [
+          [
+            9234,
+            9364,
+            426,
+            157,
+            89.253845
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "c358290c9df3f159de4d600088a05eb76fa6e64168ea7e0f020fd49d5e231806",
+          "event_key": "4c36adb8d8e10a2b29d249d0f9807f925989d947f8756244e7941d8ee8105028",
+          "plan_key": "f55d9786e6ad11034a6d8a754dfa0df0d2ab9369c2f50d062eab62639bbf58de",
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i195705504",
+      "date": "2026-10-10",
+      "start_datetime": "2026-10-10T10:04:57",
+      "type": "Cyclocross",
+      "name": "Choustn\u00edkovo Hradi\u0161t\u011b Cyklokros",
+      "interval_summary": null,
+      "intervals": [],
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            1950,
+            149.8,
+            237.5,
+            132.6,
+            49.0,
+            81.28,
+            81.28,
+            81.18,
+            6.56
+          ],
+          [
+            1950,
+            3900,
+            184.5,
+            130.4,
+            145.0,
+            52.7,
+            36.26,
+            36.26,
+            35.79,
+            9.05
+          ],
+          [
+            3900,
+            5851,
+            155.5,
+            146.8,
+            125.1,
+            47.0,
+            48.39,
+            48.39,
+            48.23,
+            6.67
+          ]
+        ],
+        "cache": {
+          "activity_key": "ff8df3da34f1cc8f65f68ebb34880725ef9fbd024007fa366f63cb31651777df",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-10-17T14:20:15.010526+00:00",
+          "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2430,19 +3356,19 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-14T16:06:45.026+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-17T14:10:30.480339"
+        "next_retry_at": "2026-10-17T14:25:10.071207"
       }
     },
     "i196910312": {
@@ -2450,16 +3376,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-13T17:41:57.222+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2469,16 +3395,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-12T15:31:18.388+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2488,16 +3414,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-11T15:13:13.325+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2507,16 +3433,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-07T15:14:30.768+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2526,16 +3452,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-06T16:19:34.526+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2545,16 +3471,16 @@
       "paired_planned": true,
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-03T13:32:39.796+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }
@@ -2563,16 +3489,16 @@
       "date": "2026-10-03",
       "intervals": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "ok",
         "reason": "ok",
         "source_icu_sync_date": "2026-10-03T12:00:37.288+00:00"
       },
       "streams": {
         "attempts": 1,
-        "first_seen": "2026-10-17T14:05:30.480339",
-        "last_attempt": "2026-10-17T14:05:30.480339",
+        "first_seen": "2026-10-17T14:20:10.071207",
+        "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
       }

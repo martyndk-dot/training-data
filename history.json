@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-17T14:05:26.589761",
+  "generated_at": "2026-10-17T14:20:02.008794",
   "source": "Intervals.icu API",
-  "sync_version": "3.132",
-  "script_hash": "e6cc7ee551ec",
+  "sync_version": "3.141",
+  "script_hash": "22262cd4fadf",
   "data_range": {
     "earliest": "2023-10-18",
     "latest": "2026-10-17",
