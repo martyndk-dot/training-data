@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T09:30:18.796355",
+  "generated_at": "2026-10-18T13:30:55.287023",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -2417,6 +2417,107 @@
           "next_refresh_at": "2026-10-18T14:20:15.010526+00:00"
         }
       }
+    },
+    {
+      "activity_id": "i198621872",
+      "date": "2026-10-18",
+      "start_datetime": "2026-10-18T10:15:11",
+      "type": "Ride",
+      "name": "KOTVA: Dlouh\u00e1 Z2 3 h 15 (S11 +10 %)",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 11440,
+          "moving_secs": 11350,
+          "start_secs": 0,
+          "end_secs": 11440,
+          "avg_power": 192,
+          "max_power": 539,
+          "avg_hr": 123,
+          "max_hr": 157,
+          "min_hr": 75,
+          "avg_cadence": 80.73778,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 38046,
+          "training_load": 125.243126
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205739",
+          "updated": "2026-10-17T13:34:00.797+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 1200,
+            "target_w": 191.0
+          },
+          {
+            "supported": false,
+            "duration_s": 9600
+          },
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 181.0
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            3813,
+            185.9,
+            692.6,
+            117.8,
+            84.3,
+            97.72,
+            97.72,
+            97.72,
+            5.9
+          ],
+          [
+            3813,
+            7626,
+            195.5,
+            745.4,
+            123.6,
+            81.3,
+            100.0,
+            100.0,
+            100.0,
+            6.4
+          ],
+          [
+            7626,
+            11439,
+            197.4,
+            752.6,
+            129.7,
+            76.8,
+            100.0,
+            100.0,
+            100.0,
+            6.16
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "89f03d19f8f48474284366475954a0f8cb83d994185f14ef741a003571e58f73",
+          "event_key": "e7b5871cf1db6d7d1d630c8725153373628fcf99b60b334f25bfbdecdbc309f1",
+          "plan_key": "492e8ebf95065129b7133ac23192a49236ade41d1461fea56bf6a51456163ba3",
+          "sampled_at": "2026-10-18T13:30:56.324206+00:00",
+          "next_refresh_at": "2026-10-19T13:30:56.324206+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -2532,6 +2633,26 @@
         "last_attempt": "2026-10-17T14:20:10.071207",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i198621872": {
+      "date": "2026-10-18",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-18T13:30:55.287023",
+        "last_attempt": "2026-10-18T13:30:55.287023",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-18T11:27:20.686+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-18T13:30:55.287023",
+        "last_attempt": "2026-10-18T13:30:55.287023",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-18T13:35:55.287023"
       }
     }
   }
