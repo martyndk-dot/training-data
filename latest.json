@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-18T19:23:26.878517",
+    "last_updated": "2026-10-18T21:47:23.236304",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -691,9 +691,9 @@
           "current_week_hard_days_completed": 3,
           "current_week_hard_days_total": 3,
           "race_proximity": null,
-          "next_week_load": 1.7,
+          "next_week_load": 1.5,
           "plan_coverage_current_week": 0.25,
-          "plan_coverage_next_week": 1.75
+          "plan_coverage_next_week": 1.25
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -726,7 +726,7 @@
     "p_max": 1052,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-18T19:23:26.877105",
+    "calculation_timestamp": "2026-10-18T21:47:23.235242",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4126,32 +4126,17 @@
       "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h 15 min (Section 11 *1 Endurance Progression, f\u00e1ze A: +10 % proti posledn\u00ed dlouh\u00e9 j\u00edzd\u011b 2 h 57 z 11. 10., decoupling tehdy \u22123,4 %).\nTEMPO podle v\u00fdkonu 200-240 W, rovnom\u011brn\u011b (c\u00edl VI \u22641,05, \u017e\u00e1dn\u00e9 z\u00e1tahy do kopc\u016f). HR jen jako STOPKA: kdy\u017e p\u0159i Z2 wattech dos\u00e1hne ~165 \u2192 ubrat na regeneraci nebo konec.\nV\u00ddDR\u017d (durability): sledujeme DI \u22650,97 (posledn\u00ed hodina vs prvn\u00ed) a HR drift <5 % (ide\u00e1ln\u011b <3 %).\nV\u00dd\u017dIVA: ~750 kJ/h \u2192 70-80 g/h (vyzkou\u0161en\u00e1 d\u00e1vka, nad 80 ne), ~25 g ka\u017ed\u00fdch 20 min od 20. min; pit\u00ed zvl\u00e1\u0161\u0165 0,5-0,75 l/h s elektrolytem. Celkem ~240 g sacharid\u016f \u2014 napl\u00e1novat kapsy a dopln\u011bn\u00ed lahv\u00ed.\nD\u00e9\u0161\u0165 = nezkracovat, zbytek na Tacxu. Zkr\u00e1tit na 2,5 h jen p\u0159i \ud83d\udd34 nebo \ud83d\udfe1\ud83d\udfe1 r\u00e1no.\nDal\u0161\u00ed progrese dlouh\u00e9 j\u00edzdy: ~3 h 35, pak ~3 h 55 (p\u0159i spln\u011bn\u00ed driftu <5 %).\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 160m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
     },
     {
-      "id": 144779313,
+      "id": 145905590,
       "date": "2026-10-19",
-      "name": "B\u011bh 25 lehce (n\u00e1b\u011bh 1/2)",
-      "type": "WORKOUT",
-      "sport_type": "Run",
+      "name": "\ud83e\udd12 Volno \u2014 zv\u00fd\u0161en\u00e1 teplota a \u00fanava, test odlo\u017een",
+      "type": "NOTE",
+      "sport_type": null,
       "planned_tss": null,
-      "duration_hours": 0.42,
-      "duration_formatted": "25m",
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
       "workout_summary": null,
       "has_terrain": false,
-      "start_time": "12:00",
-      "description": "B\u011aH 1/2 (t\u00fdden 1 n\u00e1b\u011bhu): 25 min souvisle lehce, rovina / lesn\u00ed cesta. HR do 140, tempo kolem 6:20-6:40/km, mluvit v cel\u00fdch v\u011bt\u00e1ch.\nKoleno: krat\u0161\u00ed krok, vy\u0161\u0161\u00ed kadence (c\u00edl ~84-86 / noha, loni 79-82), \u017e\u00e1dn\u00e9 dlouh\u00e9 seb\u011bhy. Po b\u011bhu hned prota\u017een\u00ed (kvadriceps, IT p\u00e1s/TFL, l\u00fdtka).\nAltra Lone Peak = zero drop \u2192 l\u00fdtka a Achillovky dostanou v\u00edc; prvn\u00ed 2 t\u00fddny nep\u0159id\u00e1vat.\nStop pravidlo: bolest kolena B\u011aHEM b\u011bhu nebo dal\u0161\u00ed den r\u00e1no \u2192 b\u011bh p\u0159eru\u0161it a hl\u00e1sit."
-    },
-    {
-      "id": 142205757,
-      "date": "2026-10-19",
-      "name": "TEST: Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 55,
-      "duration_hours": 1.17,
-      "duration_formatted": "1h10m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "start_time": "15:00",
-      "description": "TEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection). Nahrazuje FLEX Z2 90. Submaxim\u00e1ln\u00ed, ne do vy\u010derp\u00e1n\u00ed: kon\u010d\u00ed t\u011bsn\u011b nad VT2, tak\u017ee nejde o plnohodnotn\u00fd tvrd\u00fd den; \u00fater\u00fd volno, st\u0159ede\u010dn\u00ed T1 je 48 h po testu.\n\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):\nRozjet\u00ed 15 min @ 150 W, pak 5min stupn\u011b 160 \u2192 300 W po 20 W, posledn\u00ed stupe\u0148 3 min @ 320 W, vyjet\u00ed 12 min @ 140 W.\n5min stupn\u011b jsou kv\u016fli ust\u00e1len\u00ed VE i HR (VE se ust\u00e1l\u00ed za ~2 min, HR za 3-4 min) \u2014 p\u0159esn\u011b to chyb\u011blo u intermitentn\u00edho 20/40.\n\nSTOP pravidlo (kter\u00e9koli): VE >130 L/min, HR \u2265170, nebo nelze dr\u017eet kadenci. Stupe\u0148 320 W jen p\u0159i RPE \u22648 po 300 W.\n\nPODM\u00cdNKY (kv\u016fli srovnatelnosti VE):\n\u2022 M\u00edstnost co nejchladn\u011bj\u0161\u00ed, v\u011btr\u00e1k na plno od za\u010d\u00e1tku (teplo zved\u00e1 VE a posunulo \u00fatern\u00ed detekci).\n\u2022 Kadence konstantn\u011b 90 \u00b13, celou dobu v sedle, nemluvit.\n\u2022 P\u00edt jen v prvn\u00ed minut\u011b stupn\u011b, ne v posledn\u00edch 2 min (polyk\u00e1n\u00ed a zadr\u017een\u00ed dechu kaz\u00ed VE).\n\u2022 Tymewear p\u00e1s na stejn\u00e9m m\u00edst\u011b jako obvykle, dob\u0159e uta\u017een\u00fd; p\u0159ed startem ov\u011b\u0159it p\u00e1rov\u00e1n\u00ed s Edge 1050 (VE na displeji).\n\u2022 Z\u00e1znam Edge 1050 + Tymewear + HR p\u00e1s. Workout krokovat z Edge, a\u0165 ka\u017ed\u00fd stupe\u0148 je samostatn\u00fd lap.\n\u2022 Posledn\u00ed j\u00eddlo 2-3 h p\u0159edem, norm\u00e1ln\u00ed sacharidy; v testu jen voda.\n\u2022 B\u011bh 25 min r\u00e1no nebo v poledne, nejpozd\u011bji 3 h p\u0159ed testem, opravdu lehce.\n\u2022 P\u0159ed testem v Tymewearu opravit HR max 183 \u2192 186 (vstup do detekce).\n\nPO TESTU: S\u00cdLA A. V Tymewearu spustit Workout Zone Detection na tuto aktivitu a poslat screenshot (VT1/VT2 HR a VE); v\u00fdkon k prah\u016fm dopo\u010d\u00edt\u00e1m z lap\u016f.\n\nO\u010dek\u00e1v\u00e1n\u00ed (star\u00e1 data): VT1 kolem 240-260 W / HR ~137-142, VT2 kolem 285-300 W / HR ~158, VE ~113.\n\nWarmup\n- 15m 150w intensity=warmup\n\nMain Set 1x\n- 5m 160w intensity=interval\n\nMain Set 1x\n- 5m 180w intensity=interval\n\nMain Set 1x\n- 5m 200w intensity=interval\n\nMain Set 1x\n- 5m 220w intensity=interval\n\nMain Set 1x\n- 5m 240w intensity=interval\n\nMain Set 1x\n- 5m 260w intensity=interval\n\nMain Set 1x\n- 5m 280w intensity=interval\n\nMain Set 1x\n- 5m 300w intensity=interval\n\nMain Set 1x\n- 3m 320w intensity=interval\n\nCooldown\n- 12m 140w intensity=cooldown"
+      "description": "Ne 18. 10. ve\u010der: v\u00fdrazn\u011bj\u0161\u00ed \u00fanava ne\u017e obvykle + teplota na krku 38 \u00b0C, jinde 36,5\u201337 \u00b0C.\n\nPO 19. 10. \u2014 VOLNO (\u00fat 20. 10. \u0161kolen\u00ed = volno tak\u00e9).\n\u2022 Zru\u0161eno: VT test (p\u0159esunut p\u0159edb\u011b\u017en\u011b na po 26. 10. m\u00edsto FLEX Z2 90), b\u011bh 25 (n\u00e1b\u011bh b\u011bhu se posouv\u00e1 o t\u00fdden), S\u00cdLA A.\n\u2022 R\u00e1no: zm\u011b\u0159it teplotu digit\u00e1ln\u00edm teplom\u011brem v podpa\u017e\u00ed (5\u201310 min) nebo v \u00fastech + \u201ewellness\u201c.\n\u2022 Pravidlo: teplota \u226537,5 \u00b0C nebo celkov\u00e9 p\u0159\u00edznaky (zimnice, bolest sval\u016f, krk) = \u017e\u00e1dn\u00fd tr\u00e9nink.\n\u2022 N\u00e1vrat: a\u017e 24 h bez teploty a bez l\u00e9k\u016f na sn\u00ed\u017een\u00ed teploty; prvn\u00ed den jen Z1.\n\u2022 St T1 30/30: rozhodnout st\u0159eda r\u00e1no (teplota, RHR, HRV, teplota k\u016f\u017ee Garmin)."
     },
     {
       "id": 142205758,
@@ -4224,18 +4209,18 @@
       "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h 30 (S11 Endurance Progression +10 % proti 3 h 09 z 18. 10., decoupling tehdy 3,1 %, ale pozdn\u00ed n\u00e1r\u016fst HR v posledn\u00edch ~50 min \u2192 jen +10 %). Den po race-simu; od dne\u0161ka zimn\u00ed \u010das \u2192 vyjet dopoledne.\nTEMPO podle v\u00fdkonu 200\u2013240 W rovnom\u011brn\u011b (VI \u22641,05), HR jen jako stopka (~165). VE z\u00f3ny upravit podle pond\u011bln\u00edho testu.\nDURABILITY: lap ka\u017edou hodinu \u2192 srovn\u00e1n\u00ed P/HR a VE 1. vs posledn\u00ed hodina; c\u00edl drift <5 %.\nV\u00dd\u017dIVA: 70\u201380 g/h od 20. min, zvl\u00e1\u0161\u0165 hl\u00eddat 3. hodinu; 0,5\u20130,75 l/h s elektrolytem; celkem ~260 g sacharid\u016f. Sacharidy zapsat.\nD\u00e9\u0161\u0165 = nezkracovat, zbytek na Tacxu. Zkr\u00e1tit na 3 h jen p\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34 r\u00e1no.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 175m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
     },
     {
-      "id": 142205762,
+      "id": 142205757,
       "date": "2026-10-26",
-      "name": "FLEX: Z2 90 Tacx + S\u00cdLA A",
+      "name": "TEST (p\u0159edb\u011b\u017en\u011b): Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 61,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
+      "planned_tss": 55,
+      "duration_hours": 1.17,
+      "duration_formatted": "1h10m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description_preview": "FLEX: Z2 90 min na Tacxu (200-220 W) + S\u00cdLA A. Zimn\u00ed \u010das \u2014 v\u0161edn\u00ed dny indoor.\nMain Set 1x\n- 90m 64% intensity=interval"
+      "description_preview": "P\u0158ESUNUTO z 19. 10. (zv\u00fd\u0161en\u00e1 teplota + \u00fanava po v\u00edkendu). Nahrazuje FLEX Z2 90 Tacx. P\u0158EDB\u011a\u017dN\u011a \u2014 jen pokud p\u0159edchoz\u00ed 2 dny bez teploty a wellness \ud83d\udfe2; jinak dal\u0161\u00ed posun. Den p\u0159ed T2 \u2014 test je submaxim\u00e1ln\u00ed, kon\u010d\u00ed t\u011bsn\u011b nad VT2.\nTEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection).\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):"
     },
     {
       "id": 142205763,
@@ -4372,13 +4357,13 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 14,
+    "attempted": 13,
     "success": 6,
     "patternA": 6,
     "patternB": 0,
     "flat": 0,
-    "bail_no_workout_doc": 2,
-    "bail_no_match": 8
+    "bail_no_workout_doc": 1,
+    "bail_no_match": 7
   },
   "weekly_summary": {
     "total_training_hours": 9.94,
