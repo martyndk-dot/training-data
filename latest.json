@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-19T00:08:00.356480",
+    "last_updated": "2026-10-19T05:13:18.367792",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -263,10 +263,10 @@
       }
     },
     "current_metrics": {
-      "weight_kg": 83.889,
+      "weight_kg": 84.069,
       "display": {
         "weight": {
-          "value": 83.9,
+          "value": 84.1,
           "unit": "kg"
         }
       },
@@ -290,7 +290,7 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 22.4,
       "abdomen_cm": null,
       "steps": 30,
       "hydration_volume_l": null,
@@ -303,27 +303,27 @@
       "readiness": null
     },
     "weight": {
-      "weight_latest_kg": 83.9,
-      "weight_latest_date": "2026-10-18",
-      "wkg_current": 3.93,
+      "weight_latest_kg": 84.1,
+      "weight_latest_date": "2026-10-19",
+      "wkg_current": 3.92,
       "wkg_ftp_source": "tested",
       "ftp_setting_date": "2026-08-08",
       "wkg_block_start": 3.95,
       "wkg_block_end": 3.93,
       "wkg_block_delta": -0.02,
-      "weight_7d_avg_kg": 83.4,
-      "weight_28d_slope_kg_per_week": -0.139,
+      "weight_7d_avg_kg": 83.5,
+      "weight_28d_slope_kg_per_week": -0.095,
       "display": {
         "weight_latest": {
-          "value": 83.9,
+          "value": 84.1,
           "unit": "kg"
         },
         "weight_7d_avg": {
-          "value": 83.4,
+          "value": 83.5,
           "unit": "kg"
         },
         "weight_28d_slope_per_week": {
-          "value": -0.139,
+          "value": -0.095,
           "unit": "kg/week"
         }
       }
@@ -544,68 +544,68 @@
           "start": "2026-09-08",
           "end": "2026-10-19"
         },
-        "weight_kg": 83.9,
+        "weight_kg": 84.1,
         "weight_source": "wellness_recent",
         "cycling": {
           "anchors": {
             "300s": {
               "actual_watts": 383,
-              "actual_wpkg": 4.56,
+              "actual_wpkg": 4.55,
               "actual_hr": 173,
               "pct_lthr": 101.2,
               "source": "observed_outdoor",
               "coggan_watts": 350,
-              "coggan_wpkg": 4.17,
+              "coggan_wpkg": 4.16,
               "cp_model_watts": 423,
-              "cp_model_wpkg": 5.04,
+              "cp_model_wpkg": 5.03,
               "model_divergence_pct": -9.5
             },
             "600s": {
               "actual_watts": 339,
-              "actual_wpkg": 4.04,
+              "actual_wpkg": 4.03,
               "actual_hr": 171,
               "pct_lthr": 100.0,
               "source": "observed_outdoor",
               "coggan_watts": 320,
-              "coggan_wpkg": 3.81,
+              "coggan_wpkg": 3.8,
               "cp_model_watts": 376,
-              "cp_model_wpkg": 4.48,
+              "cp_model_wpkg": 4.47,
               "model_divergence_pct": -9.8
             },
             "1200s": {
               "actual_watts": 332,
-              "actual_wpkg": 3.96,
+              "actual_wpkg": 3.95,
               "actual_hr": 167,
               "pct_lthr": 97.7,
               "source": "observed_outdoor",
               "coggan_watts": 307,
-              "coggan_wpkg": 3.66,
+              "coggan_wpkg": 3.65,
               "cp_model_watts": 353,
-              "cp_model_wpkg": 4.21,
+              "cp_model_wpkg": 4.2,
               "model_divergence_pct": -5.9
             },
             "1800s": {
               "actual_watts": 311,
-              "actual_wpkg": 3.71,
+              "actual_wpkg": 3.7,
               "actual_hr": 164,
               "pct_lthr": 95.9,
               "source": "observed_outdoor",
               "coggan_watts": 297,
-              "coggan_wpkg": 3.54,
+              "coggan_wpkg": 3.53,
               "cp_model_watts": 345,
-              "cp_model_wpkg": 4.11,
+              "cp_model_wpkg": 4.1,
               "model_divergence_pct": -9.9
             },
             "3600s": {
               "actual_watts": 267,
-              "actual_wpkg": 3.18,
+              "actual_wpkg": 3.17,
               "actual_hr": 161,
               "pct_lthr": 94.2,
               "source": "observed_outdoor",
               "coggan_watts": 284,
               "coggan_wpkg": 3.38,
               "cp_model_watts": 338,
-              "cp_model_wpkg": 4.03,
+              "cp_model_wpkg": 4.02,
               "model_divergence_pct": -21.0
             },
             "5400s": {
@@ -615,9 +615,9 @@
               "pct_lthr": 86.0,
               "source": "observed_outdoor",
               "coggan_watts": 271,
-              "coggan_wpkg": 3.23,
+              "coggan_wpkg": 3.22,
               "cp_model_watts": 335,
-              "cp_model_wpkg": 3.99,
+              "cp_model_wpkg": 3.98,
               "model_divergence_pct": -35.5
             },
             "7200s": {
@@ -629,7 +629,7 @@
               "coggan_watts": 257,
               "coggan_wpkg": 3.06,
               "cp_model_watts": 334,
-              "cp_model_wpkg": 3.98,
+              "cp_model_wpkg": 3.97,
               "model_divergence_pct": -35.3
             }
           },
@@ -712,7 +712,7 @@
     "p_max": 1051,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-19T00:08:00.355110",
+    "calculation_timestamp": "2026-10-19T05:13:18.366732",
     "data_quality": {
       "hrv_data_points": 6,
       "rhr_data_points": 7,
@@ -4026,9 +4026,12 @@
     },
     {
       "date": "2026-10-19",
-      "weight_kg": null,
+      "weight_kg": 84.069,
       "display": {
-        "weight": null
+        "weight": {
+          "value": 84.1,
+          "unit": "kg"
+        }
       },
       "resting_hr": 52,
       "hrv_rmssd": null,
@@ -4054,7 +4057,7 @@
       "baevsky_si": null,
       "lactate": null,
       "respiration": null,
-      "body_fat_pct": null,
+      "body_fat_pct": 22.4,
       "abdomen_cm": null,
       "steps": 30,
       "hydration_volume_l": null,
