@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-21T13:10:16.839636",
+    "last_updated": "2026-10-21T18:14:20.442922",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -173,7 +173,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 3,
+    "age_days": 4,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -280,7 +280,7 @@
       "respiration": null,
       "body_fat_pct": 22.4,
       "abdomen_cm": null,
-      "steps": 5550,
+      "steps": 7706,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -647,7 +647,7 @@
     },
     "phase_detection": {
       "phase": "Build",
-      "confidence": "high",
+      "confidence": "medium",
       "reason_codes": [],
       "basis": {
         "stream_1": {
@@ -657,13 +657,13 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.89,
-          "hard_sessions_planned": 2,
+          "planned_tss_delta": 0.93,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 0,
-          "current_week_hard_days_total": 2,
+          "current_week_hard_days_total": 1,
           "race_proximity": null,
           "next_week_load": 1.76,
-          "plan_coverage_current_week": 1.0,
+          "plan_coverage_current_week": 0.8,
           "plan_coverage_next_week": 1.4
         },
         "data_quality": "good",
@@ -697,7 +697,7 @@
     "p_max": 1049,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-21T13:10:16.838409",
+    "calculation_timestamp": "2026-10-21T18:14:20.441552",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -4044,7 +4044,7 @@
       "respiration": null,
       "body_fat_pct": 22.4,
       "abdomen_cm": null,
-      "steps": 5550,
+      "steps": 7706,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -4057,74 +4057,73 @@
   ],
   "planned_workouts": [
     {
-      "id": 142205758,
+      "id": 146867364,
       "date": "2026-10-21",
-      "name": "KOTVA: CX T1 30/30 + Z2 50",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 100,
-      "duration_hours": 1.75,
-      "duration_formatted": "1h45m",
-      "workout_summary": "20m [target not shown] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | 10m [target not shown]",
-      "has_terrain": false,
-      "start_time": "15:00",
-      "description": "KOTVA \u2014 tvrd\u00fd den #1 (p\u0159esunuto z \u00fater\u00fd 20. 10. \u2014 \u0161kolen\u00ed, den volna). 96 h po sobotn\u00edm CX, po voln\u00e9m dni \u010derstv\u00e9 nohy. CX rotace T1: 2 s\u00e9rie 30/30 @ 430-460 W, 5 min mezi s\u00e9riemi, pak Z2 50 min. D\u00e9lka s\u00e9rie podle sign\u00e1lu: kdy\u017e HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2-3 \u00faseky a konec, max 10. Venku za sv\u011btla (posledn\u00ed t\u00fdden letn\u00edho \u010dasu), nebo Tacx (ERG jen na 30 s OK). Z\u00e1znam Edge 1050 + Tymewear.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 5m 55% intensity=recovery\n\nMain Set 10x\n- 30s 135% intensity=interval\n- 30s 50% intensity=recovery\n\nMain Set 1x\n- 50m 66% intensity=interval\n\nCooldown\n- 10m 55% intensity=cooldown"
-    },
-    {
-      "id": 142205760,
-      "date": "2026-10-22",
-      "name": "Skills 45 + Z2 60 + S\u00cdLA B",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 68,
-      "duration_hours": 1.75,
-      "duration_formatted": "1h45m",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udd34 NO-GO T1: \u00fanava + hlasivky, volno",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
       "workout_summary": null,
       "has_terrain": false,
-      "start_time": "15:00",
-      "description": "FLEX. Den po st\u0159ede\u010dn\u00edm T1. Skills 45 (skoky f\u00e1ze 3-4, sesed\u00e1n\u00ed v rychlosti, zat\u00e1\u010dky \u2014 kvalita p\u0159ed kvantitou, na \u010derstv\u00fdch nohou hned po rozjet\u00ed) + Z2 60 min 200-230 W (n\u00e1hrada za zru\u0161enou st\u0159ede\u010dn\u00ed Z2 2 h) + S\u00cdLA B (2 s\u00e9rie, 2 dny p\u0159ed spole\u010dn\u00fdm CX tr\u00e9ninkem). P\u0159i t\u011b\u017ek\u00fdch noh\u00e1ch po T1 Z2 zkr\u00e1tit na 30 min.\n\nMain Set 1x\n- 45m 58% intensity=interval\n\nMain Set 1x\n- 60m 65% intensity=interval"
+      "description": "Garmin \u2014 data doraz\u00edla se zpo\u017ed\u011bn\u00edm ~1 den; noc 20.\u219221. 10. zat\u00edm chyb\u00ed.\n\nTrend (HRV / teplota k\u016f\u017ee): 18. 10. 30 / \u22120,1 | 19. 10. 29 / \u22120,4 (RHR 52, dech 16,2) | 20. 10. 32 / +0,1\n\n\ud83d\udfe2 HRV 32 ms (20. 10.) \u2014 u baseline\n\ud83d\udfe2 Teplota k\u016f\u017ee i teplom\u011br \u2014 bez teploty\n\ud83d\udd34 Subjektivn\u011b: \u00fanava + z\u00e1n\u011bt hlasivek (21. 10. r\u00e1no)\n\u26aa RHR 20.\u201321. 10. a noc 20.\u219221. 10. \u2014 chyb\u00ed\n\nVERDIKT: \ud83d\udd34 NO-GO pro T1 \u2014 volno, p\u0159\u00edpadn\u011b Z1 30 Tacx.\nInfekce horn\u00edch cest d\u00fdchac\u00edch bez teploty; hlavn\u00ed riziko je prot\u00e1hnout ji z\u00e1t\u011b\u017e\u00ed a\u017e do MT1 31. 10.\n\nP\u0158EPL\u00c1NOV\u00c1NO 21.\u201325. 10.:\n\u2022 St: T1 zru\u0161eno \u2192 volno / Z1 30 Tacx\n\u2022 \u010ct: Z1 45 Tacx (skills + s\u00edla B zru\u0161eny)\n\u2022 P\u00e1: b\u011bh zru\u0161en \u2192 volno (n\u00e1b\u011bh b\u011bhu odlo\u017een)\n\u2022 So: race-sim zru\u0161en \u2192 podm\u00edn\u011bn\u011b CX technika bez intenzity + Z2 45\n\u2022 Ne: podm\u00edn\u011bn\u011b Z2 max 2 h 30 (progrese 3 h 30 odlo\u017eena)\n\u2022 Po 26. 10. VT test: jen p\u0159i 48 h bez p\u0159\u00edznak\u016f, jinak dal\u0161\u00ed posun\n\nN\u00c1VRAT K INTENZIT\u011a: a\u017e 48 h bez p\u0159\u00edznak\u016f a RHR zp\u011bt \u226449.\nK l\u00e9ka\u0159i: teplota, du\u0161nost, bolest p\u0159i polyk\u00e1n\u00ed s hore\u010dkou, nebo chrapot d\u00e9le ne\u017e 2\u20133 t\u00fddny."
     },
     {
-      "id": 144779314,
-      "date": "2026-10-23",
-      "name": "B\u011bh 30 lehce (n\u00e1b\u011bh 2/2)",
+      "id": 142205758,
+      "date": "2026-10-21",
+      "name": "VOLNO / Z1 30 Tacx (T1 zru\u0161eno \u2014 nemoc)",
       "type": "WORKOUT",
-      "sport_type": "Run",
-      "planned_tss": null,
+      "sport_type": "Ride",
+      "planned_tss": 13,
       "duration_hours": 0.5,
       "duration_formatted": "30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "B\u011aH 2/2 (t\u00fdden 1 n\u00e1b\u011bhu): 30 min souvisle lehce, HR do 140, tempo 6:20-6:40/km. M\u00edsto FLEX Z1 45 na kole. Z\u00edtra spole\u010dn\u00fd CX tr\u00e9nink \u2014 \u017e\u00e1dn\u00e9 zrychlen\u00ed, kopce jen ch\u016fz\u00ed nebo velmi lehce.\nKadence vy\u0161\u0161\u00ed, krat\u0161\u00ed krok; po b\u011bhu prota\u017een\u00ed. Kdy\u017e po pond\u011bln\u00edm b\u011bhu z\u016fstalo koleno nebo l\u00fdtka bolav\u00e9 >24 h \u2192 m\u00edsto b\u011bhu Z1 45 na kole."
+      "description": "VOLNO (preferovan\u011b) nebo Z1 30 min Tacx <170 W, kadence voln\u011b, bez potu \u2014 jen kdy\u017e se ti chce h\u00fdbat.\nT1 30/30 ZRU\u0160ENO: \u00fanava + z\u00e1n\u011bt hlasivek (bez teploty). Nedoh\u00e1n\u00ed se.\nIndoor kv\u016fli studen\u00e9mu vzduchu (dr\u00e1\u017edil by hrtan). Hlasov\u00fd klid, tepl\u00e9 pit\u00ed.\n\nMain Set 1x\n- 30m 165w intensity=recovery"
+    },
+    {
+      "id": 142205760,
+      "date": "2026-10-22",
+      "name": "Z1 45 Tacx (skills + s\u00edla zru\u0161eny \u2014 nemoc)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 20,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "Z1 45 min Tacx 150\u2013180 W, HR <125. Skills a S\u00cdLA B zru\u0161eny (nemoc \u2014 \u00fanava, hlasivky). Jen kdy\u017e se stav nezhor\u0161il; p\u0159i teplot\u011b, hor\u0161\u00edm krku nebo zimnici volno. Indoor kv\u016fli hrtanu.\n\nMain Set 1x\n- 45m 170w intensity=recovery"
     },
     {
       "id": 138158167,
       "date": "2026-10-24",
-      "name": "KOTVA: Spole\u010dn\u00fd CX tr\u00e9nink Ch. Hradi\u0161t\u011b (race-sim) + Z2 60",
+      "name": "PODM\u00cdN\u011aN\u011a: CX technika Ch. Hradi\u0161t\u011b + Z2 (race-sim zru\u0161en \u2014 nemoc)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 101,
-      "duration_hours": 1.97,
-      "duration_formatted": "1h58m",
-      "workout_summary": "15m [target not shown] | 3\u00d7(6m [target not shown] + 5m [target not shown]) | [repeat not summarized] | 10m [target not shown]",
+      "planned_tss": 71,
+      "duration_hours": 1.92,
+      "duration_formatted": "1h55m",
+      "workout_summary": null,
       "has_terrain": false,
       "start_time": "10:00",
-      "description": "KOTVA \u2014 tvrd\u00fd den #2 (~67 h po st\u0159ede\u010dn\u00edm T1; T1 p\u0159esunuto z \u00fater\u00fd kv\u016fli \u0161kolen\u00ed). Spole\u010dn\u00fd CX tr\u00e9nink Choustn\u00edkovo Hradi\u0161t\u011b 10:00 jako RACE-SIM: 3\u00d76 min @ 314-347 W v z\u00e1vodn\u00edm tempu s technick\u00fdmi prvky, mezi t\u00edm technika. Ka\u017ed\u00fd \u00fasek odjet samostatn\u011b s lap tla\u010d\u00edtkem. Odstup od T1 je o 5 h krat\u0161\u00ed ne\u017e 72 h \u2192 kdy\u017e r\u00e1no \ud83d\udfe1 nebo v 1. \u00faseku HR \u2265168 p\u0159i <314 W, sn\u00ed\u017eit na 2\u00d76 min. Pak Z2 60 min 200-230 W (dojezd/odjezd na kole). Inflite, z\u00e1vodn\u00ed tlaky; z\u00e1znam Edge 1050 + Tymewear. Ryma\u0159ov se nejede.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 6m 98% intensity=interval\n- 5m 60% intensity=recovery\n\nMain Set 1x\n- 60m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
+      "description": "PODM\u00cdN\u011aN\u00c9 \u2014 nemoc (\u00fanava + z\u00e1n\u011bt hlasivek od 21. 10.). RACE-SIM ZRU\u0160EN, priorita je b\u00fdt zdrav\u00fd na MT1 31. 10.\nSpole\u010dn\u00fd CX tr\u00e9nink Ch. Hradi\u0161t\u011b jen jako TECHNIKA bez intenzivn\u00edch \u00fasek\u016f (\u017e\u00e1dn\u00e9 6min, \u017e\u00e1dn\u00e9 starty), HR <150, + Z2 45 dojezd. Podm\u00ednka: v p\u00e1tek a sobotu bez teploty, \u00fanava ustupuje, krk lep\u0161\u00ed a wellness r\u00e1no \ud83d\udfe2/\ud83d\udfe1.\nKdy\u017e ne: volno nebo Z1 45 Tacx. Studen\u00fd vzduch a hlubok\u00e9 d\u00fdch\u00e1n\u00ed hrtanu nesvd\u011b\u010d\u00ed \u2014 rozhodnout p\u00e1tek ve\u010der.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 1x\n- 45m 60% intensity=interval\n\nMain Set 1x\n- 45m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
     },
     {
       "id": 138158169,
       "date": "2026-10-25",
-      "name": "KOTVA: Dlouh\u00e1 Z2 3 h 30 (S11 +10 %)",
+      "name": "PODM\u00cdN\u011aN\u011a: Z2 max 2 h 30 (po nemoci)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 150,
-      "duration_hours": 3.5,
-      "duration_formatted": "3h30m",
+      "planned_tss": 102,
+      "duration_hours": 2.5,
+      "duration_formatted": "2h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "10:00",
-      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h 30 (S11 Endurance Progression +10 % proti 3 h 09 z 18. 10., decoupling tehdy 3,1 %, ale pozdn\u00ed n\u00e1r\u016fst HR v posledn\u00edch ~50 min \u2192 jen +10 %). Den po race-simu; od dne\u0161ka zimn\u00ed \u010das \u2192 vyjet dopoledne.\nTEMPO podle v\u00fdkonu 200\u2013240 W rovnom\u011brn\u011b (VI \u22641,05), HR jen jako stopka (~165). VE z\u00f3ny upravit podle pond\u011bln\u00edho testu.\nDURABILITY: lap ka\u017edou hodinu \u2192 srovn\u00e1n\u00ed P/HR a VE 1. vs posledn\u00ed hodina; c\u00edl drift <5 %.\nV\u00dd\u017dIVA: 70\u201380 g/h od 20. min, zvl\u00e1\u0161\u0165 hl\u00eddat 3. hodinu; 0,5\u20130,75 l/h s elektrolytem; celkem ~260 g sacharid\u016f. Sacharidy zapsat.\nD\u00e9\u0161\u0165 = nezkracovat, zbytek na Tacxu. Zkr\u00e1tit na 3 h jen p\u0159i \ud83d\udfe1\ud83d\udfe1 nebo \ud83d\udd34 r\u00e1no.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 175m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+      "description": "PODM\u00cdN\u011aN\u00c9 \u2014 po nemoci (\u00fanava + z\u00e1n\u011bt hlasivek od 21. 10.). DLOUH\u00c1 Z2 zkr\u00e1cena na max 2 h 30 (progrese 3 h 30 se odkl\u00e1d\u00e1 na dal\u0161\u00ed ned\u011bli po MT1).\nPodm\u00ednka: 48 h bez p\u0159\u00edznak\u016f zhor\u0161en\u00ed, bez teploty, wellness r\u00e1no \ud83d\udfe2 (RHR \u226449, HRV \u226530). P\u0159i \ud83d\udfe1: Z2 90 min. P\u0159i \ud83d\udd34: volno.\nV\u00fdkon 190\u2013230 W, HR <140; od dne\u0161ka zimn\u00ed \u010das \u2192 dopoledne. P\u0159i hor\u0161\u00edm krku jet na Tacxu.\nV\u00fd\u017eiva 60\u201370 g/h, lap ka\u017edou hodinu.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 115m 66% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
     },
     {
       "id": 142205757,
@@ -4277,12 +4276,12 @@
   ],
   "workout_summary_stats": {
     "attempted": 12,
-    "success": 6,
-    "patternA": 6,
+    "success": 4,
+    "patternA": 4,
     "patternB": 0,
     "flat": 0,
-    "bail_no_workout_doc": 1,
-    "bail_no_match": 6
+    "bail_no_workout_doc": 0,
+    "bail_no_match": 8
   },
   "weekly_summary": {
     "total_training_hours": 5.12,
