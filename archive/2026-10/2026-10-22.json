@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-22T10:34:48.050192",
+    "last_updated": "2026-10-22T15:36:50.476486",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -138,7 +138,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 20.7
+        "value": 21.9
       }
     },
     "signal_summary": {
@@ -173,7 +173,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 4,
+    "age_days": 5,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -211,10 +211,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 55.6,
-      "atl": 34.89,
-      "tsb": 20.71,
-      "ramp_rate": -4.4,
+      "ctl": 55.3,
+      "atl": 33.39,
+      "tsb": 21.91,
+      "ramp_rate": -4.7,
       "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
     },
     "thresholds": {
@@ -280,7 +280,7 @@
       "respiration": null,
       "body_fat_pct": 22.3,
       "abdomen_cm": null,
-      "steps": 4167,
+      "steps": 6697,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -658,7 +658,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.09,
+          "planned_tss_delta": 1.04,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 1,
@@ -698,7 +698,7 @@
     "p_max": 1048,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-22T10:34:48.049447",
+    "calculation_timestamp": "2026-10-22T15:36:50.475245",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3811,7 +3811,7 @@
       "respiration": null,
       "body_fat_pct": 22.3,
       "abdomen_cm": null,
-      "steps": 4167,
+      "steps": 6697,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3839,16 +3839,16 @@
     {
       "id": 142205760,
       "date": "2026-10-22",
-      "name": "Z1 45 Tacx (skills + s\u00edla zru\u0161eny \u2014 nemoc)",
+      "name": "VOLNO / Z1 30 Tacx (nemoc \u2014 \u00fanava)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 20,
-      "duration_hours": 0.75,
-      "duration_formatted": "45m",
+      "planned_tss": 12,
+      "duration_hours": 0.5,
+      "duration_formatted": "30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Z1 45 min Tacx 150\u2013180 W, HR <125. Skills a S\u00cdLA B zru\u0161eny (nemoc \u2014 \u00fanava, hlasivky). Jen kdy\u017e se stav nezhor\u0161il; p\u0159i teplot\u011b, hor\u0161\u00edm krku nebo zimnici volno. Indoor kv\u016fli hrtanu.\n\nMain Set 1x\n- 45m 170w intensity=recovery"
+      "description": "VOLNO (preferovan\u011b) nebo Z1 30 min Tacx 150\u2013170 W, HR <120 \u2014 jen pro prokrven\u00ed, kdy\u017e se chce\u0161 h\u00fdbat. 22. 10.: st\u00e1le unaven\u00fd, hlasivky o kousek lep\u0161\u00ed \u2192 zkr\u00e1ceno ze Z1 45. Skills a S\u00cdLA B zru\u0161eny. Indoor kv\u016fli hrtanu.\n\nMain Set 1x\n- 30m 160w intensity=recovery"
     },
     {
       "id": 138158167,
