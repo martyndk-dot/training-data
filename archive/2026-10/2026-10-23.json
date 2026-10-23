@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-23T06:27:15.965056",
+    "last_updated": "2026-10-23T12:00:32.052670",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -698,7 +698,7 @@
     "p_max": 1047,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-23T06:27:15.963721",
+    "calculation_timestamp": "2026-10-23T12:00:32.051311",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3837,7 +3837,7 @@
       "duration_formatted": "0s",
       "workout_summary": null,
       "has_terrain": false,
-      "description": "Garmin p\u0159es intervals.icu, noc 22.\u219223. 10.\n\n\ud83d\udfe2 RHR 48 bpm \u2014 v baseline 47\u201348\n\ud83d\udfe2 HRV 40 ms \u2014 druh\u00fd den nad baseline ~33 (v\u010dera 42) \u2192 auton\u00f3mn\u00ed zotaven\u00ed potvrzen\u00e9, u\u017e ne jednor\u00e1zov\u00fd v\u00fdkyv\n\ud83d\udd34 Sp\u00e1nek 6 h 12, sk\u00f3re 54, kvalita 4/4 (\u0161patn\u00e1) \u2014 nejhor\u0161\u00ed noc za t\u00fdden\n\u26aa Teplota k\u016f\u017ee \u2014 v intervals nen\u00ed\n\nTrend RHR / HRV / sp\u00e1nek: 18. 48/30/89 | 19. 50/29/74 | 20. 48/32/81 | 21. 49/27/81 | 22. 47/42/83 | 23. 48/40/54\nSubjektivn\u011b 22. 10.: st\u00e1le unaven\u00fd, hlasivky o kousek lep\u0161\u00ed.\n\nVERDIKT: \ud83d\udfe1 dnes VOLNO podle pl\u00e1nu.\n\u2022 Auton\u00f3mn\u00ed sign\u00e1ly OK, ale \u0161patn\u00fd sp\u00e1nek + p\u0159etrv\u00e1vaj\u00edc\u00ed \u00fanava = infekce je\u0161t\u011b neodezn\u011bla.\n\u2022 V\u00edkend (v\u00fdchoz\u00ed n\u00e1vrh, potvrdit podle p\u0159\u00edznak\u016f dnes ve\u010der):\n  \u2013 So: CX technika Ch. Hradi\u0161t\u011b sp\u00ed\u0161 NE \u2192 Z1 45\u201360 Tacx nebo volno\n  \u2013 Ne: Z2 90\u2013120 min, jen kdy\u017e sobota bez zhor\u0161en\u00ed\n\u2022 Po 26. 10. VT test: odlo\u017eit (48 h bez p\u0159\u00edznak\u016f nebude spln\u011bno)."
+      "description": "Garmin p\u0159es intervals.icu + freddy, noc 22.\u219223. 10.\n\n\ud83d\udfe2 RHR 48 bpm \u2014 v baseline 47\u201348\n\ud83d\udfe2 HRV 40 ms \u2014 druh\u00fd den nad baseline ~33 (v\u010dera 42) \u2192 auton\u00f3mn\u00ed zotaven\u00ed potvrzen\u00e9, u\u017e ne jednor\u00e1zov\u00fd v\u00fdkyv\n\ud83d\udd34 Sp\u00e1nek 6 h 12, sk\u00f3re 54, kvalita 4/4 (\u0161patn\u00e1) \u2014 nejhor\u0161\u00ed noc za t\u00fdden\n\ud83d\udfe2 Teplota k\u016f\u017ee 0,0 \u00b0C \u2014 cel\u00fd t\u00fdden v normu (\u22120,4 a\u017e +0,1), \u017e\u00e1dn\u00e1 hore\u010dka\n\nTrend RHR / HRV / sp\u00e1nek / teplota k\u016f\u017ee: 18. 48/30/89/\u22120,1 | 19. 50/29/74/\u22120,4 | 20. 48/32/81/+0,1 | 21. 49/27/81/\u22120,1 | 22. 47/42/83/\u22120,1 | 23. 48/40/54/0,0\nSubjektivn\u011b 22. 10.: st\u00e1le unaven\u00fd, hlasivky o kousek lep\u0161\u00ed.\n\nVERDIKT: \ud83d\udfe1 dnes VOLNO podle pl\u00e1nu.\n\u2022 Auton\u00f3mn\u00ed sign\u00e1ly i teplota OK, ale \u0161patn\u00fd sp\u00e1nek + p\u0159etrv\u00e1vaj\u00edc\u00ed \u00fanava = infekce je\u0161t\u011b neodezn\u011bla.\n\u2022 V\u00edkend (v\u00fdchoz\u00ed n\u00e1vrh, potvrdit podle p\u0159\u00edznak\u016f dnes ve\u010der):\n  \u2013 So: CX technika Ch. Hradi\u0161t\u011b sp\u00ed\u0161 NE \u2192 Z1 45\u201360 Tacx nebo volno\n  \u2013 Ne: Z2 90\u2013120 min, jen kdy\u017e sobota bez zhor\u0161en\u00ed\n\u2022 Po 26. 10. VT test: odlo\u017eit (48 h bez p\u0159\u00edznak\u016f nebude spln\u011bno)."
     },
     {
       "id": 138158167,
