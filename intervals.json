@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T23:38:00.390398",
+  "generated_at": "2026-10-25T09:21:13.586912",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -1513,65 +1513,6 @@
           "activity_key": "c358290c9df3f159de4d600088a05eb76fa6e64168ea7e0f020fd49d5e231806",
           "event_key": "4c36adb8d8e10a2b29d249d0f9807f925989d947f8756244e7941d8ee8105028",
           "plan_key": "f55d9786e6ad11034a6d8a754dfa0df0d2ab9369c2f50d062eab62639bbf58de",
-          "sampled_at": "2026-10-24T23:38:00.390958+00:00",
-          "next_refresh_at": "2026-10-25T23:38:00.390958+00:00"
-        }
-      }
-    },
-    {
-      "activity_id": "i195705504",
-      "date": "2026-10-10",
-      "start_datetime": "2026-10-10T10:04:57",
-      "type": "Cyclocross",
-      "name": "Choustn\u00edkovo Hradi\u0161t\u011b Cyklokros",
-      "interval_summary": null,
-      "intervals": [],
-      "session_structure": {
-        "version": 2,
-        "method": "fixed_elapsed_thirds",
-        "status": "no_plan",
-        "thirds": [
-          [
-            0,
-            1950,
-            149.8,
-            237.5,
-            132.6,
-            49.0,
-            81.28,
-            81.28,
-            81.18,
-            6.56
-          ],
-          [
-            1950,
-            3900,
-            184.5,
-            130.4,
-            145.0,
-            52.7,
-            36.26,
-            36.26,
-            35.79,
-            9.05
-          ],
-          [
-            3900,
-            5851,
-            155.5,
-            146.8,
-            125.1,
-            47.0,
-            48.39,
-            48.39,
-            48.23,
-            6.67
-          ]
-        ],
-        "cache": {
-          "activity_key": "ff8df3da34f1cc8f65f68ebb34880725ef9fbd024007fa366f63cb31651777df",
-          "event_key": null,
-          "plan_key": null,
           "sampled_at": "2026-10-24T23:38:00.390958+00:00",
           "next_refresh_at": "2026-10-25T23:38:00.390958+00:00"
         }
