@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T12:48:24.627233",
+  "generated_at": "2026-10-26T19:11:08.538815",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -1517,6 +1517,97 @@
           "next_refresh_at": "2026-10-27T00:39:56.501046+00:00"
         }
       }
+    },
+    {
+      "activity_id": "i201938982",
+      "date": "2026-10-26",
+      "start_datetime": "2026-10-26T16:16:05",
+      "type": "Run",
+      "name": "Nemojov B\u011bh",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1902,
+          "moving_secs": 1625,
+          "start_secs": 0,
+          "end_secs": 1902,
+          "avg_power": 263,
+          "max_power": 362,
+          "avg_hr": 110,
+          "max_hr": 125,
+          "min_hr": 75,
+          "avg_cadence": 76.143295,
+          "zone": 2,
+          "w_bal_start": 34480,
+          "w_bal_end": 34480,
+          "training_load": 16.980276
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "148351259",
+          "updated": "2026-10-26T14:51:54.837+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 1680
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            633,
+            262.0,
+            154.6,
+            100.0,
+            75.5,
+            93.21,
+            93.21,
+            93.21,
+            2.88
+          ],
+          [
+            633,
+            1267,
+            269.9,
+            122.0,
+            114.6,
+            75.6,
+            71.29,
+            71.29,
+            71.29,
+            5.31
+          ],
+          [
+            1267,
+            1901,
+            259.4,
+            153.0,
+            117.6,
+            77.2,
+            93.06,
+            93.06,
+            93.06,
+            3.9
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "eea7d21063ddd25bd19286d4191e67c6114f1e4ae180968e5ec17b3a35b821df",
+          "event_key": "7932958f395be5d64cf97be84a843d95923bb50a7b13185c12514d4dcf99424c",
+          "plan_key": "2801ec6b34592f0c78091346327ef746769c4b096b5bfb3ca9fbc6a5fc0d6663",
+          "sampled_at": "2026-10-26T19:11:09.346933+00:00",
+          "next_refresh_at": "2026-10-27T19:11:09.346933+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -1594,6 +1685,26 @@
         "last_attempt": "2026-10-21T07:28:45.199459",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i201938982": {
+      "date": "2026-10-26",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-26T19:11:08.538815",
+        "last_attempt": "2026-10-26T19:11:08.538815",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-26T15:49:36.399+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-26T19:11:08.538815",
+        "last_attempt": "2026-10-26T19:11:08.538815",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-26T19:16:08.538815"
       }
     }
   }

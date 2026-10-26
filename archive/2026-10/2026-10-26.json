@@ -64,15 +64,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 0.0,
-      "total_training_formatted": "0s",
-      "total_activities": 0,
-      "total_tss": 0
+      "total_training_hours": 0.45,
+      "total_training_formatted": "26m",
+      "total_activities": 1,
+      "total_tss": 17
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-26T12:48:24.633362",
+    "last_updated": "2026-10-26T19:11:09.622918",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -102,7 +102,17 @@
     "years_on_platform": 6
   },
   "athlete_notes": null,
-  "alerts": [],
+  "alerts": [
+    {
+      "metric": "tid_distribution",
+      "value": "Base",
+      "severity": "warning",
+      "threshold": "7d/28d classification mismatch",
+      "context": "TID shift: 7d Base vs 28d Pyramidal. Training distribution changing.",
+      "persistence_days": null,
+      "tier": 3
+    }
+  ],
   "readiness_decision": {
     "recommendation": "go",
     "priority": 3,
@@ -138,7 +148,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 31.4
+        "value": 29.6
       }
     },
     "signal_summary": {
@@ -173,24 +183,37 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 8,
+    "age_days": 9,
     "total_months": 35,
     "history_confidence": "high"
   },
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 0.0,
-    "total_activities": 0,
-    "by_activity_type": {}
+    "total_duration_decimal_hours": 0.45,
+    "total_activities": 1,
+    "by_activity_type": {
+      "Run": {
+        "duration_decimal_hours": 0.45,
+        "count": 1,
+        "tss": 17,
+        "distance_km": 3.6,
+        "display": {
+          "distance": {
+            "value": 3.6,
+            "unit": "km"
+          }
+        }
+      }
+    }
   },
   "current_status": {
     "fitness": {
-      "ctl": 50.28,
-      "atl": 18.86,
-      "tsb": 31.42,
-      "ramp_rate": -9.12,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ctl": 50.68,
+      "atl": 21.12,
+      "tsb": 29.56,
+      "ramp_rate": -8.72,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 323.4,
@@ -255,7 +278,7 @@
       "respiration": null,
       "body_fat_pct": 22.0,
       "abdomen_cm": null,
-      "steps": 4030,
+      "steps": 11087,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -301,7 +324,7 @@
     "rhr_baseline_28d": 48.2,
     "latest_hrv": 40.0,
     "latest_rhr": 46,
-    "acwr": 0.0,
+    "acwr": 0.06,
     "acwr_interpretation": "undertraining",
     "acwr_scope": "live_retrospective",
     "acwr_readiness_eligible": false,
@@ -314,58 +337,80 @@
       "acute_days": 7,
       "chronic_days": 28
     },
-    "monotony": null,
-    "monotony_interpretation": null,
-    "primary_sport": null,
+    "monotony": 0.38,
+    "monotony_interpretation": "normal",
+    "primary_sport": "run",
     "primary_sport_monotony": null,
-    "primary_sport_tss_7d": null,
-    "effective_monotony": null,
+    "primary_sport_tss_7d": 17.0,
+    "effective_monotony": 0.38,
     "multi_sport_detected": false,
-    "strain": null,
-    "stress_tolerance": null,
-    "load_recovery_ratio": 0.0,
-    "tss_7d_total": 0,
-    "tss_28d_total": 1046.0,
+    "strain": 6.0,
+    "stress_tolerance": 0.2,
+    "load_recovery_ratio": 0.2,
+    "tss_7d_total": 17.0,
+    "tss_28d_total": 1063.0,
     "zone_distribution_7d": {
-      "z1_hours": 0.0,
-      "z2_hours": 0.0,
-      "z3_hours": 0.0,
+      "z1_hours": 0.05,
+      "z2_hours": 0.39,
+      "z3_hours": 0.01,
       "z4_plus_hours": 0.0,
-      "total_hours": 0.0,
-      "zone_basis": null
+      "total_hours": 0.45,
+      "zone_basis": "power"
     },
-    "grey_zone_percentage": null,
+    "grey_zone_percentage": 1.9,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
-    "quality_intensity_percentage": null,
+    "quality_intensity_percentage": 0.0,
     "quality_intensity_note": "Quality Intensity % (Z4+/threshold+) - target ~20% in polarized training",
-    "easy_time_ratio": null,
+    "easy_time_ratio": 0.98,
     "easy_time_ratio_note": "Easy time (Z1+Z2) / Total - target ~80% in polarized training",
     "hard_days_this_week": 0,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 0,
-      "z2_seconds": 0,
+      "z1_seconds": 1587,
+      "z2_seconds": 30,
       "z3_seconds": 0,
-      "z1_pct": null,
-      "z2_pct": null,
-      "z3_pct": null,
+      "z1_pct": 98.1,
+      "z2_pct": 1.9,
+      "z3_pct": 0.0,
       "polarization_index": null,
-      "classification": null,
-      "zone_basis": null
+      "classification": "Base",
+      "zone_basis": "power"
     },
-    "seiler_tid_7d_primary": null,
+    "seiler_tid_7d_primary": {
+      "z1_seconds": 1587,
+      "z2_seconds": 30,
+      "z3_seconds": 0,
+      "z1_pct": 98.1,
+      "z2_pct": 1.9,
+      "z3_pct": 0.0,
+      "polarization_index": null,
+      "classification": "Base",
+      "zone_basis": "power",
+      "sport": "run"
+    },
     "seiler_tid_28d": {
-      "z1_seconds": 66934,
-      "z2_seconds": 8912,
+      "z1_seconds": 68521,
+      "z2_seconds": 8942,
       "z3_seconds": 6029,
-      "z1_pct": 81.8,
-      "z2_pct": 10.9,
-      "z3_pct": 7.4,
+      "z1_pct": 82.1,
+      "z2_pct": 10.7,
+      "z3_pct": 7.2,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "power"
     },
-    "seiler_tid_28d_primary": null,
+    "seiler_tid_28d_primary": {
+      "z1_seconds": 1587,
+      "z2_seconds": 30,
+      "z3_seconds": 0,
+      "z1_pct": 98.1,
+      "z2_pct": 1.9,
+      "z3_pct": 0.0,
+      "polarization_index": null,
+      "classification": "Base",
+      "zone_basis": "power",
+      "sport": "run"
+    },
     "capability": {
       "durability": {
         "mean_decoupling_7d": null,
@@ -396,13 +441,13 @@
         "note": "HRRc = heart rate recovery (largest 60s HR drop in bpm after exceeding threshold HR for >1 min). Higher = better parasympathetic recovery. Null when threshold not reached, recording stopped before cooldown, or no HR data. Trend: 7d mean vs 28d mean, >10% = meaningful (min 1 session/7d, 3 sessions/28d). Display only \u2014 not wired into readiness_decision signals."
       },
       "tid_comparison": {
-        "classification_7d": null,
+        "classification_7d": "Base",
         "classification_28d": "Pyramidal",
         "pi_7d": null,
         "pi_28d": null,
         "pi_delta": null,
-        "drift": null,
-        "note": "Compares 7d vs 28d Seiler TID to detect distribution shifts. Insufficient data in one or both windows."
+        "drift": "shifting",
+        "note": "Compares 7d vs 28d Seiler TID to detect distribution shifts. pi_delta positive = more polarized acutely."
       },
       "power_curve_delta": {
         "window_days": 28,
@@ -583,11 +628,11 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.0,
+    "consistency_index": 0.2,
     "consistency_details": {
       "planned_days": 5,
-      "completed_days": 0,
-      "matched_days": 0,
+      "completed_days": 1,
+      "matched_days": 1,
       "planned_dates": [
         "2026-10-21",
         "2026-10-22",
@@ -595,7 +640,9 @@
         "2026-10-25",
         "2026-10-26"
       ],
-      "completed_dates": []
+      "completed_dates": [
+        "2026-10-26"
+      ]
     },
     "phase_detection": {
       "phase": "Build",
@@ -609,7 +656,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 1.77,
+          "planned_tss_delta": 1.68,
           "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 3,
@@ -649,12 +696,12 @@
     "p_max": 1044,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-26T12:48:24.632000",
+    "calculation_timestamp": "2026-10-26T19:11:09.621938",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 0,
-      "activities_28d": 15,
+      "activities_7d": 1,
+      "activities_28d": 16,
       "planned_workouts_7d": 5,
       "ftp_history_days": {
         "indoor": 111,
@@ -663,6 +710,158 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i201938982",
+      "date": "2026-10-26T16:16:05",
+      "type": "Run",
+      "name": "Nemojov B\u011bh",
+      "duration_hours": 0.45,
+      "duration_formatted": "26m57s",
+      "distance_km": 3.62,
+      "tss": 17,
+      "intensity_factor": 61.48492,
+      "avg_power": 259,
+      "normalized_power": 265,
+      "avg_hr": 110,
+      "max_hr": 125,
+      "avg_cadence": 79.09796,
+      "avg_speed": 8.0,
+      "avg_speed_unit": "KPH",
+      "max_speed": 10.1,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": 7.268924,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": 0.6909745,
+      "wind_speed_unit": "KMH",
+      "work_kj": 429.9,
+      "calories": 280,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": 1.0231661,
+      "decoupling": 9.510244,
+      "efficiency_factor": 2.409091,
+      "hrrc": null,
+      "elevation_m": 62.383514,
+      "display": {
+        "distance": {
+          "value": 3.62,
+          "unit": "km"
+        },
+        "elevation": {
+          "value": 62,
+          "unit": "m"
+        },
+        "avg_speed": {
+          "value": 8.0,
+          "unit": "km/h"
+        },
+        "max_speed": {
+          "value": 10.1,
+          "unit": "km/h"
+        }
+      },
+      "feel": 3,
+      "rpe": 2,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 1617,
+          "z2_time": 0,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        },
+        "power_zones": {
+          "z1_time": 177,
+          "z2_time": 1410,
+          "z3_time": 30,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": false,
+      "has_dfa": false,
+      "has_structure": true,
+      "structure_summary": {
+        "method": "plan_match_v2",
+        "status": "unknown",
+        "steps": [
+          [
+            1680,
+            null,
+            null,
+            null
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ]
+      },
+      "terrain_summary": {
+        "source": "activity_streams",
+        "total_distance_km": 3.8,
+        "total_elevation_m": 23,
+        "elevation_per_km": 6.1,
+        "course_character": "rolling",
+        "max_grade_pct": 8.8,
+        "grade_distribution": {
+          "flat_pct": 58.6,
+          "gentle_pct": 21.2,
+          "moderate_pct": 10.6,
+          "steep_pct": 9.5
+        },
+        "start_coords": [
+          50.46794,
+          15.75325
+        ],
+        "climbs": [],
+        "descents": [],
+        "display": {
+          "total_distance": {
+            "value": 3.8,
+            "unit": "km"
+          },
+          "total_elevation": {
+            "value": 23,
+            "unit": "m"
+          },
+          "elevation_per_distance": {
+            "value": 6,
+            "unit": "m/km"
+          }
+        }
+      },
+      "weather_summary": {
+        "source": "intervals_open_meteo",
+        "units": {
+          "wind": "m/s",
+          "temp": "c",
+          "rain": "mm"
+        },
+        "avg_wind_speed": 0.69,
+        "avg_wind_gust": 1.5,
+        "prevailing_wind_deg": 180,
+        "headwind_pct": 19.18,
+        "tailwind_pct": 16.27,
+        "avg_temp": 7.27,
+        "avg_temp_device": 13.31,
+        "avg_feels_like": 5.71,
+        "min_feels_like": 5.27,
+        "max_feels_like": 6.45,
+        "min_temp": 6.93,
+        "max_temp": 7.92,
+        "clouds_pct": 55,
+        "rain": 0.0,
+        "snow": 0.0
+      }
+    },
     {
       "id": "i198621872",
       "date": "2026-10-18T10:15:11",
@@ -3590,7 +3789,7 @@
       "respiration": null,
       "body_fat_pct": 22.0,
       "abdomen_cm": null,
-      "steps": 4030,
+      "steps": 11087,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3616,18 +3815,31 @@
       "description": "Garmin (intervals.icu + freddy), noc 25.\u219226. 10.\n\n\ud83d\udfe2 RHR 46 bpm \u2014 pod baseline 47\u201348\n\ud83d\udfe2 HRV 40 ms \u2014 p\u00e1t\u00fd den nad baseline ~33 (42/40/39/37/40)\n\ud83d\udfe2 Sp\u00e1nek 6 h 30, sk\u00f3re 80\n\ud83d\udfe2 Teplota k\u016f\u017ee \u22120,2 \u00b0C\n\nNed\u011ble bez j\u00edzdy \u2192 8 dn\u00ed bez tr\u00e9ninku. CTL 51,6 | ATL 26 | TSB +25.\n\nVERDIKT: \ud83d\udfe2 GO \u2014 Z2 75 jako prvn\u00ed j\u00edzda po nemoci (m\u00edsto VT testu; test p\u0159esunut p\u0159edb\u011b\u017en\u011b na po 2. 11.).\n\u2022 190\u2013220 W, HR <135; venku jen p\u0159i dobr\u00e9m krku, jinak Tacx.\n\u2022 Pozor: v kalend\u00e1\u0159i na \u00fat 27. je je\u0161t\u011b p\u016fvodn\u00ed T2 40/20 \u2014 po 8 dnech volna a nemoci ne. T\u00fdden p\u0159ed MT1 \u010dek\u00e1 na p\u0159epl\u00e1nov\u00e1n\u00ed."
     },
     {
+      "id": 148575575,
+      "date": "2026-10-26",
+      "name": "\ud83d\udcdd Nemojov B\u011bh \u2014 lehce podle pl\u00e1nu (HR 1. p\u016flky z ruky, neplatn\u00e1)",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Post-workout report \u2014 i201938982, Forerunner 970, Altra Lone Peak.\n\nShrnut\u00ed: prvn\u00ed tr\u00e9nink po nemoci a prvn\u00ed b\u011bh sez\u00f3ny odb\u011bhnut lehce podle zad\u00e1n\u00ed. HR z prvn\u00ed poloviny neplatn\u00e1 (optick\u00e9 m\u011b\u0159en\u00ed z hodinek pod ruk\u00e1vem, p\u00e1s nep\u0159ipojen).\n\nB\u011bh: 27 min pohyb (31:41 celkem, ch\u016fze/zastaven\u00ed ~5 min) | 3,62 km | 7:29/km (GAP 7:06) | +62/\u221291 m\nPodm\u00ednky: 7,3 \u00b0C (pocitov\u011b 5,7), bezv\u011bt\u0159\u00ed\nHR: platn\u00e1 jen 2. polovina \u2014 km 3 118, km 4 117, max 125 (limit 140 dodr\u017een). Km 1\u20132 (100 a 109) = artefakt optick\u00e9ho senzoru, pr\u016fm\u011br 110 je podhodnocen\u00fd; skute\u010dn\u00fd odhad ~115\u2013120.\nV\u00fdkon b\u011bhu: 259 W avg / 265 NP, VI 1,02 \u2014 v\u00fdkon byl po celou dobu stabiln\u00ed (261\u2013271 W), tak\u017ee intenzita odpov\u00eddala 2. polovin\u011b.\nTSS 17 | RPE 2 | Feel 3/5 | compliance 85 %\nDecoupling 9,5 % a HR z\u00f3ny \u2014 NEPLATN\u00c9 (sm\u00ed\u0161en\u00fd zdroj HR).\n\nB\u011a\u017dECK\u00c1 DYNAMIKA:\n\u2022 Kadence 158 krok\u016f/min (doporu\u010deno 170+) \u2014 n\u00edzk\u00e1 kadence = del\u0161\u00ed krok a del\u0161\u00ed kontakt se zem\u00ed, v\u00edc z\u00e1t\u011b\u017ee na koleno\n\u2022 Kontakt se zem\u00ed 302 ms (39,9 %), d\u00e9lka kroku 0,87 m, vertik\u00e1ln\u00ed oscilace 8,3 cm, vertical ratio 9,6 %\n\u2022 Zv\u00fd\u0161en\u00ed kadence o 5\u20138 % zkr\u00e1t\u00ed kontakt a sn\u00ed\u017e\u00ed zat\u00ed\u017een\u00ed kolene.\n\nDECH (Tymewear): BR 26,6/min, VE ~66 L/min. P\u0159i skute\u010dn\u00e9 HR ~118 men\u0161\u00ed nepom\u011br, ne\u017e se zd\u00e1lo; zbytek nejsp\u00ed\u0161 b\u011bh (pohyb p\u00e1su) a studen\u00fd vzduch.\n\nZ\u00c1T\u011a\u017d: CTL 50,7 | ATL 21 | TSB +30.\n\nDOPAD NA PL\u00c1N:\n\u2022 \u00dat Z2 90 venku beze zm\u011bny.\n\u2022 St openery: jen kdy\u017e koleno OK a bez svalovky z b\u011bhu.\n\u2022 P\u0159\u00ed\u0161t\u00ed b\u011bh (po MT1): 30 min, c\u00edl kadence 165\u2013170, HR <140; p\u00e1s p\u0159ipojit p\u0159ed startem (zkontrolovat na hodink\u00e1ch ikonu senzoru).\n\u2022 Koleno: zapsat, jestli se po b\u011bhu ozvalo (pokud ano, b\u011bh max 1\u00d7 t\u00fddn\u011b do MT3)."
+    },
+    {
       "id": 148351259,
       "date": "2026-10-26",
-      "name": "Z2 75 \u2014 n\u00e1vrat po nemoci",
+      "name": "B\u011bh 25\u201330 lehce \u2014 n\u00e1vrat po nemoci (m\u00edsto Z2 75)",
       "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 43,
-      "duration_hours": 1.25,
-      "duration_formatted": "1h15m",
+      "sport_type": "Run",
+      "planned_tss": 20,
+      "duration_hours": 0.47,
+      "duration_formatted": "28m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Prvn\u00ed j\u00edzda po nemoci (8 dn\u00ed bez tr\u00e9ninku). Z2 75 min, 190\u2013220 W, HR <135, kadence 85\u201390.\nVenku jen za sv\u011btla a kdy\u017e je krk v pohod\u011b (~9 \u00b0C, d\u00e9\u0161\u0165 15 %), jinak Tacx.\nUkon\u010dit, kdy\u017e HR po 40 min stoup\u00e1 o >8 bpm p\u0159i stejn\u00e9m v\u00fdkonu nebo se vr\u00e1t\u00ed chrapot/\u00fanava.\nV\u00fd\u017eiva 50\u201360 g/h.\n\nWarmup\n- 15m 160w intensity=warmup\n\nMain Set 1x\n- 50m 205w intensity=interval\n\nCooldown\n- 10m 150w intensity=cooldown"
+      "description": "M\u00edsto Z2 75 na kole. Prvn\u00ed b\u011bh sez\u00f3ny + prvn\u00ed tr\u00e9nink po nemoci, 5 dn\u00ed p\u0159ed MT1.\n25\u201330 min lehce, HR <140 (konverza\u010dn\u00ed tempo), rovina, ide\u00e1ln\u011b m\u011bkk\u00fd povrch.\nKadence 170+, krat\u0161\u00ed krok, dopad pod t\u011blo \u2014 \u0161et\u0159\u00ed koleno. Ch\u016fze 1 min kdykoli OK.\nKoleno: p\u0159i bolesti B\u011aHEM b\u011bhu konec a dom\u016f ch\u016fz\u00ed; po b\u011bhu prota\u017een\u00ed (kvadriceps, IT p\u00e1s, l\u00fdtka) 10 min.\nHrtan: ~9 \u00b0C \u2192 buff p\u0159es \u00fasta, d\u00fdchat nosem, kde to jde.\nUkon\u010dit p\u0159i n\u00e1vratu chrapotu/\u00fanavy nebo HR nad 140 p\u0159i pomal\u00e9m tempu.\n\nMain Set 1x\n- 28m Z1-Z2 HR intensity=interval"
     },
     {
       "id": 142205763,
@@ -3790,10 +4002,10 @@
     "bail_no_match": 5
   },
   "weekly_summary": {
-    "total_training_hours": 0.0,
-    "total_training_formatted": "0s",
-    "total_tss": 0,
-    "activities_count": 0,
+    "total_training_hours": 0.45,
+    "total_training_formatted": "26m",
+    "total_tss": 17,
+    "activities_count": 1,
     "avg_hrv": 36.7,
     "avg_resting_hr": 47.1
   },
