@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-26T06:01:04.665005",
+    "last_updated": "2026-10-26T12:48:24.633362",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -108,10 +108,10 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 36.2,
-        "delta_pct": null
+        "status": "green",
+        "value": 40.0,
+        "baseline_7d": 36.7,
+        "delta_pct": 9.0
       },
       "rhr": {
         "status": "green",
@@ -120,9 +120,9 @@
         "delta_bpm": -1.1
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "amber",
+        "hours": 6.48,
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -132,9 +132,9 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.02
+        "status": "green",
+        "value": 1.12,
+        "value_yesterday": 1.01
       },
       "tsb": {
         "status": "green",
@@ -142,10 +142,10 @@
       }
     },
     "signal_summary": {
-      "green": 3,
-      "amber": 0,
+      "green": 5,
+      "amber": 1,
       "red": 0,
-      "unavailable": 3
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Build",
@@ -155,7 +155,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 3 green, 0 amber (threshold 3), 0 red.",
+    "reason": "P3 green light. 5 green, 1 amber (threshold 3), 0 red.",
     "alarm_refs": []
   },
   "health_context": {
@@ -234,11 +234,11 @@
         }
       },
       "resting_hr": 46,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "hrv": 40.0,
+      "sleep_quality": 2,
+      "sleep_hours": 6.48,
+      "sleep_formatted": "6h29m",
+      "sleep_score": 80.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -255,7 +255,7 @@
       "respiration": null,
       "body_fat_pct": 22.0,
       "abdomen_cm": null,
-      "steps": 23,
+      "steps": 4030,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -293,13 +293,13 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.02,
-    "hrv_baseline_7d": 36.2,
+    "recovery_index": 1.12,
+    "recovery_index_yesterday": 1.01,
+    "hrv_baseline_7d": 36.7,
     "rhr_baseline_7d": 47.1,
-    "hrv_baseline_28d": 33.2,
+    "hrv_baseline_28d": 33.4,
     "rhr_baseline_28d": 48.2,
-    "latest_hrv": null,
+    "latest_hrv": 40.0,
     "latest_rhr": 46,
     "acwr": 0.0,
     "acwr_interpretation": "undertraining",
@@ -323,7 +323,7 @@
     "multi_sport_detected": false,
     "strain": null,
     "stress_tolerance": null,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 0.0,
     "tss_7d_total": 0,
     "tss_28d_total": 1046.0,
     "zone_distribution_7d": {
@@ -609,14 +609,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 2.22,
+          "planned_tss_delta": 1.77,
           "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 3,
           "race_proximity": null,
-          "next_week_load": null,
+          "next_week_load": 0.22,
           "plan_coverage_current_week": 2.33,
-          "plan_coverage_next_week": 0.0
+          "plan_coverage_next_week": 0.33
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -649,9 +649,9 @@
     "p_max": 1044,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-26T06:01:04.664306",
+    "calculation_timestamp": "2026-10-26T12:48:24.632000",
     "data_quality": {
-      "hrv_data_points": 6,
+      "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 0,
       "activities_28d": 15,
@@ -3565,12 +3565,12 @@
         }
       },
       "resting_hr": 46,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 40.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 6.48,
+      "sleep_formatted": "6h29m",
+      "sleep_quality": 2,
+      "sleep_score": 80.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -3590,7 +3590,7 @@
       "respiration": null,
       "body_fat_pct": 22.0,
       "abdomen_cm": null,
-      "steps": 23,
+      "steps": 4030,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3603,60 +3603,73 @@
   ],
   "planned_workouts": [
     {
-      "id": 142205757,
+      "id": 148351261,
       "date": "2026-10-26",
-      "name": "TEST (p\u0159edb\u011b\u017en\u011b): Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 GO: Z2 75, n\u00e1vrat po nemoci",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu + freddy), noc 25.\u219226. 10.\n\n\ud83d\udfe2 RHR 46 bpm \u2014 pod baseline 47\u201348\n\ud83d\udfe2 HRV 40 ms \u2014 p\u00e1t\u00fd den nad baseline ~33 (42/40/39/37/40)\n\ud83d\udfe2 Sp\u00e1nek 6 h 30, sk\u00f3re 80\n\ud83d\udfe2 Teplota k\u016f\u017ee \u22120,2 \u00b0C\n\nNed\u011ble bez j\u00edzdy \u2192 8 dn\u00ed bez tr\u00e9ninku. CTL 51,6 | ATL 26 | TSB +25.\n\nVERDIKT: \ud83d\udfe2 GO \u2014 Z2 75 jako prvn\u00ed j\u00edzda po nemoci (m\u00edsto VT testu; test p\u0159esunut p\u0159edb\u011b\u017en\u011b na po 2. 11.).\n\u2022 190\u2013220 W, HR <135; venku jen p\u0159i dobr\u00e9m krku, jinak Tacx.\n\u2022 Pozor: v kalend\u00e1\u0159i na \u00fat 27. je je\u0161t\u011b p\u016fvodn\u00ed T2 40/20 \u2014 po 8 dnech volna a nemoci ne. T\u00fdden p\u0159ed MT1 \u010dek\u00e1 na p\u0159epl\u00e1nov\u00e1n\u00ed."
+    },
+    {
+      "id": 148351259,
+      "date": "2026-10-26",
+      "name": "Z2 75 \u2014 n\u00e1vrat po nemoci",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 55,
-      "duration_hours": 1.17,
-      "duration_formatted": "1h10m",
+      "planned_tss": 43,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "P\u0158ESUNUTO z 19. 10. (zv\u00fd\u0161en\u00e1 teplota + \u00fanava po v\u00edkendu). Nahrazuje FLEX Z2 90 Tacx. P\u0158EDB\u011a\u017dN\u011a \u2014 jen pokud p\u0159edchoz\u00ed 2 dny bez teploty a wellness \ud83d\udfe2; jinak dal\u0161\u00ed posun. Den p\u0159ed T2 \u2014 test je submaxim\u00e1ln\u00ed, kon\u010d\u00ed t\u011bsn\u011b nad VT2.\n\nTEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection).\n\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):\nRozjet\u00ed 15 min @ 150 W, pak 5min stupn\u011b 160 \u2192 300 W po 20 W, posledn\u00ed stupe\u0148 3 min @ 320 W, vyjet\u00ed 12 min @ 140 W.\n5min stupn\u011b kv\u016fli ust\u00e1len\u00ed VE i HR.\n\nSTOP pravidlo (kter\u00e9koli): VE >130 L/min, HR \u2265170, nebo nelze dr\u017eet kadenci. Stupe\u0148 320 W jen p\u0159i RPE \u22648 po 300 W.\n\nPODM\u00cdNKY:\n\u2022 M\u00edstnost co nejchladn\u011bj\u0161\u00ed, v\u011btr\u00e1k na plno od za\u010d\u00e1tku.\n\u2022 Kadence 90 \u00b13, celou dobu v sedle, nemluvit.\n\u2022 P\u00edt jen v prvn\u00ed minut\u011b stupn\u011b, ne v posledn\u00edch 2 min.\n\u2022 Tymewear p\u00e1s na obvykl\u00e9m m\u00edst\u011b, dob\u0159e uta\u017een\u00fd; ov\u011b\u0159it p\u00e1rov\u00e1n\u00ed s Edge 1050.\n\u2022 Z\u00e1znam Edge 1050 + Tymewear + HR p\u00e1s; workout krokovat z Edge (ka\u017ed\u00fd stupe\u0148 = lap).\n\u2022 Posledn\u00ed j\u00eddlo 2\u20133 h p\u0159edem; v testu jen voda.\n\u2022 Ten den nep\u0159id\u00e1vat b\u011bh p\u0159ed testem.\n\u2022 P\u0159ed testem v Tymewearu opravit HR max 183 \u2192 186.\n\nPO TESTU: S\u00cdLA A. Spustit Workout Zone Detection a poslat screenshot.\n\nWarmup\n- 15m 150w intensity=warmup\n\nMain Set 1x\n- 5m 160w intensity=interval\n\nMain Set 1x\n- 5m 180w intensity=interval\n\nMain Set 1x\n- 5m 200w intensity=interval\n\nMain Set 1x\n- 5m 220w intensity=interval\n\nMain Set 1x\n- 5m 240w intensity=interval\n\nMain Set 1x\n- 5m 260w intensity=interval\n\nMain Set 1x\n- 5m 280w intensity=interval\n\nMain Set 1x\n- 5m 300w intensity=interval\n\nMain Set 1x\n- 3m 320w intensity=interval\n\nCooldown\n- 12m 140w intensity=cooldown"
+      "description": "Prvn\u00ed j\u00edzda po nemoci (8 dn\u00ed bez tr\u00e9ninku). Z2 75 min, 190\u2013220 W, HR <135, kadence 85\u201390.\nVenku jen za sv\u011btla a kdy\u017e je krk v pohod\u011b (~9 \u00b0C, d\u00e9\u0161\u0165 15 %), jinak Tacx.\nUkon\u010dit, kdy\u017e HR po 40 min stoup\u00e1 o >8 bpm p\u0159i stejn\u00e9m v\u00fdkonu nebo se vr\u00e1t\u00ed chrapot/\u00fanava.\nV\u00fd\u017eiva 50\u201360 g/h.\n\nWarmup\n- 15m 160w intensity=warmup\n\nMain Set 1x\n- 50m 205w intensity=interval\n\nCooldown\n- 10m 150w intensity=cooldown"
     },
     {
       "id": 142205763,
       "date": "2026-10-27",
-      "name": "KOTVA: CX T2 40/20 (Tacx)",
+      "name": "Z2 90 venku (T2 zru\u0161eno \u2014 po nemoci)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 74,
-      "duration_hours": 1.22,
-      "duration_formatted": "1h13m",
-      "workout_summary": "15m [target not shown] | 9\u00d7(40s [target not shown] + 20s [target not shown]) | [repeat not summarized] | 9\u00d7(40s [target not shown] + 20s [target not shown]) | [repeat not summarized] | 10m [target not shown]",
-      "has_terrain": false,
-      "start_time": "15:00",
-      "description": "KOTVA \u2014 tvrd\u00fd den #1 (4 dny p\u0159ed MT1). CX rotace T2: 2\u00d79-10 \u00d7 40/20 @ 400-410 W na Tacxu, pak Z2 25 min. D\u00e9lka s\u00e9rie podle sign\u00e1lu (HR \u2265162 a VE \u2265100 \u2192 je\u0161t\u011b 2-3 \u00faseky, max 10). Re\u017eim odporu p\u0159esn\u011bj\u0161\u00ed ne\u017e ERG; v\u011btr\u00e1k, 0,75-1 l/h.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 9x\n- 40s 123% intensity=interval\n- 20s 50% intensity=recovery\n\nMain Set 1x\n- 5m 55% intensity=recovery\n\nMain Set 9x\n- 40s 123% intensity=interval\n- 20s 50% intensity=recovery\n\nMain Set 1x\n- 25m 65% intensity=interval\n\nCooldown\n- 10m 50% intensity=cooldown"
-    },
-    {
-      "id": 138158617,
-      "date": "2026-10-28",
-      "name": "KOTVA: Dlouh\u00e1 Z2 2,5 h (sv\u00e1tek)",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 102,
-      "duration_hours": 2.5,
-      "duration_formatted": "2h30m",
-      "workout_summary": null,
-      "has_terrain": false,
-      "start_time": "11:00",
-      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 2,5 h (st\u00e1tn\u00ed sv\u00e1tek, m\u00edsto Krnova). Venku za sv\u011btla, 200-235 W, HR 120-135, VE 50-63, 70 g/h. D\u00e9\u0161\u0165 = zbytek na Tacxu. 3 dny p\u0159ed MT1 \u2014 bez z\u00e1tah\u016f.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 115m 66% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
-    },
-    {
-      "id": 142205764,
-      "date": "2026-10-29",
-      "name": "FLEX: Z2 90 Tacx + S\u00cdLA B (lehce)",
-      "type": "WORKOUT",
-      "sport_type": "Ride",
-      "planned_tss": 59,
+      "planned_tss": 55,
       "duration_hours": 1.5,
       "duration_formatted": "1h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "FLEX: Z2 90 min na Tacxu (195-215 W, VE <60) + S\u00cdLA B lehce (2 s\u00e9rie). 2 dny p\u0159ed MT1.\n\nMain Set 1x\n- 90m 63% intensity=interval"
+      "description": "Z2 90 venku (p\u0159edpov\u011b\u010f sucho, ~11 \u00b0C) \u2014 2. j\u00edzda po nemoci. T2 40/20 zru\u0161eno (po 8 dnech volna p\u0159\u00edli\u0161 brzy).\n195\u2013225 W, HR <138, rovnom\u011brn\u011b, bez z\u00e1tah\u016f. Za sv\u011btla (tma od ~16:45).\nUkon\u010dit/zkr\u00e1tit p\u0159i n\u00e1vratu chrapotu nebo driftu HR >8 bpm.\nV\u00fd\u017eiva 60 g/h.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 1x\n- 65m 210w intensity=interval\n\nCooldown\n- 10m 150w intensity=cooldown"
+    },
+    {
+      "id": 138158617,
+      "date": "2026-10-28",
+      "name": "Z2 105 + openery 3\u00d7 1 min (sv\u00e1tek)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 73,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
+      "workout_summary": "15m [target not shown] | [repeat not summarized] | 3\u00d7(1m [target not shown] + 3m [target not shown]) | [repeat not summarized] | 8m [target not shown]",
+      "has_terrain": false,
+      "start_time": "11:00",
+      "description": "Z2 105 + OPENERY (sv\u00e1tek, 3 dny p\u0159ed MT1). Nahrazuje dlouhou Z2 2,5 h.\nZ2 195\u2013225 W, HR <138. Openery 3\u00d7 1 min @ 380\u2013400 W / 3 min voln\u011b \u2014 JEN po 48 h bez p\u0159\u00edznak\u016f (hlas OK, \u017e\u00e1dn\u00e1 \u00fanava); jinak jen Z2 90.\nOpenery: HR na konci 3. \u00faseku by m\u011blo b\u00fdt \u2264160; kdy\u017e ne, t\u011blo je\u0161t\u011b nen\u00ed zp\u011bt \u2192 MT1 jen jako tempo.\nVenku za sv\u011btla, v\u00fd\u017eiva 60 g/h.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 1x\n- 40m 210w intensity=interval\n\nMain Set 3x\n- 1m 390w intensity=interval\n- 3m 160w intensity=recovery\n\nMain Set 1x\n- 30m 210w intensity=interval\n\nCooldown\n- 8m 150w intensity=cooldown"
+    },
+    {
+      "id": 142205764,
+      "date": "2026-10-29",
+      "name": "Z1 30 nebo volno (s\u00edla zru\u0161ena)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 13,
+      "duration_hours": 0.5,
+      "duration_formatted": "30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "Z1 30 Tacx 150\u2013180 W nebo VOLNO (2 dny p\u0159ed MT1). S\u00cdLA B zru\u0161ena \u2014 po nemoci a p\u0159ed z\u00e1vodem zbyte\u010dn\u00e1 \u00fanava nohou.\n\nMain Set 1x\n- 30m 165w intensity=recovery"
     },
     {
       "id": 142205765,
@@ -3678,13 +3691,13 @@
       "name": "MT1: CX Ch. Hradiste - mereny trenink (40 min)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 107,
+      "planned_tss": 103,
       "duration_hours": 1.47,
       "duration_formatted": "1h28m10s",
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "MERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~323 W prumerne (98 %) - delsi zavod nez OP, pacing rovnomernejsi: narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 98% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "MERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~313 W prumerne (95 %; po nemoci snizeno z 98 %) - narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nZMENY PRED MT1 (nemoc 18.-25. 10., 8 dni bez treninku):\n- Ut 27.: T2 40/20 zruseno -> Z2 90 venku\n- St 28.: dlouha Z2 2,5 h -> Z2 105 + openery 3x 1 min @ 380-400 W\n- Ct 29.: Z2 90 + sila B -> Z1 30 nebo volno\n- Pa 30.: Opener 40 beze zmeny\n- VT test presunut na po 2. 11.\nSTART jen pri wellness zelene a bez priznaku od stredy. Kdyz openery ve stredu HR >160 nebo pocit tezky -> MT1 jen jako tempo 90 % (~297 W), cas neni referencni.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 95% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
     },
     {
       "id": 142205766,
@@ -3699,6 +3712,20 @@
       "has_terrain": false,
       "start_time": "09:00",
       "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h (den po MT1). 200-240 W, HR 120-135, VE 50-63, 70 g/h + elektrolyt. Za studena: vrstvy, n\u00e1vleky.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 140m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+    },
+    {
+      "id": 142205757,
+      "date": "2026-11-02",
+      "name": "TEST (p\u0159edb\u011b\u017en\u011b): Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 55,
+      "duration_hours": 1.17,
+      "duration_formatted": "1h10m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "P\u0158ESUNUTO podruh\u00e9 (26. 10. \u2192 2. 11.): po nemoci nejd\u0159\u00edv n\u00e1vrat a MT1. P\u0158EDB\u011a\u017dN\u011a \u2014 den po dlouh\u00e9 Z2; kdy\u017e bude ned\u011ble t\u011b\u017ek\u00e1 nebo wellness \ud83d\udfe1, posun o den.\n\nTEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection).\n\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):\nRozjet\u00ed 15 min @ 150 W, pak 5min stupn\u011b 160 \u2192 300 W po 20 W, posledn\u00ed stupe\u0148 3 min @ 320 W, vyjet\u00ed 12 min @ 140 W.\n\nSTOP pravidlo (kter\u00e9koli): VE >130 L/min, HR \u2265170, nebo nelze dr\u017eet kadenci. Stupe\u0148 320 W jen p\u0159i RPE \u22648 po 300 W.\n\nPODM\u00cdNKY:\n\u2022 M\u00edstnost co nejchladn\u011bj\u0161\u00ed, v\u011btr\u00e1k na plno od za\u010d\u00e1tku.\n\u2022 Kadence 90 \u00b13, celou dobu v sedle, nemluvit.\n\u2022 P\u00edt jen v prvn\u00ed minut\u011b stupn\u011b, ne v posledn\u00edch 2 min.\n\u2022 Tymewear p\u00e1s na obvykl\u00e9m m\u00edst\u011b, dob\u0159e uta\u017een\u00fd; ov\u011b\u0159it p\u00e1rov\u00e1n\u00ed s Edge 1050.\n\u2022 Z\u00e1znam Edge 1050 + Tymewear + HR p\u00e1s; workout krokovat z Edge (ka\u017ed\u00fd stupe\u0148 = lap).\n\u2022 Posledn\u00ed j\u00eddlo 2\u20133 h p\u0159edem; v testu jen voda.\n\u2022 P\u0159ed testem v Tymewearu opravit HR max 183 \u2192 186.\n\nPO TESTU: S\u00cdLA A. Spustit Workout Zone Detection a poslat screenshot.\n\nWarmup\n- 15m 150w intensity=warmup\n\nMain Set 1x\n- 5m 160w intensity=interval\n\nMain Set 1x\n- 5m 180w intensity=interval\n\nMain Set 1x\n- 5m 200w intensity=interval\n\nMain Set 1x\n- 5m 220w intensity=interval\n\nMain Set 1x\n- 5m 240w intensity=interval\n\nMain Set 1x\n- 5m 260w intensity=interval\n\nMain Set 1x\n- 5m 280w intensity=interval\n\nMain Set 1x\n- 5m 300w intensity=interval\n\nMain Set 1x\n- 3m 320w intensity=interval\n\nCooldown\n- 12m 140w intensity=cooldown"
     },
     {
       "id": 136401236,
@@ -3754,20 +3781,20 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 8,
+    "attempted": 9,
     "success": 4,
     "patternA": 4,
     "patternB": 0,
     "flat": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 4
+    "bail_no_match": 5
   },
   "weekly_summary": {
     "total_training_hours": 0.0,
     "total_training_formatted": "0s",
     "total_tss": 0,
     "activities_count": 0,
-    "avg_hrv": 36.2,
+    "avg_hrv": 36.7,
     "avg_resting_hr": 47.1
   },
   "race_calendar": {
