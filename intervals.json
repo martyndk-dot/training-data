@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T14:52:45.919132",
+  "generated_at": "2026-10-27T20:01:38.342151",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -1513,8 +1513,109 @@
           "activity_key": "eea7d21063ddd25bd19286d4191e67c6114f1e4ae180968e5ec17b3a35b821df",
           "event_key": "7932958f395be5d64cf97be84a843d95923bb50a7b13185c12514d4dcf99424c",
           "plan_key": "2801ec6b34592f0c78091346327ef746769c4b096b5bfb3ca9fbc6a5fc0d6663",
-          "sampled_at": "2026-10-26T19:11:09.346933+00:00",
-          "next_refresh_at": "2026-10-27T19:11:09.346933+00:00"
+          "sampled_at": "2026-10-27T20:01:39.370537+00:00",
+          "next_refresh_at": "2026-10-28T20:01:39.370537+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i202446962",
+      "date": "2026-10-27",
+      "start_datetime": "2026-10-27T18:45:01",
+      "type": "VirtualRide",
+      "name": "Z2 90 venku (T2 zru\u0161eno \u2014 po nemoci)",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 5530,
+          "moving_secs": 5530,
+          "start_secs": 0,
+          "end_secs": 5530,
+          "avg_power": 143,
+          "max_power": 229,
+          "avg_hr": 106,
+          "max_hr": 122,
+          "min_hr": 64,
+          "avg_cadence": 89.35154,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38100,
+          "training_load": 31.493576
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205763",
+          "updated": "2026-10-26T06:20:54.158+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 165
+          },
+          {
+            "supported": false,
+            "duration_s": 3900
+          },
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 150
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1843,
+            129.3,
+            238.2,
+            100.1,
+            85.0,
+            100.0,
+            100.0,
+            100.0,
+            8.63
+          ],
+          [
+            1843,
+            3686,
+            160.4,
+            295.7,
+            110.4,
+            94.3,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            3686,
+            5529,
+            142.4,
+            262.4,
+            108.3,
+            88.8,
+            100.0,
+            100.0,
+            100.0,
+            1.63
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "6ce3b091a6000b6e6ad704df873033a92f8316e0ebef896a14a938b1024fb81a",
+          "event_key": "d1de59e05a1c441ee01e0cec2d6abe76d65d7f8244a1e7ca03d338c693839f0e",
+          "plan_key": "ee3f3333f497a775aedb7fe6a323c8b942bfe1da5bba51859eaeeee7bc6bf583",
+          "sampled_at": "2026-10-27T20:01:39.370537+00:00",
+          "next_refresh_at": "2026-10-28T20:01:39.370537+00:00"
         }
       }
     }
@@ -1589,12 +1690,32 @@
         "source_icu_sync_date": "2026-10-26T15:49:36.399+00:00"
       },
       "streams": {
-        "attempts": 5,
+        "attempts": 6,
         "first_seen": "2026-10-26T19:11:08.538815",
-        "last_attempt": "2026-10-27T14:52:45.919132",
+        "last_attempt": "2026-10-27T20:01:38.342151",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-27T14:57:45.919132"
+        "next_retry_at": "2026-10-27T20:06:38.342151"
+      }
+    },
+    "i202446962": {
+      "date": "2026-10-27",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-27T20:01:38.342151",
+        "last_attempt": "2026-10-27T20:01:38.342151",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-27T19:15:19.611+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-27T20:01:38.342151",
+        "last_attempt": "2026-10-27T20:01:38.342151",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-27T20:06:38.342151"
       }
     }
   }
