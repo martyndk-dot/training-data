@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-28T11:34:48.105923",
+    "last_updated": "2026-10-28T17:21:07.775773",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -183,7 +183,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 10,
+    "age_days": 11,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -290,7 +290,7 @@
       "respiration": null,
       "body_fat_pct": 22.4,
       "abdomen_cm": null,
-      "steps": 275,
+      "steps": 5555,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -670,7 +670,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 2.27,
+          "planned_tss_delta": 2.09,
           "hard_sessions_planned": 3,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 3,
@@ -710,7 +710,7 @@
     "p_max": 1042,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-28T11:34:48.104922",
+    "calculation_timestamp": "2026-10-28T17:21:07.774396",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3587,7 +3587,7 @@
       "respiration": null,
       "body_fat_pct": 22.4,
       "abdomen_cm": null,
-      "steps": 275,
+      "steps": 5555,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -3615,16 +3615,16 @@
     {
       "id": 138158617,
       "date": "2026-10-28",
-      "name": "Z2 105 + openery 3\u00d7 1 min (sv\u00e1tek)",
+      "name": "Z2 70 + openery 2\u00d7 1 min (sv\u00e1tek)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 73,
-      "duration_hours": 1.75,
-      "duration_formatted": "1h45m",
-      "workout_summary": "15m [target not shown] | [repeat not summarized] | 3\u00d7(1m [target not shown] + 3m [target not shown]) | [repeat not summarized] | 8m [target not shown]",
+      "planned_tss": 46,
+      "duration_hours": 1.17,
+      "duration_formatted": "1h10m",
+      "workout_summary": "15m [target not shown] | [repeat not summarized] | 2\u00d7(1m [target not shown] + 3m [target not shown]) | [repeat not summarized] | 7m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "Z2 105 + OPENERY (sv\u00e1tek, 3 dny p\u0159ed MT1). Nahrazuje dlouhou Z2 2,5 h.\nZ2 195\u2013225 W, HR <138. Openery 3\u00d7 1 min @ 380\u2013400 W / 3 min voln\u011b \u2014 JEN po 48 h bez p\u0159\u00edznak\u016f (hlas OK, \u017e\u00e1dn\u00e1 \u00fanava); jinak jen Z2 90.\nOpenery: HR na konci 3. \u00faseku by m\u011blo b\u00fdt \u2264160; kdy\u017e ne, t\u011blo je\u0161t\u011b nen\u00ed zp\u011bt \u2192 MT1 jen jako tempo.\nVenku za sv\u011btla, v\u00fd\u017eiva 60 g/h.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 1x\n- 40m 210w intensity=interval\n\nMain Set 3x\n- 1m 390w intensity=interval\n- 3m 160w intensity=recovery\n\nMain Set 1x\n- 30m 210w intensity=interval\n\nCooldown\n- 8m 150w intensity=cooldown"
+      "description": "Z2 70 + OPENERY 2\u00d7 1 min (sv\u00e1tek, 3 dny p\u0159ed MT1). Zkr\u00e1ceno ze 105 min: po nemoci a p\u0159i \ud83d\udfe1 wellness (HRV 31, k\u016f\u017ee +0,4) je c\u00edlem jen probudit nohy, ne budovat objem.\nZ2 195\u2013225 W, HR <138. Openery 2\u00d7 1 min @ 380\u2013400 W / 3 min voln\u011b \u2014 jen bez p\u0159\u00edznak\u016f; 2. \u00fasek jen kdy\u017e 1. p\u016fjde lehce. P\u0159i jak\u00e9mkoli p\u0159\u00edznaku bez opener\u016f, jen Z2 60.\nHR na konci 2. \u00faseku by m\u011blo b\u00fdt \u2264160; kdy\u017e ne, MT1 jen jako tempo.\nVenku za sv\u011btla; na Tacxu nejd\u0159\u00edv FTP v MyWhoosh 330 W. V\u00fd\u017eiva 60 g/h.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 1x\n- 25m 210w intensity=interval\n\nMain Set 2x\n- 1m 390w intensity=interval\n- 3m 160w intensity=recovery\n\nMain Set 1x\n- 15m 205w intensity=interval\n\nCooldown\n- 7m 150w intensity=cooldown"
     },
     {
       "id": 142205764,
