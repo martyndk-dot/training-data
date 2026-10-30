@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T13:27:27.425160",
+  "generated_at": "2026-10-30T18:48:53.103151",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -390,6 +390,200 @@
           "next_refresh_at": "2026-10-31T00:15:06.999759+00:00"
         }
       }
+    },
+    {
+      "activity_id": "i203626243",
+      "date": "2026-10-30",
+      "start_datetime": "2026-10-30T17:32:08",
+      "type": "VirtualRide",
+      "name": "Opener 40 (p\u0159ed MT1) \u2014 zost\u0159eno",
+      "interval_summary": [
+        "2x 58s 384w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 976,
+          "moving_secs": 903,
+          "start_secs": 0,
+          "end_secs": 976,
+          "avg_power": 163,
+          "max_power": 195,
+          "avg_hr": 110,
+          "max_hr": 117,
+          "min_hr": 78,
+          "avg_cadence": 90.56305,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38100,
+          "training_load": 5.97709
+        },
+        {
+          "type": "WORK",
+          "label": "58s@384w89rpm",
+          "duration_secs": 59,
+          "moving_secs": 59,
+          "start_secs": 976,
+          "end_secs": 1035,
+          "avg_power": 383,
+          "max_power": 389,
+          "avg_hr": 136,
+          "max_hr": 151,
+          "min_hr": 116,
+          "avg_cadence": 91.305084,
+          "zone": 5,
+          "w_bal_start": 38100,
+          "w_bal_end": 34938,
+          "training_load": 1.8225528
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 182,
+          "moving_secs": 182,
+          "start_secs": 1035,
+          "end_secs": 1217,
+          "avg_power": 160,
+          "max_power": 363,
+          "avg_hr": 124,
+          "max_hr": 152,
+          "min_hr": 112,
+          "avg_cadence": 90.10439,
+          "zone": 1,
+          "w_bal_start": 34905,
+          "w_bal_end": 36682,
+          "training_load": 1.9509616
+        },
+        {
+          "type": "WORK",
+          "label": "58s@384w89rpm",
+          "duration_secs": 57,
+          "moving_secs": 57,
+          "start_secs": 1217,
+          "end_secs": 1274,
+          "avg_power": 384,
+          "max_power": 391,
+          "avg_hr": 136,
+          "max_hr": 151,
+          "min_hr": 114,
+          "avg_cadence": 85.98245,
+          "zone": 5,
+          "w_bal_start": 36643,
+          "w_bal_end": 33590,
+          "training_load": 1.7607714
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 1182,
+          "moving_secs": 1182,
+          "start_secs": 1274,
+          "end_secs": 2456,
+          "avg_power": 156,
+          "max_power": 489,
+          "avg_hr": 118,
+          "max_hr": 153,
+          "min_hr": 108,
+          "avg_cadence": 90.051605,
+          "zone": 1,
+          "w_bal_start": 33542,
+          "w_bal_end": 38030,
+          "training_load": 9.986881
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "142205765",
+          "updated": "2026-10-30T06:11:48.145+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 165
+          },
+          {
+            "supported": false,
+            "duration_s": 480
+          },
+          {
+            "supported": false,
+            "duration_s": 270
+          },
+          {
+            "supported": false,
+            "duration_s": 720,
+            "target_w": 150
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            818,
+            163.5,
+            122.0,
+            109.6,
+            90.5,
+            91.2,
+            91.2,
+            91.2,
+            0.0
+          ],
+          [
+            818,
+            1636,
+            202.4,
+            165.5,
+            126.0,
+            90.7,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            1636,
+            2455,
+            146.1,
+            119.7,
+            114.0,
+            89.6,
+            100.0,
+            100.0,
+            100.0,
+            1.34
+          ]
+        ],
+        "efforts": [
+          [
+            976,
+            1035,
+            383,
+            136,
+            91.305084
+          ],
+          [
+            1217,
+            1274,
+            384,
+            136,
+            85.98245
+          ]
+        ],
+        "issues": [
+          "unsupported_steps",
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "beb7b00bf88000a9f6bd7b7f7416f87966714133221b3c71f6c535f3f667ce58",
+          "event_key": "60c88d0c23ee6b85896cfc856f544d1017f57175de2627ebaf2a1ad304e263a3",
+          "plan_key": "3d5e5bd0bc3bc7125c32b2f572e1835b872161f804e41b0f5d4356a5138a5e03",
+          "sampled_at": "2026-10-30T18:48:53.503577+00:00",
+          "next_refresh_at": "2026-10-31T18:48:53.503577+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -448,6 +642,26 @@
         "last_attempt": "2026-10-30T13:27:27.425160",
         "status": "tombstone",
         "reason": "retry_expired"
+      }
+    },
+    "i203626243": {
+      "date": "2026-10-30",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-10-30T18:48:53.103151",
+        "last_attempt": "2026-10-30T18:48:53.103151",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-10-30T17:13:34.254+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-10-30T18:48:53.103151",
+        "last_attempt": "2026-10-30T18:48:53.103151",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-10-30T18:53:53.103151"
       }
     }
   }
