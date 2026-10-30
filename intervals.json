@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T06:21:48.733580",
+  "generated_at": "2026-10-30T13:27:27.425160",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -93,8 +93,8 @@
           "activity_key": "c358290c9df3f159de4d600088a05eb76fa6e64168ea7e0f020fd49d5e231806",
           "event_key": "4c36adb8d8e10a2b29d249d0f9807f925989d947f8756244e7941d8ee8105028",
           "plan_key": "f55d9786e6ad11034a6d8a754dfa0df0d2ab9369c2f50d062eab62639bbf58de",
-          "sampled_at": "2026-10-29T08:22:34.130047+00:00",
-          "next_refresh_at": "2026-10-30T08:22:34.130047+00:00"
+          "sampled_at": "2026-10-30T13:27:27.705828+00:00",
+          "next_refresh_at": "2026-10-31T13:27:27.705828+00:00"
         }
       }
     },
@@ -194,8 +194,8 @@
           "activity_key": "89f03d19f8f48474284366475954a0f8cb83d994185f14ef741a003571e58f73",
           "event_key": "e7b5871cf1db6d7d1d630c8725153373628fcf99b60b334f25bfbdecdbc309f1",
           "plan_key": "492e8ebf95065129b7133ac23192a49236ade41d1461fea56bf6a51456163ba3",
-          "sampled_at": "2026-10-29T08:22:34.130047+00:00",
-          "next_refresh_at": "2026-10-30T08:22:34.130047+00:00"
+          "sampled_at": "2026-10-30T13:27:27.705828+00:00",
+          "next_refresh_at": "2026-10-31T13:27:27.705828+00:00"
         }
       }
     },
@@ -443,12 +443,11 @@
         "source_icu_sync_date": "2026-10-27T19:15:19.611+00:00"
       },
       "streams": {
-        "attempts": 12,
+        "attempts": 13,
         "first_seen": "2026-10-27T20:01:38.342151",
-        "last_attempt": "2026-10-30T06:21:48.733580",
-        "status": "pending",
-        "reason": "no_data",
-        "next_retry_at": "2026-10-30T06:51:48.733580"
+        "last_attempt": "2026-10-30T13:27:27.425160",
+        "status": "tombstone",
+        "reason": "retry_expired"
       }
     }
   }
