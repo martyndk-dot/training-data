@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-30T00:15:07.608436",
+    "last_updated": "2026-10-30T06:21:49.116477",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -104,6 +104,15 @@
   "athlete_notes": null,
   "alerts": [
     {
+      "metric": "hrv",
+      "value": 29.0,
+      "severity": "warning",
+      "threshold": "\u2193>20% vs baseline (37.0)",
+      "context": "HRV 29.0 is 21.6% below baseline. Monitor \u2014 alarm if persists >2 days.",
+      "persistence_days": 1,
+      "tier": 1
+    },
+    {
       "metric": "tid_distribution",
       "value": "Base",
       "severity": "warning",
@@ -114,25 +123,25 @@
     }
   ],
   "readiness_decision": {
-    "recommendation": "go",
-    "priority": 3,
+    "recommendation": "modify",
+    "priority": 2,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 38.3,
-        "delta_pct": null
+        "status": "red",
+        "value": 29.0,
+        "baseline_7d": 37.0,
+        "delta_pct": -21.6
       },
       "rhr": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 45.5,
-        "delta_bpm": null
+        "status": "green",
+        "value": 47,
+        "baseline_7d": 45.7,
+        "delta_bpm": 1.3
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "green",
+        "hours": 7.1,
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -142,20 +151,20 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.29
+        "status": "green",
+        "value": 0.76,
+        "value_yesterday": 1.34
       },
       "tsb": {
         "status": "green",
-        "value": 28.4
+        "value": 32.1
       }
     },
     "signal_summary": {
-      "green": 2,
+      "green": 5,
       "amber": 0,
-      "red": 0,
-      "unavailable": 4
+      "red": 1,
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Build",
@@ -164,8 +173,17 @@
       "modifier_applied": "build_loosened"
     },
     "race_week_defers": false,
-    "modification": null,
-    "reason": "P3 green light. 2 green, 0 amber (threshold 3), 0 red. Note: 4 signals unavailable \u2014 limited data.",
+    "modification": {
+      "triggers": [
+        "hrv"
+      ],
+      "suggested_adjustments": {
+        "intensity": "reduce",
+        "volume": "preserve",
+        "cap_zone": null
+      }
+    },
+    "reason": "P2 signal count. 1 red (hrv), 0 amber ().",
     "alarm_refs": []
   },
   "health_context": {
@@ -221,10 +239,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 47.67,
-      "atl": 19.23,
-      "tsb": 28.44,
-      "ramp_rate": -6.33,
+      "ctl": 46.75,
+      "atl": 14.62,
+      "tsb": 32.13,
+      "ramp_rate": -7.25,
       "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
     },
     "thresholds": {
@@ -268,12 +286,12 @@
           "unit": "kg"
         }
       },
-      "resting_hr": 45,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "resting_hr": 47,
+      "hrv": 29.0,
+      "sleep_quality": 2,
+      "sleep_hours": 7.1,
+      "sleep_formatted": "7h6m",
+      "sleep_score": 83.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -328,14 +346,14 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.29,
-    "hrv_baseline_7d": 38.3,
-    "rhr_baseline_7d": 45.5,
-    "hrv_baseline_28d": 33.8,
+    "recovery_index": 0.76,
+    "recovery_index_yesterday": 1.34,
+    "hrv_baseline_7d": 37.0,
+    "rhr_baseline_7d": 45.7,
+    "hrv_baseline_28d": 33.6,
     "rhr_baseline_28d": 47.6,
-    "latest_hrv": null,
-    "latest_rhr": null,
+    "latest_hrv": 29.0,
+    "latest_rhr": 47,
     "acwr": 0.21,
     "acwr_interpretation": "undertraining",
     "acwr_scope": "live_retrospective",
@@ -358,7 +376,7 @@
     "multi_sport_detected": true,
     "strain": 26.0,
     "stress_tolerance": 0.5,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 0.6,
     "tss_7d_total": 48.0,
     "tss_28d_total": 924.0,
     "zone_distribution_7d": {
@@ -711,10 +729,10 @@
     "p_max": 1040,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-10-30T00:15:07.607212",
+    "calculation_timestamp": "2026-10-30T06:21:49.115131",
     "data_quality": {
-      "hrv_data_points": 6,
-      "rhr_data_points": 6,
+      "hrv_data_points": 7,
+      "rhr_data_points": 7,
       "activities_7d": 2,
       "activities_28d": 13,
       "planned_workouts_7d": 7,
@@ -3242,13 +3260,13 @@
       "display": {
         "weight": null
       },
-      "resting_hr": null,
-      "hrv_rmssd": null,
+      "resting_hr": 47,
+      "hrv_rmssd": 29.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 7.1,
+      "sleep_formatted": "7h6m",
+      "sleep_quality": 2,
+      "sleep_score": 83.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -3281,18 +3299,31 @@
   ],
   "planned_workouts": [
     {
+      "id": 149852086,
+      "date": "2026-10-30",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 GO: zost\u0159en\u00fd opener, MT1 GO",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu + freddy), noc 29.\u219230. 10.\n\n\ud83d\udfe2 RHR 47 bpm \u2014 v baseline 47\u201348\n\ud83d\udfe1 HRV 29 ms \u2014 pod baseline ~33, nad varov\u00e1n\u00edm 27; prudk\u00fd skok ze 49 dol\u016f bez tr\u00e9ninkov\u00e9 z\u00e1t\u011b\u017ee \u2192 sp\u00ed\u0161 b\u011b\u017en\u00e1 denn\u00ed variabilita (stres, pozdn\u00ed j\u00eddlo) ne\u017e \u00fanava\n\ud83d\udfe2 Sp\u00e1nek 7 h 06, sk\u00f3re 83\n\ud83d\udfe2 Teplota k\u016f\u017ee \u22120,2 \u00b0C\n\nTrend RHR / HRV / sp\u00e1nek / k\u016f\u017ee: 26. 46/40/80/\u22120,2 | 27. 46/34/90/0,0 | 28. 44/31/84/+0,4 | 29. 45/49/92/\u22120,1 | 30. 47/29/83/\u22120,2\nSt\u0159eda i \u010dtvrtek bez tr\u00e9ninku; posledn\u00ed intenzita 17. 10. CTL 47 | ATL 18 | TSB +29.\n\nVERDIKT: \ud83d\udfe2 GO na opener, MT1 z\u016fst\u00e1v\u00e1 GO.\n\u2022 Opener 40 zost\u0159en: 2\u00d7 1 min @ 380\u2013390 W + 2\u00d7 15 s starty \u2014 nahrazuje nejet\u00e9 openery.\n\u2022 Opener = test pro MT1: HR na konci 2. \u00faseku \u2264160 \u2192 MT1 na 95 %; jinak tempo 90 %.\n\u2022 Sobota r\u00e1no nestartovat p\u0159i HRV <27, RHR \u226551 nebo p\u0159\u00edznac\u00edch.\n\u2022 Ve\u010der sacharidy ~6 g/kg, kolo, tlaky, \u010dipy."
+    },
+    {
       "id": 142205765,
       "date": "2026-10-30",
-      "name": "Opener 40 (p\u0159ed MT1)",
+      "name": "Opener 40 (p\u0159ed MT1) \u2014 zost\u0159eno",
       "type": "WORKOUT",
       "sport_type": "Ride",
       "planned_tss": 25,
-      "duration_hours": 0.67,
-      "duration_formatted": "40m",
-      "workout_summary": "15m [target not shown] | 3\u00d7(1m [target not shown] + 3m [target not shown]) | 13m [target not shown]",
+      "duration_hours": 0.66,
+      "duration_formatted": "39m30s",
+      "workout_summary": "15m [target not shown] | 2\u00d7(1m [target not shown] + 3m [target not shown]) | 2\u00d7(15s [target not shown] + 2m [target not shown]) | 12m [target not shown]",
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "Opener 40 p\u0159ed MT1.\n\nWarmup\n- 15m 55% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 3m 55% intensity=recovery\n\nCooldown\n- 13m 50% intensity=cooldown"
+      "description": "OPENER 40 p\u0159ed MT1 \u2014 zost\u0159eno: st\u0159eda i \u010dtvrtek bez j\u00edzdy, posledn\u00ed intenzita 17. 10. (13 dn\u00ed).\nRozjet\u00ed 15 min Z1\u2013Z2, pak 2\u00d7 1 min @ 380\u2013390 W / 3 min voln\u011b, 2\u00d7 15 s start ze sedla @ ~480 W / 2 min voln\u011b, vyjet\u00ed.\nKONTROLA PRO MT1: HR na konci 2. minutov\u00e9ho \u00faseku \u2264160 a pocit lehk\u00fd \u2192 MT1 podle pl\u00e1nu (95 %). HR >160 nebo t\u011b\u017ek\u00e9 nohy \u2192 MT1 jako tempo 90 % (~297 W).\nVenku za sv\u011btla (tma ~16:45); na Tacxu FTP v MyWhoosh 330 W nebo re\u017eim bez ERG.\nVe\u010der: sacharidy ~6 g/kg, p\u0159ipravit kolo, tlaky, \u010dipy.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 2x\n- 1m 385w intensity=interval\n- 3m 160w intensity=recovery\n\nMain Set 2x\n- 15s 480w intensity=interval\n- 2m 150w intensity=recovery\n\nCooldown\n- 12m 150w intensity=cooldown"
     },
     {
       "id": 138158635,
@@ -3306,7 +3337,7 @@
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "MERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~313 W prumerne (95 %; po nemoci snizeno z 98 %) - narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nZMENY PRED MT1 (nemoc 18.-25. 10., 8 dni bez treninku):\n- Ut 27.: T2 40/20 zruseno -> Z2 90 venku\n- St 28.: dlouha Z2 2,5 h -> Z2 105 + openery 3x 1 min @ 380-400 W\n- Ct 29.: Z2 90 + sila B -> Z1 30 nebo volno\n- Pa 30.: Opener 40 beze zmeny\n- VT test presunut na po 2. 11.\nSTART jen pri wellness zelene a bez priznaku od stredy. Kdyz openery ve stredu HR >160 nebo pocit tezky -> MT1 jen jako tempo 90 % (~297 W), cas neni referencni.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 95% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "MERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~313 W prumerne (95 %; po nemoci snizeno z 98 %) - narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nZMENY PRED MT1 (nemoc 18.-25. 10.):\n- Po 26.: Z2 75 -> beh 27 min lehce\n- Ut 27.: T2 40/20 zruseno -> Z2 90 (MyWhoosh, kvuli FTP 252 v aplikaci odjeto v Z1)\n- St 28. Z2 + openery a Ct 29. Z2 60 + openery: NEJETO\n- Pa 30.: Opener 40 zostreno (2x 1 min @ 385 + 2x 15 s starty)\n- VT test presunut na po 2. 11.\nPosledni intenzita 17. 10. -> prvni 2 kola kontrolovane, neprepalit start.\n\nSTART: wellness 30. 10. RHR 47, HRV 29 (zluta), spanek 83, kuze -0,2 -> GO, rozhodne patecni opener.\nKdyz v openeru HR >160 na konci 2. minutoveho useku nebo tezke nohy -> MT1 jen jako tempo 90 % (~297 W), cas neni referencni.\nSobota rano: kdyz HRV <27 nebo RHR >=51 nebo priznaky -> nestartovat.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 95% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
     },
     {
       "id": 142205766,
@@ -3403,8 +3434,8 @@
     "total_training_formatted": "1h57m",
     "total_tss": 48,
     "activities_count": 2,
-    "avg_hrv": 38.3,
-    "avg_resting_hr": 45.5
+    "avg_hrv": 37.0,
+    "avg_resting_hr": 45.7
   },
   "race_calendar": {
     "next_race": null,
