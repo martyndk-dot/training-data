@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-10-31T15:16:02.266883",
+    "last_updated": "2026-10-31T19:30:34.327673",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -685,7 +685,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 3.23,
+          "planned_tss_delta": 2.84,
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 1,
           "current_week_hard_days_total": 2,
@@ -725,7 +725,7 @@
     "p_max": 1127,
     "power_model_source": "wellness.sportInfo",
     "vo2max": 57.0,
-    "calculation_timestamp": "2026-10-31T15:16:02.265994",
+    "calculation_timestamp": "2026-10-31T19:30:34.326714",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -3029,6 +3029,19 @@
       "description": "Garmin (intervals.icu + freddy), noc 30.\u219231. 10. \u2014 den MT1.\n\n\ud83d\udfe2 RHR 48 bpm \u2014 horn\u00ed okraj baseline 47\u201348, pod startovn\u00edm limitem 51\n\ud83d\udfe1 HRV 29 ms \u2014 druh\u00fd den pod baseline ~33, ale nad startovn\u00edm limitem 27; p\u0159ed z\u00e1vodem \u010dast\u00fd jev (o\u010dek\u00e1v\u00e1n\u00ed, sympatick\u00e1 aktivace), ne \u00fanava \u2014 v\u010derej\u0161\u00ed opener spln\u011bn s HR max 153\n\ud83d\udfe2 Sp\u00e1nek 7 h 18, sk\u00f3re 87\n\ud83d\udfe2 Dech v noci 15,2/min (13,7\u201316,9) \u2014 na baseline ~15, bez n\u00e1r\u016fstu k r\u00e1nu (vzorec nemoci 17\u201318,7 chyb\u00ed)\n\ud83d\udfe2 Teplota k\u016f\u017ee \u22120,4 \u00b0C \u2014 m\u00edrn\u011b pod p\u00e1smem, z\u00e1porn\u00e1 odchylka nen\u00ed sign\u00e1l hore\u010dky\n\nTrend RHR / HRV / sp\u00e1nek: 27. 46/34/90 | 28. 44/31/84 | 29. 45/49/92 | 30. 47/29/83 | 31. 48/29/87\nCTL ~47 | TSB ~+30. V\u00e1ha 83,8 kg.\n\nVERDIKT: \ud83d\udfe2 GO \u2014 MT1 podle pl\u00e1nu na 95 % (~313 W).\n\u2022 V\u0161echny startovn\u00ed podm\u00ednky spln\u011bny (HRV \u226527, RHR <51, opener OK, dech norm\u00e1ln\u00ed); bez p\u0159\u00edznak\u016f = start.\n\u2022 Prvn\u00ed 2 kola kontrolovan\u011b \u2014 HR <165, pak nav\u00fd\u0161it.\n\nZ\u00c1VODN\u00cd DEN:\n\u2022 Po\u010das\u00ed Ch. Hradi\u0161t\u011b: zata\u017eeno, 6 \u2192 9 \u00b0C, d\u00e9\u0161\u0165 20 %.\n\u2022 Sn\u00eddan\u011b do 8:00 (~3 h p\u0159ed startem): 100\u2013130 g sacharid\u016f, m\u00e1lo vl\u00e1kniny a tuku; pak pit\u00ed 0,5 l do startu.\n\u2022 Rozjet\u00ed 20 min podle karty MT1 (3\u00d7 1 min @ 330 + 2\u00d7 20 s @ 460), konec ~10 min p\u0159ed startem; gel 15 min p\u0159ed.\n\u2022 Oble\u010den\u00ed: na rozjet\u00ed bunda + n\u00e1vleky; na z\u00e1vod dres + n\u00e1vleky na ruce, dlouh\u00e9 rukavice voliteln\u011b; hrtan \u2014 buff do posledn\u00ed chv\u00edle.\n\u2022 Z\u00e1znam Edge 1050 + HR p\u00e1s + Tymewear, lap ka\u017ed\u00e9 kolo."
     },
     {
+      "id": 150266110,
+      "date": "2026-10-31",
+      "name": "\ud83d\udcdd Choustn\u00edkovo Hradi\u0161t\u011b Cyklokros (MT1) \u2014 na prahu, vyrovnan\u00e9, limit dech",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Race report MT1 \u2014 i203940080, Forerunner 970 + Tymewear, Prodoli. 10 \u00b0C (pocitov\u011b 7), v\u00edtr 3 m/s, sucho.\n\nV\u00ddSLEDEK (ofici\u00e1ln\u00ed): 6. celkov\u011b / 38, 1. v kategorii Mu\u017ei nad 50 | 41:49,3 | +1:35,0 na v\u00edt\u011bze (J. Chyba 40:14,2) | 20 bod\u016f\nKola: 8:15,4 | 8:11,3 | 8:18,3 | 8:34,3 | 8:29,8\n\u2022 Kategorie: 2. Pt\u00e1\u010dek +25,4 s \u2014 n\u00e1skok vytvo\u0159en v 1.\u20132. kole (+46 s), v 3.\u20135. kole Pt\u00e1\u010dek rychlej\u0161\u00ed (\u221221 s). 3. Karajanis +1:55,7.\n\u2022 Okol\u00ed: 5. Kunc 6 s p\u0159ed, 7. Jon 10,7 s za.\n\u2022 \u00dabytek tempa: kola 1\u20132 pr\u016fm. 8:13 \u2192 kola 4\u20135 pr\u016fm. 8:32 (+2,3 %); nejpomalej\u0161\u00ed 4. kolo.\n\nShrnut\u00ed: fyziologicky z\u00e1vod na prahu (HR 168\u2013170 cel\u00fdch ~42 min, VE nad VT2), v\u00fdkon ale jen ~76 % FTP. Rozd\u00edl d\u011bl\u00e1 CX charakter (b\u011bh, technika, nulov\u00fd v\u00fdkon) a 13 dn\u00ed bez intenzity po nemoci.\n\nCELKEM: 42 min pohyb | 11,97 km | NP 257 W | avg 237 W | IF 0,78 | VI 1,08 | TSS 42 (power) vs HR load 66\nHR 168 avg / 174 max \u2014 Z4 80 %, Z5 19 % (LTHR 171)\nRPE 8 | Feel 3/5\n\nPR\u016aB\u011aH (z dat, \u00faseky mezi sprinty na rovince):\n\u2022 Start: NP 279 W, W\u2032 38,1 \u2192 24,3 kJ (\u221236 % hned na startu)\n\u2022 D\u00e1le NP 244\u2013251 W, HR 168\u2013169, decoupling 3\u20136,5 %\n\u2022 Rovinka ka\u017ed\u00e9 kolo: 542 \u2192 546 \u2192 553 \u2192 585 W / 10 s \u2014 posledn\u00ed nejsiln\u011bj\u0161\u00ed = rezerva zbyla\n\u2022 W\u2032 po startu u\u017e neklesl pod ~22 kJ (58 %) \u2014 anaerobn\u00ed kapacita nevyu\u017eita\n\nDECH (Tymewear):\n\u2022 VE ~115\u2013124 L/min cel\u00fd z\u00e1vod = nad VT2 (112,7)\n\u2022 BR 48 \u2192 53 \u2192 57 \u2192 59/min, TV 2,48 \u2192 2,34 \u2192 2,10 \u2192 2,01 L (\u221219 %)\n\u2022 Vzorec rychl\u00e9ho m\u011blk\u00e9ho d\u00fdch\u00e1n\u00ed od 3. kola \u2014 sed\u00ed s pomalej\u0161\u00edm 4.\u20135. kolem: limit dechov\u00fd/ventila\u010dn\u00ed, ne svalov\u00fd (W\u2032 zbyl)\n\nPRO\u010c V\u00ddKON 76 % FTP P\u0158I HR NA PRAHU:\n1) CX: b\u011bh se seskokem a nosen\u00ed kola nem\u011b\u0159\u00ed pedly, ale zvy\u0161uje HR i VE (HR load 66 vs power 42)\n2) Technika a zat\u00e1\u010dky \u2014 \u010dast\u00fd nulov\u00fd v\u00fdkon, kadence 61\n3) 13 dn\u00ed bez intenzity + infekce horn\u00edch cest \u2014 ventila\u010dn\u00ed tolerance je\u0161t\u011b nen\u00ed zp\u011bt\n\u2192 Pro CX okruh je referenc\u00ed \u010das kola a HR/VE, ne watty. P\u0159\u00ed\u0161t\u011b pacing podle HR 168\u2013172 + \u010dasu kola.\n\nREFERENCE PRO MT2 (21. 11.): 41:49 / kola 8:11\u20138:34 p\u0159i HR 168\u2013169. C\u00edl: dr\u017eet 4.\u20135. kolo pod 8:20 (Pt\u00e1\u010dek kon\u010dil rychleji).\n\nDOPAD NA PL\u00c1N:\n\u2022 Ne 1. 11.: Z2 2 h 30 (zkr\u00e1ceno z 3 h \u2014 restart S11 progrese po nemoci).\n\u2022 Po 2. 11.: VT test p\u0159edb\u011b\u017en\u011b.\n\u2022 Dal\u0161\u00ed t\u00fddny: CX intervaly s b\u011bhem/seskoky (T3 starty, T4) a ventila\u010dn\u00ed tolerance \u2014 kl\u00ed\u010d k udr\u017een\u00ed tempa ve 2. polovin\u011b z\u00e1vodu."
+    },
+    {
       "id": 138158635,
       "date": "2026-10-31",
       "name": "MT1: CX Ch. Hradiste - mereny trenink (40 min)",
@@ -3040,21 +3053,21 @@
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "MERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~313 W prumerne (95 %; po nemoci snizeno z 98 %) - narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nZMENY PRED MT1 (nemoc 18.-25. 10.):\n- Po 26.: Z2 75 -> beh 27 min lehce\n- Ut 27.: T2 40/20 zruseno -> Z2 90 (MyWhoosh, kvuli FTP 252 v aplikaci odjeto v Z1)\n- St 28. Z2 + openery a Ct 29. Z2 60 + openery: NEJETO\n- Pa 30.: Opener 40 zostreno - SPLNENO: 2x 1 min @ 383-384 W, HR max 151-153 (limit 160), starty 489 W\n- VT test presunut na po 2. 11.\nPosledni intenzita pred openerem 17. 10. -> prvni 2 kola kontrolovane, neprepalit start.\n\nSTART: opener test splnen -> MT1 na 95 % (~313 W) podle planu.\nSobota rano: kdyz HRV <27 nebo RHR >=51 nebo priznaky -> nestartovat.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 95% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "VYSLEDEK MT1: 6. MISTO CELKOVE / 38, 1. V KATEGORII MUZI NAD 50. 41:49,3 (+1:35,0 na viteze), 20 bodu.\nKola: 8:15,4 | 8:11,3 | 8:18,3 | 8:34,3 | 8:29,8\nKategorie: 2. Ptacek +25,4 s (rychlejsi ve 3.-5. kole), 3. Karajanis +1:55,7.\nReference pro MT2/MT3: 41:49 / kola 8:11-8:34 pri HR 168-169, NP ~250 W, VE 115-124 (nad VT2). Pacing priste podle HR 168-172 + casu kola, ne podle wattu. Cil MT2: 4.-5. kolo pod 8:20. Rozbor v karte 'MT1 - na prahu, vyrovnane, limit dech'.\nVysledky: https://jiskra.potocky.cz/zavody/1/vysledky\n\nMERENY TRENINK 1 (40 min) - CX Choustnikovo Hradiste, domaci okruh. Puvodni struktura pri FTP 330:\nSTART 30 s @ 495 W\n1. kolo 2 min @ ~347 W (105 %)\nHLAVNI CAST 35 min @ ~313 W prumerne (95 %; po nemoci snizeno z 98 %) - narazy po zatackach 370-430, mezi tim 300-315\nFINALE 2 min @ ~363 W\nROZJETI 20 min + 3x1 min @ 330 + 2x20 s @ 460; gel 15 min pred. Domaci okruh = referencni cas pro MT2/MT3 a zimni MT4-6.\n\nZMENY PRED MT1 (nemoc 18.-25. 10.):\n- Po 26.: Z2 75 -> beh 27 min lehce\n- Ut 27.: T2 40/20 zruseno -> Z2 90 (MyWhoosh, kvuli FTP 252 v aplikaci odjeto v Z1)\n- St 28. Z2 + openery a Ct 29. Z2 60 + openery: NEJETO\n- Pa 30.: Opener 40 zostreno - SPLNENO: 2x 1 min @ 383-384 W, HR max 151-153 (limit 160), starty 489 W\n- VT test presunut na po 2. 11.\nPosledni intenzita pred openerem 17. 10.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 100% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 140% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 95% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
     },
     {
       "id": 142205766,
       "date": "2026-11-01",
-      "name": "KOTVA: Dlouh\u00e1 Z2 3 h",
+      "name": "KOTVA: Z2 2 h 30 (den po MT1)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 124,
-      "duration_hours": 2.92,
-      "duration_formatted": "2h55m",
+      "planned_tss": 97,
+      "duration_hours": 2.5,
+      "duration_formatted": "2h30m",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:00",
-      "description": "KOTVA \u2014 DLOUH\u00c1 Z2 3 h (den po MT1). 200-240 W, HR 120-135, VE 50-63, 70 g/h + elektrolyt. Za studena: vrstvy, n\u00e1vleky.\n\nWarmup\n- 20m 58% intensity=warmup\n\nMain Set 1x\n- 140m 67% intensity=interval\n\nCooldown\n- 15m 55% intensity=cooldown"
+      "description": "Z2 2 h 30 (den po MT1). Zkr\u00e1ceno z 3 h: posledn\u00ed dlouh\u00e1 j\u00edzda 3 h 09 byla 18. 10., pak 2 t\u00fddny nemoc a n\u00e1vrat \u2014 S11 progrese se restartuje od 2 h 30, dal\u0161\u00ed ned\u011ble +10 %.\n200\u2013230 W rovnom\u011brn\u011b, HR 120\u2013135, VE pod VT1. Lap ka\u017edou hodinu (drift HR i VE po hodin\u00e1ch).\nV\u00fd\u017eiva 60\u201370 g/h + elektrolyt. Za studena vrstvy, n\u00e1vleky, buff.\nP\u0159i \ud83d\udfe1 wellness r\u00e1no: 90 min.\n\nWarmup\n- 20m 165w intensity=warmup\n\nMain Set 1x\n- 115m 215w intensity=interval\n\nCooldown\n- 15m 160w intensity=cooldown"
     },
     {
       "id": 142205757,
