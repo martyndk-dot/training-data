@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T08:48:25.958225",
+  "generated_at": "2026-10-31T15:16:00.381564",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -93,8 +93,8 @@
           "activity_key": "c358290c9df3f159de4d600088a05eb76fa6e64168ea7e0f020fd49d5e231806",
           "event_key": "4c36adb8d8e10a2b29d249d0f9807f925989d947f8756244e7941d8ee8105028",
           "plan_key": "f55d9786e6ad11034a6d8a754dfa0df0d2ab9369c2f50d062eab62639bbf58de",
-          "sampled_at": "2026-10-30T13:27:27.705828+00:00",
-          "next_refresh_at": "2026-10-31T13:27:27.705828+00:00"
+          "sampled_at": "2026-10-31T15:16:00.615493+00:00",
+          "next_refresh_at": "2026-11-01T15:16:00.615493+00:00"
         }
       }
     },
@@ -194,8 +194,8 @@
           "activity_key": "89f03d19f8f48474284366475954a0f8cb83d994185f14ef741a003571e58f73",
           "event_key": "e7b5871cf1db6d7d1d630c8725153373628fcf99b60b334f25bfbdecdbc309f1",
           "plan_key": "492e8ebf95065129b7133ac23192a49236ade41d1461fea56bf6a51456163ba3",
-          "sampled_at": "2026-10-30T13:27:27.705828+00:00",
-          "next_refresh_at": "2026-10-31T13:27:27.705828+00:00"
+          "sampled_at": "2026-10-31T15:16:00.615493+00:00",
+          "next_refresh_at": "2026-11-01T15:16:00.615493+00:00"
         }
       }
     },
@@ -584,6 +584,174 @@
           "next_refresh_at": "2026-10-31T18:48:53.503577+00:00"
         }
       }
+    },
+    {
+      "activity_id": "i203940080",
+      "date": "2026-10-31",
+      "start_datetime": "2026-10-31T13:26:06",
+      "type": "Cyclocross",
+      "name": "Choustn\u00edkovo Hradi\u0161t\u011b Cyklokros",
+      "interval_summary": [
+        "4x 10s 557w"
+      ],
+      "intervals": [],
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            937,
+            250.9,
+            163.3,
+            166.9,
+            62.6,
+            69.48,
+            69.48,
+            68.62,
+            17.2
+          ],
+          [
+            937,
+            1874,
+            236.0,
+            221.2,
+            169.4,
+            61.8,
+            100.0,
+            100.0,
+            100.0,
+            17.4
+          ],
+          [
+            1874,
+            2812,
+            227.2,
+            212.4,
+            168.1,
+            60.8,
+            99.68,
+            99.68,
+            99.68,
+            16.79
+          ]
+        ],
+        "efforts": [
+          [
+            732,
+            742,
+            542,
+            169,
+            90.4
+          ],
+          [
+            1221,
+            1230,
+            546,
+            169,
+            88.333336
+          ],
+          [
+            2234,
+            2245,
+            553,
+            167,
+            91.63636
+          ],
+          [
+            2742,
+            2752,
+            585,
+            168,
+            93.5
+          ]
+        ],
+        "cache": {
+          "activity_key": "61a6dca9c1fe67cb0a0a848e3404c508901a8c58a3c09fa136e392487c3c9062",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-10-31T15:16:00.615493+00:00",
+          "next_refresh_at": "2026-11-01T15:16:00.615493+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i203915054",
+      "date": "2026-10-31",
+      "start_datetime": "2026-10-31T12:45:53",
+      "type": "Cyclocross",
+      "name": "Choustn\u00edkovo Hradi\u0161t\u011b Cyklokros",
+      "interval_summary": [
+        "2x 11s 575w"
+      ],
+      "intervals": [],
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            736,
+            192.9,
+            111.3,
+            142.0,
+            58.9,
+            78.4,
+            78.4,
+            78.4,
+            22.7
+          ],
+          [
+            736,
+            1473,
+            188.6,
+            53.8,
+            139.1,
+            59.5,
+            38.67,
+            38.67,
+            37.31,
+            21.75
+          ],
+          [
+            1473,
+            2210,
+            145.8,
+            69.4,
+            137.3,
+            53.1,
+            64.59,
+            64.59,
+            61.87,
+            25.21
+          ]
+        ],
+        "efforts": [
+          [
+            492,
+            502,
+            552,
+            146,
+            98.9
+          ],
+          [
+            1706,
+            1717,
+            598,
+            153,
+            98.181816
+          ]
+        ],
+        "cache": {
+          "activity_key": "fa04f804141c10d67a285e292f2d9781fae8922cd0cff4f7fa96203795af32c0",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-10-31T15:16:00.615493+00:00",
+          "next_refresh_at": "2026-11-01T15:16:00.615493+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -656,12 +824,12 @@
         "source_icu_sync_date": "2026-10-30T17:13:34.254+00:00"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-10-30T18:48:53.103151",
-        "last_attempt": "2026-10-31T08:48:25.958225",
+        "last_attempt": "2026-10-31T15:16:00.381564",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-31T08:53:25.958225"
+        "next_retry_at": "2026-10-31T15:21:00.381564"
       }
     }
   }
