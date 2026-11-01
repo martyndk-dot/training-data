@@ -1,103 +1,11 @@
 {
-  "generated_at": "2026-10-31T22:46:40.717321",
+  "generated_at": "2026-11-01T02:06:40.833947",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i198247774",
-      "date": "2026-10-17",
-      "start_datetime": "2026-10-17T09:08:29",
-      "type": "Cyclocross",
-      "name": "KOTVA: CX tr\u00e9nink 1 h (T4 80/160) + p\u0159\u00edjezd/odjezd Z2",
-      "interval_summary": [
-        "1x 2m10s 426w"
-      ],
-      "intervals": [],
-      "session_structure": {
-        "version": 2,
-        "method": "fixed_elapsed_thirds",
-        "status": "unknown",
-        "plan": {
-          "event_id": "138158616",
-          "updated": "2026-10-16T21:58:18.859+00:00"
-        },
-        "steps": [
-          {
-            "supported": false,
-            "duration_s": 2700,
-            "target_w": 211.0
-          },
-          {
-            "supported": false,
-            "duration_s": 900
-          },
-          {
-            "supported": false,
-            "duration_s": 1440
-          },
-          {
-            "supported": false,
-            "duration_s": 900
-          },
-          {
-            "supported": false,
-            "duration_s": 2700,
-            "target_w": 211.0
-          }
-        ],
-        "thirds": [
-          [
-            0,
-            3159,
-            166.0,
-            432.3,
-            118.0,
-            79.9,
-            82.43,
-            82.43,
-            82.02,
-            8.45
-          ],
-          [
-            3159,
-            6318,
-            185.4,
-            370.3,
-            122.5,
-            57.0,
-            63.22,
-            63.22,
-            61.86,
-            6.91
-          ],
-          [
-            6318,
-            9477,
-            206.6,
-            515.6,
-            130.3,
-            74.5,
-            79.01,
-            79.01,
-            79.01,
-            4.37
-          ]
-        ],
-        "issues": [
-          "unsupported_steps"
-        ],
-        "cache": {
-          "activity_key": "c358290c9df3f159de4d600088a05eb76fa6e64168ea7e0f020fd49d5e231806",
-          "event_key": "4c36adb8d8e10a2b29d249d0f9807f925989d947f8756244e7941d8ee8105028",
-          "plan_key": "f55d9786e6ad11034a6d8a754dfa0df0d2ab9369c2f50d062eab62639bbf58de",
-          "sampled_at": "2026-10-31T15:16:00.615493+00:00",
-          "next_refresh_at": "2026-11-01T15:16:00.615493+00:00"
-        }
-      }
-    },
     {
       "activity_id": "i198621872",
       "date": "2026-10-18",
@@ -824,12 +732,12 @@
         "source_icu_sync_date": "2026-10-30T17:13:34.254+00:00"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-10-30T18:48:53.103151",
-        "last_attempt": "2026-10-31T22:46:40.717321",
+        "last_attempt": "2026-11-01T02:06:40.833947",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-10-31T23:16:40.717321"
+        "next_retry_at": "2026-11-01T02:36:40.833947"
       }
     }
   }
