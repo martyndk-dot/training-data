@@ -64,15 +64,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 3.24,
-      "total_training_formatted": "3h14m",
-      "total_activities": 4,
-      "total_tss": 114
+      "total_training_hours": 3.63,
+      "total_training_formatted": "3h37m",
+      "total_activities": 5,
+      "total_tss": 136
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-02T06:46:39.197024",
+    "last_updated": "2026-11-02T16:59:11.019074",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -102,17 +102,7 @@
     "years_on_platform": 6
   },
   "athlete_notes": null,
-  "alerts": [
-    {
-      "metric": "tid_distribution",
-      "value": "Polarized",
-      "severity": "warning",
-      "threshold": "7d/28d classification mismatch",
-      "context": "TID shift: 7d Polarized vs 28d Pyramidal. Training distribution changing.",
-      "persistence_days": null,
-      "tier": 3
-    }
-  ],
+  "alerts": [],
   "readiness_decision": {
     "recommendation": "go",
     "priority": 3,
@@ -148,7 +138,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 27.9
+        "value": 22.6
       }
     },
     "signal_summary": {
@@ -183,15 +173,15 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 15,
+    "age_days": 16,
     "total_months": 35,
     "history_confidence": "high"
   },
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 3.24,
-    "total_activities": 4,
+    "total_duration_decimal_hours": 3.63,
+    "total_activities": 5,
     "by_activity_type": {
       "Cyclocross": {
         "duration_decimal_hours": 1.07,
@@ -201,6 +191,18 @@
         "display": {
           "distance": {
             "value": 17.1,
+            "unit": "km"
+          }
+        }
+      },
+      "Run": {
+        "duration_decimal_hours": 0.39,
+        "count": 1,
+        "tss": 22,
+        "distance_km": 3.6,
+        "display": {
+          "distance": {
+            "value": 3.6,
             "unit": "km"
           }
         }
@@ -221,10 +223,10 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 45.38,
-      "atl": 17.49,
-      "tsb": 27.89,
-      "ramp_rate": -5.3,
+      "ctl": 46.51,
+      "atl": 23.88,
+      "tsb": 22.63,
+      "ramp_rate": -4.17,
       "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
@@ -232,7 +234,7 @@
       "w_prime": 27461,
       "w_prime_kj": 27.5,
       "p_max": 1125,
-      "vo2max": null,
+      "vo2max": 56.0,
       "sports": {
         "cycling": {
           "lthr": 171,
@@ -290,7 +292,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 153,
+      "steps": 8862,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -331,7 +333,7 @@
     "rhr_baseline_28d": 47.6,
     "latest_hrv": 34.0,
     "latest_rhr": 50,
-    "acwr": 0.52,
+    "acwr": 0.61,
     "acwr_interpretation": "undertraining",
     "acwr_scope": "live_retrospective",
     "acwr_readiness_eligible": false,
@@ -344,43 +346,43 @@
       "acute_days": 7,
       "chronic_days": 28
     },
-    "monotony": 0.72,
+    "monotony": 0.9,
     "monotony_interpretation": "normal",
     "primary_sport": "other",
     "primary_sport_monotony": null,
     "primary_sport_tss_7d": 58.0,
-    "effective_monotony": 0.72,
+    "effective_monotony": 0.9,
     "multi_sport_detected": true,
-    "strain": 82.0,
-    "stress_tolerance": 1.1,
-    "load_recovery_ratio": 1.2,
-    "tss_7d_total": 114.0,
-    "tss_28d_total": 870.0,
+    "strain": 122.0,
+    "stress_tolerance": 1.4,
+    "load_recovery_ratio": 1.4,
+    "tss_7d_total": 136.0,
+    "tss_28d_total": 892.0,
     "zone_distribution_7d": {
-      "z1_hours": 2.61,
-      "z2_hours": 0.15,
-      "z3_hours": 0.12,
-      "z4_plus_hours": 0.35,
-      "total_hours": 3.24,
+      "z1_hours": 2.69,
+      "z2_hours": 0.22,
+      "z3_hours": 0.35,
+      "z4_plus_hours": 0.37,
+      "total_hours": 3.63,
       "zone_basis": "power"
     },
-    "grey_zone_percentage": 3.7,
+    "grey_zone_percentage": 9.6,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
-    "quality_intensity_percentage": 10.9,
+    "quality_intensity_percentage": 10.1,
     "quality_intensity_note": "Quality Intensity % (Z4+/threshold+) - target ~20% in polarized training",
-    "easy_time_ratio": 0.85,
+    "easy_time_ratio": 0.8,
     "easy_time_ratio_note": "Easy time (Z1+Z2) / Total - target ~80% in polarized training",
     "hard_days_this_week": 0,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 9938,
-      "z2_seconds": 436,
-      "z3_seconds": 1273,
-      "z1_pct": 85.3,
-      "z2_pct": 3.7,
-      "z3_pct": 10.9,
-      "polarization_index": 2.4,
-      "classification": "Polarized",
+      "z1_seconds": 10487,
+      "z2_seconds": 1247,
+      "z3_seconds": 1318,
+      "z1_pct": 80.3,
+      "z2_pct": 9.6,
+      "z3_pct": 10.1,
+      "polarization_index": 1.93,
+      "classification": "Pyramidal",
       "zone_basis": "power"
     },
     "seiler_tid_7d_primary": {
@@ -396,12 +398,12 @@
       "sport": "other"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 64097,
-      "z2_seconds": 7283,
-      "z3_seconds": 4283,
-      "z1_pct": 84.7,
-      "z2_pct": 9.6,
-      "z3_pct": 5.7,
+      "z1_seconds": 64646,
+      "z2_seconds": 8094,
+      "z3_seconds": 4328,
+      "z1_pct": 83.9,
+      "z2_pct": 10.5,
+      "z3_pct": 5.6,
       "polarization_index": null,
       "classification": "Pyramidal",
       "zone_basis": "power"
@@ -448,12 +450,12 @@
         "note": "HRRc = heart rate recovery (largest 60s HR drop in bpm after exceeding threshold HR for >1 min). Higher = better parasympathetic recovery. Null when threshold not reached, recording stopped before cooldown, or no HR data. Trend: 7d mean vs 28d mean, >10% = meaningful (min 1 session/7d, 3 sessions/28d). Display only \u2014 not wired into readiness_decision signals."
       },
       "tid_comparison": {
-        "classification_7d": "Polarized",
+        "classification_7d": "Pyramidal",
         "classification_28d": "Pyramidal",
-        "pi_7d": 2.4,
+        "pi_7d": 1.93,
         "pi_28d": null,
         "pi_delta": null,
-        "drift": "shifting",
+        "drift": "consistent",
         "note": "Compares 7d vs 28d Seiler TID to detect distribution shifts. pi_delta positive = more polarized acutely."
       },
       "power_curve_delta": {
@@ -635,23 +637,25 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.5,
+    "consistency_index": 0.57,
     "consistency_details": {
-      "planned_days": 6,
-      "completed_days": 3,
-      "matched_days": 3,
+      "planned_days": 7,
+      "completed_days": 4,
+      "matched_days": 4,
       "planned_dates": [
         "2026-10-27",
         "2026-10-28",
         "2026-10-29",
         "2026-10-30",
         "2026-10-31",
-        "2026-11-01"
+        "2026-11-01",
+        "2026-11-02"
       ],
       "completed_dates": [
         "2026-10-27",
         "2026-10-30",
-        "2026-10-31"
+        "2026-10-31",
+        "2026-11-02"
       ]
     },
     "phase_detection": {
@@ -666,14 +670,14 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 0.29,
-          "hard_sessions_planned": 0,
+          "planned_tss_delta": 1.76,
+          "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 0,
-          "current_week_hard_days_total": 0,
+          "current_week_hard_days_total": 1,
           "race_proximity": null,
-          "next_week_load": null,
-          "plan_coverage_current_week": 0.33,
-          "plan_coverage_next_week": 0.0
+          "next_week_load": 1.91,
+          "plan_coverage_current_week": 2.33,
+          "plan_coverage_next_week": 2.0
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -705,14 +709,14 @@
     "w_prime_kj": 27.5,
     "p_max": 1125,
     "power_model_source": "wellness.sportInfo",
-    "vo2max": null,
-    "calculation_timestamp": "2026-11-02T06:46:39.195703",
+    "vo2max": 56.0,
+    "calculation_timestamp": "2026-11-02T16:59:11.017735",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 4,
-      "activities_28d": 14,
-      "planned_workouts_7d": 6,
+      "activities_7d": 5,
+      "activities_28d": 15,
+      "planned_workouts_7d": 7,
       "ftp_history_days": {
         "indoor": 111,
         "outdoor": 111
@@ -720,6 +724,128 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i204815711",
+      "date": "2026-11-02T16:09:44",
+      "type": "Run",
+      "name": "Nemojov B\u011bh",
+      "duration_hours": 0.39,
+      "duration_formatted": "23m25s",
+      "distance_km": 3.6,
+      "tss": 22,
+      "intensity_factor": 74.47796,
+      "avg_power": 303,
+      "normalized_power": 321,
+      "avg_hr": 128,
+      "max_hr": 143,
+      "avg_cadence": 77.09469,
+      "avg_speed": 9.2,
+      "avg_speed_unit": "KPH",
+      "max_speed": 12.4,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": 16.813787,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "KMH",
+      "work_kj": 431.9,
+      "calories": 296,
+      "carbs_used": null,
+      "carbs_ingested": null,
+      "variability_index": 1.0594059,
+      "decoupling": 1.1817535,
+      "efficiency_factor": 2.5078125,
+      "hrrc": null,
+      "elevation_m": 71.4129,
+      "display": {
+        "distance": {
+          "value": 3.6,
+          "unit": "km"
+        },
+        "elevation": {
+          "value": 71,
+          "unit": "m"
+        },
+        "avg_speed": {
+          "value": 9.2,
+          "unit": "km/h"
+        },
+        "max_speed": {
+          "value": 12.4,
+          "unit": "km/h"
+        }
+      },
+      "feel": 3,
+      "rpe": 3,
+      "effort_response": "neutral",
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 978,
+          "z2_time": 427,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        },
+        "power_zones": {
+          "z1_time": 286,
+          "z2_time": 263,
+          "z3_time": 811,
+          "z4_time": 45,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": true,
+      "has_dfa": false,
+      "has_structure": true,
+      "structure_summary": {
+        "method": "plan_match_v2",
+        "status": "no_plan",
+        "issues": [
+          "efforts_from_interval_cache"
+        ]
+      },
+      "terrain_summary": {
+        "source": "activity_streams",
+        "total_distance_km": 3.6,
+        "total_elevation_m": 53,
+        "elevation_per_km": 14.7,
+        "course_character": "rolling",
+        "max_grade_pct": 9.9,
+        "grade_distribution": {
+          "flat_pct": 55.6,
+          "gentle_pct": 11.1,
+          "moderate_pct": 22.2,
+          "steep_pct": 11.1
+        },
+        "start_coords": [
+          50.46391,
+          15.75364
+        ],
+        "climbs": [],
+        "descents": [],
+        "display": {
+          "total_distance": {
+            "value": 3.6,
+            "unit": "km"
+          },
+          "total_elevation": {
+            "value": 53,
+            "unit": "m"
+          },
+          "elevation_per_distance": {
+            "value": 15,
+            "unit": "m/km"
+          }
+        }
+      },
+      "weather_status": "unavailable"
+    },
     {
       "id": "i203940080",
       "date": "2026-10-31T13:26:06",
@@ -2961,7 +3087,7 @@
       "sleep_score": 81.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
-      "vo2max": null,
+      "vo2max": 56.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -2978,7 +3104,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 153,
+      "steps": 8862,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2990,6 +3116,74 @@
     }
   ],
   "planned_workouts": [
+    {
+      "id": 150921245,
+      "date": "2026-11-02",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe1 zlep\u0161en\u00ed: Z1\u2013Z2 50 lehce",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu + freddy), noc 1.\u21922. 11.\n\n\ud83d\udfe1 RHR 50 bpm \u2014 st\u00e1le +2\u20133 nad baseline 47\u201348 (v\u010dera dodate\u010dn\u011b 51)\n\ud83d\udfe2 HRV 34 ms \u2014 zp\u011bt na baseline ~33 z v\u010derej\u0161\u00edch 25\n\ud83d\udfe2 Sp\u00e1nek 7 h 48, sk\u00f3re 81\n\ud83d\udfe1 Dech v noci 15,8/min (13,2\u201318,1) \u2014 pokles ze 17,3, t\u011bsn\u011b nad baseline ~15\n\ud83d\udfe2 Teplota k\u016f\u017ee \u22120,4 \u00b0C \u2014 v\u010derej\u0161\u00ed +0,5 zmizel\n\nTrend RHR / HRV / sp\u00e1nek / dech / k\u016f\u017ee: 30. 47/29/83/14,8/\u22120,2 | 31. 48/29/87/15,2/\u22120,4 | 1. 51/25/58/17,3/+0,5 | 2. 50/34/81/15,8/\u22120,4\n\nV\u00ddKLAD: v\u010derej\u0161\u00ed v\u00fdkyv byl s nejv\u011bt\u0161\u00ed pravd\u011bpodobnost\u00ed reakce na z\u00e1vod, ne n\u00e1vrat infekce \u2014 teplota k\u016f\u017ee i HRV se b\u011bhem jedn\u00e9 noci vr\u00e1tily. RHR a dech je\u0161t\u011b nejsou \u00fapln\u011b zp\u011bt.\n\nVERDIKT: \ud83d\udfe1 lehce \u2014 Z1\u2013Z2 50 min, HR <125, bez intenzity; jen bez p\u0159\u00edznak\u016f.\n\u2022 VT test \u010dt 5. 11. jen kdy\u017e st i \u010dt r\u00e1no \ud83d\udfe2 (RHR \u226448, HRV \u226530, dech ~15)."
+    },
+    {
+      "id": 151170718,
+      "date": "2026-11-02",
+      "name": "\ud83d\udcdd Nemojov B\u011bh \u2014 lep\u0161\u00ed technika, ale tvrd\u0161\u00ed ne\u017e doporu\u010deno",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Post-workout report \u2014 i204815711, Forerunner 970 + Tymewear, Altra Lone Peak. 12\u201316 \u00b0C (\u010didlo hodinek).\nM\u00edsto pl\u00e1novan\u00e9 j\u00edzdy Z1\u2013Z2 50 (HR <125).\n\nShrnut\u00ed: druh\u00fd b\u011bh sez\u00f3ny, o t\u0159\u00edde rychlej\u0161\u00ed ne\u017e 26. 10. a s lep\u0161\u00ed technikou; intenzitou ale nad dne\u0161n\u00edm \ud83d\udfe1 doporu\u010den\u00edm (HR do 143).\n\nB\u011bh: 23 min | 3,60 km | 6:30/km | +71/\u221267 m | TSS 22 | RPE 3 | Feel 3/5\n\u2022 Km 1 (stoup\u00e1n\u00ed +48 m): 8:49/km, HR 112, ch\u016fze/rozb\u011bh\n\u2022 Rovina 0,9 km: 5:47/km, HR 136 / max 140, 350 W\n\u2022 Rovina 1,25 km: 5:43/km, HR 138 / max 143, 333 W\n\u2022 Seb\u011bh 0,5 km: 5:27/km, HR 136\nHR z\u00f3ny: Z1 70 %, Z2 30 % (cyklistick\u00e9 z\u00f3ny) | decoupling 1,2 % celkem, 4\u20137 % v \u00fasec\u00edch\n\nSROVN\u00c1N\u00cd S 26. 10.:\n\u2022 Tempo na rovin\u011b 7:06 GAP \u2192 5:45 p\u0159i HR ~118 \u2192 ~138 \u2014 jin\u00e1 intenzita, ne zlep\u0161en\u00ed kondice\n\u2022 Kadence 158 \u2192 164\u2013168 krok\u016f/min \u2713 (c\u00edl 165\u2013170 spln\u011bn)\n\u2022 Kontakt se zem\u00ed 302 \u2192 278 ms \u2713, d\u00e9lka kroku 0,87 \u2192 1,05 m\n\nDECH (Tymewear): VE ~93\u201395 L/min, BR 27\u201329, TV ~3,4 L p\u0159i HR 138. Na kole by VE 93 odpov\u00eddala Z4; p\u0159i b\u011bhu Tymewear opakovan\u011b ukazuje v\u00fdrazn\u011b vy\u0161\u0161\u00ed VE na stejnou HR (26. 10. tot\u00e9\u017e) \u2192 cyklistick\u00e9 VE z\u00f3ny na b\u011bh nepou\u017e\u00edvat.\n\nINTERPRETACE: b\u011bh v pohod\u011b zvl\u00e1dnut\u00fd (RPE 3, n\u00edzk\u00fd decoupling), technika se zlep\u0161ila. Ale 13 min na HR 136\u2013143 je st\u0159edn\u00ed z\u00e1t\u011b\u017e v den, kdy RHR a dech je\u0161t\u011b nebyly zp\u011bt; p\u0159\u00ed\u0161t\u011b p\u0159i \ud83d\udfe1 dr\u017eet HR <130.\n\nDOPAD NA PL\u00c1N:\n\u2022 \u00dat 3. 11.: Z2 60 na kole lehce (rozhodne wellness).\n\u2022 \u010ct 5. 11. VT test jen po 2 zelen\u00fdch r\u00e1nech.\n\u2022 B\u011bh max 2\u00d7 t\u00fddn\u011b, mezi b\u011bhy \u226548 h; koleno zapsat.\n\u2022 T\u00fdden 3.\u20138. 11. a cesta k MT2 (21. 11.) \u010dek\u00e1 na napl\u00e1nov\u00e1n\u00ed."
+    },
+    {
+      "id": 150921243,
+      "date": "2026-11-02",
+      "name": "Z1\u2013Z2 50 lehce (po MT1)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 26,
+      "duration_hours": 0.83,
+      "duration_formatted": "50m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "Lehk\u00e1 Z1\u2013Z2 50 min (wellness 2. 11. \ud83d\udfe1: HRV zp\u011bt 34, RHR je\u0161t\u011b 50, dech 15,8).\n180\u2013205 W, HR <125, bez z\u00e1tah\u016f. Tacx nebo venku za sv\u011btla (tma ~16:40).\nJen bez p\u0159\u00edznak\u016f a bez teploty; p\u0159i \u00fanav\u011b nebo krku volno. Na Tacxu MyWhoosh FTP 330 nebo bez ERG.\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 35m 195w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 151172531,
+      "date": "2026-11-03",
+      "name": "FLEX: Z2 60 Tacx",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 35,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "T\u00fdden 1/3 k MT2 \u2014 n\u00e1vrat po MT1. Z2 195\u2013215 W, HR <130. Podle rann\u00edho wellness; p\u0159i \ud83d\udfe1 Z1 45. MyWhoosh FTP 330 nebo bez ERG.\n\nWarmup\n- 10m 165w intensity=warmup\n\nMain Set 1x\n- 45m 205w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 151172535,
+      "date": "2026-11-04",
+      "name": "B\u011bh 30 lehce",
+      "type": "WORKOUT",
+      "sport_type": "Run",
+      "planned_tss": 21,
+      "duration_hours": 0.5,
+      "duration_formatted": "30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "30 min lehce, HR <135, rovina. Kadence 165\u2013170, kr\u00e1tk\u00fd krok (koleno). P\u00e1s p\u0159ipojit p\u0159ed startem. Po b\u011bhu 10 min prota\u017een\u00ed. P\u0159i bolesti kolene b\u011bhem b\u011bhu konec.\n\nMain Set 1x\n- 30m Z1-Z2 HR intensity=interval"
+    },
     {
       "id": 142205757,
       "date": "2026-11-05",
@@ -3005,6 +3199,48 @@
       "description": "P\u0158ESUNUTO pot\u0159et\u00ed (2. 11. \u2192 5. 11.): wellness 1. 11. \ud83d\udd34 po MT1. P\u0158EDB\u011a\u017dN\u011a \u2014 jen po 2 dnech \ud83d\udfe2 wellness a bez p\u0159\u00edznak\u016f; jinak dal\u0161\u00ed posun.\n\nTEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection).\n\nPROTOKOL (Tacx, ERG, absolutn\u00ed watty):\nRozjet\u00ed 15 min @ 150 W, pak 5min stupn\u011b 160 \u2192 300 W po 20 W, posledn\u00ed stupe\u0148 3 min @ 320 W, vyjet\u00ed 12 min @ 140 W.\n\nSTOP pravidlo (kter\u00e9koli): VE >130 L/min, HR \u2265170, nebo nelze dr\u017eet kadenci. Stupe\u0148 320 W jen p\u0159i RPE \u22648 po 300 W.\n\nPODM\u00cdNKY:\n\u2022 M\u00edstnost co nejchladn\u011bj\u0161\u00ed, v\u011btr\u00e1k na plno od za\u010d\u00e1tku.\n\u2022 Kadence 90 \u00b13, celou dobu v sedle, nemluvit.\n\u2022 P\u00edt jen v prvn\u00ed minut\u011b stupn\u011b, ne v posledn\u00edch 2 min.\n\u2022 Tymewear p\u00e1s na obvykl\u00e9m m\u00edst\u011b, dob\u0159e uta\u017een\u00fd; ov\u011b\u0159it p\u00e1rov\u00e1n\u00ed s Edge 1050.\n\u2022 Z\u00e1znam Edge 1050 + Tymewear + HR p\u00e1s; workout krokovat z Edge (ka\u017ed\u00fd stupe\u0148 = lap).\n\u2022 Na Tacxu p\u0159es MyWhoosh: FTP v aplikaci 330 W nebo j\u00edzda bez ERG.\n\u2022 Posledn\u00ed j\u00eddlo 2\u20133 h p\u0159edem; v testu jen voda.\n\u2022 P\u0159ed testem v Tymewearu opravit HR max 183 \u2192 186.\n\nPO TESTU: S\u00cdLA A. Spustit Workout Zone Detection a poslat screenshot.\n\nWarmup\n- 15m 150w intensity=warmup\n\nMain Set 1x\n- 5m 160w intensity=interval\n\nMain Set 1x\n- 5m 180w intensity=interval\n\nMain Set 1x\n- 5m 200w intensity=interval\n\nMain Set 1x\n- 5m 220w intensity=interval\n\nMain Set 1x\n- 5m 240w intensity=interval\n\nMain Set 1x\n- 5m 260w intensity=interval\n\nMain Set 1x\n- 5m 280w intensity=interval\n\nMain Set 1x\n- 5m 300w intensity=interval\n\nMain Set 1x\n- 3m 320w intensity=interval\n\nCooldown\n- 12m 140w intensity=cooldown"
     },
     {
+      "id": 151172542,
+      "date": "2026-11-06",
+      "name": "Z1 30 + S\u00cdLA B",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 13,
+      "duration_hours": 0.5,
+      "duration_formatted": "30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description": "Z1 30 min Tacx 150\u2013180 W (prokrven\u00ed po testu) + S\u00cdLA B. Den p\u0159ed sobotn\u00edm T1 \u2014 s\u00edlu dr\u017eet st\u0159edn\u011b, bez vy\u010derp\u00e1n\u00ed.\n\nMain Set 1x\n- 30m 165w intensity=interval"
+    },
+    {
+      "id": 151172545,
+      "date": "2026-11-07",
+      "name": "KOTVA: CX T1 30/30 2\u00d710 + seskoky",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 83,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
+      "workout_summary": "20m [target not shown] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | 10\u00d7(30s [target not shown] + 30s [target not shown]) | [repeat not summarized] | [repeat not summarized] | 10m [target not shown]",
+      "has_terrain": false,
+      "start_time": "10:00",
+      "description": "Tvrd\u00fd den #1 (po testu ~67 h). CX venku. T1: 2 s\u00e9rie 30/30 @ 430\u2013460 W, 5 min mezi.\nSIGN\u00c1L pro kr\u00e1tk\u00e9 \u00faseky: konec za 2 \u00faseky, kdy\u017e VE v pauze z\u016fst\u00e1v\u00e1 >113 a z\u00e1rove\u0148 BR v \u00faseku \u226570 nebo TV klesne o \u226510 % proti 2.\u20133. \u00faseku; max 10.\nPak 15 min technika: seskoky/n\u00e1skoky, b\u011bh s kolem 6\u00d7 15 s (ventila\u010dn\u00ed tolerance \u2014 limit z MT1). Edge 1050 + Tymewear + HR p\u00e1s.\n\nWarmup\n- 20m 165w intensity=warmup\n\nMain Set 10x\n- 30s 445w\n- 30s 160w\n\nMain Set 1x\n- 5m 165w intensity=interval\n\nMain Set 10x\n- 30s 445w\n- 30s 160w\n\nMain Set 1x\n- 15m 190w intensity=interval\n\nMain Set 1x\n- 20m 210w intensity=interval\n\nCooldown\n- 10m 150w intensity=cooldown"
+    },
+    {
+      "id": 151172551,
+      "date": "2026-11-08",
+      "name": "KOTVA: Z2 2 h 30",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 97,
+      "duration_hours": 2.5,
+      "duration_formatted": "2h30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "09:30",
+      "description": "Restart S11 progrese dlouh\u00e9 j\u00edzdy po nemoci (2 h 30 \u2192 2 h 45 \u2192 \u2026). 200\u2013230 W rovnom\u011brn\u011b, VI \u22641,05, HR 120\u2013135. Lap ka\u017edou hodinu. V\u00fd\u017eiva 70 g/h + elektrolyt. P\u0159i de\u0161ti Tacx 2 h.\n\nWarmup\n- 20m 165w intensity=warmup\n\nMain Set 1x\n- 115m 215w intensity=interval\n\nCooldown\n- 15m 160w intensity=cooldown"
+    },
+    {
       "id": 136401236,
       "date": "2026-11-09",
       "name": "\ud83d\udccc Registrace: Ilona \u2013 Ho\u0159ick\u00fd kros (do \u010dt 12. 11.)",
@@ -3016,6 +3252,74 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "\ud83d\udccc REGISTRACE ILONA \u2013 Ho\u0159ick\u00fd kros. Term\u00edn: \u010dtvrtek 12. 11. do 23:59, p\u0159edem 350 K\u010d (na m\u00edst\u011b 450 K\u010d, kapacita 500). Kategorie Z45. Registrace: sport-base.eu/competitions/horicky-kros/register"
+    },
+    {
+      "id": 151172554,
+      "date": "2026-11-10",
+      "name": "KOTVA: CX T2 40/20 2\u00d79 (Tacx)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 69,
+      "duration_hours": 1.13,
+      "duration_formatted": "1h8m",
+      "workout_summary": "15m [target not shown] | 5m [target not shown] | 9\u00d7(40s [target not shown] + 20s [target not shown]) | [repeat not summarized] | 9\u00d7(40s [target not shown] + 20s [target not shown]) | [repeat not summarized] | 10m [target not shown]",
+      "has_terrain": false,
+      "start_time": "15:00"
+    },
+    {
+      "id": 151172555,
+      "date": "2026-11-11",
+      "name": "FLEX: Z2 90 + S\u00cdLA A",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 57,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "Z2 200\u2013225 W, HR <135, Tacx nebo venku za sv\u011btla. Pak S\u00cdLA A.\nWarmup\n- 10m 165w intensity=warmup"
+    },
+    {
+      "id": 151172556,
+      "date": "2026-11-12",
+      "name": "B\u011bh 35 lehce + S\u00cdLA B",
+      "type": "WORKOUT",
+      "sport_type": "Run",
+      "planned_tss": 24,
+      "duration_hours": 0.58,
+      "duration_formatted": "35m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "35 min lehce, HR <135, kadence 165\u2013170, rovina. Po b\u011bhu prota\u017een\u00ed + S\u00cdLA B. Den p\u0159ed T4 \u2014 s\u00edlu bez vy\u010derp\u00e1n\u00ed.\nMain Set 1x\n- 35m Z1-Z2 HR intensity=interval"
+    },
+    {
+      "id": 151172559,
+      "date": "2026-11-13",
+      "name": "KOTVA: CX T4 80/160 2\u00d74 (Tacx)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 64,
+      "duration_hours": 1.12,
+      "duration_formatted": "1h7m",
+      "workout_summary": "15m [target not shown] | 5m [target not shown] | 4\u00d7(1m20s [target not shown] + 2m40s [target not shown]) | [repeat not summarized] | 4\u00d7(1m20s [target not shown] + 2m40s [target not shown]) | 10m [target not shown]",
+      "has_terrain": false,
+      "start_time": "15:00"
+    },
+    {
+      "id": 151172560,
+      "date": "2026-11-14",
+      "name": "KOTVA: Z2 2 h 45",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 108,
+      "duration_hours": 2.75,
+      "duration_formatted": "2h45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "09:30",
+      "description_preview": "Dlouh\u00e1 j\u00edzda v sobotu (ned\u011ble 15. 11. Ilona Ho\u0159ick\u00fd kros). S11 progrese +10 % proti 2 h 30 \u2014 jen kdy\u017e 8. 11. decoupling <5 %. 200\u2013230 W, HR 120\u2013135, lap ka\u017edou hodinu, v\u00fd\u017eiva 70 g/h.\nWarmup\n- 20m 165w intensity=warmup"
     },
     {
       "id": 136401237,
@@ -3031,12 +3335,94 @@
       "description_preview": "\ud83c\udfc1 ILONA Z\u00c1VOD\u00cd \u2013 Ho\u0159ick\u00fd kros, 5 280 m / 151 m. Ho\u0159ice v Podkrkono\u0161\u00ed, koupali\u0161t\u011b Dachova. Prezentace 8:30\u20139:45, v\u00fdklad trati ~10:15, start 10:30\u201311:00 (intervalov\u011b po 15 s, kdo d\u0159\u00edv p\u0159ijde, d\u0159\u00edv b\u011b\u017e\u00ed), vyhl\u00e1\u0161en\u00ed ~12:00. Parkov\u00e1n\u00ed u koupali\u0161t\u011b. Jej\u00ed c\u00edl: pod 42:00 (2023: 45:15)."
     },
     {
+      "id": 151172562,
+      "date": "2026-11-15",
+      "name": "FLEX: Z2 60 voliteln\u011b",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 37,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "Voliteln\u011b po Ilonin\u011b z\u00e1vod\u011b, jinak volno. Z2 190\u2013215 W, HR <130.\nMain Set 1x\n- 60m 200w intensity=interval"
+    },
+    {
+      "id": 151172565,
+      "date": "2026-11-16",
+      "name": "FLEX: Z2 60 + S\u00cdLA A (lehce)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 35,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "Z\u00e1vodn\u00ed t\u00fdden MT2. Z2 Tacx + posledn\u00ed S\u00cdLA A p\u0159ed z\u00e1vodem: 2 s\u00e9rie, bez vy\u010derp\u00e1n\u00ed.\nWarmup\n- 10m 165w intensity=warmup"
+    },
+    {
+      "id": 151172566,
+      "date": "2026-11-17",
+      "name": "KOTVA: CX T3 20/40 + 6 start\u016f (sv\u00e1tek)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 67,
+      "duration_hours": 1.48,
+      "duration_formatted": "1h28m30s",
+      "workout_summary": "20m [target not shown] | 10\u00d7(20s [target not shown] + 40s [target not shown]) | [repeat not summarized] | 6\u00d7(15s [target not shown] + 2m [target not shown]) | [repeat not summarized] | 10m [target not shown]",
+      "has_terrain": false,
+      "start_time": "10:00"
+    },
+    {
+      "id": 151172567,
+      "date": "2026-11-18",
+      "name": "FLEX: Z2 75",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 47,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "Z2 200\u2013225 W, HR <135. Tacx nebo venku za sv\u011btla.\nWarmup\n- 10m 165w intensity=warmup"
+    },
+    {
+      "id": 151172569,
+      "date": "2026-11-19",
+      "name": "Z1 45 nebo volno",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 19,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "15:00",
+      "description_preview": "2 dny p\u0159ed MT2. Z1 150\u2013180 W nebo volno, \u017e\u00e1dn\u00fd b\u011bh ani s\u00edla.\nMain Set 1x\n- 45m 165w intensity=interval"
+    },
+    {
+      "id": 151172571,
+      "date": "2026-11-20",
+      "name": "Opener 40 (p\u0159ed MT2)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 25,
+      "duration_hours": 0.66,
+      "duration_formatted": "39m30s",
+      "workout_summary": "15m [target not shown] | 2\u00d7(1m [target not shown] + 3m [target not shown]) | 2\u00d7(15s [target not shown] + 2m [target not shown]) | 12m [target not shown]",
+      "has_terrain": false,
+      "start_time": "15:00"
+    },
+    {
       "id": 138158636,
       "date": "2026-11-21",
       "name": "MT2: CX Ch. Hradiste - mereny trenink (40 min)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 107,
+      "planned_tss": 85,
       "duration_hours": 1.47,
       "duration_formatted": "1h28m10s",
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
@@ -3071,19 +3457,19 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 3,
-    "success": 2,
-    "patternA": 2,
+    "attempted": 20,
+    "success": 7,
+    "patternA": 7,
     "patternB": 0,
     "flat": 0,
     "bail_no_workout_doc": 0,
-    "bail_no_match": 1
+    "bail_no_match": 13
   },
   "weekly_summary": {
-    "total_training_hours": 3.24,
-    "total_training_formatted": "3h14m",
-    "total_tss": 114,
-    "activities_count": 4,
+    "total_training_hours": 3.63,
+    "total_training_formatted": "3h37m",
+    "total_tss": 136,
+    "activities_count": 5,
     "avg_hrv": 33.0,
     "avg_resting_hr": 47.3
   },

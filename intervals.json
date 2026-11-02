@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T06:46:39.023656",
+  "generated_at": "2026-11-02T16:59:08.846499",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -92,8 +92,8 @@
           "activity_key": "eea7d21063ddd25bd19286d4191e67c6114f1e4ae180968e5ec17b3a35b821df",
           "event_key": "7932958f395be5d64cf97be84a843d95923bb50a7b13185c12514d4dcf99424c",
           "plan_key": "2801ec6b34592f0c78091346327ef746769c4b096b5bfb3ca9fbc6a5fc0d6663",
-          "sampled_at": "2026-11-01T09:09:53.582461+00:00",
-          "next_refresh_at": "2026-11-02T09:09:53.582461+00:00"
+          "sampled_at": "2026-11-02T16:59:09.586644+00:00",
+          "next_refresh_at": "2026-11-03T16:59:09.586644+00:00"
         }
       }
     },
@@ -193,8 +193,8 @@
           "activity_key": "6ce3b091a6000b6e6ad704df873033a92f8316e0ebef896a14a938b1024fb81a",
           "event_key": "d1de59e05a1c441ee01e0cec2d6abe76d65d7f8244a1e7ca03d338c693839f0e",
           "plan_key": "ee3f3333f497a775aedb7fe6a323c8b942bfe1da5bba51859eaeeee7bc6bf583",
-          "sampled_at": "2026-11-01T09:09:53.582461+00:00",
-          "next_refresh_at": "2026-11-02T09:09:53.582461+00:00"
+          "sampled_at": "2026-11-02T16:59:09.586644+00:00",
+          "next_refresh_at": "2026-11-03T16:59:09.586644+00:00"
         }
       }
     },
@@ -448,8 +448,8 @@
           "activity_key": "61a6dca9c1fe67cb0a0a848e3404c508901a8c58a3c09fa136e392487c3c9062",
           "event_key": null,
           "plan_key": null,
-          "sampled_at": "2026-11-01T16:16:50.361864+00:00",
-          "next_refresh_at": "2026-11-02T16:16:50.361864+00:00"
+          "sampled_at": "2026-11-02T16:59:09.586644+00:00",
+          "next_refresh_at": "2026-11-03T16:59:09.586644+00:00"
         }
       }
     },
@@ -509,8 +509,178 @@
           "activity_key": "fa04f804141c10d67a285e292f2d9781fae8922cd0cff4f7fa96203795af32c0",
           "event_key": null,
           "plan_key": null,
-          "sampled_at": "2026-11-01T16:16:50.361864+00:00",
-          "next_refresh_at": "2026-11-02T16:16:50.361864+00:00"
+          "sampled_at": "2026-11-02T16:59:09.586644+00:00",
+          "next_refresh_at": "2026-11-03T16:59:09.586644+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i204815711",
+      "date": "2026-11-02",
+      "start_datetime": "2026-11-02T16:09:44",
+      "type": "Run",
+      "name": "Nemojov B\u011bh",
+      "interval_summary": [
+        "1x 5m14s 350w",
+        "1x 7m8s 333w"
+      ],
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 493,
+          "moving_secs": 471,
+          "start_secs": 0,
+          "end_secs": 493,
+          "avg_power": 267,
+          "max_power": 449,
+          "avg_hr": 110,
+          "max_hr": 136,
+          "min_hr": 71,
+          "avg_cadence": 65.59746,
+          "zone": 2,
+          "w_bal_start": 34480,
+          "w_bal_end": 34411,
+          "training_load": 6.325332
+        },
+        {
+          "type": "WORK",
+          "label": "314s@350w82rpm",
+          "duration_secs": 314,
+          "moving_secs": 314,
+          "start_secs": 493,
+          "end_secs": 807,
+          "avg_power": 350,
+          "max_power": 398,
+          "avg_hr": 136,
+          "max_hr": 140,
+          "min_hr": 118,
+          "avg_cadence": 81.818474,
+          "zone": 3,
+          "w_bal_start": 34411,
+          "w_bal_end": 34447,
+          "training_load": 5.5887
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 21,
+          "moving_secs": 21,
+          "start_secs": 807,
+          "end_secs": 828,
+          "avg_power": 128,
+          "max_power": 347,
+          "avg_hr": 128,
+          "max_hr": 137,
+          "min_hr": 123,
+          "avg_cadence": 46.47619,
+          "zone": 1,
+          "w_bal_start": 34447,
+          "w_bal_end": 34452,
+          "training_load": 0.24795616
+        },
+        {
+          "type": "WORK",
+          "label": "428s@333w83rpm",
+          "duration_secs": 428,
+          "moving_secs": 428,
+          "start_secs": 828,
+          "end_secs": 1256,
+          "avg_power": 333,
+          "max_power": 371,
+          "avg_hr": 138,
+          "max_hr": 143,
+          "min_hr": 123,
+          "avg_cadence": 82.6986,
+          "zone": 3,
+          "w_bal_start": 34452,
+          "w_bal_end": 34471,
+          "training_load": 7.012013
+        },
+        {
+          "type": "RECOVERY",
+          "duration_secs": 172,
+          "moving_secs": 172,
+          "start_secs": 1256,
+          "end_secs": 1428,
+          "avg_power": 292,
+          "max_power": 352,
+          "avg_hr": 136,
+          "max_hr": 140,
+          "min_hr": 133,
+          "avg_cadence": 83.98837,
+          "zone": 2,
+          "w_bal_start": 34471,
+          "w_bal_end": 34475,
+          "training_load": 2.3148024
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            475,
+            267.3,
+            125.4,
+            110.6,
+            65.5,
+            98.74,
+            98.74,
+            98.74,
+            1.71
+          ],
+          [
+            475,
+            951,
+            336.9,
+            155.3,
+            136.0,
+            80.4,
+            96.85,
+            96.85,
+            96.85,
+            1.3
+          ],
+          [
+            951,
+            1427,
+            317.4,
+            151.1,
+            138.5,
+            83.2,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ]
+        ],
+        "efforts": [
+          [
+            493,
+            807,
+            350,
+            136,
+            81.818474
+          ],
+          [
+            828,
+            1256,
+            333,
+            138,
+            82.6986
+          ]
+        ],
+        "issues": [
+          "efforts_from_interval_cache"
+        ],
+        "cache": {
+          "activity_key": "6ae508f71c6ae1654cb8092e2ddf70e31be1aaf72bffc686a409419a72549824",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-11-02T16:59:09.586644+00:00",
+          "next_refresh_at": "2026-11-03T16:59:09.586644+00:00"
         }
       }
     }
@@ -566,12 +736,30 @@
         "source_icu_sync_date": "2026-10-30T17:13:34.254+00:00"
       },
       "streams": {
-        "attempts": 13,
+        "attempts": 14,
         "first_seen": "2026-10-30T18:48:53.103151",
-        "last_attempt": "2026-11-02T06:46:39.023656",
+        "last_attempt": "2026-11-02T16:59:08.846499",
+        "status": "tombstone",
+        "reason": "retry_expired"
+      }
+    },
+    "i204815711": {
+      "date": "2026-11-02",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-02T16:59:08.846499",
+        "last_attempt": "2026-11-02T16:59:08.846499",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-11-02T15:34:01.585+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-02T16:59:08.846499",
+        "last_attempt": "2026-11-02T16:59:08.846499",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-02T12:46:39.023656"
+        "next_retry_at": "2026-11-02T17:04:08.846499"
       }
     }
   }
