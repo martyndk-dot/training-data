@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-06T06:32:39.963051",
+    "last_updated": "2026-11-06T14:33:32.207239",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -173,7 +173,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 19,
+    "age_days": 20,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -701,7 +701,7 @@
     "p_max": 1120,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-06T06:32:39.961840",
+    "calculation_timestamp": "2026-11-06T14:33:32.206252",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -2678,6 +2678,19 @@
     }
   ],
   "planned_workouts": [
+    {
+      "id": 152510327,
+      "date": "2026-11-06",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe1 obrat bez z\u00e1t\u011b\u017ee: Z1 30 nebo volno",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 5.\u21926. 11. Freddy (dech, teplota k\u016f\u017ee) nedostupn\u00fd \u2014 \u010dek\u00e1 na potvrzen\u00ed nov\u00fdch podm\u00ednek.\n\n\ud83d\udfe1 RHR 52 bpm \u2014 +4\u20135 nad baseline 47\u201348, t\u011bsn\u011b pod varov\u00e1n\u00edm 53 (v\u010dera 46)\n\ud83d\udfe1 HRV 28 ms \u2014 t\u011bsn\u011b nad varov\u00e1n\u00edm 27 (v\u010dera 37)\n\ud83d\udfe1 Sp\u00e1nek 6 h 18, sk\u00f3re 74 \u2014 druh\u00e1 krat\u0161\u00ed noc za sebou\n\u26aa Dech, teplota k\u016f\u017ee \u2014 nedostupn\u00e9\n\nTrend RHR / HRV / sp\u00e1nek: 3. 49/34/81 | 4. 49/30/83 | 5. 46/37/82 | 6. 52/28/74\nSt\u0159eda ani \u010dtvrtek bez tr\u00e9ninku (VT test neodjet). CTL 42 | ATL 13 | TSB +29.\n\nV\u00ddKLAD: prudk\u00fd obrat za jednu noc bez jak\u00e9koli tr\u00e9ninkov\u00e9 z\u00e1t\u011b\u017ee \u2014 nen\u00ed to \u00fanava z tr\u00e9ninku. Pravd\u011bpodobn\u011b nedostatek sp\u00e1nku/stres, p\u0159\u00edpadn\u011b n\u011bco za\u010d\u00edn\u00e1 (3. vlna od 18. 10.?).\n\nVERDIKT: \ud83d\udfe1 lehce \u2014 Z1 30 bez S\u00cdLY B, nebo volno.\n\u2022 Z\u00edtra T1 30/30 jen p\u0159i RHR \u226449 a HRV \u226530 a bez p\u0159\u00edznak\u016f; jinak Z2 60 lehce.\n\u2022 VT test neodjet \u2192 nov\u00fd term\u00edn podle domluvy."
+    },
     {
       "id": 151172542,
       "date": "2026-11-06",
