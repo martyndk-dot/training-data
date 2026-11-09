@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-09T06:04:19.616010",
+    "last_updated": "2026-11-09T16:04:07.202803",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -108,21 +108,21 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 33.2,
-        "delta_pct": null
+        "status": "amber",
+        "value": 29.0,
+        "baseline_7d": 32.6,
+        "delta_pct": -11.0
       },
       "rhr": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 48.8,
-        "delta_bpm": null
+        "status": "green",
+        "value": 49,
+        "baseline_7d": 48.9,
+        "delta_bpm": 0.1
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "green",
+        "hours": 7.23,
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -132,9 +132,9 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.07
+        "status": "green",
+        "value": 0.89,
+        "value_yesterday": 1.09
       },
       "tsb": {
         "status": "green",
@@ -142,10 +142,10 @@
       }
     },
     "signal_summary": {
-      "green": 2,
-      "amber": 0,
+      "green": 5,
+      "amber": 1,
       "red": 0,
-      "unavailable": 4
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Base",
@@ -155,7 +155,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 2 green, 0 amber (threshold 2), 0 red. Note: 4 signals unavailable \u2014 limited data.",
+    "reason": "P3 green light. 5 green, 1 amber (threshold 2), 0 red.",
     "alarm_refs": []
   },
   "health_context": {
@@ -173,7 +173,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 22,
+    "age_days": 23,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -233,12 +233,12 @@
           "unit": "kg"
         }
       },
-      "resting_hr": 48,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "resting_hr": 49,
+      "hrv": 29.0,
+      "sleep_quality": 2,
+      "sleep_hours": 7.23,
+      "sleep_formatted": "7h14m",
+      "sleep_score": 88.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -255,7 +255,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 5547,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -293,14 +293,14 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.07,
-    "hrv_baseline_7d": 33.2,
-    "rhr_baseline_7d": 48.8,
-    "hrv_baseline_28d": 33.5,
+    "recovery_index": 0.89,
+    "recovery_index_yesterday": 1.09,
+    "hrv_baseline_7d": 32.6,
+    "rhr_baseline_7d": 48.9,
+    "hrv_baseline_28d": 33.4,
     "rhr_baseline_28d": 47.9,
-    "latest_hrv": null,
-    "latest_rhr": null,
+    "latest_hrv": 29.0,
+    "latest_rhr": 49,
     "acwr": 0.0,
     "acwr_interpretation": "undertraining",
     "acwr_scope": "live_retrospective",
@@ -323,7 +323,7 @@
     "multi_sport_detected": false,
     "strain": null,
     "stress_tolerance": null,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 0.0,
     "tss_7d_total": 0,
     "tss_28d_total": 519.0,
     "zone_distribution_7d": {
@@ -648,10 +648,10 @@
     "p_max": 1117,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-09T06:04:19.614681",
+    "calculation_timestamp": "2026-11-09T16:04:07.201492",
     "data_quality": {
-      "hrv_data_points": 6,
-      "rhr_data_points": 6,
+      "hrv_data_points": 7,
+      "rhr_data_points": 7,
       "activities_7d": 0,
       "activities_28d": 10,
       "planned_workouts_7d": 4,
@@ -2187,13 +2187,13 @@
       "display": {
         "weight": null
       },
-      "resting_hr": null,
-      "hrv_rmssd": null,
+      "resting_hr": 49,
+      "hrv_rmssd": 29.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 7.23,
+      "sleep_formatted": "7h14m",
+      "sleep_quality": 2,
+      "sleep_score": 88.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -2213,7 +2213,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": null,
+      "steps": 5547,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2237,6 +2237,19 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "\ud83d\udccc REGISTRACE ILONA \u2013 Ho\u0159ick\u00fd kros. Term\u00edn: \u010dtvrtek 12. 11. do 23:59, p\u0159edem 350 K\u010d (na m\u00edst\u011b 450 K\u010d, kapacita 500). Kategorie Z45. Registrace: sport-base.eu/competitions/horicky-kros/register"
+    },
+    {
+      "id": 153583953,
+      "date": "2026-11-09",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe1 volno, 5. den vir\u00f3zy",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 8.\u21929. 11. \u2014 5. den vir\u00f3zy (od 5. 11., ucpan\u00fd nos, bez teploty).\n\n\ud83d\udfe2 RHR 49 bpm \u2014 horn\u00ed okraj baseline 47\u201348\n\ud83d\udfe1 HRV 29 ms \u2014 pod baseline ~33, nad varov\u00e1n\u00edm 27 (v\u010dera 35)\n\ud83d\udfe2 Sp\u00e1nek 7 h 12, sk\u00f3re 88\n\u26aa Dech v noci \u2014 freddy nedod\u00e1v\u00e1 od 5. 11.\n\u26aa Teplota k\u016f\u017ee \u2014 za dne\u0161n\u00ed noc zat\u00edm nedorazila (v\u010dera \u22120,1 \u00b0C)\n\nTrend RHR / HRV / sp\u00e1nek: 5. 46/37/82 | 6. 52/28/74 | 7. 49/35/87 | 8. 48/35/82 | 9. 49/29/88\nCTL ~41, \u017e\u00e1dn\u00fd tr\u00e9nink od 2. 11.\n\nVERDIKT: \ud83d\udfe1 VOLNO podle pl\u00e1nu \u2014 rozhoduj\u00ed p\u0159\u00edznaky, ne \u010d\u00edsla (Garmin vir\u00f3zu nezachytil).\n\u2022 \u00dat Z1 45 jen p\u0159i voln\u011bj\u0161\u00edm nosu a bez \u00fanavy.\n\u2022 Intenzita (p\u00e1 T1 1\u00d78) a\u017e po 48 h bez p\u0159\u00edznak\u016f."
     },
     {
       "id": 151172554,
@@ -2471,8 +2484,8 @@
     "total_training_formatted": "0s",
     "total_tss": 0,
     "activities_count": 0,
-    "avg_hrv": 33.2,
-    "avg_resting_hr": 48.8
+    "avg_hrv": 32.6,
+    "avg_resting_hr": 48.9
   },
   "race_calendar": {
     "next_race": null,
