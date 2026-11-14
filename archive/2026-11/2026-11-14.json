@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-14T06:06:30.394814",
+    "last_updated": "2026-11-14T13:25:38.420804",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -108,10 +108,10 @@
     "priority": 3,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 32.7,
-        "delta_pct": null
+        "status": "green",
+        "value": 34.0,
+        "baseline_7d": 32.9,
+        "delta_pct": 3.3
       },
       "rhr": {
         "status": "green",
@@ -120,9 +120,9 @@
         "delta_bpm": 0
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "green",
+        "hours": 7.92,
+        "quality": 2
       },
       "acwr": {
         "status": "green",
@@ -132,8 +132,8 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
+        "status": "green",
+        "value": 1.03,
         "value_yesterday": 0.76
       },
       "tsb": {
@@ -142,10 +142,10 @@
       }
     },
     "signal_summary": {
-      "green": 3,
+      "green": 6,
       "amber": 0,
       "red": 0,
-      "unavailable": 3
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Base",
@@ -155,7 +155,7 @@
     },
     "race_week_defers": false,
     "modification": null,
-    "reason": "P3 green light. 3 green, 0 amber (threshold 2), 0 red.",
+    "reason": "P3 green light. 6 green, 0 amber (threshold 2), 0 red.",
     "alarm_refs": []
   },
   "health_context": {
@@ -234,11 +234,11 @@
         }
       },
       "resting_hr": 49,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "hrv": 34.0,
+      "sleep_quality": 2,
+      "sleep_hours": 7.92,
+      "sleep_formatted": "7h55m",
+      "sleep_score": 83.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -255,7 +255,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 40,
+      "steps": 380,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -293,13 +293,13 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
+    "recovery_index": 1.03,
     "recovery_index_yesterday": 0.76,
-    "hrv_baseline_7d": 32.7,
+    "hrv_baseline_7d": 32.9,
     "rhr_baseline_7d": 49,
     "hrv_baseline_28d": 33.6,
     "rhr_baseline_28d": 48.1,
-    "latest_hrv": null,
+    "latest_hrv": 34.0,
     "latest_rhr": 49,
     "acwr": 0.0,
     "acwr_interpretation": "undertraining",
@@ -323,7 +323,7 @@
     "multi_sport_detected": false,
     "strain": null,
     "stress_tolerance": null,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 0.0,
     "tss_7d_total": 0,
     "tss_28d_total": 278.0,
     "zone_distribution_7d": {
@@ -607,7 +607,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 6.31,
+          "planned_tss_delta": 4.74,
           "hard_sessions_planned": 0,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 0,
@@ -647,9 +647,9 @@
     "p_max": 1111,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-14T06:06:30.393512",
+    "calculation_timestamp": "2026-11-14T13:25:38.419462",
     "data_quality": {
-      "hrv_data_points": 6,
+      "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 0,
       "activities_28d": 7,
@@ -1755,12 +1755,12 @@
         "weight": null
       },
       "resting_hr": 49,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 34.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 7.92,
+      "sleep_formatted": "7h55m",
+      "sleep_quality": 2,
+      "sleep_score": 83.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -1780,7 +1780,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 40,
+      "steps": 380,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -1793,18 +1793,31 @@
   ],
   "planned_workouts": [
     {
+      "id": 155664392,
+      "date": "2026-11-14",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 obrat k lep\u0161\u00edmu: podm\u00edn\u011bn\u011b Z1\u2013Z2 60",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 13.\u219214. 11. \u2014 4. den ATB (rinosinusitida vlevo).\n\n\ud83d\udfe2 RHR 49 bpm \u2014 horn\u00ed okraj baseline 47\u201348 (\u010dt i p\u00e1 51)\n\ud83d\udfe2 HRV 34 ms \u2014 zp\u011bt na baseline ~33 (v\u010dera 26 = pod varov\u00e1n\u00edm)\n\ud83d\udfe2 Sp\u00e1nek 7 h 54, sk\u00f3re 83\n\u26aa SpO2 \u2014 nep\u0159ich\u00e1z\u00ed\n\u26aa P\u0159\u00edznaky dnes \u2014 \u010dek\u00e1 na hl\u00e1\u0161en\u00ed (\u010dt: l\u00e9pe, vykasl\u00e1v\u00e1n\u00ed hlen\u016f)\n\nTrend RHR / HRV / sp\u00e1nek: 10. 48/39/80 | 11. 47/36/82 | 12. 51/31/82 | 13. 51/26/81 | 14. 49/34/83\nCTL ~37, bez tr\u00e9ninku od 2. 11.\n\nV\u00ddKLAD: p\u00e1te\u010dn\u00ed dno (HRV 26, RHR 51) bylo vrcholem reakce na z\u00e1n\u011bt/l\u00e9\u010dbu, dnes obrat zp\u011bt k normu. Prvn\u00ed objektivn\u011b zelen\u00fd den od za\u010d\u00e1tku ATB.\n\nVERDIKT: \ud83d\udfe2/\ud83d\udfe1 PODM\u00cdN\u011aN\u011a Z1\u2013Z2 60 Tacx (HR <125) \u2014 sn\u00ed\u017eeno ze Z2 90 venku.\n\u2022 Jen kdy\u017e ka\u0161el ustupuje a nejsi unaven\u00fd; jinak je\u0161t\u011b volno.\n\u2022 Ne 15. 11. Z2 60 voliteln\u011b podle dne\u0161ka."
+    },
+    {
       "id": 151172560,
       "date": "2026-11-14",
-      "name": "PODM\u00cdN\u011aN\u011a: Z2 90 (vir\u00f3za)",
+      "name": "PODM\u00cdN\u011aN\u011a: Z1\u2013Z2 60 Tacx (ATB)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 55,
-      "duration_hours": 1.5,
-      "duration_formatted": "1h30m",
+      "planned_tss": 32,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "09:30",
-      "description": "PODM\u00cdN\u011aN\u011a \u2014 Z2 90 (m\u00edsto 2 h) po vir\u00f3ze. 200\u2013220 W, HR 120\u2013130. Venku jen nad 0 \u00b0C a s voln\u00fdm nosem (buff), jinak Tacx 75 min. Jen bez \u00fanavy; jinak Z1 45 nebo volno.\n\nWarmup\n- 15m 165w intensity=warmup\n\nMain Set 1x\n- 65m 210w intensity=interval\n\nCooldown\n- 10m 160w intensity=cooldown"
+      "description": "PODM\u00cdN\u011aN\u011a \u2014 prvn\u00ed j\u00edzda po 12 dnech, 4. den ATB. Z1\u2013Z2 60 Tacx 180\u2013205 W, HR <125 (sn\u00ed\u017eeno ze Z2 90 venku). Jen kdy\u017e ka\u0161el ustupuje a c\u00edt\u00ed\u0161 se dob\u0159e; p\u0159i n\u00e1vratu \u00fanavy nebo zhor\u0161en\u00ed ka\u0161le b\u011bhem j\u00edzdy konec.\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 45m 195w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
     },
     {
       "id": 136401237,
@@ -1972,7 +1985,7 @@
     "total_training_formatted": "0s",
     "total_tss": 0,
     "activities_count": 0,
-    "avg_hrv": 32.7,
+    "avg_hrv": 32.9,
     "avg_resting_hr": 49.0
   },
   "race_calendar": {
