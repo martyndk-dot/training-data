@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T16:58:48.802007",
+  "generated_at": "2026-11-15T21:40:39.727620",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -171,8 +171,8 @@
           "activity_key": "6ae508f71c6ae1654cb8092e2ddf70e31be1aaf72bffc686a409419a72549824",
           "event_key": null,
           "plan_key": null,
-          "sampled_at": "2026-11-14T18:49:58.578819+00:00",
-          "next_refresh_at": "2026-11-15T18:49:58.578819+00:00"
+          "sampled_at": "2026-11-15T21:40:39.727889+00:00",
+          "next_refresh_at": "2026-11-16T21:40:39.727889+00:00"
         }
       }
     }
