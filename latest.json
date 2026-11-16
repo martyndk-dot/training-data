@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-16T09:28:32.786243",
+    "last_updated": "2026-11-16T19:48:06.764497",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -173,7 +173,7 @@
   "history": {
     "available": true,
     "last_generated": "2026-10-17",
-    "age_days": 29,
+    "age_days": 30,
     "total_months": 35,
     "history_confidence": "high"
   },
@@ -255,7 +255,7 @@
       "respiration": null,
       "body_fat_pct": 23.8,
       "abdomen_cm": null,
-      "steps": 22,
+      "steps": 6632,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -609,7 +609,7 @@
           "weeks_available": 4
         },
         "stream_2": {
-          "planned_tss_delta": 5.22,
+          "planned_tss_delta": 5.16,
           "hard_sessions_planned": 2,
           "current_week_hard_days_completed": 0,
           "current_week_hard_days_total": 2,
@@ -649,7 +649,7 @@
     "p_max": 1109,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-16T09:28:32.785015",
+    "calculation_timestamp": "2026-11-16T19:48:06.763485",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -1618,7 +1618,7 @@
       "respiration": null,
       "body_fat_pct": 23.8,
       "abdomen_cm": null,
-      "steps": 22,
+      "steps": 6632,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -1631,18 +1631,31 @@
   ],
   "planned_workouts": [
     {
+      "id": 156683236,
+      "date": "2026-11-16",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 stabiln\u00ed: podm\u00edn\u011bn\u011b Z1\u2013Z2 45\u201360",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 15.\u219216. 11. \u2014 6. den ATB (rinosinusitida vlevo).\n\n\ud83d\udfe2 RHR 49 bpm \u2014 horn\u00ed okraj baseline 47\u201348, t\u0159et\u00ed den stabiln\u011b\n\ud83d\udfe2 HRV 32 ms \u2014 na baseline ~33\n\ud83d\udfe1 Sp\u00e1nek 6 h 42, sk\u00f3re 85 \u2014 krat\u0161\u00ed, ale kvalitn\u00ed\n\u26aa SpO2 \u2014 nep\u0159ich\u00e1z\u00ed\n\u26aa P\u0159\u00edznaky dnes \u2014 \u010dek\u00e1 na hl\u00e1\u0161en\u00ed\n\nTrend RHR / HRV / sp\u00e1nek: 12. 51/31/82 | 13. 51/26/81 | 14. 49/34/83 | 15. 49/31/85 | 16. 49/32/85\nBez tr\u00e9ninku od 2. 11. (14 dn\u00ed). CTL 33,7 | TSB +26. V\u00e1ha 85,8 kg.\n\nV\u00ddKLAD: sign\u00e1ly 3 dny stabiln\u00ed u normy, reakce na z\u00e1n\u011bt odezn\u011bla.\n\nVERDIKT: \ud83d\udfe2 PODM\u00cdN\u011aN\u011a Z1\u2013Z2 45\u201360 Tacx (180\u2013205 W, HR <125).\n\u2022 Jen kdy\u017e ka\u0161el ustupuje a nejsi unaven\u00fd.\n\u2022 MT2 21. 11.: po 14 dnech bez kola a s ATB do st\u0159edy doporu\u010den\u00ed NESTARTOVAT; potvrdit \u010dt 19. 11."
+    },
+    {
       "id": 151172565,
       "date": "2026-11-16",
-      "name": "Z2 60 Tacx (ATB)",
+      "name": "PODM\u00cdN\u011aN\u011a: Z1\u2013Z2 60 Tacx (ATB)",
       "type": "WORKOUT",
       "sport_type": "Ride",
-      "planned_tss": 35,
+      "planned_tss": 32,
       "duration_hours": 1.0,
       "duration_formatted": "1h",
       "workout_summary": null,
       "has_terrain": false,
       "start_time": "15:00",
-      "description": "B\u011bhem ATB (11.\u201318. 11.): Z2 60 Tacx 195\u2013215 W, HR <130, jen kdy\u017e se c\u00edt\u00ed\u0161 dob\u0159e. S\u00edla zru\u0161ena.\n\nWarmup\n- 10m 165w intensity=warmup\n\nMain Set 1x\n- 45m 205w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+      "description": "PODM\u00cdN\u011aN\u011a \u2014 prvn\u00ed j\u00edzda po 14 dnech, 6. den ATB. Z1\u2013Z2 60 Tacx 180\u2013205 W, HR <125; klidn\u011b jen 45 min. Jen kdy\u017e ka\u0161el ustupuje a nejsi unaven\u00fd; p\u0159i n\u00e1vratu ka\u0161le nebo \u00fanavy b\u011bhem j\u00edzdy konec. S\u00edla zru\u0161ena.\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 45m 195w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
     },
     {
       "id": 151172566,
