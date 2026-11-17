@@ -1,10 +1,93 @@
 {
-  "generated_at": "2026-11-17T02:52:50.006473",
+  "generated_at": "2026-11-17T11:41:49.373068",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
   "scan_hours": 72,
   "retention_days": 14,
-  "activities": [],
+  "activities": [
+    {
+      "activity_id": "i211152365",
+      "date": "2026-11-17",
+      "start_datetime": "2026-11-17T10:20:05",
+      "type": "Cyclocross",
+      "name": "PODM\u00cdN\u011aN\u011a: Z1\u2013Z2 60 Tacx (ATB)",
+      "interval_summary": null,
+      "intervals": [],
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "151172566",
+          "updated": "2026-11-17T06:49:37.916+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 160
+          },
+          {
+            "supported": false,
+            "duration_s": 2700
+          },
+          {
+            "supported": false,
+            "duration_s": 300,
+            "target_w": 150
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1430,
+            160.2,
+            182.5,
+            132.1,
+            53.2,
+            79.65,
+            79.65,
+            69.16,
+            22.21
+          ],
+          [
+            1430,
+            2861,
+            164.1,
+            173.3,
+            135.1,
+            55.9,
+            73.79,
+            73.79,
+            49.62,
+            33.33
+          ],
+          [
+            2861,
+            4292,
+            96.9,
+            73.6,
+            115.5,
+            61.4,
+            53.04,
+            53.04,
+            24.04,
+            47.56
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "cb284552e83cbc12e0b97e07e500c27f7137f12b3291e85a8acd9d35aaa052a7",
+          "event_key": "5c18d0f6a5d8722b5a04755d442194dc69bf7a82d2549335d0bd10c5216e6538",
+          "plan_key": "d7e4c5a3868b8cae9f80a31d35aff030b72970c4901876154d013b6488a20005",
+          "sampled_at": "2026-11-17T11:41:49.373303+00:00",
+          "next_refresh_at": "2026-11-18T11:41:49.373303+00:00"
+        }
+      }
+    }
+  ],
   "fetch_state": {}
 }
