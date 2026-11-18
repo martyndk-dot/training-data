@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T11:29:06.239893",
+  "generated_at": "2026-11-18T19:31:49.998311",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -83,11 +83,109 @@
           "activity_key": "cb284552e83cbc12e0b97e07e500c27f7137f12b3291e85a8acd9d35aaa052a7",
           "event_key": "5c18d0f6a5d8722b5a04755d442194dc69bf7a82d2549335d0bd10c5216e6538",
           "plan_key": "d7e4c5a3868b8cae9f80a31d35aff030b72970c4901876154d013b6488a20005",
-          "sampled_at": "2026-11-17T11:41:49.373303+00:00",
-          "next_refresh_at": "2026-11-18T11:41:49.373303+00:00"
+          "sampled_at": "2026-11-18T19:31:50.360673+00:00",
+          "next_refresh_at": "2026-11-19T19:31:50.360673+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i211759332",
+      "date": "2026-11-18",
+      "start_datetime": "2026-11-18T18:13:57",
+      "type": "VirtualRide",
+      "name": "UVNIT\u0158",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2112,
+          "moving_secs": 2112,
+          "start_secs": 0,
+          "end_secs": 2112,
+          "avg_power": 186,
+          "max_power": 244,
+          "avg_hr": 127,
+          "max_hr": 142,
+          "min_hr": 85,
+          "avg_cadence": 94.12322,
+          "zone": 2,
+          "w_bal_start": 38100,
+          "w_bal_end": 38100,
+          "training_load": 19.625147
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "no_plan",
+        "thirds": [
+          [
+            0,
+            703,
+            169.6,
+            119.2,
+            116.1,
+            94.0,
+            100.0,
+            100.0,
+            99.72,
+            0.14
+          ],
+          [
+            703,
+            1407,
+            208.0,
+            146.5,
+            133.6,
+            94.1,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            1407,
+            2111,
+            181.1,
+            127.5,
+            134.0,
+            94.5,
+            100.0,
+            100.0,
+            100.0,
+            0.28
+          ]
+        ],
+        "cache": {
+          "activity_key": "d141fb336017afb6e818436cb2c0564f9fe53ffa9015ef4ed20efbfa25ac42d8",
+          "event_key": null,
+          "plan_key": null,
+          "sampled_at": "2026-11-18T19:31:50.360673+00:00",
+          "next_refresh_at": "2026-11-19T19:31:50.360673+00:00"
         }
       }
     }
   ],
-  "fetch_state": {}
+  "fetch_state": {
+    "i211759332": {
+      "date": "2026-11-18",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-18T19:31:49.998311",
+        "last_attempt": "2026-11-18T19:31:49.998311",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-11-18T17:49:45.445+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-18T19:31:49.998311",
+        "last_attempt": "2026-11-18T19:31:49.998311",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-18T19:36:49.998311"
+      }
+    }
+  }
 }
