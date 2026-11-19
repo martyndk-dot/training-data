@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T09:26:31.315984",
+  "generated_at": "2026-11-19T18:36:47.208125",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -165,6 +165,107 @@
           "next_refresh_at": "2026-11-19T19:31:50.360673+00:00"
         }
       }
+    },
+    {
+      "activity_id": "i212138270",
+      "date": "2026-11-19",
+      "start_datetime": "2026-11-19T16:55:50",
+      "type": "VirtualRide",
+      "name": "Z2 45\u201360 Tacx (strop HR 135)",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 3310,
+          "moving_secs": 3310,
+          "start_secs": 0,
+          "end_secs": 3310,
+          "avg_power": 178,
+          "max_power": 222,
+          "avg_hr": 126,
+          "max_hr": 139,
+          "min_hr": 98,
+          "avg_cadence": 93.14713,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 38100,
+          "training_load": 27.355371
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "151172569",
+          "updated": "2026-11-19T06:26:12.579+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 160
+          },
+          {
+            "supported": false,
+            "duration_s": 2400
+          },
+          {
+            "supported": false,
+            "duration_s": 300,
+            "target_w": 150
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            1103,
+            171.8,
+            189.5,
+            120.6,
+            93.3,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            1103,
+            2206,
+            188.0,
+            207.4,
+            130.5,
+            94.5,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            2206,
+            3309,
+            176.1,
+            194.2,
+            129.7,
+            91.7,
+            100.0,
+            100.0,
+            100.0,
+            0.36
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "a145c72d4341adfb8f5c61f92979527139224a6151f37885ce4f36b739b50a10",
+          "event_key": "eaeaaddff45e0384c2b315b8074873b23d05d69c5b3735111715004dd5fe4cfb",
+          "plan_key": "f59f0a3b7a6f6c1f69d5d920007b3f4cb647d6e6bfa18fe322e2d3f98da4361f",
+          "sampled_at": "2026-11-19T18:36:47.991215+00:00",
+          "next_refresh_at": "2026-11-20T18:36:47.991215+00:00"
+        }
+      }
     }
   ],
   "fetch_state": {
@@ -179,12 +280,32 @@
         "source_icu_sync_date": "2026-11-18T17:49:45.445+00:00"
       },
       "streams": {
-        "attempts": 3,
+        "attempts": 4,
         "first_seen": "2026-11-18T19:31:49.998311",
-        "last_attempt": "2026-11-19T09:26:31.315984",
+        "last_attempt": "2026-11-19T18:36:47.208125",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-19T09:31:31.315984"
+        "next_retry_at": "2026-11-19T18:41:47.208125"
+      }
+    },
+    "i212138270": {
+      "date": "2026-11-19",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-19T18:36:47.208125",
+        "last_attempt": "2026-11-19T18:36:47.208125",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-11-19T16:51:33.347+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-19T18:36:47.208125",
+        "last_attempt": "2026-11-19T18:36:47.208125",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-19T18:41:47.208125"
       }
     }
   }
