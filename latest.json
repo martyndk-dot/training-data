@@ -64,15 +64,15 @@
       "menstrual": "menstrual_phase and menstrual_phase_predicted are not on the 1-4 scale. Values: PERIOD, FOLLICULAR, OVULATION, LUTEAL, etc."
     },
     "quick_stats": {
-      "total_training_hours": 2.32,
-      "total_training_formatted": "2h19m",
-      "total_activities": 3,
-      "total_tss": 79
+      "total_training_hours": 2.92,
+      "total_training_formatted": "2h55m",
+      "total_activities": 4,
+      "total_tss": 97
     }
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-20T17:12:14.432256",
+    "last_updated": "2026-11-20T23:18:47.926144",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -105,23 +105,14 @@
   "alerts": [
     {
       "metric": "acwr",
-      "value": 1.36,
+      "value": 1.55,
       "severity": "alarm",
       "threshold": "1.35",
-      "context": "Live ACWR 1.36 crossed the 1.35 reporting threshold. Retrospective load context only \u2014 not a standalone injury-risk conclusion and not a readiness decision. It includes today's completed load, so it must not decide a later same-day session, and must not decide tomorrow before tomorrow morning's new start-of-day calculation. Today's readiness used readiness_decision.signals.acwr (start-of-day).",
+      "context": "Live ACWR 1.55 crossed the 1.35 reporting threshold. Retrospective load context only \u2014 not a standalone injury-risk conclusion and not a readiness decision. It includes today's completed load, so it must not decide a later same-day session, and must not decide tomorrow before tomorrow morning's new start-of-day calculation. Today's readiness used readiness_decision.signals.acwr (start-of-day).",
       "persistence_days": null,
       "tier": 2,
       "scope": "live_retrospective",
       "readiness_eligible": false
-    },
-    {
-      "metric": "tid_distribution",
-      "value": "Polarized",
-      "severity": "warning",
-      "threshold": "7d/28d classification mismatch",
-      "context": "TID shift: 7d Polarized vs 28d Pyramidal. Training distribution changing.",
-      "persistence_days": null,
-      "tier": 3
     }
   ],
   "readiness_decision": {
@@ -159,7 +150,7 @@
       },
       "tsb": {
         "status": "green",
-        "value": 22.2
+        "value": 20.2
       }
     },
     "signal_summary": {
@@ -201,8 +192,8 @@
   "summary": {
     "period_description": "Last 7 days of training (including today)",
     "note": "Duration calculated from API moving_time field.",
-    "total_duration_decimal_hours": 2.32,
-    "total_activities": 3,
+    "total_duration_decimal_hours": 2.92,
+    "total_activities": 4,
     "by_activity_type": {
       "Cyclocross": {
         "duration_decimal_hours": 0.82,
@@ -217,13 +208,13 @@
         }
       },
       "VirtualRide": {
-        "duration_decimal_hours": 1.5,
-        "count": 2,
-        "tss": 47,
-        "distance_km": 28.9,
+        "duration_decimal_hours": 2.1,
+        "count": 3,
+        "tss": 65,
+        "distance_km": 40.3,
         "display": {
           "distance": {
-            "value": 28.9,
+            "value": 40.3,
             "unit": "km"
           }
         }
@@ -232,11 +223,11 @@
   },
   "current_status": {
     "fitness": {
-      "ctl": 31.67,
-      "atl": 9.45,
-      "tsb": 22.22,
-      "ramp_rate": -3.65,
-      "fitness_source": "Decayed from yesterday (today's planned workouts not yet completed)"
+      "ctl": 32.09,
+      "atl": 11.85,
+      "tsb": 20.24,
+      "ramp_rate": -3.23,
+      "fitness_source": "From Intervals.icu API (reflects completed workouts)"
     },
     "thresholds": {
       "eftp": 315.4,
@@ -301,7 +292,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 3448,
+      "steps": 7309,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -342,8 +333,8 @@
     "rhr_baseline_28d": 48.5,
     "latest_hrv": 33.0,
     "latest_rhr": 51,
-    "acwr": 1.36,
-    "acwr_interpretation": "caution",
+    "acwr": 1.55,
+    "acwr_interpretation": "danger",
     "acwr_scope": "live_retrospective",
     "acwr_readiness_eligible": false,
     "acwr_start_of_day": {
@@ -355,76 +346,76 @@
       "acute_days": 7,
       "chronic_days": 28
     },
-    "monotony": 0.78,
-    "monotony_interpretation": "normal",
+    "monotony": 1.01,
+    "monotony_interpretation": "normal (primary sport 0.78, total 1.01 inflated by multi-sport)",
     "primary_sport": "cycling",
-    "primary_sport_monotony": null,
-    "primary_sport_tss_7d": 47.0,
+    "primary_sport_monotony": 0.78,
+    "primary_sport_tss_7d": 65.0,
     "effective_monotony": 0.78,
     "multi_sport_detected": true,
-    "strain": 62.0,
-    "stress_tolerance": 0.8,
-    "load_recovery_ratio": 0.8,
-    "tss_7d_total": 79.0,
-    "tss_28d_total": 232.0,
+    "strain": 98.0,
+    "stress_tolerance": 1.0,
+    "load_recovery_ratio": 1.0,
+    "tss_7d_total": 97.0,
+    "tss_28d_total": 250.0,
     "zone_distribution_7d": {
-      "z1_hours": 1.04,
+      "z1_hours": 1.6,
       "z2_hours": 1.12,
       "z3_hours": 0.06,
-      "z4_plus_hours": 0.11,
-      "total_hours": 2.32,
+      "z4_plus_hours": 0.14,
+      "total_hours": 2.92,
       "zone_basis": "power"
     },
-    "grey_zone_percentage": 2.5,
+    "grey_zone_percentage": 2.1,
     "grey_zone_note": "Gray Zone % (Z3/tempo) - minimize in polarized training",
-    "quality_intensity_percentage": 4.8,
+    "quality_intensity_percentage": 4.7,
     "quality_intensity_note": "Quality Intensity % (Z4+/threshold+) - target ~20% in polarized training",
     "easy_time_ratio": 0.93,
     "easy_time_ratio_note": "Easy time (Z1+Z2) / Total - target ~80% in polarized training",
     "hard_days_this_week": 1,
     "hard_days_note": "Power ladder: z3+ >= 30min, z4+ >= 10min, z5+ >= 5min, z6+ >= 2min, z7 >= 1min. HR fallback (when no power): z4+ >= 10min, z5+ >= 5min. Per Seiler 3-zone model + Foster. HR-based days flagged with intensity_basis: hr",
     "seiler_tid_7d": {
-      "z1_seconds": 7747,
-      "z2_seconds": 212,
-      "z3_seconds": 401,
-      "z1_pct": 92.7,
-      "z2_pct": 2.5,
-      "z3_pct": 4.8,
-      "polarization_index": 2.24,
+      "z1_seconds": 9806,
+      "z2_seconds": 219,
+      "z3_seconds": 490,
+      "z1_pct": 93.3,
+      "z2_pct": 2.1,
+      "z3_pct": 4.7,
+      "polarization_index": 2.32,
       "classification": "Polarized",
       "zone_basis": "power"
     },
     "seiler_tid_7d_primary": {
-      "z1_seconds": 5419,
-      "z2_seconds": 0,
-      "z3_seconds": 0,
-      "z1_pct": 100.0,
-      "z2_pct": 0.0,
-      "z3_pct": 0.0,
-      "polarization_index": null,
-      "classification": "Base",
+      "z1_seconds": 7478,
+      "z2_seconds": 7,
+      "z3_seconds": 89,
+      "z1_pct": 98.7,
+      "z2_pct": 0.1,
+      "z3_pct": 1.2,
+      "polarization_index": 3.1,
+      "classification": "Polarized",
       "zone_basis": "power",
       "sport": "cycling"
     },
     "seiler_tid_28d": {
-      "z1_seconds": 19821,
-      "z2_seconds": 1489,
-      "z3_seconds": 1719,
-      "z1_pct": 86.1,
-      "z2_pct": 6.5,
-      "z3_pct": 7.5,
-      "polarization_index": 2.0,
-      "classification": "Pyramidal",
+      "z1_seconds": 21880,
+      "z2_seconds": 1496,
+      "z3_seconds": 1808,
+      "z1_pct": 86.9,
+      "z2_pct": 5.9,
+      "z3_pct": 7.2,
+      "polarization_index": 2.02,
+      "classification": "Polarized",
       "zone_basis": "power"
     },
     "seiler_tid_28d_primary": {
-      "z1_seconds": 13061,
-      "z2_seconds": 10,
-      "z3_seconds": 147,
-      "z1_pct": 98.8,
+      "z1_seconds": 15120,
+      "z2_seconds": 17,
+      "z3_seconds": 236,
+      "z1_pct": 98.4,
       "z2_pct": 0.1,
-      "z3_pct": 1.1,
-      "polarization_index": 3.16,
+      "z3_pct": 1.5,
+      "polarization_index": 3.14,
       "classification": "Polarized",
       "zone_basis": "power",
       "sport": "cycling"
@@ -460,11 +451,11 @@
       },
       "tid_comparison": {
         "classification_7d": "Polarized",
-        "classification_28d": "Pyramidal",
-        "pi_7d": 2.24,
-        "pi_28d": 2.0,
-        "pi_delta": 0.24,
-        "drift": "shifting",
+        "classification_28d": "Polarized",
+        "pi_7d": 2.32,
+        "pi_28d": 2.02,
+        "pi_delta": 0.3,
+        "drift": "consistent",
         "note": "Compares 7d vs 28d Seiler TID to detect distribution shifts. pi_delta positive = more polarized acutely."
       },
       "power_curve_delta": {
@@ -646,11 +637,11 @@
       },
       "dfa_a1_profile": null
     },
-    "consistency_index": 0.43,
+    "consistency_index": 0.57,
     "consistency_details": {
       "planned_days": 7,
-      "completed_days": 3,
-      "matched_days": 3,
+      "completed_days": 4,
+      "matched_days": 4,
       "planned_dates": [
         "2026-11-14",
         "2026-11-15",
@@ -663,7 +654,8 @@
       "completed_dates": [
         "2026-11-17",
         "2026-11-18",
-        "2026-11-19"
+        "2026-11-19",
+        "2026-11-20"
       ]
     },
     "phase_detection": {
@@ -722,12 +714,12 @@
     "p_max": 1105,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-20T17:12:14.431301",
+    "calculation_timestamp": "2026-11-20T23:18:47.925267",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
-      "activities_7d": 3,
-      "activities_28d": 9,
+      "activities_7d": 4,
+      "activities_28d": 10,
       "planned_workouts_7d": 7,
       "ftp_history_days": {
         "indoor": 111,
@@ -736,6 +728,116 @@
     }
   },
   "recent_activities": [
+    {
+      "id": "i212555454",
+      "date": "2026-11-20T17:59:03",
+      "type": "VirtualRide",
+      "name": "Opener 30 zkr\u00e1cen\u00fd (p\u0159ed MT2 \u2014 po nemoci)",
+      "duration_hours": 0.6,
+      "duration_formatted": "35m55s",
+      "distance_km": 11.41,
+      "tss": 18,
+      "intensity_factor": 55.151516,
+      "avg_power": 158,
+      "normalized_power": 182,
+      "avg_hr": 115,
+      "max_hr": 140,
+      "avg_cadence": 91.463936,
+      "avg_speed": 18.7,
+      "avg_speed_unit": "KPH",
+      "max_speed": 20.6,
+      "max_speed_unit": "KPH",
+      "avg_pace": null,
+      "avg_temp": 22.548388,
+      "avg_temp_unit": "C",
+      "weather": null,
+      "humidity": null,
+      "wind_speed": null,
+      "wind_speed_unit": "KMH",
+      "work_kj": 348.3,
+      "calories": 403,
+      "carbs_used": 122,
+      "carbs_ingested": null,
+      "variability_index": 1.1518987,
+      "decoupling": 2.0141168,
+      "efficiency_factor": 1.5826087,
+      "hrrc": null,
+      "elevation_m": null,
+      "display": {
+        "distance": {
+          "value": 11.41,
+          "unit": "km"
+        },
+        "elevation": null,
+        "avg_speed": {
+          "value": 18.7,
+          "unit": "km/h"
+        },
+        "max_speed": {
+          "value": 20.6,
+          "unit": "km/h"
+        }
+      },
+      "feel": 3,
+      "rpe": 4,
+      "effort_response": null,
+      "zone_distribution": {
+        "hr_zones": {
+          "z1_time": 2136,
+          "z2_time": 19,
+          "z3_time": 0,
+          "z4_time": 0,
+          "z5_time": 0,
+          "z6_time": 0,
+          "z7_time": 0
+        },
+        "power_zones": {
+          "z1_time": 2046,
+          "z2_time": 13,
+          "z3_time": 7,
+          "z4_time": 7,
+          "z5_time": 57,
+          "z6_time": 25,
+          "z7_time": 0
+        }
+      },
+      "has_intervals": false,
+      "has_dfa": false,
+      "has_structure": true,
+      "structure_summary": {
+        "method": "plan_match_v2",
+        "status": "unknown",
+        "steps": [
+          [
+            900,
+            155,
+            null,
+            null
+          ],
+          [
+            420,
+            null,
+            null,
+            null
+          ],
+          [
+            270,
+            null,
+            null,
+            null
+          ],
+          [
+            600,
+            150,
+            null,
+            null
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ]
+      }
+    },
     {
       "id": "i212138270",
       "date": "2026-11-19T16:55:50",
@@ -1980,7 +2082,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 3448,
+      "steps": 7309,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2004,6 +2106,19 @@
       "workout_summary": null,
       "has_terrain": false,
       "description": "Garmin (intervals.icu), noc 19.\u219220. 11. \u2014 2. noc bez l\u00e9k\u016f (ATB i Clarinase do 18. 11.), den p\u0159ed MT2.\n\n\ud83d\udfe1 RHR 51 bpm \u2014 +3\u20134 nad baseline 47\u201348, pod varov\u00e1n\u00edm 53 (v\u010dera 49)\n\ud83d\udfe2 HRV 33 ms \u2014 na baseline ~33\n\ud83d\udfe1 Sp\u00e1nek 7 h 00, sk\u00f3re 75, kvalita 3/4 \u2014 nejslab\u0161\u00ed za t\u00fdden\n\u26aa SpO2, dech, teplota k\u016f\u017ee \u2014 nedostupn\u00e9\n\u26aa P\u0159\u00edznaky dnes \u2014 \u010dek\u00e1 na hl\u00e1\u0161en\u00ed\n\nTrend RHR / HRV / sp\u00e1nek: 16. 49/32/85 | 17. 51/28/83 | 18. 52/31/81 | 19. 49/32/80 | 20. 51/33/75\nV\u010dera Z2 55 Tacx (TSS 27, HR ust\u00e1len\u00e1, decoupling 2 %). CTL ~32 | TSB ~+21.\n\nV\u00ddKLAD: RHR nahoru bez poklesu HRV a s hor\u0161\u00edm sp\u00e1nkem = sp\u00ed\u0161 hor\u0161\u00ed noc / p\u0159edz\u00e1vodn\u00ed nabuzen\u00ed ne\u017e n\u00e1vrat z\u00e1n\u011btu (z\u00e1n\u011bt dosud d\u00e1val RHR\u2191 a z\u00e1rove\u0148 HRV\u2193, nap\u0159. 1. 11. 50/25). Pseudoefedrin to b\u00fdt nem\u016f\u017ee (posledn\u00ed d\u00e1vka 18. 11. ve\u010der). Pozor: sinusitidu Garmin d\u0159\u00edv nezachytil \u2014 rozhoduj\u00ed p\u0159\u00edznaky.\n\nVERDIKT: \ud83d\udfe1 GO \u2014 Opener zkr\u00e1cen\u00fd podle pl\u00e1nu (kr\u00e1tk\u00fd, TSS ~19; s\u00e1m slou\u017e\u00ed jako test).\n\u2022 Rozhoduje HR na konci 2. \u00faseku 30 s: \u2264150 OK; >155 nebo t\u011b\u017ek\u00e9 nohy \u2192 MT2 jen Z2 / nestartovat.\n\u2022 Jen bez zhor\u0161en\u00ed nosu/ka\u0161le; p\u0159i zhor\u0161en\u00ed opener vynechat.\n\u2022 Ve\u010der brzy sp\u00e1t, sacharidy ~6 g/kg (~500 g za den).\n\u2022 So r\u00e1no p\u0159ed MT2: RHR \u226451, HRV \u226528 a bez p\u0159\u00edznak\u016f \u2192 tempo start; RHR \u226553 nebo HRV <27 \u2192 nestartovat (max Z2)."
+    },
+    {
+      "id": 158451037,
+      "date": "2026-11-20",
+      "name": "\ud83d\udcdd Opener 30 zkr\u00e1cen\u00fd \u2014 spln\u011bno, HR 140 (\u2264150) \u2192 MT2 GO",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Post-workout report \u2014 i212555454, Edge 1050, Tacx (indoor), 17:59. Pl\u00e1n: Opener 30 zkr\u00e1cen\u00fd (37 min, TSS 19); odjeto 36 min, TSS 18.\n\nShrnut\u00ed: opener spln\u011bn p\u0159esn\u011b podle p\u0159edpisu. Rozhoduj\u00edc\u00ed krit\u00e9rium (HR na konci 2. \u00faseku \u2264150) spln\u011bno s rezervou: 140. Reakce HR na 30 s @ 385 W je toto\u017en\u00e1 s 30. 10. (opener p\u0159ed MT1). V n\u00edzk\u00e9 intenzit\u011b se posun po nemoci zmen\u0161il na ~+4\u20135 bpm. \u2192 MT2 tempo start GO (s rann\u00ed kontrolou).\n\nJ\u00edzda: 36 min | NP 182 W | avg 158 W | IF 0,55 | TSS 18 | RPE 4 | Feel 3/5 | 22,5 \u00b0C\n\u2022 Rozjet\u00ed ~15 min @ ~154 W (pauza ~50 s v 5. min): HR plat\u00f3 112\u2013114, na konci 114\n\u2022 30 s #1: 384 W \u2192 HR 114 \u2192 137 (peak)\n\u2022 30 s #2: 385 W \u2192 HR 113 \u2192 140 (peak) \u2713 \u2264150\n\u2022 15 s #1: 472 W (max 479) \u2192 HR peak 138\n\u2022 15 s #2: 475 W (max 486) \u2192 HR peak 137\n\u2022 Vyjet\u00ed ~10 min @ ~148 W: HR 114\u2013118\nW\u2032 skoro nedot\u010den (7,1 kJ nad FTP celkem, W\u2032bal po\u0159\u00e1d >90 %) \u2192 aktivace bez \u00fanavy \u2713\n\nSROVN\u00c1N\u00cd S 30. 10. (opener p\u0159ed MT1, stejn\u00fd Tacx, 21,8 \u00b0C, stejn\u00fd v\u00fdkon 384 W):\n\u2022 Pr\u016fb\u011bh HR v prvn\u00edch ~30 s \u00faseku prakticky shodn\u00fd (start 113\u2013115 \u2192 po ~26 s 129\u2013130 v obou p\u0159\u00edpadech). 30. 10. pokra\u010doval 1 min a\u017e na 151, dnes 30 s \u2192 140.\n\u2022 HR zotaven\u00ed za 60 s: dnes 140 \u2192 ~120 (\u221220), 30. 10. 151 \u2192 ~127 (\u221224) \u2014 \u00fam\u011brn\u00e9 ni\u017e\u0161\u00edmu peaku.\n\u2022 Rozjet\u00ed: 30. 10. 163 W \u2192 HR 111\u2013113; dnes 154 W \u2192 112\u2013114. P\u0159epo\u010det na stejn\u00fd v\u00fdkon (~0,32 bpm/W) \u2192 posun ~+4\u20135 bpm (v\u010dera ~+6\u20138).\n\u2022 Vyjet\u00ed @ 148 W: dnes 114\u2013118 vs 30. 10. 111\u2013114 \u2192 ~+3.\n\nINTERPRETACE: N\u00e1st\u0159el HR v kr\u00e1tk\u00e9m tvrd\u00e9m \u00faseku \u0159\u00edd\u00ed hlavn\u011b rychl\u00e9 sta\u017een\u00ed vagu a sympatikus \u2014 ta reakce je norm\u00e1ln\u00ed, srdce na zm\u011bnu z\u00e1t\u011b\u017ee odpov\u00edd\u00e1 jako p\u0159ed nemoc\u00ed. Zbytkov\u00fd deficit tepov\u00e9ho objemu (objem plazmy) se ukazuje jen v ust\u00e1len\u00e9 z\u00e1t\u011b\u017ei a za 2 dny se zmen\u0161il zhruba o t\u0159etinu a\u017e polovinu. Tymewear: VE 46,7 L/min, BR 24,0/min, TV ~1,9 L (pr\u016fm\u011br cel\u00e9 j\u00edzdy v\u010d. \u00fasek\u016f) \u2014 bez n\u00e1padnost\u00ed.\n\nDOPAD NA PL\u00c1N:\n\u2022 So 21. 11. MT2: tempo start GO. R\u00e1no potvrdit: RHR \u226451, HRV \u226528, bez p\u0159\u00edznak\u016f (nos, ka\u0161el). RHR \u226553 nebo HRV <27 \u2192 nestartovat.\n\u2022 HR 160 te\u010f stoj\u00ed orienta\u010dn\u011b jen o ~10\u201315 W m\u00e9n\u011b ne\u017e p\u0159ed nemoc\u00ed (ne 15\u201325 W) \u2014 karta MT2 aktualizov\u00e1na. Strategie HR \u2264160 beze zm\u011bny.\n\u2022 Ne 22. 11. a t\u00fdden 23.\u201329. 11. napl\u00e1novat po MT2 podle reakce (rozbor z\u00e1vodu).\n\u2022 VT test \u010dt 3. 12. plat\u00ed s podm\u00ednkou HR p\u0159i ~190 W \u2264125 \u2014 p\u0159i sou\u010dasn\u00e9m trendu re\u00e1ln\u00e9."
     },
     {
       "id": 151172571,
@@ -2031,7 +2146,7 @@
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00",
-      "description": "TEMPO START \u2014 po rinosinusitid\u011b (5.\u201318. 11.), ATB + Clarinase, 17 dn\u00ed bez intenzity. CTL ~33.\n\nAKTUALIZACE 19. 11. (po Z2 55 Tacx): HR p\u0159i stejn\u00e9m v\u00fdkonu je st\u00e1le o ~8\u201310 bpm v\u00fd\u0161 ne\u017e p\u0159ed nemoc\u00ed (objem plazmy; teplo ani l\u00e9k to nevysv\u011btluj\u00ed). HR 160 tedy te\u010f znamen\u00e1 ni\u017e\u0161\u00ed v\u00fdkon ne\u017e d\u0159\u00edv (orienta\u010dn\u011b o 15\u201325 W) \u2192 kola pomalej\u0161\u00ed ne\u017e v MT1 i p\u0159i stejn\u00e9 HR, to je v po\u0159\u00e1dku. \u0158\u00eddit HR, ne pocitem ani soupe\u0159i. Kroky rozjet\u00ed opraveny na 320 W / 440 W (byly 330 / 462).\n\nSTRATEGIE: HR \u2264160 po celou dobu, \u017e\u00e1dn\u00e9 sprinty na rovink\u00e1ch, \u017e\u00e1dn\u00e9 boje. Je to \u201ez\u00e1vodn\u00ed Z3\u201c, ne v\u00fdkon na prahu.\n\u2022 Start: kontrolovan\u011b, HR nepustit nad 160 u\u017e v 1. kole.\n\u2022 Pr\u016fb\u011bh: HR 155\u2013160, tempo samovoln\u011b.\n\u2022 Kdy\u017e po 2. kole HR nep\u0159ekro\u010d\u00ed 158 a c\u00edt\u00ed\u0161 se lehce \u2192 m\u016f\u017ee\u0161 zkusit jet v tempu MT1 (HR 165+), ale jen 1\u20132 kola a sledovat nos.\n\u2022 P\u0159i jak\u00e9mkoli zhor\u0161en\u00ed nosu b\u011bhem z\u00e1vodu \u2192 ihned sn\u00ed\u017eit intenzitu nebo sjet.\nROZJET\u00cd 20 min + 3\u00d71 min @ 320 W + 2\u00d720 s @ 440 W, gel 15 min p\u0159ed.\nEdge 1050 + HR p\u00e1s + Tymewear, lap ka\u017ed\u00e9 kolo.\n\nREFERENCE MT1 (31. 10.): 41:49,3, 6. celkov\u011b / 1. M50+. Kola 8:11\u20138:34 p\u0159i HR 168\u2013169. Dnes cca o 1 min pomalej\u0161\u00ed \u2014 srovn\u00e1n\u00ed M50+ je c\u00edl, ne v\u00fdkon na prahu.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 97% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 133% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 80% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
+      "description": "TEMPO START \u2014 po rinosinusitid\u011b (5.\u201318. 11.), ATB + Clarinase, 17 dn\u00ed bez intenzity. CTL ~32.\n\nAKTUALIZACE 20. 11. (po openeru): opener spln\u011bn \u2014 HR na konci 2. \u00faseku 140 (limit 150), reakce HR na 30 s @ 385 W shodn\u00e1 s 30. 10. p\u0159ed MT1. Posun HR v n\u00edzk\u00e9 intenzit\u011b se zmen\u0161il na ~+4\u20135 bpm (19. 11. ~+6\u20138). HR 160 tedy te\u010f stoj\u00ed orienta\u010dn\u011b jen o ~10\u201315 W m\u00e9n\u011b ne\u017e p\u0159ed nemoc\u00ed \u2192 kola o n\u011bco pomalej\u0161\u00ed ne\u017e v MT1 i p\u0159i stejn\u00e9 HR, to je v po\u0159\u00e1dku. \u0158\u00eddit HR, ne pocitem ani soupe\u0159i.\nR\u00c1NO: RHR \u226451, HRV \u226528, bez p\u0159\u00edznak\u016f (nos, ka\u0161el) \u2192 start. RHR \u226553 nebo HRV <27 \u2192 nestartovat (max Z2).\n\nSTRATEGIE: HR \u2264160 po celou dobu, \u017e\u00e1dn\u00e9 sprinty na rovink\u00e1ch, \u017e\u00e1dn\u00e9 boje. Je to \u201ez\u00e1vodn\u00ed Z3\u201c, ne v\u00fdkon na prahu.\n\u2022 Start: kontrolovan\u011b, HR nepustit nad 160 u\u017e v 1. kole.\n\u2022 Pr\u016fb\u011bh: HR 155\u2013160, tempo samovoln\u011b.\n\u2022 Kdy\u017e po 2. kole HR nep\u0159ekro\u010d\u00ed 158 a c\u00edt\u00ed\u0161 se lehce \u2192 m\u016f\u017ee\u0161 zkusit jet v tempu MT1 (HR 165+), ale jen 1\u20132 kola a sledovat nos.\n\u2022 P\u0159i jak\u00e9mkoli zhor\u0161en\u00ed nosu b\u011bhem z\u00e1vodu \u2192 ihned sn\u00ed\u017eit intenzitu nebo sjet.\nROZJET\u00cd 20 min + 3\u00d71 min @ 320 W + 2\u00d720 s @ 440 W, gel 15 min p\u0159ed.\nEdge 1050 + HR p\u00e1s + Tymewear, lap ka\u017ed\u00e9 kolo.\n\nREFERENCE MT1 (31. 10.): 41:49,3, 6. celkov\u011b / 1. M50+. Kola 8:11\u20138:34 p\u0159i HR 168\u2013169. Dnes cca o 1 min pomalej\u0161\u00ed \u2014 srovn\u00e1n\u00ed M50+ je c\u00edl, ne v\u00fdkon na prahu.\n\nWarmup\n- 12m 55% intensity=warmup\n- 8m 65% intensity=warmup\n\nMain Set 3x\n- 1m 97% intensity=interval\n- 2m 55% intensity=recovery\n\nMain Set 2x\n- 20s 133% intensity=interval\n- 2m 50% intensity=recovery\n\nMain Set 1x\n- 30s 150% intensity=interval\n\nMain Set 1x\n- 2m 105% intensity=interval\n\nMain Set 1x\n- 35m 80% intensity=interval\n\nMain Set 1x\n- 2m 110% intensity=interval\n\nCooldown\n- 15m 50% intensity=cooldown"
     },
     {
       "id": 121719151,
@@ -2111,10 +2226,10 @@
     "bail_no_match": 1
   },
   "weekly_summary": {
-    "total_training_hours": 2.32,
-    "total_training_formatted": "2h19m",
-    "total_tss": 79,
-    "activities_count": 3,
+    "total_training_hours": 2.92,
+    "total_training_formatted": "2h55m",
+    "total_tss": 97,
+    "activities_count": 4,
     "avg_hrv": 31.6,
     "avg_resting_hr": 50.0
   },

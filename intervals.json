@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T17:12:13.892414",
+  "generated_at": "2026-11-20T23:18:46.554094",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -262,8 +262,113 @@
           "activity_key": "a145c72d4341adfb8f5c61f92979527139224a6151f37885ce4f36b739b50a10",
           "event_key": "eaeaaddff45e0384c2b315b8074873b23d05d69c5b3735111715004dd5fe4cfb",
           "plan_key": "f59f0a3b7a6f6c1f69d5d920007b3f4cb647d6e6bfa18fe322e2d3f98da4361f",
-          "sampled_at": "2026-11-19T18:36:47.991215+00:00",
-          "next_refresh_at": "2026-11-20T18:36:47.991215+00:00"
+          "sampled_at": "2026-11-20T23:18:47.291504+00:00",
+          "next_refresh_at": "2026-11-21T23:18:47.291504+00:00"
+        }
+      }
+    },
+    {
+      "activity_id": "i212555454",
+      "date": "2026-11-20",
+      "start_datetime": "2026-11-20T17:59:03",
+      "type": "VirtualRide",
+      "name": "Opener 30 zkr\u00e1cen\u00fd (p\u0159ed MT2 \u2014 po nemoci)",
+      "interval_summary": null,
+      "intervals": [
+        {
+          "type": "RECOVERY",
+          "duration_secs": 2201,
+          "moving_secs": 2201,
+          "start_secs": 0,
+          "end_secs": 2201,
+          "avg_power": 158,
+          "max_power": 486,
+          "avg_hr": 115,
+          "max_hr": 140,
+          "min_hr": 88,
+          "avg_cadence": 89.30305,
+          "zone": 1,
+          "w_bal_start": 38100,
+          "w_bal_end": 37991,
+          "training_load": 18.207891
+        }
+      ],
+      "zone_basis": "power",
+      "session_structure": {
+        "version": 2,
+        "method": "fixed_elapsed_thirds",
+        "status": "unknown",
+        "plan": {
+          "event_id": "151172571",
+          "updated": "2026-11-19T17:06:16.547+00:00"
+        },
+        "steps": [
+          {
+            "supported": false,
+            "duration_s": 900,
+            "target_w": 155
+          },
+          {
+            "supported": false,
+            "duration_s": 420
+          },
+          {
+            "supported": false,
+            "duration_s": 270
+          },
+          {
+            "supported": false,
+            "duration_s": 600,
+            "target_w": 150
+          }
+        ],
+        "thirds": [
+          [
+            0,
+            733,
+            144.1,
+            105.6,
+            109.4,
+            85.5,
+            100.0,
+            100.0,
+            100.0,
+            6.14
+          ],
+          [
+            733,
+            1466,
+            181.0,
+            132.6,
+            119.8,
+            91.1,
+            100.0,
+            100.0,
+            100.0,
+            0.0
+          ],
+          [
+            1466,
+            2200,
+            149.9,
+            110.0,
+            116.8,
+            91.4,
+            100.0,
+            100.0,
+            100.0,
+            0.68
+          ]
+        ],
+        "issues": [
+          "unsupported_steps"
+        ],
+        "cache": {
+          "activity_key": "eb7ca95802de394e77b28b10bf7cea42d301b65a440b2ae56aad1b939faeffb2",
+          "event_key": "9b836f1874c3e1a29ddc40d48c0aa42a51de7e66ab775e7993129af163685558",
+          "plan_key": "2e711519c4dbcc74adcf1470f4c04e12f53466f8c28a83c8deda93d592c6cfc9",
+          "sampled_at": "2026-11-20T23:18:47.291504+00:00",
+          "next_refresh_at": "2026-11-21T23:18:47.291504+00:00"
         }
       }
     }
@@ -280,12 +385,12 @@
         "source_icu_sync_date": "2026-11-18T17:49:45.445+00:00"
       },
       "streams": {
-        "attempts": 7,
+        "attempts": 8,
         "first_seen": "2026-11-18T19:31:49.998311",
-        "last_attempt": "2026-11-20T17:12:13.892414",
+        "last_attempt": "2026-11-20T23:18:46.554094",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-20T17:42:13.892414"
+        "next_retry_at": "2026-11-20T23:48:46.554094"
       }
     },
     "i212138270": {
@@ -300,12 +405,32 @@
         "source_icu_sync_date": "2026-11-19T16:51:33.347+00:00"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-11-19T18:36:47.208125",
-        "last_attempt": "2026-11-20T17:12:13.892414",
+        "last_attempt": "2026-11-20T23:18:46.554094",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-20T17:17:13.892414"
+        "next_retry_at": "2026-11-20T23:23:46.554094"
+      }
+    },
+    "i212555454": {
+      "date": "2026-11-20",
+      "paired_planned": true,
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-20T23:18:46.554094",
+        "last_attempt": "2026-11-20T23:18:46.554094",
+        "status": "ok",
+        "reason": "ok",
+        "source_icu_sync_date": "2026-11-20T17:36:19.551+00:00"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-20T23:18:46.554094",
+        "last_attempt": "2026-11-20T23:18:46.554094",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-20T23:23:46.554094"
       }
     }
   }
