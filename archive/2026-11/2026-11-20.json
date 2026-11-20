@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-20T08:24:31.826633",
+    "last_updated": "2026-11-20T17:12:14.432256",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -301,7 +301,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 977,
+      "steps": 3448,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -722,7 +722,7 @@
     "p_max": 1105,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-20T08:24:31.825313",
+    "calculation_timestamp": "2026-11-20T17:12:14.431301",
     "data_quality": {
       "hrv_data_points": 7,
       "rhr_data_points": 7,
@@ -1980,7 +1980,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 977,
+      "steps": 3448,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -1992,6 +1992,19 @@
     }
   ],
   "planned_workouts": [
+    {
+      "id": 158425833,
+      "date": "2026-11-20",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe1 RHR 51, HRV OK: opener podle pl\u00e1nu",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 19.\u219220. 11. \u2014 2. noc bez l\u00e9k\u016f (ATB i Clarinase do 18. 11.), den p\u0159ed MT2.\n\n\ud83d\udfe1 RHR 51 bpm \u2014 +3\u20134 nad baseline 47\u201348, pod varov\u00e1n\u00edm 53 (v\u010dera 49)\n\ud83d\udfe2 HRV 33 ms \u2014 na baseline ~33\n\ud83d\udfe1 Sp\u00e1nek 7 h 00, sk\u00f3re 75, kvalita 3/4 \u2014 nejslab\u0161\u00ed za t\u00fdden\n\u26aa SpO2, dech, teplota k\u016f\u017ee \u2014 nedostupn\u00e9\n\u26aa P\u0159\u00edznaky dnes \u2014 \u010dek\u00e1 na hl\u00e1\u0161en\u00ed\n\nTrend RHR / HRV / sp\u00e1nek: 16. 49/32/85 | 17. 51/28/83 | 18. 52/31/81 | 19. 49/32/80 | 20. 51/33/75\nV\u010dera Z2 55 Tacx (TSS 27, HR ust\u00e1len\u00e1, decoupling 2 %). CTL ~32 | TSB ~+21.\n\nV\u00ddKLAD: RHR nahoru bez poklesu HRV a s hor\u0161\u00edm sp\u00e1nkem = sp\u00ed\u0161 hor\u0161\u00ed noc / p\u0159edz\u00e1vodn\u00ed nabuzen\u00ed ne\u017e n\u00e1vrat z\u00e1n\u011btu (z\u00e1n\u011bt dosud d\u00e1val RHR\u2191 a z\u00e1rove\u0148 HRV\u2193, nap\u0159. 1. 11. 50/25). Pseudoefedrin to b\u00fdt nem\u016f\u017ee (posledn\u00ed d\u00e1vka 18. 11. ve\u010der). Pozor: sinusitidu Garmin d\u0159\u00edv nezachytil \u2014 rozhoduj\u00ed p\u0159\u00edznaky.\n\nVERDIKT: \ud83d\udfe1 GO \u2014 Opener zkr\u00e1cen\u00fd podle pl\u00e1nu (kr\u00e1tk\u00fd, TSS ~19; s\u00e1m slou\u017e\u00ed jako test).\n\u2022 Rozhoduje HR na konci 2. \u00faseku 30 s: \u2264150 OK; >155 nebo t\u011b\u017ek\u00e9 nohy \u2192 MT2 jen Z2 / nestartovat.\n\u2022 Jen bez zhor\u0161en\u00ed nosu/ka\u0161le; p\u0159i zhor\u0161en\u00ed opener vynechat.\n\u2022 Ve\u010der brzy sp\u00e1t, sacharidy ~6 g/kg (~500 g za den).\n\u2022 So r\u00e1no p\u0159ed MT2: RHR \u226451, HRV \u226528 a bez p\u0159\u00edznak\u016f \u2192 tempo start; RHR \u226553 nebo HRV <27 \u2192 nestartovat (max Z2)."
+    },
     {
       "id": 151172571,
       "date": "2026-11-20",
