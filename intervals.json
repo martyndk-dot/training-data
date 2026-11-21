@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T04:14:02.057038",
+  "generated_at": "2026-11-21T12:57:21.570291",
   "schema_version": 2,
   "version": "3.141",
   "script_hash": "22262cd4fadf",
@@ -385,12 +385,12 @@
         "source_icu_sync_date": "2026-11-18T17:49:45.445+00:00"
       },
       "streams": {
-        "attempts": 9,
+        "attempts": 10,
         "first_seen": "2026-11-18T19:31:49.998311",
-        "last_attempt": "2026-11-21T04:14:02.057038",
+        "last_attempt": "2026-11-21T12:57:21.570291",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-21T04:44:02.057038"
+        "next_retry_at": "2026-11-21T13:27:21.570291"
       }
     },
     "i212138270": {
@@ -405,12 +405,12 @@
         "source_icu_sync_date": "2026-11-19T16:51:33.347+00:00"
       },
       "streams": {
-        "attempts": 6,
+        "attempts": 7,
         "first_seen": "2026-11-19T18:36:47.208125",
-        "last_attempt": "2026-11-21T04:14:02.057038",
+        "last_attempt": "2026-11-21T12:57:21.570291",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-21T04:19:02.057038"
+        "next_retry_at": "2026-11-21T13:27:21.570291"
       }
     },
     "i212555454": {
@@ -425,12 +425,12 @@
         "source_icu_sync_date": "2026-11-20T17:36:19.551+00:00"
       },
       "streams": {
-        "attempts": 2,
+        "attempts": 3,
         "first_seen": "2026-11-20T23:18:46.554094",
-        "last_attempt": "2026-11-21T04:14:02.057038",
+        "last_attempt": "2026-11-21T12:57:21.570291",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-21T04:19:02.057038"
+        "next_retry_at": "2026-11-21T13:02:21.570291"
       }
     }
   }
