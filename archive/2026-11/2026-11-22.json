@@ -72,7 +72,7 @@
   },
   "metadata": {
     "athlete_id": "REDACTED",
-    "last_updated": "2026-11-22T07:22:17.474591",
+    "last_updated": "2026-11-22T15:37:34.253631",
     "data_range_days": 7,
     "extended_range_days": 28,
     "version": "3.141"
@@ -120,10 +120,10 @@
     "priority": 2,
     "signals": {
       "hrv": {
-        "status": "unavailable",
-        "value": null,
-        "baseline_7d": 31.7,
-        "delta_pct": null
+        "status": "green",
+        "value": 30.0,
+        "baseline_7d": 31.4,
+        "delta_pct": -4.5
       },
       "rhr": {
         "status": "green",
@@ -132,9 +132,9 @@
         "delta_bpm": 0.3
       },
       "sleep": {
-        "status": "unavailable",
-        "hours": null,
-        "quality": null
+        "status": "green",
+        "hours": 7.63,
+        "quality": 2
       },
       "acwr": {
         "status": "red",
@@ -144,9 +144,9 @@
         "current_day_load_included": false
       },
       "ri": {
-        "status": "unavailable",
-        "value": null,
-        "value_yesterday": 1.05
+        "status": "green",
+        "value": 0.95,
+        "value_yesterday": 1.06
       },
       "tsb": {
         "status": "green",
@@ -154,10 +154,10 @@
       }
     },
     "signal_summary": {
-      "green": 2,
+      "green": 5,
       "amber": 0,
       "red": 1,
-      "unavailable": 3
+      "unavailable": 0
     },
     "phase_context": {
       "phase": "Recovery",
@@ -280,11 +280,11 @@
         }
       },
       "resting_hr": 51,
-      "hrv": null,
-      "sleep_quality": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_score": null,
+      "hrv": 30.0,
+      "sleep_quality": 2,
+      "sleep_hours": 7.63,
+      "sleep_formatted": "7h38m",
+      "sleep_score": 86.0,
       "fatigue": null,
       "soreness": null,
       "stress": null,
@@ -301,7 +301,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 70,
+      "steps": 3676,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -339,13 +339,13 @@
     }
   },
   "derived_metrics": {
-    "recovery_index": null,
-    "recovery_index_yesterday": 1.05,
-    "hrv_baseline_7d": 31.7,
+    "recovery_index": 0.95,
+    "recovery_index_yesterday": 1.06,
+    "hrv_baseline_7d": 31.4,
     "rhr_baseline_7d": 50.7,
-    "hrv_baseline_28d": 32.8,
+    "hrv_baseline_28d": 32.7,
     "rhr_baseline_28d": 48.9,
-    "latest_hrv": null,
+    "latest_hrv": 30.0,
     "latest_rhr": 51,
     "acwr": 2.06,
     "acwr_interpretation": "danger",
@@ -369,7 +369,7 @@
     "multi_sport_detected": true,
     "strain": 168.0,
     "stress_tolerance": 1.6,
-    "load_recovery_ratio": null,
+    "load_recovery_ratio": 1.7,
     "tss_7d_total": 162.0,
     "tss_28d_total": 315.0,
     "zone_distribution_7d": {
@@ -691,10 +691,10 @@
           "hard_sessions_planned": 1,
           "current_week_hard_days_completed": 2,
           "current_week_hard_days_total": 3,
-          "race_proximity": null,
-          "next_week_load": null,
+          "race_proximity": 20,
+          "next_week_load": 5.04,
           "plan_coverage_current_week": 0.5,
-          "plan_coverage_next_week": 0.0
+          "plan_coverage_next_week": 4.0
         },
         "data_quality": "good",
         "stream_agreement": null
@@ -729,9 +729,9 @@
     "p_max": 1146,
     "power_model_source": "wellness.sportInfo",
     "vo2max": null,
-    "calculation_timestamp": "2026-11-22T07:22:17.473935",
+    "calculation_timestamp": "2026-11-22T15:37:34.252464",
     "data_quality": {
-      "hrv_data_points": 6,
+      "hrv_data_points": 7,
       "rhr_data_points": 7,
       "activities_7d": 6,
       "activities_28d": 12,
@@ -2302,12 +2302,12 @@
         "weight": null
       },
       "resting_hr": 51,
-      "hrv_rmssd": null,
+      "hrv_rmssd": 30.0,
       "hrv_sdnn": null,
-      "sleep_hours": null,
-      "sleep_formatted": null,
-      "sleep_quality": null,
-      "sleep_score": null,
+      "sleep_hours": 7.63,
+      "sleep_formatted": "7h38m",
+      "sleep_quality": 2,
+      "sleep_score": 86.0,
       "mental_energy": null,
       "avg_sleeping_hr": null,
       "vo2max": null,
@@ -2327,7 +2327,7 @@
       "respiration": null,
       "body_fat_pct": null,
       "abdomen_cm": null,
-      "steps": 70,
+      "steps": 3676,
       "hydration_volume_l": null,
       "kcal_consumed": null,
       "carbohydrates_g": null,
@@ -2339,6 +2339,19 @@
     }
   ],
   "planned_workouts": [
+    {
+      "id": 158946523,
+      "date": "2026-11-22",
+      "name": "\ud83e\ude7a Wellness \u2014 \ud83d\udfe2 RHR 51, HRV 30 po z\u00e1vod\u011b: Z1 45 GO",
+      "type": "NOTE",
+      "sport_type": null,
+      "planned_tss": null,
+      "duration_hours": 0.0,
+      "duration_formatted": "0s",
+      "workout_summary": null,
+      "has_terrain": false,
+      "description": "Garmin (intervals.icu), noc 21.\u219222. 11. \u2014 1. noc po MT2 (13 min nad HR 160, RPE 9).\n\n\ud83d\udfe1 RHR 51 bpm \u2014 +3\u20134 nad baseline 47\u201348, beze zm\u011bny proti v\u010derej\u0161ku (52)\n\ud83d\udfe1 HRV 30 ms \u2014 \u22123 pod baseline ~33, \u22124 proti v\u010derej\u0161ku; nad hranic\u00ed 28\n\ud83d\udfe2 Sp\u00e1nek 7 h 36, sk\u00f3re 86 \u2014 nejlep\u0161\u00ed za t\u00fdden\n\u26aa SpO2, dech, teplota k\u016f\u017ee \u2014 nedostupn\u00e9\n\u26aa Ka\u0161el / tlak na hrudi po z\u00e1vod\u011b \u2014 \u010dek\u00e1 na hl\u00e1\u0161en\u00ed\n\nTrend RHR / HRV / sp\u00e1nek: 18. 52/31/81 | 19. 49/32/80 | 20. 51/33/75 | 21. 52/34/83 | 22. 51/30/86\n\nV\u00ddKLAD: m\u00edrn\u00fd pokles HRV prvn\u00ed noc po intenzit\u011b je o\u010dek\u00e1van\u00e1 sympatick\u00e1 odezva na z\u00e1vod; RHR se nezvedla, sp\u00e1nek nejlep\u0161\u00ed za t\u00fdden \u2192 t\u011blo z\u00e1vod vst\u0159eb\u00e1v\u00e1 norm\u00e1ln\u011b. Z\u00e1n\u011btliv\u00fd vzorec (RHR\u2191 + HRV\u2193 spolu) to nen\u00ed.\n\nVERDIKT: \ud83d\udfe2 GO \u2014 Z1 45 Tacx podle karty (podm\u00ednky RHR \u226451, HRV \u226528 spln\u011bny).\n\u2022 Jen bez no\u010dn\u00edho ka\u0161le a tlaku na hrudi po v\u010derej\u0161ku.\n\u2022 Strop HR 130, \u017e\u00e1dn\u00e9 \u00faseky; BR >30/min nebo sev\u0159en\u00ed na hrudi u\u017e v Z1 \u2192 ukon\u010dit.\n\u2022 Intenzita (SS) nejd\u0159\u00edv st 25. 11. \u2014 72 h po z\u00e1vod\u011b a HRV zp\u011bt \u226530.\n\u2022 T\u00fdden 23.\u201329. 11. zaps\u00e1n."
+    },
     {
       "id": 158755594,
       "date": "2026-11-22",
@@ -2367,6 +2380,156 @@
       "description": "P\u0158IPOM\u00cdNKA (domluveno 10.7.): Napl\u00e1novat zimn\u00ed CX off-season most s AI kou\u010dem, ne\u017e skon\u010d\u00ed sez\u00f3na. C\u00edl: prosinec\u2013leden dr\u017eet ~300 TSS/t\u00fdden (\u017e\u00e1dn\u00e1 d\u00edra 80\u2013230 jako ka\u017ed\u00fd rok), 2\u00d7 t\u00fddn\u011b kr\u00e1tk\u00e1 intenzita (VO2/threshold udr\u017eovac\u00ed d\u00e1vky), v\u00e1hov\u00fd strop 84\u201385 kg. Loni: prosinec 82\u2013230 TSS/t\u00fdden a +4 kg \u2192 jarn\u00ed rebuild z j\u00e1my. Letos most."
     },
     {
+      "id": 158946581,
+      "date": "2026-11-23",
+      "name": "S\u00edla A \u2014 n\u00e1vratov\u00e1 (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "WeightTraining",
+      "planned_tss": null,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": "45m",
+      "has_terrain": false,
+      "start_time": "17:00",
+      "description": "FLEX. Prvn\u00ed s\u00edla po nemoci. Obvykl\u00fd program A, zhruba 60 % vah a objemu, bez selh\u00e1n\u00ed, RPE nejv\u00fd\u0161 6, bez skok\u016f. Den bez kola. Kdy\u017e nohy po MT2 je\u0161t\u011b bol\u00ed, p\u0159esu\u0148 to na \u00fater\u00fd.\n\n- 45m S\u00edla A n\u00e1vratov\u00e1, lehk\u00e9 v\u00e1hy, bez selh\u00e1n\u00ed"
+    },
+    {
+      "id": 158946582,
+      "date": "2026-11-24",
+      "name": "Z2 60 Tacx (strop HR 135) \u2014 KOTVA",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 34,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "17:00",
+      "description": "KOTVA. Z2 n\u00e1vratov\u00e1: 45 min @ 200 W, strop HR 135, kadence 90+. V\u011btr\u00e1k, chladn\u00e1 m\u00edstnost. Edge + HR p\u00e1s + Tymewear.\nKONTROLA POSUNU (pro VT test 3. 12.): HR p\u0159i 200 W po 30. min \u2264128 = posun \u2264+5 bpm; \u2264125 = zp\u011bt na normu (19. 11.: 188 W \u2192 130\u2013132).\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 45m 200w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 158946584,
+      "date": "2026-11-25",
+      "name": "SS 3\u00d78 @ 285 W (PODM\u00cdN\u011aN\u011a) \u2014 KOTVA",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 51,
+      "duration_hours": 1.02,
+      "duration_formatted": "1h1m",
+      "workout_summary": "10m [target not shown] | 5m [target not shown] | 3\u00d7(8m [target not shown] + 4m [target not shown]) | 10m [target not shown]",
+      "has_terrain": false,
+      "start_time": "17:00",
+      "description": "KOTVA, PODM\u00cdN\u011aN\u011a: r\u00e1no RHR \u226450, HRV \u226530, bez ka\u0161le a tlaku na hrudi \u2192 jet. Jinak Z2 60 m\u00edsto toho.\nPrvn\u00ed intenzita po nemoci \u2014 sweet spot pod VT2, ne VO2 (v MT2 byl limitem dech). 3\u00d7 8 min @ 280\u2013290 W, pauza 4 min @ 160 W. C\u00edl HR na konci \u00faseku 150\u2013158.\nSTOP: HR >162 v posledn\u00edch 2 min \u00faseku nebo du\u0161nost / sev\u0159en\u00ed na hrudi \u2192 dal\u0161\u00ed \u00fasek nejet.\nIndoor (teplej\u0161\u00ed vzduch \u0161et\u0159\u00ed d\u00fdchac\u00ed cesty), v\u011btr\u00e1k. Edge + Tymewear \u2014 VE a BR v \u00fasec\u00edch = nov\u00e1 reference.\n\nWarmup\n- 10m 160w intensity=warmup\n- 5m 200w intensity=warmup\n\nMain Set 3x\n- 8m 285w intensity=interval\n- 4m 160w intensity=recovery\n\nCooldown\n- 10m 150w intensity=cooldown"
+    },
+    {
+      "id": 158946585,
+      "date": "2026-11-26",
+      "name": "Z1 45 Tacx (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 19,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "17:00",
+      "description": "FLEX. Regenerace po SS: 160\u2013180 W, strop HR 130, kadence 90+. Pak s\u00edla B.\n\nWarmup\n- 10m 150w intensity=warmup\n\nMain Set 1x\n- 30m 170w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 158946587,
+      "date": "2026-11-26",
+      "name": "S\u00edla B \u2014 n\u00e1vratov\u00e1 (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "WeightTraining",
+      "planned_tss": null,
+      "duration_hours": 0.67,
+      "duration_formatted": "40m",
+      "workout_summary": "40m",
+      "has_terrain": false,
+      "start_time": "18:00",
+      "description": "FLEX. Po Z1 45. Obvykl\u00fd program B, zhruba 60\u201370 % vah a objemu, bez selh\u00e1n\u00ed, RPE nejv\u00fd\u0161 6. Den p\u0159ed n\u00edm je SS (ne VO2max), tak\u017ee po\u0159ad\u00ed sed\u00ed.\n\n- 40m S\u00edla B n\u00e1vratov\u00e1, bez selh\u00e1n\u00ed"
+    },
+    {
+      "id": 158946588,
+      "date": "2026-11-27",
+      "name": "Z2 60 Tacx (FLEX \u2014 rezerva)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 34,
+      "duration_hours": 1.0,
+      "duration_formatted": "1h",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "17:00",
+      "description": "FLEX / rezerva. P\u0159i \ud83d\udfe1 wellness nebo \u00fanav\u011b vynechat. 200 W, strop HR 135.\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 45m 200w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 158946589,
+      "date": "2026-11-28",
+      "name": "Z2 90 venku / Tacx 75 (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 55,
+      "duration_hours": 1.5,
+      "duration_formatted": "1h30m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "10:00",
+      "description": "FLEX. Venku jen za sucha a nad ~3 \u00b0C, \u00fasta kr\u00fdt n\u00e1kr\u010dn\u00edkem; jinak Tacx 75 min. 200\u2013215 W, strop HR 135. Sacharidy 70\u201380 g/h od 45. min.\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 75m 205w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 158946590,
+      "date": "2026-11-29",
+      "name": "Z2 105 \u2014 dlouh\u00e1 ned\u011ble (KOTVA)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 64,
+      "duration_hours": 1.75,
+      "duration_formatted": "1h45m",
+      "workout_summary": null,
+      "has_terrain": false,
+      "start_time": "10:00",
+      "description": "KOTVA. Dlouh\u00e1 ned\u011ble v Z2: 200\u2013215 W, strop HR 135. Venku (n\u00e1kr\u010dn\u00edk) nebo Tacx 90 min. Sacharidy 70\u201380 g/h, ~0,6\u20130,7 l/h. T\u00fdden celkem ~260 TSS (bez rezervy ~225).\n\nWarmup\n- 10m 160w intensity=warmup\n\nMain Set 1x\n- 90m 205w intensity=interval\n\nCooldown\n- 5m 150w intensity=cooldown"
+    },
+    {
+      "id": 158968914,
+      "date": "2026-11-30",
+      "name": "S\u00edla B (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "WeightTraining",
+      "planned_tss": null,
+      "duration_hours": 0.75,
+      "duration_formatted": "45m",
+      "workout_summary": "45m",
+      "has_terrain": false
+    },
+    {
+      "id": 158968916,
+      "date": "2026-12-01",
+      "name": "SS 3\u00d710 @ 280\u2013290 W (PODM\u00cdN\u011aN\u011a) \u2013 KOTVA",
+      "type": "WORKOUT",
+      "sport_type": "VirtualRide",
+      "planned_tss": 61,
+      "duration_hours": 1.12,
+      "duration_formatted": "1h7m",
+      "workout_summary": "10m [target not shown] | 1m [target not shown] | 2m [target not shown] | 1m [target not shown] | 1m [target not shown] | 3\u00d7(10m [target not shown] + 4m [target not shown]) | 10m [target not shown]",
+      "has_terrain": false,
+      "indoor": true
+    },
+    {
+      "id": 158968917,
+      "date": "2026-12-02",
+      "name": "Z2 75 Tacx \u2013 kontrola HR p\u0159ed testem",
+      "type": "WORKOUT",
+      "sport_type": "VirtualRide",
+      "planned_tss": 41,
+      "duration_hours": 1.25,
+      "duration_formatted": "1h15m",
+      "workout_summary": "10m [target not shown] | 1h [target not shown] | 5m [target not shown]",
+      "has_terrain": false,
+      "indoor": true
+    },
+    {
       "id": 142205757,
       "date": "2026-12-03",
       "name": "TEST (p\u0159edb\u011b\u017en\u011b): Stup\u0148ovan\u00fd VT1/VT2 (Tacx) + S\u00cdLA A",
@@ -2381,14 +2544,38 @@
       "description_preview": "P\u0158ESUNUTO 23. 11. \u2192 \u010ct 3. 12. (rozhodnuto 19. 11.): HR p\u0159i Z2 v\u00fdkonu je po nemoci je\u0161t\u011b o ~8\u201310 bpm v\u00fd\u0161 (objem plazmy) \u2014 test te\u010f by zachytil do\u010dasn\u011b posunut\u00e9 prahy a z\u00f3ny na zimu by vy\u0161ly n\u00edzko; nav\u00edc 23. 11. jen 2 dny po MT2. (P\u016fvodn\u011b 9. 11., posunuto kv\u016fli vir\u00f3ze.)\nP\u0158EDB\u011a\u017dN\u011a \u2014 jen kdy\u017e Z2 j\u00edzda v t\u00fddnu p\u0159ed testem uk\u00e1\u017ee HR p\u0159i ~190 W \u2264125 a r\u00e1no \ud83d\udfe2 wellness (RHR \u226449, HRV \u226530), bez p\u0159\u00edznak\u016f. Jinak dal\u0161\u00ed posun.\nTEST \u2014 stup\u0148ovan\u00fd ventila\u010dn\u00ed test pro nov\u00e9 VT1/VT2 (Tymewear Workout Zone Detection)."
     },
     {
+      "id": 158968918,
+      "date": "2026-12-05",
+      "name": "Z2 105 + 6\u00d7 CX start 12 s (FLEX)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 64,
+      "duration_hours": 1.74,
+      "duration_formatted": "1h44m12s",
+      "workout_summary": "10m [target not shown] | 40m [target not shown] | 6\u00d7(12s [target not shown] + 3m [target not shown]) | 30m [target not shown] | 5m [target not shown]",
+      "has_terrain": false
+    },
+    {
+      "id": 158968919,
+      "date": "2026-12-06",
+      "name": "Z2 120 \u2013 dlouh\u00e1 ned\u011ble (KOTVA)",
+      "type": "WORKOUT",
+      "sport_type": "Ride",
+      "planned_tss": 72,
+      "duration_hours": 2.0,
+      "duration_formatted": "2h",
+      "workout_summary": "10m [target not shown] | 1h40m [target not shown] | 10m [target not shown]",
+      "has_terrain": false
+    },
+    {
       "id": 138158637,
       "date": "2026-12-12",
       "name": "MT3: CX Ch. Hradiste - mereny trenink (40 min)",
-      "type": "WORKOUT",
+      "type": "RACE_A",
       "sport_type": "Ride",
       "planned_tss": 107,
       "duration_hours": 1.47,
-      "duration_formatted": "1h28m10s",
+      "duration_formatted": "1h28m",
       "workout_summary": "12m [target not shown] | 8m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "11:00"
@@ -2397,11 +2584,11 @@
       "id": 139301593,
       "date": "2026-12-31",
       "name": "RACE A: Silvestrovsky CX Terezin (6 kol ~43 min)",
-      "type": "WORKOUT",
+      "type": "RACE_A",
       "sport_type": "Ride",
       "planned_tss": 116,
       "duration_hours": 1.6,
-      "duration_formatted": "1h36m10s",
+      "duration_formatted": "1h36m",
       "workout_summary": "15m [target not shown] | 10m [target not shown] | 3\u00d7(1m [target not shown] + 2m [target not shown]) | 2\u00d7(20s [target not shown] + 2m [target not shown]) | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | [repeat not summarized] | 15m [target not shown]",
       "has_terrain": false,
       "start_time": "12:00"
@@ -2422,25 +2609,67 @@
     }
   ],
   "workout_summary_stats": {
-    "attempted": 4,
-    "success": 2,
-    "patternA": 2,
+    "attempted": 17,
+    "success": 10,
+    "patternA": 5,
     "patternB": 0,
-    "flat": 0,
+    "flat": 5,
     "bail_no_workout_doc": 1,
-    "bail_no_match": 2
+    "bail_no_match": 7
   },
   "weekly_summary": {
     "total_training_hours": 4.05,
     "total_training_formatted": "4h2m",
     "total_tss": 162,
     "activities_count": 6,
-    "avg_hrv": 31.7,
+    "avg_hrv": 31.4,
     "avg_resting_hr": 50.7
   },
   "race_calendar": {
-    "next_race": null,
-    "all_races": [],
+    "next_race": {
+      "name": "MT3: CX Ch. Hradiste - mereny trenink (40 min)",
+      "date": "2026-12-12",
+      "category": "RACE_A",
+      "type": "Ride",
+      "days_until": 20,
+      "moving_time_seconds": 5280,
+      "distance_meters": null,
+      "display": {
+        "distance": null
+      },
+      "has_terrain": false,
+      "start_time": "11:00"
+    },
+    "all_races": [
+      {
+        "name": "MT3: CX Ch. Hradiste - mereny trenink (40 min)",
+        "date": "2026-12-12",
+        "category": "RACE_A",
+        "type": "Ride",
+        "days_until": 20,
+        "moving_time_seconds": 5280,
+        "distance_meters": null,
+        "display": {
+          "distance": null
+        },
+        "has_terrain": false,
+        "start_time": "11:00"
+      },
+      {
+        "name": "RACE A: Silvestrovsky CX Terezin (6 kol ~43 min)",
+        "date": "2026-12-31",
+        "category": "RACE_A",
+        "type": "Ride",
+        "days_until": 39,
+        "moving_time_seconds": 5760,
+        "distance_meters": null,
+        "display": {
+          "distance": null
+        },
+        "has_terrain": false,
+        "start_time": "12:00"
+      }
+    ],
     "taper_alert": {
       "active": false
     },
